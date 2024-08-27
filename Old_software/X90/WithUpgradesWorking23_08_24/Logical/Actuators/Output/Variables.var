@@ -1,0 +1,5 @@
+VAR
+	i : USINT;
+	rtdsVariables : rtdsVariables_typ;
+	rtdsConstants : rtdsConstants_typ;
+END_VAR

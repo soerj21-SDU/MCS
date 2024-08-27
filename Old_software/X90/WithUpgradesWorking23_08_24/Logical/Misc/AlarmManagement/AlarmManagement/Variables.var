@@ -1,0 +1,5 @@
+VAR
+	MpAlarmXListUI_0 : MpAlarmXListUI;
+	MpAlarmXListUIConnectType_0 : MpAlarmXListUIConnectType;
+	MpAlarmXCore_0 : MpAlarmXCore;
+END_VAR

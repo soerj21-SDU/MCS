@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="inverterTorqueContent" height="880" width="1670" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="10" left="50" width="360" height="30" zIndex="4" text="Torque Pedal and Brake Pressure" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="260" left="50" width="360" height="30" zIndex="5" text="Actual steering angle " textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="enableFL" top="568" left="19" width="100" height="30" zIndex="6" mouseDownText="Shown" text="Hidden" value="true" />
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="enableFR" top="647" left="19" width="100" height="30" zIndex="7" mouseDownText="Shown" text="Hidden" value="true" />
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="enableRR" top="727" left="19" width="100" height="30" zIndex="8" mouseDownText="Shown" text="Hidden" value="true" />
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="enableRL" top="810" left="19" width="100" height="30" zIndex="9" mouseDownText="Shown" text="Hidden" value="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="540" left="10" width="80" height="30" zIndex="10" text="FL" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="620" left="10" width="80" height="30" zIndex="11" text="FR" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="700" left="10" width="80" height="30" zIndex="12" text="RR" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="780" left="10" width="80" height="30" zIndex="13" text="RL" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle9" top="618" left="9" width="120" height="71" zIndex="1" cornerRadius="5px" backColor="rgba(192, 255, 192, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle7" top="540" left="9" width="120" height="71" zIndex="0" cornerRadius="5px" backColor="rgba(255, 192, 192, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle10" top="700" left="9" width="120" height="71" zIndex="2" cornerRadius="5px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle11" top="777" left="9" width="120" height="71" zIndex="3" cornerRadius="5px" backColor="rgba(192, 192, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="460" width="360" height="30" zIndex="14" text="Vehicle Velocity [km/t]" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="260" left="460" width="360" height="30" zIndex="15" text="Vehicle Acceleration [m/s^2]" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="10" left="870" width="360" height="30" zIndex="16" text="Actual Power [kW]" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="260" left="870" width="360" height="30" zIndex="17" text="Wheel Speed [rad/s]" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label11" top="10" left="1280" width="360" height="30" zIndex="18" text="Torque Output [%]" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label12" top="260" left="1280" width="360" height="30" zIndex="19" text="Torque Output [AMK unit]" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart1" top="275" left="1220" width="410" height="220" zIndex="20" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis1" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph12" zIndex="0" maxValue="10000" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph45" zIndex="1" maxValue="10000" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph46" zIndex="2" maxValue="10000" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph47" zIndex="3" maxValue="10000" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis1" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart2" top="20" left="1220" width="410" height="220" zIndex="21" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis2" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph11" zIndex="0" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph42" zIndex="1" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph43" zIndex="2" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph44" zIndex="3" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis2" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart3" top="275" left="810" width="410" height="220" zIndex="22" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis3" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph7" zIndex="0" maxValue="5000" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph8" zIndex="1" maxValue="5000" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph9" zIndex="2" maxValue="5000" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph10" zIndex="3" maxValue="5000" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis3" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart4" top="20" left="810" width="410" height="220" zIndex="23" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis4" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph6" zIndex="0" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis4" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart5" top="275" left="400" width="410" height="220" zIndex="24" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis5" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph5" zIndex="0" maxValue="25" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis5" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart6" top="20" left="400" width="410" height="220" zIndex="25" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis6" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph4" zIndex="0" maxValue="125" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis6" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart7" top="20" left="-10" width="410" height="220" zIndex="26" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis7" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph1" zIndex="0" xAxisRefId="xAxisRefId1" />
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph2" zIndex="1" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis7" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart8" top="275" left="-10" width="410" height="220" zIndex="27" borderWidth="0px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis8" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph3" zIndex="0" minValue="-100" xAxisRefId="xAxisRefId1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis8" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="520" left="140" width="1520" height="350" zIndex="28">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" width="120" height="30" zIndex="0" text="General">
+          <Widgets />
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" width="120" height="30" zIndex="1" text="TV">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart9" top="30" left="-10" width="500" height="270" zIndex="0" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis9" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph13" zIndex="0" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph14" zIndex="1" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph15" zIndex="2" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph16" zIndex="3" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis9" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label13" top="10" left="50" width="450" height="30" zIndex="1" text="TV Torque Output" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart10" top="30" left="500" width="500" height="270" zIndex="2" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis10" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph17" zIndex="0" maxValue="30" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph18" zIndex="1" maxValue="30" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis10" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label14" top="10" left="560" width="450" height="30" zIndex="3" text="Yaw Rate &amp; Yaw Rate Reference" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart11" top="30" left="1010" width="480" height="270" zIndex="4" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis11" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph19" zIndex="0" maxValue="2" minValue="-2" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis11" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label15" top="10" left="1070" width="420" height="30" zIndex="5" text="Torque Transfer" textAlign="center" bold="true" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" width="120" height="30" zIndex="2" text="TC">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart12" top="30" left="-10" width="500" height="270" zIndex="0" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis12" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph20" zIndex="0" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph21" zIndex="1" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph22" zIndex="2" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph23" zIndex="3" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis12" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label16" top="10" left="50" width="450" height="30" zIndex="1" text="TC Derating Output" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart13" top="30" left="500" width="500" height="270" zIndex="2" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis13" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph24" zIndex="0" maxValue="1" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph25" zIndex="1" maxValue="1" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis13" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label17" top="10" left="560" width="190" height="30" zIndex="3" text="Longitudinal Slip" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="Label19" top="10" left="780" width="150" height="30" zIndex="4" text="Slip Reference:" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="10" left="910" width="100" height="30" zIndex="5" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem4" left="0" width="120" height="30" zIndex="3" text="LP">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart14" top="30" left="-10" width="500" height="270" zIndex="0" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis14" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph26" zIndex="0" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph27" zIndex="1" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph28" zIndex="2" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph29" zIndex="3" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis14" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label18" top="10" left="50" width="450" height="30" zIndex="1" text="LP Derating Output" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart15" top="30" left="500" width="500" height="270" zIndex="2" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis15" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph30" zIndex="0" maxValue="1" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph31" zIndex="1" maxValue="1" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis15" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label20" top="10" left="560" width="190" height="30" zIndex="3" text="Longitudinal Slip" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="Label21" top="10" left="780" width="150" height="30" zIndex="4" text="Slip Reference:" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="10" left="910" width="100" height="30" zIndex="5" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem5" left="0" width="120" height="30" zIndex="4" text="PL">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart17" top="30" left="-10" width="500" height="270" zIndex="0" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis17" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph34" zIndex="0" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis17" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label22" top="10" left="50" width="450" height="30" zIndex="1" text="PL Derating Output" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart18" top="30" left="500" width="500" height="270" zIndex="2" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis18" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph32" zIndex="0" maxValue="250" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis18" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label23" top="10" left="560" width="450" height="30" zIndex="3" text="Actual Current [A]" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart19" top="30" left="1010" width="480" height="270" zIndex="4" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis19" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph33" zIndex="0" maxValue="600" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis19" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label24" top="10" left="1070" width="420" height="30" zIndex="5" text="Actual Voltage [V]" textAlign="center" bold="true" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem6" left="0" width="120" height="30" zIndex="5" text="RB">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart20" top="30" left="-10" width="500" height="270" zIndex="0" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis20" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph35" zIndex="0" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph36" zIndex="1" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph37" zIndex="2" xAxisRefId="xAxisRefId1" />
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph38" zIndex="3" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis20" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label25" top="10" left="50" width="450" height="30" zIndex="1" text="RB Output" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart21" top="30" left="500" width="500" height="270" zIndex="2" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis21" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph39" zIndex="0" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis21" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label26" top="10" left="560" width="450" height="30" zIndex="3" text="State Of Charge" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart22" top="30" left="1010" width="480" height="270" zIndex="4" borderWidth="0px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis22" width="40" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':0}}" unit="{'metric':'2H','imperial':'2H','imperial-us':'2H'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph41" zIndex="0" maxValue="600" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis22" height="20" zIndex="1" format="ss" tickLabelDistance="5px" timeSpan="30">
+                  <Widgets />
+                </Widget>
+                <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis16" width="50" zIndex="2" unit="{'metric':'AMP','imperial':'AMP','imperial-us':'AMP'}">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph40" zIndex="0" maxValue="250" xAxisRefId="xAxisRefId1" />
+                  </Widgets>
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="Label27" top="10" left="1070" width="420" height="30" zIndex="5" text="Actual Voltage &amp; Actual Current" textAlign="center" bold="true" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem7" left="0" width="120" height="30" zIndex="6" text="Extra 1">
+          <Widgets />
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem8" left="0" width="120" height="30" zIndex="7" text="Extra 2">
+          <Widgets />
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem9" left="0" width="120" height="30" zIndex="8" text="Extra 3">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

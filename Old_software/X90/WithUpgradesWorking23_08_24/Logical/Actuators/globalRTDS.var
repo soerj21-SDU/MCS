@@ -1,0 +1,3 @@
+VAR
+	gRTDS : gRTDS_typ;
+END_VAR

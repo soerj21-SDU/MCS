@@ -1,0 +1,20 @@
+VAR
+	tempActivateOutputTorque : BOOL := FALSE;
+	tempManualControl : BOOL := FALSE;
+	distDelta : REAL;
+	cycletime : UDINT;
+	RTInfo_0 : RTInfo;
+	constant : constant_typ;
+	TON_history : TON;
+	TON_acceleration_0to100 : TON;
+	torqueSetpoint : ARRAY[0..3] OF REAL;
+	enableAccelerationTimer : BOOL;
+	i_powerLimit : INT;
+	i : INT;
+	j : INT;
+	control : control_typ;
+	torqueLimitNM : REAL;
+	ActualSpeedRADS : REAL;
+	MaxSpeedRADS : REAL;
+	individualInverterTorqueEnabled : BOOL;
+END_VAR

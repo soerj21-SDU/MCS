@@ -1,0 +1,3 @@
+VAR
+	gLowVoltageBattery : gLowVoltageBattery_typ;
+END_VAR

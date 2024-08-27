@@ -1,0 +1,3 @@
+VAR
+	gSteeringAngle : gSteeringAngle_typ;
+END_VAR

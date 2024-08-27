@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="amsChargingContent" height="880" width="1670" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="6" x1="0" x2="0" y1="880" y2="0" />
+    <Widget xsi:type="widgets.brease.LineChart" id="LineChart2" top="580" left="25" width="360" height="280" zIndex="7" chartMargin="5px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.LineChartYAxis" id="LineChartYAxis2" width="40" zIndex="0" axisLabelDistance="20px">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.LineChartGraph" id="LineChartGraph2" zIndex="0" maxValue="200" xAxisRefId="LineChartIndexAxis2" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.LineChartIndexAxis" id="LineChartIndexAxis2" height="20" zIndex="1">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="540" left="25" width="370" height="30" zIndex="8" text="Charging Current" textAlign="center" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart1" top="60" left="1145" width="510" height="145" zIndex="9" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem1" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem2" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem3" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem4" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem5" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem6" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem7" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem8" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem9" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem10" zIndex="9" text="10" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem21" zIndex="10" text="11" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem22" zIndex="11" text="12" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem23" zIndex="12" text="13" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem24" zIndex="13" text="14" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart2" top="60" left="749" width="385" height="145" zIndex="10" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem11" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem12" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem13" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem14" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem15" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem16" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem17" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem18" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem19" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem20" zIndex="9" text="10" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="-1" left="755" width="385" height="50" zIndex="11" text="Cell Temperatures" textAlign="center" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="-2" left="1155" width="495" height="50" zIndex="12" text="Balancing Resistor Temperatures" textAlign="center" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart3" top="225" left="750" width="385" height="145" zIndex="13" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem25" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem26" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem27" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem28" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem29" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem30" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem31" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem32" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem33" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem34" zIndex="9" text="10" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart4" top="390" left="750" width="385" height="145" zIndex="14" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem39" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem40" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem41" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem42" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem43" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem44" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem45" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem46" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem47" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem48" zIndex="9" text="10" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart5" top="555" left="750" width="385" height="145" zIndex="15" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem53" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem54" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem55" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem56" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem57" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem58" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem59" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem60" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem61" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem62" zIndex="9" text="10" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart6" top="720" left="750" width="385" height="145" zIndex="16" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem67" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem68" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem69" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem70" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem71" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem72" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem73" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem74" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem75" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem76" zIndex="9" text="10" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart7" top="225" left="1145" width="510" height="145" zIndex="17" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem81" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem82" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem83" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem84" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem85" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem86" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem87" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem88" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem89" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem90" zIndex="9" text="10" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem121" zIndex="10" text="11" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem122" zIndex="11" text="12" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem123" zIndex="12" text="13" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem124" zIndex="13" text="14" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart8" top="390" left="1145" width="510" height="145" zIndex="18" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem91" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem92" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem93" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem94" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem95" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem96" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem97" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem98" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem99" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem100" zIndex="9" text="10" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem125" zIndex="10" text="11" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem126" zIndex="11" text="12" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem127" zIndex="12" text="13" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem128" zIndex="13" text="14" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart9" top="555" left="1145" width="510" height="145" zIndex="19" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem101" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem102" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem103" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem104" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem105" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem106" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem107" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem108" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem109" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem110" zIndex="9" text="10" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem129" zIndex="10" text="11" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem130" zIndex="11" text="12" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem131" zIndex="12" text="13" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem132" zIndex="13" text="14" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.BarChart" id="BarChart10" top="720" left="1145" width="510" height="145" zIndex="20" chartMargin="10px 10px 0px 0px" format="{'metric':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" xAxisHeight="20" yAxisWidth="30" fontSize="10px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem111" zIndex="0" text="1" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem112" zIndex="1" text="2" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem113" zIndex="2" text="3" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem114" zIndex="3" text="4" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem115" zIndex="4" text="5" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem116" zIndex="5" text="6" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem117" zIndex="6" text="7" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem118" zIndex="7" text="8" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem119" zIndex="8" text="9" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem120" zIndex="9" text="10" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem133" zIndex="10" text="11" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem134" zIndex="11" text="12" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem135" zIndex="12" text="13" />
+        <Widget xsi:type="widgets.brease.BarChartItem" id="BarChartItem136" zIndex="13" text="14" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="444" left="155" width="100" height="30" zIndex="21" maxValue="12.5" value="12.5" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="415" left="155" width="105" height="30" zIndex="22" text="Scaling" textAlign="left" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="445" left="265" width="45" height="25" zIndex="23" text="A" fontSize="20px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label12" top="75" left="66" width="145" height="30" zIndex="24" text="Charging Active" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label13" top="215" left="81" width="60" height="30" zIndex="25" text="IMD" backColor="rgba(105, 105, 105, 0)" textAlign="center bottom" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label14" top="215" left="181" width="60" height="30" zIndex="26" text="AMS" backColor="rgba(105, 105, 105, 0)" textAlign="center bottom" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label15" top="202" left="266" width="90" height="44" zIndex="27" multiLine="true" text="HV DC Interlock" wordWrap="true" backColor="rgba(105, 105, 105, 0)" textAlign="center bottom" fontSize="20px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label16" top="300" left="81" width="60" height="30" zIndex="28" text="AIR+" backColor="rgba(105, 105, 105, 0)" textAlign="center bottom" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label17" top="300" left="181" width="60" height="30" zIndex="29" text="AIR-" backColor="rgba(105, 105, 105, 0)" textAlign="center bottom" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton9" top="245" left="85" width="50" height="50" zIndex="30" borderWidth="0px" cornerRadius="50px" backColor="rgba(255, 0, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(0, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton10" top="245" left="185" width="50" height="50" zIndex="31" borderWidth="0px" cornerRadius="50px" backColor="rgba(255, 0, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(0, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton11" top="245" left="280" width="50" height="50" zIndex="32" borderWidth="0px" cornerRadius="50px" backColor="rgba(255, 0, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(0, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton12" top="327" left="85" width="50" height="50" zIndex="33" borderWidth="0px" cornerRadius="50px" backColor="rgba(255, 0, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(0, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton13" top="327" left="180" width="50" height="50" zIndex="34" borderWidth="0px" cornerRadius="50px" backColor="rgba(255, 0, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(0, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label18" top="300" left="256" width="110" height="30" zIndex="35" text="Precharged" backColor="rgba(105, 105, 105, 0)" textAlign="center bottom" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton14" top="327" left="280" width="50" height="50" zIndex="36" borderWidth="0px" cornerRadius="50px" backColor="rgba(255, 0, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(0, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label19" top="75" left="236" width="145" height="30" zIndex="37" text="Connection OK" textAlign="center" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton15" top="110" left="110" width="50" height="50" zIndex="38" borderWidth="0px" cornerRadius="50px" backColor="rgba(255, 0, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(0, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton16" top="110" left="280" width="50" height="50" zIndex="39" value="true" borderWidth="0px" cornerRadius="50px" backColor="rgba(0, 255, 0, 1)" mouseDownBorderWidth="0px" textAlign="center" checkedBackColor="rgba(255, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="55" left="405" width="1255" height="160" zIndex="5" cornerRadius="5px" backColor="rgba(220, 220, 220, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label11" top="109" left="363" width="153" height="55" zIndex="40" text="Bank 1" textAlign="center" rotation="-90deg" fontSize="30px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="220" left="405" width="1255" height="160" zIndex="4" cornerRadius="5px" backColor="rgba(220, 220, 220, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="385" left="405" width="1255" height="160" zIndex="3" cornerRadius="5px" backColor="rgba(220, 220, 220, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle5" top="550" left="405" width="1255" height="160" zIndex="2" cornerRadius="5px" backColor="rgba(220, 220, 220, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle6" top="715" left="405" width="1255" height="160" zIndex="1" cornerRadius="5px" backColor="rgba(220, 220, 220, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label20" top="273" left="361" width="153" height="55" zIndex="41" text="Bank 2" textAlign="center" rotation="-90deg" fontSize="30px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label21" top="438" left="361" width="153" height="55" zIndex="42" text="Bank 3" textAlign="center" rotation="-90deg" fontSize="30px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label22" top="604" left="363" width="153" height="55" zIndex="43" text="Bank 4" textAlign="center" rotation="-90deg" fontSize="30px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label23" top="769" left="363" width="153" height="55" zIndex="44" text="Bank 5" textAlign="center" rotation="-90deg" fontSize="30px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="105" left="630" width="90" height="30" zIndex="45" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="110" left="469" width="156" height="20" zIndex="46" multiLine="true" text="Min cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="70" left="630" width="90" height="30" zIndex="47" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label24" top="75" left="469" width="156" height="20" zIndex="48" multiLine="true" text="Max cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label68" top="105" left="720" width="25" height="30" zIndex="49" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label69" top="70" left="720" width="25" height="30" zIndex="50" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput4" top="175" left="630" width="90" height="30" zIndex="51" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="180" left="470" width="156" height="20" zIndex="52" multiLine="true" text="Min resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput5" top="140" left="630" width="90" height="30" zIndex="53" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label25" top="145" left="470" width="156" height="20" zIndex="54" multiLine="true" text="Max resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label70" top="175" left="720" width="25" height="30" zIndex="55" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label71" top="140" left="720" width="25" height="30" zIndex="56" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput6" top="271" left="630" width="90" height="30" zIndex="57" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label26" top="276" left="469" width="156" height="20" zIndex="58" multiLine="true" text="Min cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput7" top="234" left="630" width="90" height="30" zIndex="59" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label27" top="241" left="469" width="156" height="20" zIndex="60" multiLine="true" text="Max cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label72" top="271" left="720" width="25" height="30" zIndex="61" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label73" top="236" left="720" width="25" height="30" zIndex="62" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput8" top="341" left="630" width="90" height="30" zIndex="63" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label28" top="346" left="470" width="156" height="20" zIndex="64" multiLine="true" text="Min resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput9" top="306" left="630" width="90" height="30" zIndex="65" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label29" top="311" left="470" width="156" height="20" zIndex="66" multiLine="true" text="Max resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label74" top="341" left="720" width="25" height="30" zIndex="67" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label75" top="306" left="720" width="25" height="30" zIndex="68" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput10" top="434" left="630" width="90" height="30" zIndex="69" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label30" top="440" left="469" width="156" height="20" zIndex="70" multiLine="true" text="Min cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput11" top="400" left="630" width="90" height="30" zIndex="71" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label31" top="405" left="469" width="156" height="20" zIndex="72" multiLine="true" text="Max cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label76" top="435" left="720" width="25" height="30" zIndex="73" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label77" top="400" left="720" width="25" height="30" zIndex="74" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput12" top="504" left="630" width="90" height="30" zIndex="75" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label32" top="510" left="470" width="156" height="20" zIndex="76" multiLine="true" text="Min resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput13" top="469" left="630" width="90" height="30" zIndex="77" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label33" top="475" left="470" width="156" height="20" zIndex="78" multiLine="true" text="Max resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label78" top="505" left="720" width="25" height="30" zIndex="79" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label79" top="470" left="720" width="25" height="30" zIndex="80" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput14" top="600" left="630" width="90" height="30" zIndex="81" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label34" top="605" left="469" width="156" height="20" zIndex="82" multiLine="true" text="Min cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput15" top="565" left="630" width="90" height="30" zIndex="83" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label35" top="570" left="469" width="156" height="20" zIndex="84" multiLine="true" text="Max cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label80" top="600" left="720" width="25" height="30" zIndex="85" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label81" top="565" left="720" width="25" height="30" zIndex="86" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput16" top="670" left="630" width="90" height="30" zIndex="87" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label36" top="675" left="470" width="156" height="20" zIndex="88" multiLine="true" text="Min resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput17" top="635" left="630" width="90" height="30" zIndex="89" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label37" top="640" left="470" width="156" height="20" zIndex="90" multiLine="true" text="Max resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label82" top="670" left="720" width="25" height="30" zIndex="91" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label83" top="635" left="720" width="25" height="30" zIndex="92" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput18" top="760" left="630" width="90" height="30" zIndex="93" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label38" top="765" left="469" width="156" height="20" zIndex="94" multiLine="true" text="Min cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput19" top="725" left="630" width="90" height="30" zIndex="95" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label39" top="730" left="469" width="156" height="20" zIndex="96" multiLine="true" text="Max cell temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label84" top="760" left="720" width="25" height="30" zIndex="97" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label85" top="725" left="720" width="25" height="30" zIndex="98" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput20" top="829" left="630" width="90" height="30" zIndex="99" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label40" top="835" left="470" width="156" height="20" zIndex="100" multiLine="true" text="Min resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput21" top="794" left="630" width="90" height="30" zIndex="101" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label41" top="800" left="470" width="156" height="20" zIndex="102" multiLine="true" text="Max resistor temperature" wordWrap="true" fontSize="13px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label86" top="830" left="720" width="25" height="30" zIndex="103" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label87" top="795" left="720" width="25" height="30" zIndex="104" text="C" fontSize="16px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle7" top="45" left="20" width="1645" height="831" zIndex="0" cornerRadius="5px" backColor="rgba(220, 220, 220, 1)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="475" left="105" width="100" height="25" zIndex="105" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" borderWidth="0px" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="475" left="195" width="95" height="25" zIndex="106" text="% of max" fontSize="20px" padding="0px" />
+  </Widgets>
+</Content>

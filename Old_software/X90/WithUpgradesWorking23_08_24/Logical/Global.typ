@@ -1,0 +1,12 @@
+
+TYPE
+	CAN_STATES : 
+		(
+		S_INIT,
+		S_INIT_TX,
+		S_INIT_RX,
+		S_RUNNING,
+		S_ERROR,
+		S_IDLE
+		);
+END_TYPE

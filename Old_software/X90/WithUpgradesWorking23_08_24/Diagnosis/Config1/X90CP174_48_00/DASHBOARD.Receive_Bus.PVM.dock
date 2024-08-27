@@ -1,0 +1,122 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=DASHBOARD 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index=0 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                          ArCanReceive_0                             ArCanReceive    0 "                                                               *"    0   24    1    0    1    0         
+                                  Enable                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                              DeviceName                              STRING[127]    0 "                                                   'IF6.ST1.IF1'"    1    9  128    1    0    0         
+                                      ID                                    UDINT    0 "                                                               0"    1    7    1   10    0    0         
+                                  IDMask                                    UDINT    0 "                                                               0"    1    7    1   10    0    0         
+                                  Format                                    UDINT    0 "                                                               1"    1    7    1   10    0    0         
+                               QueueSize                                    UDINT    0 "                                                             100"    1    7    1   10    0    0         
+                                    Busy                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                                  Active                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               0"    1    4    1   10    0    0         
+                           ReceivedFrame                           ArCanFrameType    0 "                                                               *"    1   24    1    0    0    0         
+                                    Data                              BYTE[0..63]    0 "                                                               *"    2   17   64    0    0    0        b
+                                 Data[0]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[1]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[2]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[3]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[4]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[5]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[6]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[7]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[8]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                 Data[9]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[10]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[11]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[12]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[13]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[14]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[15]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[16]                                     BYTE    0 "                                                               0"    3   17    1   10    0    0        b
+                                Data[17]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[18]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[19]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[20]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[21]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[22]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[23]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[24]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[25]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[26]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[27]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[28]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[29]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[30]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[31]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[32]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[33]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[34]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[35]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[36]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[37]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[38]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[39]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[40]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[41]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[42]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[43]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[44]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[45]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[46]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[47]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[48]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[49]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[50]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[51]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[52]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[53]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[54]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[55]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[56]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[57]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[58]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[59]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[60]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[61]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[62]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                                Data[63]                                     BYTE    0 "                                                               *"    3   17    1   10    0    0        b
+                              DataLength                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                                      ID                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                                  Format                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                               Timestamp                       ArCanTimestampType    0 "                                                               *"    1   24    1    0    0    0         
+                              UTCSeconds                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                          UTCNanoSeconds                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                               LocalTime                                     DINT    0 "                                                               *"    2    4    1   10    0    0         
+                            NewDataValid                                     BOOL    0 "                                                               *"    1    1    1    2    0    0         
+                      NumberOfLostFrames                                    UDINT    0 "                                                               *"    1    7    1   10    0    0         
+                                Internal                             UDINT[0..31]    0 "                                                               *"    1    7   32    0    0    0         
+                             Internal[0]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[1]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[2]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[3]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[4]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[5]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[6]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[7]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[8]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                             Internal[9]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[10]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[11]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[12]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[13]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[14]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[15]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[16]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[17]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[18]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[19]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[20]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[21]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[22]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[23]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[24]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[25]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[26]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[27]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[28]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[29]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[30]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                            Internal[31]                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         

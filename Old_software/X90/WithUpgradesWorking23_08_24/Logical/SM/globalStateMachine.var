@@ -1,0 +1,3 @@
+VAR
+	gStateMachine : gStateMachine_typ;
+END_VAR

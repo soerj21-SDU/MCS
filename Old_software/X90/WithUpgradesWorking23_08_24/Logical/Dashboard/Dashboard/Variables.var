@@ -1,0 +1,33 @@
+VAR
+	ledLVState : USINT;
+	scLedState : led_states;
+	estimatedRange : UINT;
+	msgIndex : USINT;
+	i : USINT;
+	speed : UINT;
+	soc : UINT;
+	maxTemperature : UINT;
+	lvBatVoltage : UINT;
+	torqueLimitNm : UINT;
+	powerLimitKW : UINT;
+	TON_sc : TON;
+	ArCanSetBaudrate_0 : ArCanSetBaudrate;
+	ArCanSend_0 : ArCanSend;
+	ArCanReceive_0 : ArCanReceive;
+	communicationState : CAN_STATES;
+	deviceName : STRING[127];
+	TON_disconnectTimer : TON;
+	TON_sendTimer : TON;
+	frameIdOffset : UDINT;
+	TX_CAN_ID_BASE : {REDUND_UNREPLICABLE} UDINT := 0;
+	RX_CAN_ID_BASE : {REDUND_UNREPLICABLE} UDINT := 0;
+END_VAR
+VAR CONSTANT
+	READY_OFF : USINT := 0;
+	READY_ON : USINT := 1;
+	READY_SLOW_BLINK : USINT := 2;
+	READY_FAST_BLINK : USINT := 3;
+	SC_OFF : USINT := 0;
+	SC_ON : USINT := 1;
+	SC_BLINK : USINT := 2;
+END_VAR

@@ -1,0 +1,15 @@
+VAR
+	this : this_typ;
+	i : UINT;
+	j : USINT;
+	pBool : REFERENCE TO BOOL; (*Temp pointer to bool*)
+	noOfPvVars : UINT;
+	MpDataRecorder_0 : MpDataRecorder;
+	MpDataRecorderConfig_0 : MpDataRecorderConfig;
+	MpDataRecorderConfiguration : MpDataRecorderConfigType;
+	MpRecipeCsv_0 : MpRecipeCsv;
+	MpRecipeRegPar_csv : MpRecipeRegPar;
+	FileInfo_0 : FileInfo;
+	DirCreate_0 : DirCreate;
+	RTInfo_0 : RTInfo;
+END_VAR

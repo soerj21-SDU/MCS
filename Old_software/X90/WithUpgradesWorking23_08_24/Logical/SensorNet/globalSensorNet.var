@@ -1,0 +1,6 @@
+VAR
+	gSensorNet : gSensorNet_typ;
+END_VAR
+VAR CONSTANT
+	SENSOR_NET_POLY_LEN : USINT := 8; (*Length - 1. Writing 8 here means its a 9th order polynomial*)
+END_VAR

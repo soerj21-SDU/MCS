@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gAlarmXCore" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="steeringAngleSensorDisconnected" />
+        <Property ID="Message" Value="Steering angle sensor disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gSteeringAngle.status.disconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="steeringAngleOutOfRange" />
+        <Property ID="Message" Value="Steering angle sensor values out of range" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gSteeringAngle.status.errorOutOfRange" />
+            <Selector ID="LowLimitEnable" Value="Static" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Name" Value="brakePressureRearOutOfRange" />
+        <Property ID="Message" Value="Brake pressure rear {&amp;LimitText}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gBraking.inputs.ai_brakePressureRear" />
+            <Selector ID="LowLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.rearWarningLimitMin" />
+              <Property ID="LimitText" Value="under low limit. " />
+              <Selector ID="LowLowLimitEnable" Value="Dynamic">
+                <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.rearWarningLimitMinMin" />
+                <Property ID="LimitText" Value="under low low limit. " />
+              </Selector>
+            </Selector>
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.rearWarningLimitMax" />
+              <Property ID="LimitText" Value="over high limit. " />
+              <Selector ID="HighHighLimitEnable" Value="Dynamic">
+                <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.rearWarningLimitMaxMax" />
+                <Property ID="LimitText" Value="over high high limit. " />
+              </Selector>
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Name" Value="brakePressureFrontOutOfRange" />
+        <Property ID="Message" Value="Brake pressure front {&amp;LimitText}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gBraking.inputs.ai_brakePressureFront" />
+            <Selector ID="LowLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.frontWarningLimitMin" />
+              <Property ID="LimitText" Value="under low limit." />
+              <Selector ID="LowLowLimitEnable" Value="Dynamic">
+                <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.frontWarningLimitMinMin" />
+                <Property ID="LimitText" Value="under low low limit." />
+              </Selector>
+            </Selector>
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.frontWarningLimitMax" />
+              <Property ID="LimitText" Value="over high limit." />
+              <Selector ID="HighHighLimitEnable" Value="Dynamic">
+                <Property ID="LimitPV" Value="::SENSORS:brakingPedalConstants.frontWarningLimitMaxMax" />
+                <Property ID="LimitText" Value="over high high limit." />
+              </Selector>
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[4]">
+        <Property ID="Name" Value="torquePedalError1" />
+        <Property ID="Message" Value="Torque pedal sensor 1 out of range" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTorqueSensor.inputs.torque1" />
+            <Selector ID="LowLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:torquePedalConstants.lowLimit1" />
+            </Selector>
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:torquePedalConstants..highLimit1" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[5]">
+        <Property ID="Name" Value="torquePedalError2" />
+        <Property ID="Message" Value="Torque pedal sensor 2 out of range" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTorqueSensor.inputs.torque2" />
+            <Selector ID="LowLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:torquePedalConstants.lowLimit2" />
+            </Selector>
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::SENSORS:torquePedalConstants.highLimit2" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[6]">
+        <Property ID="Name" Value="PowerLimitWarning_fix" />
+        <Property ID="Message" Value="Warning! Power usage close to limit" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Recording">
+            <Property ID="InactiveToActive" Value="FALSE" />
+            <Property ID="UnacknowledgedToAcknowledged" Value="FALSE" />
+          </Group>
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gShunt.data.actPowerKW" />
+            <Property ID="Exclusive" Value="FALSE" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="" />
+              <Property ID="LimitText" Value="Warning! Power limit high" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[7]">
+        <Property ID="Name" Value="PowerLimitError_fix" />
+        <Property ID="Message" Value="Error! Power limit exceeded!" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Recording">
+            <Property ID="InactiveToActive" Value="FALSE" />
+            <Property ID="UnacknowledgedToAcknowledged" Value="FALSE" />
+          </Group>
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gShunt.data.actPowerKW" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="" />
+              <Property ID="LimitText" Value="" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[8]">
+        <Property ID="Name" Value="coolingSystemManual" />
+        <Property ID="Message" Value="Cooling system on manual mode" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="InactiveToActive" Value="FALSE" />
+            <Property ID="UnacknowledgedToAcknowledged" Value="FALSE" />
+          </Group>
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gCooling[0].cmd.manualMode" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.1" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[9]">
+        <Property ID="Name" Value="stateChangeTimeout" />
+        <Property ID="Message" Value="State Machine never received confirmation and had a timeout" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Recording">
+            <Property ID="InactiveToActive" Value="FALSE" />
+            <Property ID="UnacknowledgedToAcknowledged" Value="FALSE" />
+          </Group>
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gStateMachine.status.stateChangeTimeout" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[10]">
+        <Property ID="Name" Value="tractionControlDisabled" />
+        <Property ID="Message" Value="Traction Control not enabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="InactiveToActive" Value="FALSE" />
+            <Property ID="UnacknowledgedToAcknowledged" Value="FALSE" />
+          </Group>
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.cmd.enableTractionControl" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[11]">
+        <Property ID="Name" Value="torqueVectoringDisabled" />
+        <Property ID="Message" Value="Torque Vectoring not enabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Recording">
+            <Property ID="InactiveToActive" Value="FALSE" />
+            <Property ID="UnacknowledgedToAcknowledged" Value="FALSE" />
+          </Group>
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.cmd.enableTorqueVectoring" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[12]">
+        <Property ID="Name" Value="powerLimiterDisabled" />
+        <Property ID="Message" Value="Power Limiter not enabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.cmd.enablePowerLimiter" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[13]">
+        <Property ID="Name" Value="regenBrakingDisabled" />
+        <Property ID="Message" Value="Regenerative Braking not enabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.cmd.enableRegenerativeBraking" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[14]">
+        <Property ID="Name" Value="inverter1disabled" />
+        <Property ID="Message" Value="Inverter 1 disabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[0].status.inverterEnabled" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[15]">
+        <Property ID="Name" Value="inverter2disabled" />
+        <Property ID="Message" Value="Inverter 2 disabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[1].status.inverterEnabled" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[16]">
+        <Property ID="Name" Value="inverter3disabled" />
+        <Property ID="Message" Value="Inverter 3 disabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[2].status.inverterEnabled" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[17]">
+        <Property ID="Name" Value="inverter4disabled" />
+        <Property ID="Message" Value="Inverter 4 disabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[3].status.inverterEnabled" />
+            <Selector ID="LowLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[18]">
+        <Property ID="Name" Value="torqueLimiting" />
+        <Property ID="Message" Value="Torque Limiting is active" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Recording">
+            <Property ID="InactiveToActive" Value="FALSE" />
+            <Property ID="UnacknowledgedToAcknowledged" Value="FALSE" />
+          </Group>
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.cmd.enableTorqueLimiter" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[19]">
+        <Property ID="Name" Value="inverter1ErrorDiagnostics" />
+        <Property ID="Message" Value="Inverter 1 - Error {&amp;inverter1ErrorDiag}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[0].inputs.com_errorDiagnostics" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[20]">
+        <Property ID="Name" Value="inverter2ErrorDiagnostics" />
+        <Property ID="Message" Value="Inverter 2 - Error {&amp;inverter2ErrorDiag}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[1].inputs.com_errorDiagnostics" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[21]">
+        <Property ID="Name" Value="inverter3ErrorDiagnostics" />
+        <Property ID="Message" Value="Inverter 3 - Error {&amp;inverter3ErrorDiag}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[2].inputs.com_errorDiagnostics" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[22]">
+        <Property ID="Name" Value="inverter4ErrorDiagnostics" />
+        <Property ID="Message" Value="Inverter 4 - Error {&amp;inverter4ErrorDiag}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[3].inputs.com_errorDiagnostics" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[23]">
+        <Property ID="Name" Value="amsUnderVoltage" />
+        <Property ID="Message" Value="AMS Error - Cell voltage too low" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.lowVoltage" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[24]">
+        <Property ID="Name" Value="amsOverVoltage" />
+        <Property ID="Message" Value="AMS Error - Cell voltage too high" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.highVoltage" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[25]">
+        <Property ID="Name" Value="amsUnderTemperature" />
+        <Property ID="Message" Value="AMS Error - Cell temperature too low" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.lowTemp" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[26]">
+        <Property ID="Name" Value="amsOverTemperature" />
+        <Property ID="Message" Value="AMS Error - Cell temperature too high" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.highTemp" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[27]">
+        <Property ID="Name" Value="amsCommunicationErrorLTC" />
+        <Property ID="Message" Value="AMS Error - LTC6813 communication error" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.ltc6813Com" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[28]">
+        <Property ID="Name" Value="amsCommunicationErrorShunt" />
+        <Property ID="Message" Value="AMS Error - Shunt communication error" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.shuntCom" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[29]">
+        <Property ID="Name" Value="amsOpenSc" />
+        <Property ID="Message" Value="AMS Error - Unable to open safety circuit" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.openSc" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[30]">
+        <Property ID="Name" Value="amsCloseSc" />
+        <Property ID="Message" Value="AMS Error - Unable to close safety circuit" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.closeSc" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[31]">
+        <Property ID="Name" Value="amsOpenAirMinusError" />
+        <Property ID="Message" Value="AMS Error - &#xA;Unable to open AIR- relay" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.openAirMinus" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[32]">
+        <Property ID="Name" Value="amsCloseAirMinusError" />
+        <Property ID="Message" Value="AMS Error - Unable to close AIR- relay" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.closeAirMinus" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[33]">
+        <Property ID="Name" Value="amsOpenAirPlusError" />
+        <Property ID="Message" Value="AMS Error - Unable to open AIR+ relay&#xA;&#xA;&#xA;" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.openAirPlus" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[34]">
+        <Property ID="Name" Value="amsCloseAirPlusError" />
+        <Property ID="Message" Value="AMS Error - &#xA;Unable to close AIR+ relay" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.closeAirPlus" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[35]">
+        <Property ID="Name" Value="amsOpenPreError" />
+        <Property ID="Message" Value="AMS Error - &#xA;Unable to open precharge relay" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.openPrePlus" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[36]">
+        <Property ID="Name" Value="amsClosePreError" />
+        <Property ID="Message" Value="AMS Error - Unable to close precharge relay" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.closePrePlus" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[37]">
+        <Property ID="Name" Value="amsPrechargeTimeout" />
+        <Property ID="Message" Value="AMS Error - Precharge timeout" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.preTimeout" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[38]">
+        <Property ID="Name" Value="amsUnexpectedChargingRate" />
+        <Property ID="Message" Value="AMS Error - Unexpected Charge Rate" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.unexpectedChargeRate" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[39]">
+        <Property ID="Name" Value="amsUnexpectedTsCurrent" />
+        <Property ID="Message" Value="AMS Error - Unexpected TS Current" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.unexpectedTsCurrent" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[40]">
+        <Property ID="Name" Value="amsBankCountMismatch" />
+        <Property ID="Message" Value="AMS Error - The specified bank count from the Car does not match the meassured cells by the AMS" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.bankCountMismatch" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[41]">
+        <Property ID="Name" Value="amsScBroken" />
+        <Property ID="Message" Value="AMS Error - SC Broken" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.scBroken" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[42]">
+        <Property ID="Name" Value="amsUnfitChargingVoltage" />
+        <Property ID="Message" Value="AMS Error - Unfit Charge Voltage" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.unexpectedChargeRate" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[43]">
+        <Property ID="Name" Value="amsMonitorError" />
+        <Property ID="Message" Value="AMS Error - Monitor Error" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.monitorError" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[44]">
+        <Property ID="Name" Value="amsRelayFailed" />
+        <Property ID="Message" Value="AMS Error - Relay Failed" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gAMS.status.error.relayFailed" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[45]">
+        <Property ID="Name" Value="chargingCurrentWarning_fix" />
+        <Property ID="Message" Value="Charging Current Warning" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[46]">
+        <Property ID="Name" Value="dashboardDisconnection" />
+        <Property ID="Message" Value="Dashboard Error - Disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gDashboard.status.DashboardDisconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[47]">
+        <Property ID="Name" Value="AMSDisconnection" />
+        <Property ID="Message" Value="AMS Error - Disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="gAMS.status.disconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[48]">
+        <Property ID="Name" Value="RTDSDisconnection" />
+        <Property ID="Message" Value="RTDS Error - Disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="gRTDS.status.RTDS_Disconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[49]">
+        <Property ID="Name" Value="Pump1Disconnection" />
+        <Property ID="Message" Value="Pump 1 Error - Disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="gCooling.status.error[0]" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[50]">
+        <Property ID="Name" Value="Pump2Disconnection" />
+        <Property ID="Message" Value="Pump 2 Error - Disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="gCooling.status.error[1]" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[51]">
+        <Property ID="Name" Value="LowVoltageBatteryLow" />
+        <Property ID="Message" Value="Warning! LV battery low " />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="gLowVoltageBattery.status.empty" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[52]">
+        <Property ID="Name" Value="inverter1Disconnected" />
+        <Property ID="Message" Value="Inverter 1 disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[0].status.inverterDisconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[53]">
+        <Property ID="Name" Value="inverter2Disconnected" />
+        <Property ID="Message" Value="Inverter 2 disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[1].status.inverterDisconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[54]">
+        <Property ID="Name" Value="inverter3Disconnected" />
+        <Property ID="Message" Value="Inverter 3 disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[2].status.inverterDisconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[55]">
+        <Property ID="Name" Value="inverter4Disconnected" />
+        <Property ID="Message" Value="Inverter 4 disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Property ID="Acknowledge" Value="0" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gInverters.inverter[3].status.inverterDisconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[56]">
+        <Property ID="Name" Value="dataloggingInactive" />
+        <Property ID="Message" Value="Datalogging disabled" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gDataLogging.status.dataloggingActive" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[57]">
+        <Property ID="Name" Value="torquePedalPlausibilityError" />
+        <Property ID="Message" Value="Torque Pedal Plausibility Error" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTorqueSensor.status.plausibilityError" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[58]">
+        <Property ID="Name" Value="shuntDisconnection" />
+        <Property ID="Message" Value="Shunt disconnected" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gShunt.status.disconnected" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[59]">
+        <Property ID="Name" Value="scBroken" />
+        <Property ID="Message" Value="SC Error - {&amp;scErrorString}" />
+        <Selector ID="Behavior" Value="DiscreteValueMonitoring">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gSafetyChain.status.scErrorIndex" />
+            <Group ID="TriggerValues">
+              <Property ID="[0]" Value="1" />
+              <Property ID="[1]" Value="2" />
+              <Property ID="[2]" Value="3" />
+              <Property ID="[3]" Value="4" />
+              <Property ID="[4]" Value="5" />
+              <Property ID="[5]" Value="6" />
+              <Property ID="[6]" Value="7" />
+              <Property ID="[7]" Value="8" />
+              <Property ID="[8]" Value="9" />
+              <Property ID="[9]" Value="10" />
+              <Property ID="[10]" Value="11" />
+              <Property ID="[11]" Value="12" />
+              <Property ID="[12]" Value="13" />
+              <Property ID="[13]" Value="14" />
+              <Property ID="[14]" Value="15" />
+              <Property ID="[15]" Value="16" />
+              <Property ID="[16]" Value="17" />
+              <Property ID="[17]" Value="18" />
+              <Property ID="[18]" Value="19" />
+              <Property ID="[19]" Value="20" />
+              <Property ID="[20]" Value="21" />
+              <Property ID="[21]" Value="22" />
+              <Property ID="[22]" Value="" />
+            </Group>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[60]">
+        <Property ID="Name" Value="inverterHighTemperature" />
+        <Property ID="Message" Value="Warning! Inverters are getting hot" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gCooling.status.warningInverterHighTemp" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[61]">
+        <Property ID="Name" Value="motorHighTemperature" />
+        <Property ID="Message" Value="Warning! Motors are getting hot" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gCooling.status.warningMotorHighTemp" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[62]">
+        <Property ID="Name" Value="orionBmsCommTimeout" />
+        <Property ID="Message" Value="Error! No Communication with Orion BMS" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gORION.status.commTimeout" />
+            <Selector ID="HighLimitEnable" Value="Static">
+              <Property ID="Limit" Value="0.5" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+    </Group>
+    <Group ID="mapp.AlarmX.Core.Snippets">
+      <Group ID="[0]">
+        <Property ID="Key" Value="inverter1ErrorDiag" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::gInverters.inverter[0].inputs.com_errorDiagnostics" />
+        </Selector>
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Key" Value="inverter2ErrorDiag" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::gInverters.inverter[1].inputs.com_errorDiagnostics" />
+        </Selector>
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Key" Value="inverter3ErrorDiag" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::gInverters.inverter[2].inputs.com_errorDiagnostics" />
+        </Selector>
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Key" Value="inverter4ErrorDiag" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::gInverters.inverter[3].inputs.com_errorDiagnostics" />
+        </Selector>
+      </Group>
+      <Group ID="[4]">
+        <Property ID="Key" Value="scErrorString" />
+        <Selector ID="Value">
+          <Property ID="PV" Value="::gSafetyChain.status.scErrorString" />
+        </Selector>
+      </Group>
+    </Group>
+  </Element>
+</Configuration>

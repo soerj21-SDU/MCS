@@ -1,0 +1,6 @@
+VAR
+	gSafetyChain : gSafetyChain_typ;
+END_VAR
+VAR CONSTANT
+	MAX_SC_ELEMENTS : USINT := 26;
+END_VAR
