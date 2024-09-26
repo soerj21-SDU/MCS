@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Sep 26 13:41:58 2024
+# Process ID: 24248
+# Current directory: C:/Git/GitHub/MCS/Drivers/INTERRUPT/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent39732 C:\Git\GitHub\MCS\Drivers\INTERRUPT\Vivado\INTERRUPT.xpr
+# Log file: C:/Git/GitHub/MCS/Drivers/INTERRUPT/Vivado/vivado.log
+# Journal file: C:/Git/GitHub/MCS/Drivers/INTERRUPT/Vivado\vivado.jou
+# Running On: Soeren-Laptop, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Git/GitHub/MCS/Drivers/INTERRUPT/Vivado/INTERRUPT.xpr
