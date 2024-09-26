@@ -1,0 +1,1422 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 12 17
+Title "Zynq-Based Master Controller"
+Date "2020-10-14"
+Rev "1.0"
+Comp "JFH & SRM"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Vikings_actives:BTT6030-2EKA U1202
+U 1 1 5F8DF5E1
+P 2150 2650
+F 0 "U1202" H 2450 1877 50  0000 C CNN
+F 1 "BTT6030-2EKA" H 2450 1786 50  0000 C CNN
+F 2 "Vikings_devices:PG-DSO-14-40" H 2485 3140 50  0001 C CNN
+F 3 "https://docs.rs-online.com/f6aa/0900766b815790fc.pdf" H 2485 3140 50  0001 C CNN
+	1    2150 2650
+	1    0    0    -1  
+$EndComp
+Text Notes 700  2250 0    50   ~ 0
+PROFET 1: Dashboard and Accumulator Management System (max. 1 A)
+Wire Notes Line
+	3750 640  6650 640 
+Text Notes 3750 640  0    50   ~ 0
+PROFET 2: Tractive System Container and Inverter 1 + 2 (max. 2.5 A)
+$Comp
+L Device:R R1210
+U 1 1 5F8E5C0A
+P 1750 2800
+F 0 "R1210" V 1670 2800 50  0000 C CNN
+F 1 "4.7k" V 1750 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1680 2800 50  0001 C CNN
+F 3 "~" H 1750 2800 50  0001 C CNN
+	1    1750 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1212
+U 1 1 5F8E8EEE
+P 1750 3100
+F 0 "R1212" V 1680 3100 50  0000 C CNN
+F 1 "4.7k" V 1750 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1680 3100 50  0001 C CNN
+F 3 "~" H 1750 3100 50  0001 C CNN
+	1    1750 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1213
+U 1 1 5F8E90ED
+P 1750 3200
+F 0 "R1213" V 1830 3200 50  0000 C CNN
+F 1 "4.7k" V 1750 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1680 3200 50  0001 C CNN
+F 3 "~" H 1750 3200 50  0001 C CNN
+	1    1750 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2850 2700 2900 2700
+Wire Wire Line
+	2900 2700 2900 2800
+Wire Wire Line
+	2900 2800 2850 2800
+Wire Wire Line
+	2850 2900 2900 2900
+Wire Wire Line
+	2900 2900 2900 2800
+Connection ~ 2900 2800
+Wire Wire Line
+	2850 3100 2900 3100
+Wire Wire Line
+	2900 3100 2900 3200
+Wire Wire Line
+	2900 3200 2850 3200
+Wire Wire Line
+	2900 3200 2900 3300
+Wire Wire Line
+	2900 3300 2850 3300
+Connection ~ 2900 3200
+Wire Wire Line
+	1900 2900 2050 2900
+Wire Wire Line
+	2050 3100 1900 3100
+Wire Wire Line
+	2050 2700 2000 2700
+Wire Wire Line
+	2000 2700 2000 2550
+$Comp
+L Device:R R1209
+U 1 1 5F8EE15D
+P 1850 2550
+F 0 "R1209" V 1750 2550 50  0000 C CNN
+F 1 "33" V 1850 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1780 2550 50  0001 C CNN
+F 3 "~" H 1850 2550 50  0001 C CNN
+	1    1850 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 2550 1650 2550
+$Comp
+L power:GND #PWR0370
+U 1 1 5F8F0C0F
+P 1250 2600
+F 0 "#PWR0370" H 1250 2350 50  0001 C CNN
+F 1 "GND" H 1100 2550 50  0000 C CNN
+F 2 "" H 1250 2600 50  0001 C CNN
+F 3 "" H 1250 2600 50  0001 C CNN
+	1    1250 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 2550 1250 2550
+Wire Wire Line
+	1250 2550 1250 2600
+Wire Wire Line
+	2050 3000 1950 3000
+$Comp
+L power:GND #PWR0371
+U 1 1 5F8F7045
+P 1700 4250
+F 0 "#PWR0371" H 1700 4000 50  0001 C CNN
+F 1 "GND" H 1700 4100 50  0000 C CNN
+F 2 "" H 1700 4250 50  0001 C CNN
+F 3 "" H 1700 4250 50  0001 C CNN
+	1    1700 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT Z1202
+U 1 1 5F8F68DE
+P 1950 3850
+F 0 "Z1202" V 1904 3930 50  0000 L CNN
+F 1 "MMSZ5V6T3G" V 1995 3930 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 1950 3850 50  0001 C CNN
+F 3 "https://docs.rs-online.com/d102/0900766b80dad80e.pdf" H 1950 3850 50  0001 C CNN
+	1    1950 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1217
+U 1 1 5F8FC516
+P 1700 3650
+F 0 "R1217" H 1400 3700 50  0000 L CNN
+F 1 "9.42k" H 1450 3600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1630 3650 50  0001 C CNN
+F 3 "~" H 1700 3650 50  0001 C CNN
+	1    1700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1220
+U 1 1 5F8FCC16
+P 1700 4050
+F 0 "R1220" H 1400 4100 50  0000 L CNN
+F 1 "2.05k" H 1450 4000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1630 4050 50  0001 C CNN
+F 3 "~" H 1700 4050 50  0001 C CNN
+	1    1700 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3800 1700 3850
+Wire Wire Line
+	1700 4200 1700 4250
+Wire Wire Line
+	1950 4000 1950 4250
+Wire Wire Line
+	1950 4250 1700 4250
+Connection ~ 1700 4250
+Wire Wire Line
+	1950 3000 1950 3400
+Wire Wire Line
+	1700 3500 1700 3400
+Wire Wire Line
+	1700 3400 1950 3400
+Connection ~ 1950 3400
+Wire Wire Line
+	1950 3400 1950 3700
+Wire Wire Line
+	1700 3850 1250 3850
+Connection ~ 1700 3850
+Wire Wire Line
+	1700 3850 1700 3900
+Text HLabel 1250 3850 0    50   Output ~ 0
+DashAMSC_V
+$Comp
+L Diode:BAS21 D1202
+U 1 1 5F86FC8E
+P 1500 2550
+F 0 "D1202" H 1500 2767 50  0000 C CNN
+F 1 "BAS21T-7-F" H 1500 2676 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1500 2375 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/Ds12004.pdf" H 1500 2550 50  0001 C CNN
+	1    1500 2550
+	1    0    0    -1  
+$EndComp
+Text Notes 3750 2990 0    50   ~ 0
+PROFET 3: Sensor Network and Inverter 3 + 4 (max. 2.5 A)
+Text Notes 700  4600 0    50   ~ 0
+Level Shifter 1
+Wire Notes Line
+	700  4600 3600 4600
+$Comp
+L Vikings_actives:SN74LV4T125PWR IC1202
+U 1 1 5F87FB70
+P 1500 5250
+F 0 "IC1202" H 2050 5515 50  0000 C CNN
+F 1 "SN74LV4T125PWR" H 2050 5424 50  0000 C CNN
+F 2 "Vikings_devices:SN74LV4T125PWR" H 2450 5350 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lv4t125.pdf" H 2450 5250 50  0001 L CNN
+F 4 "Single Power Supply Quadruple Buffer GATE w/ 3-State Output CMOS Logic Level Shifter" H 2450 5150 50  0001 L CNN "Description"
+F 5 "1.2" H 2450 5050 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 2450 4950 50  0001 L CNN "Manufacturer_Name"
+F 7 "SN74LV4T125PWR" H 2450 4850 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "SN74LV4T125PWR" H 2450 4750 50  0001 L CNN "Arrow Part Number"
+F 9 "https://www.arrow.com/en/products/sn74lv4t125pwr/texas-instruments" H 2450 4650 50  0001 L CNN "Arrow Price/Stock"
+F 10 "595-SN74LV4T125PWR" H 2450 4550 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LV4T125PWR?qs=%2Fd%252BFzHvH4c3%252BiZGZ%252Bu8B9g%3D%3D" H 2450 4450 50  0001 L CNN "Mouser Price/Stock"
+	1    1500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1202
+U 1 1 5F881671
+P 2950 5000
+F 0 "C1202" V 2900 5200 50  0000 C CNN
+F 1 "100nF" V 3000 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2988 4850 50  0001 C CNN
+F 3 "~" H 2950 5000 50  0001 C CNN
+	1    2950 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1203
+U 1 1 5F881DE9
+P 2950 5250
+F 0 "C1203" V 2900 5450 50  0000 C CNN
+F 1 "1uF" V 3000 5400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2988 5100 50  0001 C CNN
+F 3 "~" H 2950 5250 50  0001 C CNN
+	1    2950 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 5250 2800 5250
+Wire Wire Line
+	2800 5000 2800 5250
+Connection ~ 2800 5250
+Wire Wire Line
+	2800 5000 2800 4850
+Connection ~ 2800 5000
+$Comp
+L power:+3.3V #PWR0372
+U 1 1 5F885C5C
+P 2800 4850
+F 0 "#PWR0372" H 2800 4700 50  0001 C CNN
+F 1 "+3.3V" H 2815 5023 50  0000 C CNN
+F 2 "" H 2800 4850 50  0001 C CNN
+F 3 "" H 2800 4850 50  0001 C CNN
+	1    2800 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0373
+U 1 1 5F8861C2
+P 3300 5250
+F 0 "#PWR0373" H 3300 5000 50  0001 C CNN
+F 1 "GND" V 3305 5122 50  0000 R CNN
+F 2 "" H 3300 5250 50  0001 C CNN
+F 3 "" H 3300 5250 50  0001 C CNN
+	1    3300 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3100 5000 3100 5250
+Wire Wire Line
+	3100 5250 3300 5250
+Connection ~ 3100 5250
+Wire Wire Line
+	1500 5850 1400 5850
+Wire Wire Line
+	1400 5850 1400 6000
+$Comp
+L power:GND #PWR0374
+U 1 1 5F88C811
+P 1400 6000
+F 0 "#PWR0374" H 1400 5750 50  0001 C CNN
+F 1 "GND" H 1405 5827 50  0000 C CNN
+F 2 "" H 1400 6000 50  0001 C CNN
+F 3 "" H 1400 6000 50  0001 C CNN
+	1    1400 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 5250 1400 5250
+Wire Wire Line
+	1500 5550 1400 5550
+Wire Wire Line
+	2600 5650 2700 5650
+Wire Wire Line
+	2600 5350 3300 5350
+Wire Wire Line
+	3300 5350 3300 5250
+Connection ~ 3300 5250
+$Comp
+L power:GND #PWR0375
+U 1 1 5F8925E9
+P 2700 5650
+F 0 "#PWR0375" H 2700 5400 50  0001 C CNN
+F 1 "GND" V 2705 5522 50  0000 R CNN
+F 2 "" H 2700 5650 50  0001 C CNN
+F 3 "" H 2700 5650 50  0001 C CNN
+	1    2700 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0376
+U 1 1 5F892832
+P 1400 5250
+F 0 "#PWR0376" H 1400 5000 50  0001 C CNN
+F 1 "GND" V 1405 5122 50  0000 R CNN
+F 2 "" H 1400 5250 50  0001 C CNN
+F 3 "" H 1400 5250 50  0001 C CNN
+	1    1400 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0377
+U 1 1 5F892CD7
+P 1400 5550
+F 0 "#PWR0377" H 1400 5300 50  0001 C CNN
+F 1 "GND" V 1405 5422 50  0000 R CNN
+F 2 "" H 1400 5550 50  0001 C CNN
+F 3 "" H 1400 5550 50  0001 C CNN
+	1    1400 5550
+	0    1    1    0   
+$EndComp
+Text HLabel 1350 5650 0    50   Input ~ 0
+Zynq_1V8_PS_2
+Text HLabel 5800 6500 2    50   Input ~ 0
+Zynq_1V8_PS_4
+Text HLabel 2750 5750 2    50   Input ~ 0
+Zynq_1V8_PS_3
+Wire Wire Line
+	5800 6500 5650 6500
+Wire Wire Line
+	2600 5750 2750 5750
+Wire Wire Line
+	1350 5650 1500 5650
+$Comp
+L power:+3.3V #PWR0378
+U 1 1 5F8A8839
+P 1450 2900
+F 0 "#PWR0378" H 1450 2750 50  0001 C CNN
+F 1 "+3.3V" V 1450 3000 50  0000 L CNN
+F 2 "" H 1450 2900 50  0001 C CNN
+F 3 "" H 1450 2900 50  0001 C CNN
+	1    1450 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1350 5750 1500 5750
+Wire Wire Line
+	5650 6600 5800 6600
+Wire Wire Line
+	2600 5850 2750 5850
+Text Label 1350 5750 2    50   ~ 0
+FET1IN1
+Text Label 2750 5850 0    50   ~ 0
+FET1DSEL
+Text Label 1410 2800 2    50   ~ 0
+FET1IN0
+Text Label 1450 3200 2    50   ~ 0
+FET1IN1
+Text Label 1450 3100 2    50   ~ 0
+FET1DSEL
+Text Label 5800 6600 0    50   ~ 0
+FET2DSEL
+Wire Wire Line
+	1410 2800 1590 2800
+Wire Wire Line
+	1450 3100 1600 3100
+Wire Wire Line
+	1450 3200 1490 3200
+Text HLabel 3020 3200 2    50   Output ~ 0
+Dash_V_Out
+Text HLabel 3020 2800 2    50   Output ~ 0
+AMS_V_Out
+Wire Notes Line
+	700  2250 700  4450
+Wire Notes Line
+	700  4600 700  6250
+Wire Notes Line
+	700  6250 3600 6250
+Wire Notes Line
+	3600 6250 3600 4600
+Wire Notes Line
+	3600 4450 3600 2250
+Wire Notes Line
+	700  4450 3600 4450
+Wire Notes Line
+	700  2250 3600 2250
+$Comp
+L Vikings_actives:BTT6030-2EKA U1201
+U 1 1 5F90912E
+P 5200 1040
+F 0 "U1201" H 5500 267 50  0000 C CNN
+F 1 "BTT6030-2EKA" H 5500 176 50  0000 C CNN
+F 2 "Vikings_devices:PG-DSO-14-40" H 5535 1530 50  0001 C CNN
+F 3 "https://docs.rs-online.com/f6aa/0900766b815790fc.pdf" H 5535 1530 50  0001 C CNN
+	1    5200 1040
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1202
+U 1 1 5F909134
+P 4800 1190
+F 0 "R1202" V 4730 1190 50  0000 C CNN
+F 1 "4.7k" V 4800 1190 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 1190 50  0001 C CNN
+F 3 "~" H 4800 1190 50  0001 C CNN
+	1    4800 1190
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1204
+U 1 1 5F909140
+P 4800 1490
+F 0 "R1204" V 4730 1490 50  0000 C CNN
+F 1 "4.7k" V 4800 1490 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 1490 50  0001 C CNN
+F 3 "~" H 4800 1490 50  0001 C CNN
+	1    4800 1490
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1205
+U 1 1 5F909146
+P 4800 1590
+F 0 "R1205" V 4870 1590 50  0000 C CNN
+F 1 "4.7k" V 4800 1590 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 1590 50  0001 C CNN
+F 3 "~" H 4800 1590 50  0001 C CNN
+	1    4800 1590
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 1090 5950 1090
+Wire Wire Line
+	5950 1090 5950 1190
+Wire Wire Line
+	5950 1190 5900 1190
+Wire Wire Line
+	5900 1290 5950 1290
+Wire Wire Line
+	5950 1290 5950 1190
+Connection ~ 5950 1190
+Wire Wire Line
+	5900 1490 5950 1490
+Wire Wire Line
+	5950 1490 5950 1590
+Wire Wire Line
+	5950 1590 5900 1590
+Wire Wire Line
+	5950 1590 5950 1690
+Wire Wire Line
+	5950 1690 5900 1690
+Connection ~ 5950 1590
+Wire Wire Line
+	4950 1290 5100 1290
+Wire Wire Line
+	5100 1490 4950 1490
+Wire Wire Line
+	5100 1090 5050 1090
+Wire Wire Line
+	5050 1090 5050 940 
+$Comp
+L Device:R R1201
+U 1 1 5F909160
+P 4900 940
+F 0 "R1201" V 4800 940 50  0000 C CNN
+F 1 "33" V 4900 940 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4830 940 50  0001 C CNN
+F 3 "~" H 4900 940 50  0001 C CNN
+	1    4900 940 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 940  4700 940 
+$Comp
+L power:GND #PWR0379
+U 1 1 5F909167
+P 4300 990
+F 0 "#PWR0379" H 4300 740 50  0001 C CNN
+F 1 "GND" H 4150 940 50  0000 C CNN
+F 2 "" H 4300 990 50  0001 C CNN
+F 3 "" H 4300 990 50  0001 C CNN
+	1    4300 990 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 940  4300 940 
+Wire Wire Line
+	4300 940  4300 990 
+Wire Wire Line
+	5100 1390 5000 1390
+$Comp
+L power:GND #PWR0380
+U 1 1 5F909170
+P 4750 2640
+F 0 "#PWR0380" H 4750 2390 50  0001 C CNN
+F 1 "GND" H 4750 2490 50  0000 C CNN
+F 2 "" H 4750 2640 50  0001 C CNN
+F 3 "" H 4750 2640 50  0001 C CNN
+	1    4750 2640
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT Z1201
+U 1 1 5F909176
+P 5000 2240
+F 0 "Z1201" V 4954 2320 50  0000 L CNN
+F 1 "MMSZ5V6T3G" V 5045 2320 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 5000 2240 50  0001 C CNN
+F 3 "https://docs.rs-online.com/d102/0900766b80dad80e.pdf" H 5000 2240 50  0001 C CNN
+	1    5000 2240
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1207
+U 1 1 5F90917C
+P 4750 2040
+F 0 "R1207" H 4460 2110 50  0000 L CNN
+F 1 "3.79k" H 4500 1990 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 2040 50  0001 C CNN
+F 3 "~" H 4750 2040 50  0001 C CNN
+	1    4750 2040
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1208
+U 1 1 5F909182
+P 4750 2440
+F 0 "R1208" H 4470 2500 50  0000 L CNN
+F 1 "825" H 4550 2400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 2440 50  0001 C CNN
+F 3 "~" H 4750 2440 50  0001 C CNN
+	1    4750 2440
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2190 4750 2240
+Wire Wire Line
+	4750 2590 4750 2640
+Wire Wire Line
+	5000 2390 5000 2640
+Wire Wire Line
+	5000 2640 4750 2640
+Connection ~ 4750 2640
+Wire Wire Line
+	5000 1390 5000 1790
+Wire Wire Line
+	4750 1890 4750 1790
+Wire Wire Line
+	4750 1790 5000 1790
+Connection ~ 5000 1790
+Wire Wire Line
+	5000 1790 5000 2090
+Wire Wire Line
+	4750 2240 4300 2240
+Connection ~ 4750 2240
+Wire Wire Line
+	4750 2240 4750 2290
+Text HLabel 4300 2240 0    50   Output ~ 0
+TSCINV12C_V
+$Comp
+L Diode:BAS21 D1201
+U 1 1 5F909196
+P 4550 940
+F 0 "D1201" H 4550 1157 50  0000 C CNN
+F 1 "BAS21T-7-F" H 4500 1080 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4550 765 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/Ds12004.pdf" H 4550 940 50  0001 C CNN
+	1    4550 940 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0381
+U 1 1 5F90919C
+P 4500 1290
+F 0 "#PWR0381" H 4500 1140 50  0001 C CNN
+F 1 "+3.3V" V 4500 1390 50  0000 L CNN
+F 2 "" H 4500 1290 50  0001 C CNN
+F 3 "" H 4500 1290 50  0001 C CNN
+	1    4500 1290
+	0    -1   -1   0   
+$EndComp
+Text Label 4500 1190 2    50   ~ 0
+FET2IN0
+Text Label 4500 1590 2    50   ~ 0
+FET2IN1
+Text Label 4500 1490 2    50   ~ 0
+FET2DSEL
+Wire Wire Line
+	4500 1190 4610 1190
+Wire Wire Line
+	4500 1490 4650 1490
+Wire Wire Line
+	4500 1590 4580 1590
+Text HLabel 6090 1590 2    50   Output ~ 0
+TSC_V_Out
+Text HLabel 6090 1190 2    50   Output ~ 0
+INV12_V_Out
+Wire Notes Line
+	3750 640  3750 2840
+Wire Notes Line
+	3750 2840 6650 2840
+Wire Notes Line
+	6650 2840 6650 640 
+$Comp
+L Vikings_actives:BTT6030-2EKA U1203
+U 1 1 5F91AADD
+P 5200 3390
+F 0 "U1203" H 5500 2617 50  0000 C CNN
+F 1 "BTT6030-2EKA" H 5500 2526 50  0000 C CNN
+F 2 "Vikings_devices:PG-DSO-14-40" H 5535 3880 50  0001 C CNN
+F 3 "https://docs.rs-online.com/f6aa/0900766b815790fc.pdf" H 5535 3880 50  0001 C CNN
+	1    5200 3390
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1215
+U 1 1 5F91AAE3
+P 4800 3540
+F 0 "R1215" V 4720 3540 50  0000 C CNN
+F 1 "4.7k" V 4800 3540 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 3540 50  0001 C CNN
+F 3 "~" H 4800 3540 50  0001 C CNN
+	1    4800 3540
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1218
+U 1 1 5F91AAEF
+P 4800 3840
+F 0 "R1218" V 4730 3840 50  0000 C CNN
+F 1 "4.7k" V 4800 3840 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 3840 50  0001 C CNN
+F 3 "~" H 4800 3840 50  0001 C CNN
+	1    4800 3840
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1219
+U 1 1 5F91AAF5
+P 4800 3940
+F 0 "R1219" V 4870 3940 50  0000 C CNN
+F 1 "4.7k" V 4800 3940 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 3940 50  0001 C CNN
+F 3 "~" H 4800 3940 50  0001 C CNN
+	1    4800 3940
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 3440 5950 3440
+Wire Wire Line
+	5900 3640 5950 3640
+Wire Wire Line
+	5900 3840 5930 3840
+Wire Wire Line
+	5930 3840 5930 3940
+Wire Wire Line
+	5930 3940 5900 3940
+Wire Wire Line
+	5930 3940 5930 4040
+Wire Wire Line
+	5930 4040 5900 4040
+Connection ~ 5930 3940
+Wire Wire Line
+	4950 3640 5100 3640
+Wire Wire Line
+	5100 3840 4950 3840
+Wire Wire Line
+	5100 3440 5050 3440
+Wire Wire Line
+	5050 3440 5050 3290
+$Comp
+L Device:R R1214
+U 1 1 5F91AB0F
+P 4900 3290
+F 0 "R1214" V 4800 3290 50  0000 C CNN
+F 1 "33" V 4900 3290 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4830 3290 50  0001 C CNN
+F 3 "~" H 4900 3290 50  0001 C CNN
+	1    4900 3290
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 3290 4700 3290
+$Comp
+L power:GND #PWR0382
+U 1 1 5F91AB16
+P 4300 3340
+F 0 "#PWR0382" H 4300 3090 50  0001 C CNN
+F 1 "GND" H 4150 3290 50  0000 C CNN
+F 2 "" H 4300 3340 50  0001 C CNN
+F 3 "" H 4300 3340 50  0001 C CNN
+	1    4300 3340
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3290 4300 3290
+Wire Wire Line
+	4300 3290 4300 3340
+Wire Wire Line
+	5100 3740 5000 3740
+$Comp
+L power:GND #PWR0383
+U 1 1 5F91AB1F
+P 4750 4990
+F 0 "#PWR0383" H 4750 4740 50  0001 C CNN
+F 1 "GND" H 4750 4840 50  0000 C CNN
+F 2 "" H 4750 4990 50  0001 C CNN
+F 3 "" H 4750 4990 50  0001 C CNN
+	1    4750 4990
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_ALT Z1203
+U 1 1 5F91AB25
+P 5000 4590
+F 0 "Z1203" V 4954 4670 50  0000 L CNN
+F 1 "MMSZ5V6T3G" V 5045 4670 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 5000 4590 50  0001 C CNN
+F 3 "https://docs.rs-online.com/d102/0900766b80dad80e.pdf" H 5000 4590 50  0001 C CNN
+	1    5000 4590
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 4540 4750 4590
+Wire Wire Line
+	4750 4940 4750 4990
+Wire Wire Line
+	5000 4740 5000 4990
+Wire Wire Line
+	5000 4990 4750 4990
+Connection ~ 4750 4990
+Wire Wire Line
+	5000 3740 5000 4140
+Wire Wire Line
+	4750 4240 4750 4140
+Wire Wire Line
+	4750 4140 5000 4140
+Connection ~ 5000 4140
+Wire Wire Line
+	5000 4140 5000 4440
+Wire Wire Line
+	4750 4590 4300 4590
+Connection ~ 4750 4590
+Wire Wire Line
+	4750 4590 4750 4640
+Text HLabel 4300 4590 0    50   Output ~ 0
+NetINV34C_V
+$Comp
+L Diode:BAS21 D1203
+U 1 1 5F91AB45
+P 4550 3290
+F 0 "D1203" H 4550 3507 50  0000 C CNN
+F 1 "BAS21T-7-F" H 4500 3430 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4550 3115 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/Ds12004.pdf" H 4550 3290 50  0001 C CNN
+	1    4550 3290
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0384
+U 1 1 5F91AB4B
+P 4500 3640
+F 0 "#PWR0384" H 4500 3490 50  0001 C CNN
+F 1 "+3.3V" V 4500 3740 50  0000 L CNN
+F 2 "" H 4500 3640 50  0001 C CNN
+F 3 "" H 4500 3640 50  0001 C CNN
+	1    4500 3640
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4500 3540 4600 3540
+Wire Wire Line
+	4500 3840 4650 3840
+Wire Wire Line
+	4500 3940 4570 3940
+Text HLabel 6170 3940 2    50   Output ~ 0
+SNet_V_Out
+Text HLabel 6040 3540 2    50   Output ~ 0
+INV34_V_Out
+Wire Notes Line
+	3750 2990 3750 5190
+Wire Notes Line
+	6650 5190 6650 2990
+Text Notes 3750 5350 0    50   ~ 0
+Level Shifter 2
+Wire Notes Line
+	3750 5350 6650 5350
+$Comp
+L Vikings_actives:SN74LV4T125PWR IC1203
+U 1 1 5F936AB0
+P 4550 6000
+F 0 "IC1203" H 5100 6265 50  0000 C CNN
+F 1 "SN74LV4T125PWR" H 5100 6174 50  0000 C CNN
+F 2 "Vikings_devices:SN74LV4T125PWR" H 5500 6100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lv4t125.pdf" H 5500 6000 50  0001 L CNN
+F 4 "Single Power Supply Quadruple Buffer GATE w/ 3-State Output CMOS Logic Level Shifter" H 5500 5900 50  0001 L CNN "Description"
+F 5 "1.2" H 5500 5800 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 5500 5700 50  0001 L CNN "Manufacturer_Name"
+F 7 "SN74LV4T125PWR" H 5500 5600 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "SN74LV4T125PWR" H 5500 5500 50  0001 L CNN "Arrow Part Number"
+F 9 "https://www.arrow.com/en/products/sn74lv4t125pwr/texas-instruments" H 5500 5400 50  0001 L CNN "Arrow Price/Stock"
+F 10 "595-SN74LV4T125PWR" H 5500 5300 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LV4T125PWR?qs=%2Fd%252BFzHvH4c3%252BiZGZ%252Bu8B9g%3D%3D" H 5500 5200 50  0001 L CNN "Mouser Price/Stock"
+	1    4550 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1204
+U 1 1 5F936AB6
+P 6000 5750
+F 0 "C1204" V 5950 5950 50  0000 C CNN
+F 1 "100nF" V 6050 5950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6038 5600 50  0001 C CNN
+F 3 "~" H 6000 5750 50  0001 C CNN
+	1    6000 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1205
+U 1 1 5F936ABC
+P 6000 6000
+F 0 "C1205" V 5950 6200 50  0000 C CNN
+F 1 "1uF" V 6050 6150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6038 5850 50  0001 C CNN
+F 3 "~" H 6000 6000 50  0001 C CNN
+	1    6000 6000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 6000 5850 6000
+Wire Wire Line
+	5850 5750 5850 6000
+Connection ~ 5850 6000
+Wire Wire Line
+	5850 5750 5850 5600
+Connection ~ 5850 5750
+$Comp
+L power:+3.3V #PWR0385
+U 1 1 5F936AC7
+P 5850 5600
+F 0 "#PWR0385" H 5850 5450 50  0001 C CNN
+F 1 "+3.3V" H 5865 5773 50  0000 C CNN
+F 2 "" H 5850 5600 50  0001 C CNN
+F 3 "" H 5850 5600 50  0001 C CNN
+	1    5850 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0386
+U 1 1 5F936ACD
+P 6350 6000
+F 0 "#PWR0386" H 6350 5750 50  0001 C CNN
+F 1 "GND" V 6355 5872 50  0000 R CNN
+F 2 "" H 6350 6000 50  0001 C CNN
+F 3 "" H 6350 6000 50  0001 C CNN
+	1    6350 6000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 5750 6150 6000
+Wire Wire Line
+	6150 6000 6350 6000
+Connection ~ 6150 6000
+Wire Wire Line
+	4550 6600 4450 6600
+Wire Wire Line
+	4450 6600 4450 6750
+$Comp
+L power:GND #PWR0387
+U 1 1 5F936AD8
+P 4450 6750
+F 0 "#PWR0387" H 4450 6500 50  0001 C CNN
+F 1 "GND" H 4455 6577 50  0000 C CNN
+F 2 "" H 4450 6750 50  0001 C CNN
+F 3 "" H 4450 6750 50  0001 C CNN
+	1    4450 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6000 4450 6000
+Wire Wire Line
+	4550 6300 4450 6300
+Wire Wire Line
+	5650 6400 5750 6400
+Wire Wire Line
+	5650 6100 6350 6100
+Wire Wire Line
+	6350 6100 6350 6000
+Connection ~ 6350 6000
+$Comp
+L power:GND #PWR0388
+U 1 1 5F936AE4
+P 5750 6400
+F 0 "#PWR0388" H 5750 6150 50  0001 C CNN
+F 1 "GND" V 5755 6272 50  0000 R CNN
+F 2 "" H 5750 6400 50  0001 C CNN
+F 3 "" H 5750 6400 50  0001 C CNN
+	1    5750 6400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0389
+U 1 1 5F936AEA
+P 4450 6000
+F 0 "#PWR0389" H 4450 5750 50  0001 C CNN
+F 1 "GND" V 4455 5872 50  0000 R CNN
+F 2 "" H 4450 6000 50  0001 C CNN
+F 3 "" H 4450 6000 50  0001 C CNN
+	1    4450 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0390
+U 1 1 5F936AF0
+P 4450 6300
+F 0 "#PWR0390" H 4450 6050 50  0001 C CNN
+F 1 "GND" V 4455 6172 50  0000 R CNN
+F 2 "" H 4450 6300 50  0001 C CNN
+F 3 "" H 4450 6300 50  0001 C CNN
+	1    4450 6300
+	0    1    1    0   
+$EndComp
+Text HLabel 5800 6200 2    50   Input ~ 0
+Zynq_1V8_PS_5
+Text HLabel 4400 6400 0    50   Input ~ 0
+Zynq_1V8_PS_6
+Text HLabel 4400 6100 0    50   Input ~ 0
+Zynq_1V8_PS_8
+Text HLabel 1350 5350 0    50   Input ~ 0
+Zynq_1V8_PS_7
+Wire Wire Line
+	4400 6100 4550 6100
+Wire Wire Line
+	1500 5350 1350 5350
+Wire Wire Line
+	5650 6200 5800 6200
+Wire Wire Line
+	4400 6400 4550 6400
+Text Label 5800 6300 0    50   ~ 0
+FET2IN0
+Wire Wire Line
+	5800 6300 5650 6300
+Wire Wire Line
+	4400 6500 4550 6500
+Wire Wire Line
+	4550 6200 4400 6200
+Wire Wire Line
+	1500 5450 1350 5450
+Text Label 4400 6500 2    50   ~ 0
+FET2IN1
+Text Label 4400 6200 2    50   ~ 0
+FET3IN0
+Text Label 1350 5450 2    50   ~ 0
+FET3IN1
+Wire Notes Line
+	3750 5350 3750 7000
+Wire Notes Line
+	3750 7000 6650 7000
+Wire Notes Line
+	6650 7000 6650 5350
+Text Label 4500 3540 2    50   ~ 0
+FET3IN0
+Text Label 4500 3940 2    50   ~ 0
+FET3IN1
+$Comp
+L power:+3.3V #PWR0391
+U 1 1 5F968365
+P 2000 6550
+F 0 "#PWR0391" H 2000 6400 50  0001 C CNN
+F 1 "+3.3V" V 2015 6678 50  0000 L CNN
+F 2 "" H 2000 6550 50  0001 C CNN
+F 3 "" H 2000 6550 50  0001 C CNN
+	1    2000 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0392
+U 1 1 5F9689A8
+P 2100 7250
+F 0 "#PWR0392" H 2100 7000 50  0001 C CNN
+F 1 "GND" H 2105 7077 50  0000 C CNN
+F 2 "" H 2100 7250 50  0001 C CNN
+F 3 "" H 2100 7250 50  0001 C CNN
+	1    2100 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 6950 2550 6950
+Text Label 2550 6950 0    50   ~ 0
+FET3DSEL
+Wire Wire Line
+	1800 6950 1650 6950
+Text HLabel 1650 6950 0    50   Input ~ 0
+Zynq_1V8_PS_9
+Text Label 4500 3840 2    50   ~ 0
+FET3DSEL
+Text Notes 700  6400 0    50   ~ 0
+Level Shifter 3
+Wire Notes Line
+	700  6400 700  7500
+Wire Notes Line
+	700  7500 3600 7500
+Wire Notes Line
+	3600 7500 3600 6400
+Wire Notes Line
+	3600 6400 700  6400
+$Comp
+L Device:C C1206
+U 1 1 5F9BE3B4
+P 2400 6550
+F 0 "C1206" V 2350 6750 50  0000 C CNN
+F 1 "100nF" V 2450 6750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2438 6400 50  0001 C CNN
+F 3 "~" H 2400 6550 50  0001 C CNN
+	1    2400 6550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 6550 2100 6550
+Wire Wire Line
+	2100 6550 2100 6650
+Wire Wire Line
+	2550 6550 2750 6550
+$Comp
+L power:GND #PWR0393
+U 1 1 5F9CF5F0
+P 2750 6550
+F 0 "#PWR0393" H 2750 6300 50  0001 C CNN
+F 1 "GND" V 2755 6422 50  0000 R CNN
+F 2 "" H 2750 6550 50  0001 C CNN
+F 3 "" H 2750 6550 50  0001 C CNN
+	1    2750 6550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 6550 2100 6550
+Connection ~ 2100 6550
+$Comp
+L Device:R R1221
+U 1 1 5FA48EDE
+P 4750 4390
+F 0 "R1221" H 4470 4460 50  0000 L CNN
+F 1 "3.79k" H 4500 4340 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 4390 50  0001 C CNN
+F 3 "~" H 4750 4390 50  0001 C CNN
+	1    4750 4390
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1222
+U 1 1 5FA49342
+P 4750 4790
+F 0 "R1222" H 4460 4860 50  0000 L CNN
+F 1 "825" H 4550 4750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 4790 50  0001 C CNN
+F 3 "~" H 4750 4790 50  0001 C CNN
+	1    4750 4790
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1211
+U 1 1 5F911850
+P 1750 2900
+F 0 "R1211" V 1820 2900 50  0000 C CNN
+F 1 "4.7k" V 1750 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1680 2900 50  0001 C CNN
+F 3 "~" H 1750 2900 50  0001 C CNN
+	1    1750 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 2900 1600 2900
+$Comp
+L Device:R R1203
+U 1 1 5F92082A
+P 4800 1290
+F 0 "R1203" V 4870 1290 50  0000 C CNN
+F 1 "4.7k" V 4800 1290 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 1290 50  0001 C CNN
+F 3 "~" H 4800 1290 50  0001 C CNN
+	1    4800 1290
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 1290 4650 1290
+$Comp
+L Device:R R1216
+U 1 1 5F92FBA7
+P 4800 3640
+F 0 "R1216" V 4870 3640 50  0000 C CNN
+F 1 "4.7k" V 4800 3640 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 3640 50  0001 C CNN
+F 3 "~" H 4800 3640 50  0001 C CNN
+	1    4800 3640
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 3640 4650 3640
+$Comp
+L Vikings_actives:SN74LV1T34DBV U1204
+U 1 1 5F8386BD
+P 2100 6950
+F 0 "U1204" H 2350 6800 50  0000 L CNN
+F 1 "SN74LV1T34DBV" H 2350 6700 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2750 6700 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf" H 1700 6750 50  0001 C CNN
+	1    2100 6950
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	3750 5190 6650 5190
+Wire Notes Line
+	3750 2990 6650 2990
+Wire Wire Line
+	5950 3440 5950 3540
+Wire Wire Line
+	5900 3540 5950 3540
+Connection ~ 5950 3540
+Wire Wire Line
+	5950 3540 5950 3640
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FA3B741
+P 1590 2800
+AR Path="/5F94DFD6/5FA3B741" Ref="TP?"  Part="1" 
+AR Path="/5F7F5CD4/5FA3B741" Ref="TP1203"  Part="1" 
+F 0 "TP1203" H 1450 2950 50  0000 L CNN
+F 1 "TestPoint" H 1648 2827 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 1790 2800 50  0001 C CNN
+F 3 "~" H 1790 2800 50  0001 C CNN
+	1    1590 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FA4643E
+P 1490 3200
+AR Path="/5F94DFD6/5FA4643E" Ref="TP?"  Part="1" 
+AR Path="/5F7F5CD4/5FA4643E" Ref="TP1204"  Part="1" 
+F 0 "TP1204" H 1340 3400 50  0000 L CNN
+F 1 "TestPoint" H 1548 3227 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 1690 3200 50  0001 C CNN
+F 3 "~" H 1690 3200 50  0001 C CNN
+	1    1490 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FA4B3C2
+P 4600 3540
+AR Path="/5F94DFD6/5FA4B3C2" Ref="TP?"  Part="1" 
+AR Path="/5F7F5CD4/5FA4B3C2" Ref="TP1205"  Part="1" 
+F 0 "TP1205" H 4450 3680 50  0000 L CNN
+F 1 "TestPoint" H 4658 3567 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4800 3540 50  0001 C CNN
+F 3 "~" H 4800 3540 50  0001 C CNN
+	1    4600 3540
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FA55C0F
+P 4570 3940
+AR Path="/5F94DFD6/5FA55C0F" Ref="TP?"  Part="1" 
+AR Path="/5F7F5CD4/5FA55C0F" Ref="TP1206"  Part="1" 
+F 0 "TP1206" H 4405 4130 50  0000 L CNN
+F 1 "TestPoint" H 4628 3967 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4770 3940 50  0001 C CNN
+F 3 "~" H 4770 3940 50  0001 C CNN
+	1    4570 3940
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FA5B3BC
+P 4610 1190
+AR Path="/5F94DFD6/5FA5B3BC" Ref="TP?"  Part="1" 
+AR Path="/5F7F5CD4/5FA5B3BC" Ref="TP1201"  Part="1" 
+F 0 "TP1201" H 4460 1340 50  0000 L CNN
+F 1 "TestPoint" H 4668 1217 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4810 1190 50  0001 C CNN
+F 3 "~" H 4810 1190 50  0001 C CNN
+	1    4610 1190
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FA659BB
+P 4580 1590
+AR Path="/5F94DFD6/5FA659BB" Ref="TP?"  Part="1" 
+AR Path="/5F7F5CD4/5FA659BB" Ref="TP1202"  Part="1" 
+F 0 "TP1202" H 4425 1790 50  0000 L CNN
+F 1 "TestPoint" H 4638 1617 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4780 1590 50  0001 C CNN
+F 3 "~" H 4780 1590 50  0001 C CNN
+	1    4580 1590
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	700  640  700  2040
+Wire Notes Line
+	700  2040 3600 2040
+Wire Notes Line
+	3600 2040 3600 640 
+Wire Notes Line
+	3600 640  700  640 
+Text Notes 700  630  0    50   ~ 0
+Upstream PROFET Fuses
+$Comp
+L Vikings_misc:LV_Unfiltered #PWR0397
+U 1 1 5F910F3D
+P 1840 1150
+F 0 "#PWR0397" H 1840 950 50  0001 C CNN
+F 1 "LV_Unfiltered" H 1840 1323 50  0000 C CNN
+F 2 "" H 1840 1200 50  0001 C CNN
+F 3 "" H 1840 1200 50  0001 C CNN
+	1    1840 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1840 1150 1840 1170
+Wire Wire Line
+	1840 1170 2040 1170
+Wire Wire Line
+	2240 1170 2410 1170
+Wire Wire Line
+	2410 1170 2410 1150
+$Comp
+L Vikings_misc:LV_Unfiltered #PWR0399
+U 1 1 5F9621F2
+P 1840 1660
+F 0 "#PWR0399" H 1840 1460 50  0001 C CNN
+F 1 "LV_Unfiltered" H 1840 1833 50  0000 C CNN
+F 2 "" H 1840 1710 50  0001 C CNN
+F 3 "" H 1840 1710 50  0001 C CNN
+	1    1840 1660
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1840 1660 1840 1680
+$Comp
+L Device:Fuse_Small F1202
+U 1 1 5F9621F9
+P 2150 1680
+F 0 "F1202" H 2150 1740 50  0000 C CNN
+F 1 "15A" H 2150 1620 50  0000 C CNN
+F 2 "Vikings_misc:LittelfuseMiniBlade01530008Z" H 2150 1680 50  0001 C CNN
+F 3 "https://www.mouser.dk/datasheet/2/240/Littelfuse_MINI_Datasheet-1077557.pdf" H 2150 1680 50  0001 C CNN
+F 4 "Littelfuse" H 2150 1680 50  0001 C CNN "Manufacturer"
+F 5 "0297015.WXNV" H 2150 1680 50  0001 C CNN "Man. Part No."
+	1    2150 1680
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1840 1680 2050 1680
+$Comp
+L Vikings_misc:LV_Fused-2 #PWR0400
+U 1 1 5F96C14E
+P 2410 1660
+F 0 "#PWR0400" H 2410 1510 50  0001 C CNN
+F 1 "LV_Fused-2" H 2425 1833 50  0000 C CNN
+F 2 "" H 2410 1660 50  0001 C CNN
+F 3 "" H 2410 1660 50  0001 C CNN
+	1    2410 1660
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2410 1660 2410 1680
+Wire Wire Line
+	2410 1680 2250 1680
+Wire Wire Line
+	5950 1190 6090 1190
+Wire Wire Line
+	5950 1590 6090 1590
+Wire Wire Line
+	2900 3200 3020 3200
+Wire Wire Line
+	2900 2800 3020 2800
+Text Notes 1190 810  0    50   ~ 0
+Littelfuse MINI Automotive Fuses
+Wire Wire Line
+	5950 3540 6040 3540
+Wire Wire Line
+	5930 3940 5960 3940
+Wire Wire Line
+	1900 3200 2050 3200
+Connection ~ 1490 3200
+Wire Wire Line
+	1490 3200 1600 3200
+Connection ~ 4570 3940
+Wire Wire Line
+	4570 3940 4650 3940
+Wire Wire Line
+	4950 3940 5100 3940
+Connection ~ 4600 3540
+Wire Wire Line
+	4600 3540 4650 3540
+Wire Wire Line
+	4950 3540 5100 3540
+Connection ~ 4610 1190
+Wire Wire Line
+	4610 1190 4650 1190
+Wire Wire Line
+	4950 1190 5100 1190
+Connection ~ 4580 1590
+Wire Wire Line
+	4580 1590 4650 1590
+Wire Wire Line
+	4950 1590 5100 1590
+Wire Wire Line
+	2750 5550 2600 5550
+Text Label 2750 5550 0    50   ~ 0
+FET1IN0
+Wire Wire Line
+	2600 5450 2750 5450
+Text HLabel 2750 5450 2    50   Input ~ 0
+Zynq_1V8_PS_1
+Wire Wire Line
+	6160 3940 6170 3940
+$Comp
+L Device:Fuse_Small F?
+U 1 1 5FC1BB3C
+P 6060 3940
+AR Path="/5F8AF573/5FC1BB3C" Ref="F?"  Part="1" 
+AR Path="/5F7F5CD4/5FC1BB3C" Ref="F1203"  Part="1" 
+F 0 "F1203" H 6060 3880 50  0000 C CNN
+F 1 "2A" H 6060 4000 50  0000 C CNN
+F 2 "Vikings_devices:Littlefuse_Nano_Clip" H 6060 3940 50  0001 C CNN
+F 3 "https://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_157_datasheet.pdf.pdf" H 6060 3940 50  0001 C CNN
+F 4 "Littelfuse" H 6060 3940 50  0001 C CNN "Manufacturer"
+F 5 "0157001.DR" H 6060 3940 50  0001 C CNN "Man. Part No."
+	1    6060 3940
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F1201
+U 1 1 5F936FBE
+P 2140 1170
+F 0 "F1201" H 2140 1230 50  0000 C CNN
+F 1 "15A" H 2140 1110 50  0000 C CNN
+F 2 "Vikings_misc:LittelfuseMiniBlade01530008Z" H 2140 1170 50  0001 C CNN
+F 3 "https://www.mouser.dk/datasheet/2/240/Littelfuse_MINI_Datasheet-1077557.pdf" H 2140 1170 50  0001 C CNN
+F 4 "Littelfuse" H 2140 1170 50  0001 C CNN "Manufacturer"
+F 5 "0297010.WXNV" H 2140 1170 50  0001 C CNN "Man. Part No."
+	1    2140 1170
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vikings_misc:LV_Fused-1 #PWR0398
+U 1 1 5F91E0F1
+P 2410 1150
+F 0 "#PWR0398" H 2410 1000 50  0001 C CNN
+F 1 "LV_Fused-1" H 2425 1323 50  0000 C CNN
+F 2 "" H 2410 1150 50  0001 C CNN
+F 3 "" H 2410 1150 50  0001 C CNN
+	1    2410 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vikings_misc:LV_Fused-1 #PWR0298
+U 1 1 5FC467F8
+P 2450 2550
+F 0 "#PWR0298" H 2450 2400 50  0001 C CNN
+F 1 "LV_Fused-1" H 2465 2723 50  0000 C CNN
+F 2 "" H 2450 2550 50  0001 C CNN
+F 3 "" H 2450 2550 50  0001 C CNN
+	1    2450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vikings_misc:LV_Fused-2 #PWR0317
+U 1 1 5FC46B5F
+P 5500 940
+F 0 "#PWR0317" H 5500 790 50  0001 C CNN
+F 1 "LV_Fused-2" H 5515 1113 50  0000 C CNN
+F 2 "" H 5500 940 50  0001 C CNN
+F 3 "" H 5500 940 50  0001 C CNN
+	1    5500 940 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vikings_misc:LV_Fused-2 #PWR0401
+U 1 1 5FC46FAC
+P 5500 3290
+F 0 "#PWR0401" H 5500 3140 50  0001 C CNN
+F 1 "LV_Fused-2" H 5515 3463 50  0000 C CNN
+F 2 "" H 5500 3290 50  0001 C CNN
+F 3 "" H 5500 3290 50  0001 C CNN
+	1    5500 3290
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2800 2050 2800
+Wire Wire Line
+	1600 2800 1590 2800
+Connection ~ 1590 2800
+$EndSCHEMATC

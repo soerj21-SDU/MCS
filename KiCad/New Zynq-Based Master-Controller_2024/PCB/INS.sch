@@ -1,0 +1,464 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 17
+Title "Zynq-Based Master Controller"
+Date "2020-10-14"
+Rev "1.0"
+Comp "JFH & SRM"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1850 1950 0    50   Output ~ 0
+RS232TX
+Text HLabel 1850 1850 0    50   Input ~ 0
+RS232RX
+Text HLabel 3050 4100 0    50   Input ~ 0
+SYNC_OUT
+Text HLabel 3050 4000 0    50   Output ~ 0
+SYNC_IN
+Text HLabel 3050 4700 0    50   Input ~ 0
+GPS_PPS
+Wire Wire Line
+	3000 1450 3000 1400
+$Comp
+L power:GND #PWR0304
+U 1 1 5F7091AD
+P 3000 1400
+F 0 "#PWR0304" H 3000 1150 50  0001 C CNN
+F 1 "GND" H 3000 1250 50  0000 C CNN
+F 2 "" H 3000 1400 50  0001 C CNN
+F 3 "" H 3000 1400 50  0001 C CNN
+	1    3000 1400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 3050 4000 3050
+Wire Wire Line
+	3600 2650 4000 2650
+Wire Wire Line
+	4000 3000 4000 3050
+Wire Wire Line
+	4000 2700 4000 2650
+Wire Wire Line
+	3600 2550 4000 2550
+Wire Wire Line
+	3600 2150 4000 2150
+Wire Wire Line
+	4000 2500 4000 2550
+Wire Wire Line
+	4000 2200 4000 2150
+$Comp
+L power:GND #PWR0305
+U 1 1 5F70D5D9
+P 2500 3350
+F 0 "#PWR0305" H 2500 3100 50  0001 C CNN
+F 1 "GND" V 2505 3222 50  0000 R CNN
+F 2 "" H 2500 3350 50  0001 C CNN
+F 3 "" H 2500 3350 50  0001 C CNN
+	1    2500 3350
+	0    1    1    0   
+$EndComp
+Connection ~ 3000 3350
+Wire Wire Line
+	3000 3350 3000 3250
+Wire Wire Line
+	3000 3400 3000 3350
+$Comp
+L Device:C C705
+U 1 1 5F70CD1E
+P 2750 3350
+F 0 "C705" V 2500 3450 50  0000 C CNN
+F 1 "100nF" V 2600 3450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2788 3200 50  0001 C CNN
+F 3 "~" H 2750 3350 50  0001 C CNN
+	1    2750 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3000 3350 2900 3350
+Wire Wire Line
+	2600 3350 2500 3350
+Wire Wire Line
+	2400 2650 2250 2650
+Wire Wire Line
+	2400 2150 2250 2150
+Wire Wire Line
+	1950 2650 1850 2650
+Wire Wire Line
+	1950 2150 1850 2150
+$Comp
+L power:GND #PWR0306
+U 1 1 5F713ED8
+P 1850 2400
+F 0 "#PWR0306" H 1850 2150 50  0001 C CNN
+F 1 "GND" V 1855 2272 50  0000 R CNN
+F 2 "" H 1850 2400 50  0001 C CNN
+F 3 "" H 1850 2400 50  0001 C CNN
+	1    1850 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 2650 1850 2400
+Wire Wire Line
+	1850 2150 1850 2400
+Connection ~ 1850 2400
+Wire Wire Line
+	3650 1650 3600 1650
+Wire Wire Line
+	2400 1650 2350 1650
+NoConn ~ 2400 1750
+$Comp
+L Device:C C704
+U 1 1 5F71A9FA
+P 4000 2850
+F 0 "C704" H 4250 2800 50  0000 C CNN
+F 1 "100nF" H 4250 2900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4038 2700 50  0001 C CNN
+F 3 "~" H 4000 2850 50  0001 C CNN
+	1    4000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C702
+U 1 1 5F71B05C
+P 4000 2350
+F 0 "C702" H 4250 2300 50  0000 C CNN
+F 1 "100nF" H 4250 2400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4038 2200 50  0001 C CNN
+F 3 "~" H 4000 2350 50  0001 C CNN
+	1    4000 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C703
+U 1 1 5F71B3B5
+P 2100 2650
+F 0 "C703" V 2350 2650 50  0000 C CNN
+F 1 "100nF" V 2250 2650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2138 2500 50  0001 C CNN
+F 3 "~" H 2100 2650 50  0001 C CNN
+	1    2100 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C701
+U 1 1 5F71BB88
+P 2100 2150
+F 0 "C701" V 2350 2150 50  0000 C CNN
+F 1 "100nF" V 2250 2150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2138 2000 50  0001 C CNN
+F 3 "~" H 2100 2150 50  0001 C CNN
+	1    2100 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 1850 2400 1850
+Wire Wire Line
+	2400 1950 1850 1950
+Wire Wire Line
+	3600 1850 4000 1850
+Wire Wire Line
+	4000 1950 3600 1950
+Text HLabel 4000 1850 2    50   Output ~ 0
+UART_ROUT
+Text HLabel 4000 1950 2    50   Input ~ 0
+UART_DIN
+Wire Notes Line
+	1350 1150 4500 1150
+Wire Notes Line
+	4500 1150 4500 3650
+Wire Notes Line
+	4500 3650 1350 3650
+Wire Notes Line
+	1350 3650 1350 1150
+Text Notes 1350 1150 0    50   ~ 0
+RS-232 to 3.3 V Transceiver
+Text HLabel 1570 4210 0    50   Output ~ 0
+VCC
+Text HLabel 4150 4000 2    50   Input ~ 0
+Z_SYNC_I
+$Comp
+L Vikings_passives:ESD5Z3.3T1G D701
+U 1 1 5F741387
+P 3250 4100
+F 0 "D701" V 3400 3800 50  0000 L CNN
+F 1 "3.3 V Working" V 3500 3450 50  0000 L CNN
+F 2 "Vikings_devices:SODFL1608X70N" H 3700 3900 50  0001 L CNN
+F 3 "https://www.mouser.dk/datasheet/2/308/ESD5Z2_5T1_D-1522641.pdf" H 3400 4400 50  0001 L CNN
+F 4 "0.7" H 3700 3800 50  0001 L CNN "Height"
+F 5 "ON Semiconductor" H 3700 3700 50  0001 L CNN "Manufacturer_Name"
+F 6 "ESD5Z3.3T1G" H 3700 3600 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "ESD5Z3.3T1G" H 3700 3500 50  0001 L CNN "Arrow Part Number"
+F 8 "https://www.arrow.com/en/products/esd5z12t1g/on-semiconductor" H 3700 3400 50  0001 L CNN "Arrow Price/Stock"
+F 9 "863-ESD5Z3.3T1G" H 3700 3300 50  0001 L CNN "Mouser Part Number"
+F 10 "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor/ESD5Z12T1G?qs=2OtswVQKCOGXcPEz0%252Bii5A%3D%3D" H 3700 3200 50  0001 L CNN "Mouser Price/Stock"
+	1    3250 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 4100 3250 4100
+$Comp
+L power:GND #PWR0311
+U 1 1 5F745F4E
+P 3250 4400
+F 0 "#PWR0311" H 3250 4150 50  0001 C CNN
+F 1 "GND" H 3250 4250 50  0000 C CNN
+F 2 "" H 3250 4400 50  0001 C CNN
+F 3 "" H 3250 4400 50  0001 C CNN
+	1    3250 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4100 3500 4100
+Connection ~ 3250 4100
+Text Notes 1350 3950 0    50   ~ 0
+INS Supply
+$Comp
+L Device:R R701
+U 1 1 5F749AA7
+P 3650 4100
+F 0 "R701" V 3730 4100 50  0000 C CNN
+F 1 "127" V 3650 4090 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3580 4100 50  0001 C CNN
+F 3 "~" H 3650 4100 50  0001 C CNN
+	1    3650 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 4100 3900 4100
+$Comp
+L Device:C C706
+U 1 1 5F74C4D2
+P 3900 4250
+F 0 "C706" H 4015 4296 50  0000 L CNN
+F 1 "2.2uF" H 4015 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3938 4100 50  0001 C CNN
+F 3 "~" H 3900 4250 50  0001 C CNN
+	1    3900 4250
+	1    0    0    -1  
+$EndComp
+Text HLabel 4150 4100 2    50   Output ~ 0
+Z_SYNC_O
+Wire Wire Line
+	3250 4400 3900 4400
+Connection ~ 3250 4400
+Wire Wire Line
+	4150 4100 3900 4100
+Connection ~ 3900 4100
+Wire Wire Line
+	4150 4000 3050 4000
+Text Notes 2500 3950 0    50   ~ 0
+INS Synchronization
+Text Notes 4700 4700 0    50   ~ 0
+RC filter:\nf_c = 570 Hz
+$Comp
+L Vikings_passives:ESD5Z3.3T1G D702
+U 1 1 5F7681F1
+P 3250 4700
+F 0 "D702" V 3400 4400 50  0000 L CNN
+F 1 "3.3 V Working" V 3500 4050 50  0000 L CNN
+F 2 "Vikings_devices:SODFL1608X70N" H 3700 4500 50  0001 L CNN
+F 3 "https://www.mouser.dk/datasheet/2/308/ESD5Z2_5T1_D-1522641.pdf" H 3400 5000 50  0001 L CNN
+F 4 "0.7" H 3700 4400 50  0001 L CNN "Height"
+F 5 "ON Semiconductor" H 3700 4300 50  0001 L CNN "Manufacturer_Name"
+F 6 "ESD5Z3.3T1G" H 3700 4200 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "ESD5Z3.3T1G" H 3700 4100 50  0001 L CNN "Arrow Part Number"
+F 8 "https://www.arrow.com/en/products/esd5z12t1g/on-semiconductor" H 3700 4000 50  0001 L CNN "Arrow Price/Stock"
+F 9 "863-ESD5Z3.3T1G" H 3700 3900 50  0001 L CNN "Mouser Part Number"
+F 10 "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor/ESD5Z12T1G?qs=2OtswVQKCOGXcPEz0%252Bii5A%3D%3D" H 3700 3800 50  0001 L CNN "Mouser Price/Stock"
+	1    3250 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 4700 3250 4700
+$Comp
+L power:GND #PWR0312
+U 1 1 5F7681F8
+P 3250 5000
+F 0 "#PWR0312" H 3250 4750 50  0001 C CNN
+F 1 "GND" H 3250 4850 50  0000 C CNN
+F 2 "" H 3250 5000 50  0001 C CNN
+F 3 "" H 3250 5000 50  0001 C CNN
+	1    3250 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4700 3500 4700
+Connection ~ 3250 4700
+$Comp
+L Device:R R702
+U 1 1 5F768200
+P 3650 4700
+F 0 "R702" V 3730 4700 50  0000 C CNN
+F 1 "127" V 3650 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3580 4700 50  0001 C CNN
+F 3 "~" H 3650 4700 50  0001 C CNN
+	1    3650 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 4700 3900 4700
+$Comp
+L Device:C C707
+U 1 1 5F768207
+P 3900 4850
+F 0 "C707" H 4015 4896 50  0000 L CNN
+F 1 "2.2uF" H 4015 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3938 4700 50  0001 C CNN
+F 3 "~" H 3900 4850 50  0001 C CNN
+	1    3900 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 5000 3900 5000
+Connection ~ 3250 5000
+Wire Wire Line
+	4150 4700 3900 4700
+Connection ~ 3900 4700
+Text HLabel 4150 4700 2    50   Output ~ 0
+Z_PPS
+Wire Notes Line
+	4700 3950 4700 5200
+Wire Notes Line
+	2500 3950 2500 5200
+Text Notes 2500 5300 0    50   ~ 0
+INS GPS Pulse-Per-Second
+$Comp
+L power:+3.3V #PWR0313
+U 1 1 5F7311BB
+P 2300 5100
+F 0 "#PWR0313" H 2300 4950 50  0001 C CNN
+F 1 "+3.3V" V 2200 5150 50  0000 C CNN
+F 2 "" H 2300 5100 50  0001 C CNN
+F 3 "" H 2300 5100 50  0001 C CNN
+	1    2300 5100
+	0    1    1    0   
+$EndComp
+Text HLabel 1400 5000 1    50   Output ~ 0
+RESTORE
+Text Notes 1350 5300 0    50   ~ 0
+Reset Switch
+$Comp
+L Vikings_actives:SN65C3221 U701
+U 1 1 5F72B0E2
+P 3000 2350
+F 0 "U701" H 2450 3250 50  0000 C CNN
+F 1 "SN65C3221" H 2450 3350 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 3050 2350 50  0001 C CIN
+F 3 "https://www.ti.com/lit/ds/symlink/sn65c3221e.pdf" H 3000 3300 50  0001 C CNN
+	1    3000 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vikings_misc:PTS636_SK43_SMTR_LFS S?
+U 1 1 5FA8BEF7
+P 1700 5100
+AR Path="/5F5BCF4D/5FA8BEF7" Ref="S?"  Part="1" 
+AR Path="/5F705886/5FA8BEF7" Ref="S701"  Part="1" 
+F 0 "S701" H 1975 5385 50  0000 C CNN
+F 1 "PTS636" H 1975 5294 50  0000 C CNN
+F 2 "Vikings_misc:PTS636SK43SMTRLFS" H 2450 5200 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/PTS636 SK43 SMTR LFS.pdf" H 2450 5100 50  0001 L CNN
+F 4 "Tactile Switches Tact 50mA 12VDC, 6.0x3.5, 4.3mm H, 250gf, G leads, No ground pin, Black Actuator" H 2450 5000 50  0001 L CNN "Description"
+F 5 "4.5" H 2450 4900 50  0001 L CNN "Height"
+F 6 "C & K COMPONENTS" H 2450 4800 50  0001 L CNN "Manufacturer_Name"
+F 7 "PTS636 SK43 SMTR LFS" H 2450 4700 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "PTS636 SK43 SMTR LFS" H 2450 4600 50  0001 L CNN "Arrow Part Number"
+F 9 "https://www.arrow.com/en/products/pts636-sk43-smtr-lfs/ck" H 2450 4500 50  0001 L CNN "Arrow Price/Stock"
+F 10 "611-PTS636SK43SMTRLF" H 2450 4400 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/CK/PTS636-SK43-SMTR-LFS?qs=vLWxofP3U2wsQpQ593zsYw%3D%3D" H 2450 4300 50  0001 L CNN "Mouser Price/Stock"
+	1    1700 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 5100 2300 5100
+Wire Wire Line
+	1400 5100 1400 5000
+Wire Wire Line
+	1400 5100 1700 5100
+Wire Notes Line
+	1350 5200 1350 3950
+Wire Notes Line
+	1350 3950 4700 3950
+Wire Notes Line
+	1350 5200 4700 5200
+Wire Notes Line
+	1350 4600 4700 4600
+Wire Wire Line
+	2350 1400 2350 1650
+Wire Wire Line
+	3650 1750 3600 1750
+$Comp
+L power:GND #PWR0297
+U 1 1 5F886B69
+P 3650 1750
+F 0 "#PWR0297" H 3650 1500 50  0001 C CNN
+F 1 "GND" V 3655 1622 50  0000 R CNN
+F 2 "" H 3650 1750 50  0001 C CNN
+F 3 "" H 3650 1750 50  0001 C CNN
+	1    3650 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1570 4210 2200 4210
+$Comp
+L power:GND #PWR0299
+U 1 1 5FAB47C1
+P 2200 4400
+F 0 "#PWR0299" H 2200 4150 50  0001 C CNN
+F 1 "GND" H 2280 4240 50  0000 R CNN
+F 2 "" H 2200 4400 50  0001 C CNN
+F 3 "" H 2200 4400 50  0001 C CNN
+	1    2200 4400
+	1    0    0    -1  
+$EndComp
+Text HLabel 1570 4360 0    50   Output ~ 0
+GND
+Wire Wire Line
+	1570 4360 2200 4360
+Wire Wire Line
+	2200 4360 2200 4400
+$Comp
+L power:+3.3V #PWR0300
+U 1 1 5FBA6BC3
+P 2350 1400
+F 0 "#PWR0300" H 2350 1250 50  0001 C CNN
+F 1 "+3.3V" H 2365 1573 50  0000 C CNN
+F 2 "" H 2350 1400 50  0001 C CNN
+F 3 "" H 2350 1400 50  0001 C CNN
+	1    2350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0302
+U 1 1 5FBA79C5
+P 3000 3400
+F 0 "#PWR0302" H 3000 3250 50  0001 C CNN
+F 1 "+3.3V" H 3015 3573 50  0000 C CNN
+F 2 "" H 3000 3400 50  0001 C CNN
+F 3 "" H 3000 3400 50  0001 C CNN
+	1    3000 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vikings_misc:+5V_Sensor #PWR0136
+U 1 1 5FA7C6C9
+P 2200 4190
+F 0 "#PWR0136" H 2200 4040 50  0001 C CNN
+F 1 "+5V_Sensor" H 2215 4363 50  0000 C CNN
+F 2 "" H 2200 4190 50  0001 C CNN
+F 3 "" H 2200 4190 50  0001 C CNN
+	1    2200 4190
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4210 2200 4190
+Wire Wire Line
+	3650 1650 3650 1750
+Connection ~ 3650 1750
+$EndSCHEMATC

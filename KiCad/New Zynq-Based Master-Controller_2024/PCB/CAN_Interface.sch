@@ -1,0 +1,612 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 17
+Title "Zynq-Based Master Controller"
+Date "2020-10-14"
+Rev "1.0"
+Comp "JFH & SRM"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_CAN_LIN:SN65HVD235 U802
+U 1 1 5F6467FD
+P 2880 2850
+F 0 "U802" H 3150 2470 50  0000 C CNN
+F 1 "SN65HVD235" H 2550 2470 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2880 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd234.pdf" H 2780 3250 50  0001 C CNN
+	1    2880 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2880 2550 2880 2500
+Wire Wire Line
+	2480 3050 2210 3050
+Wire Wire Line
+	2210 3050 2210 3090
+Wire Wire Line
+	2480 2950 2210 2950
+Wire Wire Line
+	2210 2950 2210 3050
+Connection ~ 2210 3050
+$Comp
+L power:GND #PWR0303
+U 1 1 5F649E9B
+P 2210 3090
+F 0 "#PWR0303" H 2210 2840 50  0001 C CNN
+F 1 "GND" H 2080 3020 50  0000 C CNN
+F 2 "" H 2210 3090 50  0001 C CNN
+F 3 "" H 2210 3090 50  0001 C CNN
+	1    2210 3090
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2880 3250 2880 3300
+$Comp
+L power:GND #PWR0307
+U 1 1 5F64ACE2
+P 2880 3300
+F 0 "#PWR0307" H 2880 3050 50  0001 C CNN
+F 1 "GND" H 2885 3127 50  0000 C CNN
+F 2 "" H 2880 3300 50  0001 C CNN
+F 3 "" H 2880 3300 50  0001 C CNN
+	1    2880 3300
+	1    0    0    -1  
+$EndComp
+Text HLabel 1880 2750 0    50   Input ~ 0
+CAN0_D
+Text HLabel 1880 2850 0    50   Output ~ 0
+CAN0_R
+Wire Wire Line
+	3280 2850 3540 2850
+Wire Wire Line
+	3280 2950 3740 2950
+Wire Wire Line
+	3640 2850 4560 2850
+Connection ~ 3640 2850
+Wire Wire Line
+	3960 2950 4560 2950
+Connection ~ 3960 2950
+Text HLabel 4560 2850 2    50   BiDi ~ 0
+CAN0_H
+Text HLabel 4560 2950 2    50   BiDi ~ 0
+CAN0_L
+Wire Wire Line
+	3540 3020 3540 2850
+Connection ~ 3540 2850
+Wire Wire Line
+	3540 2850 3640 2850
+Wire Wire Line
+	3740 3020 3740 2950
+Connection ~ 3740 2950
+Wire Wire Line
+	3740 2950 3960 2950
+Wire Wire Line
+	3640 3520 3640 3580
+$Comp
+L power:GND #PWR0309
+U 1 1 5F667F91
+P 3640 3580
+F 0 "#PWR0309" H 3640 3330 50  0001 C CNN
+F 1 "GND" H 3645 3407 50  0000 C CNN
+F 2 "" H 3640 3580 50  0001 C CNN
+F 3 "" H 3640 3580 50  0001 C CNN
+	1    3640 3580
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	5860 510  5860 3890
+Wire Notes Line
+	510  3890 510  510 
+Wire Notes Line
+	11180 510  11180 3890
+Wire Notes Line
+	510  510  11180 510 
+Wire Notes Line
+	510  3890 11180 3890
+Text Notes 3840 700  2    100  ~ 0
+CAN0 Interface Circuit
+Text Notes 9500 720  2    100  ~ 0
+CAN1 Interface Circuit
+Text Notes 3940 3710 0    50   ~ 0
+TVS Diodes,\nStandoff Voltage = 16V\nBreakdown Voltage <= 20V\nClamp Voltage <= 23V
+Text Notes 1510 3440 0    50   ~ 0
+CAN Transceiver IC\nAuto-baud function not used.
+Text Notes 530  2780 0    50   ~ 0
+CAN0 Driver from PicoZed
+Text Notes 530  2880 0    50   ~ 0
+CAN0 Receiver to PicoZed
+Text Notes 5890 2880 0    50   ~ 0
+CAN1 Receiver to PicoZed
+Text Notes 5890 2770 0    50   ~ 0
+CAN1 Driver from PicoZed
+Text Notes 6890 3390 0    50   ~ 0
+CAN Transceiver IC\nAuto-baud function not used.
+Text Notes 9290 3700 0    50   ~ 0
+TVS Diodes,\nStandoff Voltage = 16V\nBreakdown Voltage <= 20V\nClamp Voltage <= 23V
+$Comp
+L power:GND #PWR0310
+U 1 1 5F67C7BA
+P 9010 3570
+F 0 "#PWR0310" H 9010 3320 50  0001 C CNN
+F 1 "GND" H 9015 3397 50  0000 C CNN
+F 2 "" H 9010 3570 50  0001 C CNN
+F 3 "" H 9010 3570 50  0001 C CNN
+	1    9010 3570
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9010 3510 9010 3570
+Connection ~ 9110 2940
+Wire Wire Line
+	9110 3010 9110 2940
+Text HLabel 9930 2940 2    50   BiDi ~ 0
+CAN1_L
+Text HLabel 9930 2840 2    50   BiDi ~ 0
+CAN1_H
+Wire Wire Line
+	8650 2940 9110 2940
+Text HLabel 7270 2840 0    50   Output ~ 0
+CAN1_R
+Text HLabel 7270 2740 0    50   Input ~ 0
+CAN1_D
+$Comp
+L power:GND #PWR0315
+U 1 1 5F67C76C
+P 8250 3290
+F 0 "#PWR0315" H 8250 3040 50  0001 C CNN
+F 1 "GND" H 8255 3117 50  0000 C CNN
+F 2 "" H 8250 3290 50  0001 C CNN
+F 3 "" H 8250 3290 50  0001 C CNN
+	1    8250 3290
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3240 8250 3290
+$Comp
+L power:GND #PWR0318
+U 1 1 5F67C763
+P 7580 3080
+F 0 "#PWR0318" H 7580 2830 50  0001 C CNN
+F 1 "GND" H 7450 3010 50  0000 C CNN
+F 2 "" H 7580 3080 50  0001 C CNN
+F 3 "" H 7580 3080 50  0001 C CNN
+	1    7580 3080
+	1    0    0    -1  
+$EndComp
+Connection ~ 7580 3040
+Wire Wire Line
+	7580 2940 7580 3040
+Wire Wire Line
+	7850 2940 7580 2940
+Wire Wire Line
+	7580 3040 7580 3080
+Wire Wire Line
+	7850 3040 7580 3040
+Wire Wire Line
+	8250 2540 8250 2480
+$Comp
+L Interface_CAN_LIN:SN65HVD235 U801
+U 1 1 5F67C751
+P 8250 2840
+F 0 "U801" H 8520 2460 50  0000 C CNN
+F 1 "SN65HVD235" H 7920 2460 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8250 2340 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd234.pdf" H 8150 3240 50  0001 C CNN
+	1    8250 2840
+	1    0    0    -1  
+$EndComp
+Text Notes 4940 2880 0    50   ~ 0
+CAN0_H to bus
+Text Notes 4940 2990 0    50   ~ 0
+CAN0_L to bus
+Text Notes 10330 2870 0    50   ~ 0
+CAN1_H to bus
+Text Notes 10330 2980 0    50   ~ 0
+CAN1_L to bus
+$Comp
+L Device:C_Small C804
+U 1 1 5F70D706
+P 2640 2500
+F 0 "C804" V 2411 2500 50  0000 C CNN
+F 1 "100nF" V 2502 2500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2640 2500 50  0001 C CNN
+F 3 "~" H 2640 2500 50  0001 C CNN
+	1    2640 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0319
+U 1 1 5F70FCA4
+P 2090 2500
+F 0 "#PWR0319" H 2090 2250 50  0001 C CNN
+F 1 "GND" H 1950 2440 50  0000 C CNN
+F 2 "" H 2090 2500 50  0001 C CNN
+F 3 "" H 2090 2500 50  0001 C CNN
+	1    2090 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C803
+U 1 1 5F710346
+P 7960 2480
+F 0 "C803" V 7731 2480 50  0000 C CNN
+F 1 "100nF" V 7822 2480 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7960 2480 50  0001 C CNN
+F 3 "~" H 7960 2480 50  0001 C CNN
+	1    7960 2480
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 2480 8060 2480
+Connection ~ 8250 2480
+$Comp
+L power:GND #PWR0320
+U 1 1 5F7147BF
+P 7280 2480
+F 0 "#PWR0320" H 7280 2230 50  0001 C CNN
+F 1 "GND" H 7150 2410 50  0000 C CNN
+F 2 "" H 7280 2480 50  0001 C CNN
+F 3 "" H 7280 2480 50  0001 C CNN
+	1    7280 2480
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R806
+U 1 1 5F717C7E
+P 2090 2750
+F 0 "R806" V 2170 2850 50  0000 C CNN
+F 1 "330" V 2080 2750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2020 2750 50  0001 C CNN
+F 3 "~" H 2090 2750 50  0001 C CNN
+	1    2090 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1940 2750 1880 2750
+$Comp
+L Device:R R808
+U 1 1 5F719E9E
+P 2090 2850
+F 0 "R808" V 2170 2740 50  0000 C CNN
+F 1 "330" V 2090 2850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2020 2850 50  0001 C CNN
+F 3 "~" H 2090 2850 50  0001 C CNN
+	1    2090 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2240 2850 2480 2850
+Wire Wire Line
+	2240 2750 2340 2750
+Wire Wire Line
+	1940 2850 1880 2850
+Wire Wire Line
+	2090 2500 2340 2500
+$Comp
+L Device:C_Small C806
+U 1 1 5F72193F
+P 2340 2620
+F 0 "C806" H 2250 2690 50  0000 L CNN
+F 1 "100pF" H 2250 2540 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2340 2620 50  0001 C CNN
+F 3 "https://www.we-online.com/katalog/en/datasheet/885012006023.pdf" H 2340 2620 50  0001 C CNN
+F 4 "Würth Elektronik" H 2340 2620 50  0001 C CNN "Manufacturer"
+F 5 "885012006023" H 2340 2620 50  0001 C CNN "Man. Part No."
+	1    2340 2620
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2340 2750 2340 2720
+Connection ~ 2340 2750
+Wire Wire Line
+	2340 2750 2480 2750
+Wire Wire Line
+	2340 2520 2340 2500
+Connection ~ 2340 2500
+Wire Wire Line
+	2340 2500 2540 2500
+Wire Wire Line
+	7280 2480 7740 2480
+$Comp
+L Device:R R805
+U 1 1 5F72CE19
+P 7480 2740
+F 0 "R805" V 7560 2840 50  0000 C CNN
+F 1 "330" V 7470 2740 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7410 2740 50  0001 C CNN
+F 3 "~" H 7480 2740 50  0001 C CNN
+	1    7480 2740
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R807
+U 1 1 5F72CE1F
+P 7480 2840
+F 0 "R807" V 7560 2730 50  0000 C CNN
+F 1 "330" V 7480 2840 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7410 2840 50  0001 C CNN
+F 3 "~" H 7480 2840 50  0001 C CNN
+	1    7480 2840
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7330 2840 7270 2840
+Wire Wire Line
+	7270 2740 7330 2740
+Wire Wire Line
+	7630 2740 7740 2740
+Wire Wire Line
+	7850 2840 7630 2840
+$Comp
+L Device:C_Small C805
+U 1 1 5F733E20
+P 7740 2610
+F 0 "C805" H 7650 2670 50  0000 L CNN
+F 1 "100pF" H 7650 2520 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7740 2610 50  0001 C CNN
+F 3 "https://www.we-online.com/katalog/en/datasheet/885012006023.pdf" H 7740 2610 50  0001 C CNN
+F 4 "Würth Elektronik" H 7740 2610 50  0001 C CNN "Manufacturer"
+F 5 "885012006023" H 7740 2610 50  0001 C CNN "Man. Part No."
+	1    7740 2610
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7740 2710 7740 2740
+Connection ~ 7740 2740
+Wire Wire Line
+	7740 2740 7850 2740
+Wire Wire Line
+	7740 2510 7740 2480
+Connection ~ 7740 2480
+Wire Wire Line
+	7740 2480 7860 2480
+Text Notes 4060 3250 0    50   ~ 0
+Place Bus Protection in signal path!!
+Text Notes 9440 3260 0    50   ~ 0
+Place Bus Protection in signal path!!
+$Comp
+L Vikings_passives:VCAN16A2 D802
+U 1 1 5F651741
+P 3840 3120
+F 0 "D802" H 3640 3070 50  0000 L CNN
+F 1 "VCAN16A2" H 3550 3160 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3740 3120 50  0001 C CNN
+F 3 "https://www.mouser.dk/datasheet/2/427/vcan16a2-03g-1713959.pdf" H 3740 3120 50  0001 C CNN
+	1    3840 3120
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Vikings_passives:VCAN16A2 D801
+U 1 1 5F653EB2
+P 9210 3110
+F 0 "D801" H 9010 3070 50  0000 L CNN
+F 1 "VCAN16A2" H 8900 3150 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9110 3110 50  0001 C CNN
+F 3 "https://www.mouser.dk/datasheet/2/427/vcan16a2-03g-1713959.pdf" H 9110 3110 50  0001 C CNN
+	1    9210 3110
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0321
+U 1 1 5F748C1A
+P 8250 1815
+F 0 "#PWR0321" H 8250 1665 50  0001 C CNN
+F 1 "+3.3V" H 8265 1988 50  0000 C CNN
+F 2 "" H 8250 1815 50  0001 C CNN
+F 3 "" H 8250 1815 50  0001 C CNN
+	1    8250 1815
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5FB58F18
+P 8250 2245
+AR Path="/5F5FC96C/5FB58F18" Ref="FB?"  Part="1" 
+AR Path="/5F604B68/5FB58F18" Ref="FB?"  Part="1" 
+AR Path="/5F650ED1/5FB58F18" Ref="FB801"  Part="1" 
+F 0 "FB801" H 8145 2500 50  0000 C CNN
+F 1 "220R @ 100 MHz" H 7870 2405 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" V 8180 2245 50  0001 C CNN
+F 3 "https://www.mouser.dk/ProductDetail/TDK/MPZ1608S221ATA00?qs=sGAEpiMZZMt1hubY80%2Fs8Hp09N5ImNkmPGZEpzSBQSs%3D" H 8250 2245 50  0001 C CNN
+F 4 "MPZ1608S221ATA00" V 8250 2245 50  0001 C CNN "Name"
+	1    8250 2245
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 2345 8250 2480
+Text Notes 8000 1940 0    50   ~ 0
+2.2 A
+Wire Wire Line
+	8250 2145 8250 1815
+$Comp
+L power:+3.3V #PWR0322
+U 1 1 5FB73510
+P 2880 1835
+F 0 "#PWR0322" H 2880 1685 50  0001 C CNN
+F 1 "+3.3V" H 2895 2008 50  0000 C CNN
+F 2 "" H 2880 1835 50  0001 C CNN
+F 3 "" H 2880 1835 50  0001 C CNN
+	1    2880 1835
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5FB73517
+P 2880 2265
+AR Path="/5F5FC96C/5FB73517" Ref="FB?"  Part="1" 
+AR Path="/5F604B68/5FB73517" Ref="FB?"  Part="1" 
+AR Path="/5F650ED1/5FB73517" Ref="FB802"  Part="1" 
+F 0 "FB802" H 2775 2520 50  0000 C CNN
+F 1 "220R @ 100 MHz" H 2500 2425 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" V 2810 2265 50  0001 C CNN
+F 3 "https://www.mouser.dk/ProductDetail/TDK/MPZ1608S221ATA00?qs=sGAEpiMZZMt1hubY80%2Fs8Hp09N5ImNkmPGZEpzSBQSs%3D" H 2880 2265 50  0001 C CNN
+F 4 "MPZ1608S221ATA00" V 2880 2265 50  0001 C CNN "Name"
+	1    2880 2265
+	1    0    0    -1  
+$EndComp
+Text Notes 2630 1960 0    50   ~ 0
+2.2 A
+Wire Wire Line
+	2880 2165 2880 1835
+Wire Wire Line
+	2740 2500 2880 2500
+Wire Wire Line
+	2880 2500 2880 2365
+Connection ~ 2880 2500
+Text Notes 4020 2410 0    50   ~ 0
+Only solder resistors on if split termination\nshould be used
+$Comp
+L Device:R R804
+U 1 1 5F650626
+P 3640 2530
+F 0 "R804" V 3560 2630 50  0000 R CNN
+F 1 "60" V 3640 2580 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3570 2530 50  0001 C CNN
+F 3 "~" H 3640 2530 50  0001 C CNN
+	1    3640 2530
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R802
+U 1 1 5F650F2F
+P 3960 2520
+F 0 "R802" V 3880 2620 50  0000 R CNN
+F 1 "60" V 3960 2580 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3890 2520 50  0001 C CNN
+F 3 "~" H 3960 2520 50  0001 C CNN
+	1    3960 2520
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C802
+U 1 1 5F65287A
+P 3800 2130
+F 0 "C802" H 3708 2084 50  0000 R CNN
+F 1 "C_term" H 3708 2175 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3800 2130 50  0001 C CNN
+F 3 "~" H 3800 2130 50  0001 C CNN
+	1    3800 2130
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3640 2380 3640 2270
+Wire Wire Line
+	3640 2270 3800 2270
+Wire Wire Line
+	3960 2270 3960 2370
+Wire Wire Line
+	3800 2230 3800 2270
+Connection ~ 3800 2270
+Wire Wire Line
+	3800 2270 3960 2270
+Wire Wire Line
+	3800 2030 3800 1920
+Wire Wire Line
+	3800 1920 3550 1920
+Wire Wire Line
+	3550 1920 3550 1960
+$Comp
+L power:GND #PWR0308
+U 1 1 5F65E4CD
+P 3550 1960
+F 0 "#PWR0308" H 3550 1710 50  0001 C CNN
+F 1 "GND" H 3555 1787 50  0000 C CNN
+F 2 "" H 3550 1960 50  0001 C CNN
+F 3 "" H 3550 1960 50  0001 C CNN
+	1    3550 1960
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3640 2680 3640 2850
+Wire Wire Line
+	3960 2670 3960 2950
+Wire Wire Line
+	8650 2840 8910 2840
+Wire Wire Line
+	8910 3010 8910 2840
+Connection ~ 8910 2840
+$Comp
+L power:GND #PWR0314
+U 1 1 5F67C7A1
+P 8920 1950
+F 0 "#PWR0314" H 8920 1700 50  0001 C CNN
+F 1 "GND" H 8925 1777 50  0000 C CNN
+F 2 "" H 8920 1950 50  0001 C CNN
+F 3 "" H 8920 1950 50  0001 C CNN
+	1    8920 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8920 1910 8920 1950
+Wire Wire Line
+	9170 1910 8920 1910
+Wire Wire Line
+	9170 2020 9170 1910
+Wire Wire Line
+	9170 2260 9330 2260
+Connection ~ 9170 2260
+Wire Wire Line
+	9170 2220 9170 2260
+Wire Wire Line
+	9330 2260 9330 2360
+Wire Wire Line
+	9010 2260 9170 2260
+Wire Wire Line
+	9010 2370 9010 2260
+$Comp
+L Device:C_Small C801
+U 1 1 5F67C780
+P 9170 2120
+F 0 "C801" H 9078 2074 50  0000 R CNN
+F 1 "C_term" H 9078 2165 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9170 2120 50  0001 C CNN
+F 3 "~" H 9170 2120 50  0001 C CNN
+	1    9170 2120
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R801
+U 1 1 5F67C77A
+P 9330 2510
+F 0 "R801" V 9250 2610 50  0000 R CNN
+F 1 "60" V 9330 2560 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9260 2510 50  0001 C CNN
+F 3 "~" H 9330 2510 50  0001 C CNN
+	1    9330 2510
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R803
+U 1 1 5F67C774
+P 9010 2520
+F 0 "R803" V 8930 2620 50  0000 R CNN
+F 1 "60" V 9010 2570 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8940 2520 50  0001 C CNN
+F 3 "~" H 9010 2520 50  0001 C CNN
+	1    9010 2520
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9010 2840 9930 2840
+Wire Wire Line
+	8910 2840 9010 2840
+Connection ~ 9010 2840
+Wire Wire Line
+	9110 2940 9330 2940
+Wire Wire Line
+	9330 2940 9930 2940
+Connection ~ 9330 2940
+Wire Wire Line
+	9330 2660 9330 2940
+Wire Wire Line
+	9010 2670 9010 2840
+Text Notes 9360 2390 0    50   ~ 0
+Only solder resistors on if split termination\nshould be used
+$EndSCHEMATC

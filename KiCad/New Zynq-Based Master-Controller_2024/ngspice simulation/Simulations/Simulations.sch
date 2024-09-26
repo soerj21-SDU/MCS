@@ -1,0 +1,496 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Sallen-Key Filter Simulation"
+Date "2020-11-17"
+Rev "1"
+Comp "JFH  & SRM"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1750 2200 1750 1700
+$Comp
+L pspice:0 #GND?
+U 1 1 5F759D95
+P 1750 3100
+F 0 "#GND?" H 1750 3000 50  0001 C CNN
+F 1 "0" H 1750 3189 50  0000 C CNN
+F 2 "" H 1750 3100 50  0001 C CNN
+F 3 "~" H 1750 3100 50  0001 C CNN
+	1    1750 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 1700 1650 1700
+Connection ~ 1750 1700
+Text GLabel 1650 1700 0    50   Input ~ 0
+IN
+Wire Wire Line
+	6100 1800 5600 1800
+Wire Wire Line
+	6600 1100 5200 1100
+Wire Wire Line
+	5200 1100 5200 1500
+Wire Wire Line
+	5000 1900 5000 2500
+Wire Wire Line
+	5000 2500 6100 2500
+Wire Wire Line
+	6100 2500 6100 1800
+$Comp
+L pspice:0 #GND?
+U 1 1 5F765D39
+P 7200 1100
+F 0 "#GND?" H 7200 1000 50  0001 C CNN
+F 1 "0" V 7200 1144 50  0000 L CNN
+F 2 "" H 7200 1100 50  0001 C CNN
+F 3 "~" H 7200 1100 50  0001 C CNN
+	1    7200 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5F765ADA
+P 7150 3600
+F 0 "#GND?" H 7150 3500 50  0001 C CNN
+F 1 "0" H 7150 3689 50  0000 C CNN
+F 2 "" H 7150 3600 50  0001 C CNN
+F 3 "~" H 7150 3600 50  0001 C CNN
+	1    7150 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 3000 1750 3100
+Wire Wire Line
+	1750 2800 1750 3000
+Connection ~ 1750 3000
+Wire Wire Line
+	7250 3000 7250 2800
+Wire Wire Line
+	7250 2300 7250 1800
+Connection ~ 7250 1800
+Wire Wire Line
+	6600 1800 7250 1800
+Connection ~ 6100 1800
+$Comp
+L pspice:R R1
+U 1 1 5F75A8BD
+P 6350 1800
+F 0 "R1" V 6145 1800 50  0000 C CNN
+F 1 "147" V 6236 1800 50  0000 C CNN
+F 2 "" H 6350 1800 50  0001 C CNN
+F 3 "~" H 6350 1800 50  0001 C CNN
+	1    6350 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 1700 1750 1700
+$Comp
+L pspice:R R3
+U 1 1 5F760F46
+P 4450 1700
+F 0 "R3" V 4245 1700 50  0000 C CNN
+F 1 "8.66k" V 4336 1700 50  0000 C CNN
+F 2 "" H 4450 1700 50  0001 C CNN
+F 3 "~" H 4450 1700 50  0001 C CNN
+	1    4450 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R2
+U 1 1 5F760CBE
+P 3800 1700
+F 0 "R2" V 3595 1700 50  0000 C CNN
+F 1 "8.66k" V 3686 1700 50  0000 C CNN
+F 2 "" H 3800 1700 50  0001 C CNN
+F 3 "~" H 3800 1700 50  0001 C CNN
+	1    3800 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 1700 4150 1700
+Wire Wire Line
+	4150 1700 4200 1700
+Connection ~ 4150 1700
+Wire Wire Line
+	4150 1700 4150 900 
+Wire Wire Line
+	6100 900  6100 1800
+Wire Wire Line
+	4150 900  4750 900 
+Wire Wire Line
+	5250 900  6100 900 
+Wire Wire Line
+	1750 3000 2850 3000
+Wire Wire Line
+	4750 2550 4750 3000
+Wire Wire Line
+	4700 1700 4750 1700
+Wire Wire Line
+	4750 1700 5000 1700
+Connection ~ 4750 1700
+Wire Wire Line
+	4750 2050 4750 1700
+$Comp
+L pspice:C C1
+U 1 1 5F75A597
+P 7250 2550
+F 0 "C1" H 7428 2596 50  0000 L CNN
+F 1 "15n" H 7428 2505 50  0000 L CNN
+F 2 "" H 7250 2550 50  0001 C CNN
+F 3 "~" H 7250 2550 50  0001 C CNN
+	1    7250 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3600 5200 3600
+Wire Wire Line
+	5200 3600 5200 2100
+Text GLabel 5900 1800 1    50   Output ~ 0
+OpAmpOut
+$Comp
+L pspice:C C2
+U 1 1 5F7627DC
+P 4750 2300
+F 0 "C2" H 4500 2350 50  0000 L CNN
+F 1 "33n" H 4500 2250 50  0000 L CNN
+F 2 "" H 4750 2300 50  0001 C CNN
+F 3 "~" H 4750 2300 50  0001 C CNN
+	1    4750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C3
+U 1 1 5F762CD9
+P 5000 900
+F 0 "C3" V 4685 900 50  0000 C CNN
+F 1 "56n" V 4776 900 50  0000 C CNN
+F 2 "" H 5000 900 50  0001 C CNN
+F 3 "~" H 5000 900 50  0001 C CNN
+	1    5000 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5F79AD8E
+P 6850 3600
+F 0 "V2" V 7215 3600 50  0000 C CNN
+F 1 "100" V 7124 3600 50  0000 C CNN
+F 2 "" H 6850 3600 50  0001 C CNN
+F 3 "~" H 6850 3600 50  0001 C CNN
+	1    6850 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V3
+U 1 1 5F796F6D
+P 6900 1100
+F 0 "V3" V 7265 1100 50  0000 C CNN
+F 1 "100" V 7174 1100 50  0000 C CNN
+F 2 "" H 6900 1100 50  0001 C CNN
+F 3 "~" H 6900 1100 50  0001 C CNN
+	1    6900 1100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7250 1800 8200 1800
+Wire Wire Line
+	8200 3000 7250 3000
+Connection ~ 7250 3000
+$Comp
+L pspice:OPAMP U1
+U 1 1 5F768865
+P 5300 1800
+F 0 "U1" H 5644 1846 50  0000 L CNN
+F 1 "OPAMP" H 5644 1755 50  0000 L CNN
+F 2 "" H 5300 1800 50  0001 C CNN
+F 3 "~" H 5300 1800 50  0001 C CNN
+F 4 "X" H 5300 1800 50  0001 C CNN "Spice_Primitive"
+F 5 "LF356/NS" H 5300 1800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5300 1800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 4 5 3" H 5300 1800 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "/home/sebastian/Downloads/LF356.MOD" H 5300 1800 50  0001 C CNN "Spice_Lib_File"
+	1    5300 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7450 1800 1    50   Output ~ 0
+RCOut
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5F758441
+P 1750 2500
+F 0 "V1" H 1978 2546 50  0000 L CNN
+F 1 "dc 0 ac 1" H 1978 2455 50  0000 L CNN
+F 2 "" H 1750 2500 50  0001 C CNN
+F 3 "~" H 1750 2500 50  0001 C CNN
+	1    1750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3000 7250 3000
+$Comp
+L pspice:R R4
+U 1 1 5F804296
+P 2300 1700
+F 0 "R4" V 2095 1700 50  0000 C CNN
+F 1 "4.02k" V 2186 1700 50  0000 C CNN
+F 2 "" H 2300 1700 50  0001 C CNN
+F 3 "~" H 2300 1700 50  0001 C CNN
+	1    2300 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R5
+U 1 1 5F804738
+P 2850 2300
+F 0 "R5" V 2645 2300 50  0000 C CNN
+F 1 "1k" V 2736 2300 50  0000 C CNN
+F 2 "" H 2850 2300 50  0001 C CNN
+F 3 "~" H 2850 2300 50  0001 C CNN
+	1    2850 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2550 1700 2850 1700
+Wire Wire Line
+	2850 2050 2850 1700
+Connection ~ 2850 1700
+Wire Wire Line
+	2850 1700 3550 1700
+Wire Wire Line
+	2850 2550 2850 3000
+Connection ~ 2850 3000
+Wire Wire Line
+	2850 3000 4750 3000
+Connection ~ 4750 3000
+$Comp
+L pspice:0 #GND?
+U 1 1 5F80EECC
+P 1800 6400
+F 0 "#GND?" H 1800 6300 50  0001 C CNN
+F 1 "0" H 1800 6489 50  0000 C CNN
+F 2 "" H 1800 6400 50  0001 C CNN
+F 3 "~" H 1800 6400 50  0001 C CNN
+	1    1800 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 5100 1700 5100
+Text GLabel 1700 5100 0    50   Input ~ 0
+IN2
+Wire Wire Line
+	5350 5200 4850 5200
+Wire Wire Line
+	5850 4500 4450 4500
+Wire Wire Line
+	4450 4500 4450 4900
+Wire Wire Line
+	4250 5300 4250 5900
+Wire Wire Line
+	4250 5900 5350 5900
+Wire Wire Line
+	5350 5900 5350 5200
+$Comp
+L pspice:0 #GND?
+U 1 1 5F80EEDB
+P 6450 4500
+F 0 "#GND?" H 6450 4400 50  0001 C CNN
+F 1 "0" V 6450 4544 50  0000 L CNN
+F 2 "" H 6450 4500 50  0001 C CNN
+F 3 "~" H 6450 4500 50  0001 C CNN
+	1    6450 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5F80EEE1
+P 6400 7000
+F 0 "#GND?" H 6400 6900 50  0001 C CNN
+F 1 "0" H 6400 7089 50  0000 C CNN
+F 2 "" H 6400 7000 50  0001 C CNN
+F 3 "~" H 6400 7000 50  0001 C CNN
+	1    6400 7000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1800 6300 1800 6400
+Wire Wire Line
+	6500 6400 6500 6200
+Wire Wire Line
+	6500 5700 6500 5200
+Connection ~ 6500 5200
+Wire Wire Line
+	5850 5200 6500 5200
+Connection ~ 5350 5200
+$Comp
+L pspice:R R8
+U 1 1 5F80EEEF
+P 5600 5200
+F 0 "R8" V 5395 5200 50  0000 C CNN
+F 1 "147" V 5486 5200 50  0000 C CNN
+F 2 "" H 5600 5200 50  0001 C CNN
+F 3 "~" H 5600 5200 50  0001 C CNN
+	1    5600 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R7
+U 1 1 5F80EEF6
+P 3700 5100
+F 0 "R7" V 3495 5100 50  0000 C CNN
+F 1 "8.66k" V 3586 5100 50  0000 C CNN
+F 2 "" H 3700 5100 50  0001 C CNN
+F 3 "~" H 3700 5100 50  0001 C CNN
+	1    3700 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R6
+U 1 1 5F80EEFC
+P 3050 5100
+F 0 "R6" V 2845 5100 50  0000 C CNN
+F 1 "8.66k" V 2936 5100 50  0000 C CNN
+F 2 "" H 3050 5100 50  0001 C CNN
+F 3 "~" H 3050 5100 50  0001 C CNN
+	1    3050 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 5100 3400 5100
+Wire Wire Line
+	3400 5100 3450 5100
+Connection ~ 3400 5100
+Wire Wire Line
+	3400 5100 3400 4300
+Wire Wire Line
+	5350 4300 5350 5200
+Wire Wire Line
+	3400 4300 4000 4300
+Wire Wire Line
+	4500 4300 5350 4300
+Wire Wire Line
+	4000 5950 4000 6300
+Wire Wire Line
+	3950 5100 4000 5100
+Wire Wire Line
+	4000 5100 4250 5100
+Connection ~ 4000 5100
+Wire Wire Line
+	4000 5450 4000 5100
+Wire Wire Line
+	5800 7000 4450 7000
+Wire Wire Line
+	4450 7000 4450 5500
+Text GLabel 5150 5200 1    50   Output ~ 0
+OpAmpOut2
+$Comp
+L pspice:C C5
+U 1 1 5F80EF1E
+P 4250 4300
+F 0 "C5" V 3935 4300 50  0000 C CNN
+F 1 "56n" V 4026 4300 50  0000 C CNN
+F 2 "" H 4250 4300 50  0001 C CNN
+F 3 "~" H 4250 4300 50  0001 C CNN
+	1    4250 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V6
+U 1 1 5F80EF24
+P 6100 7000
+F 0 "V6" V 6465 7000 50  0000 C CNN
+F 1 "100" V 6374 7000 50  0000 C CNN
+F 2 "" H 6100 7000 50  0001 C CNN
+F 3 "~" H 6100 7000 50  0001 C CNN
+	1    6100 7000
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V5
+U 1 1 5F80EF2A
+P 6150 4500
+F 0 "V5" V 6515 4500 50  0000 C CNN
+F 1 "100" V 6424 4500 50  0000 C CNN
+F 2 "" H 6150 4500 50  0001 C CNN
+F 3 "~" H 6150 4500 50  0001 C CNN
+	1    6150 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 5200 7450 5200
+Wire Wire Line
+	7450 6400 6500 6400
+Connection ~ 6500 6400
+$Comp
+L pspice:OPAMP U2
+U 1 1 5F80EF38
+P 4550 5200
+F 0 "U2" H 4894 5246 50  0000 L CNN
+F 1 "OPAMP" H 4894 5155 50  0000 L CNN
+F 2 "" H 4550 5200 50  0001 C CNN
+F 3 "~" H 4550 5200 50  0001 C CNN
+F 4 "X" H 4550 5200 50  0001 C CNN "Spice_Primitive"
+F 5 "LF356/NS" H 4550 5200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4550 5200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 4 5 3" H 4550 5200 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "/home/sebastian/Downloads/LF356.MOD" H 4550 5200 50  0001 C CNN "Spice_Lib_File"
+	1    4550 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 6700 5200 1    50   Output ~ 0
+RCOut2
+Wire Wire Line
+	4000 6400 6500 6400
+Wire Wire Line
+	1800 5100 2800 5100
+Wire Wire Line
+	1800 6300 4000 6300
+Connection ~ 4000 6300
+Wire Wire Line
+	4000 6300 4000 6400
+Wire Wire Line
+	1800 5500 1800 5100
+Wire Wire Line
+	1800 6100 1800 6300
+Connection ~ 1800 6300
+Connection ~ 1800 5100
+$Comp
+L pspice:C C4
+U 1 1 5F80EF18
+P 4000 5700
+F 0 "C4" H 3750 5750 50  0000 L CNN
+F 1 "33n" H 3750 5650 50  0000 L CNN
+F 2 "" H 4000 5700 50  0001 C CNN
+F 3 "~" H 4000 5700 50  0001 C CNN
+	1    4000 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V4
+U 1 1 5F80EF3F
+P 1800 5800
+F 0 "V4" H 2028 5846 50  0000 L CNN
+F 1 "PULSE (0 1 1u 1u 1 1 1)" H 2028 5755 50  0000 L CNN
+F 2 "" H 1800 5800 50  0001 C CNN
+F 3 "~" H 1800 5800 50  0001 C CNN
+	1    1800 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C6
+U 1 1 5F80EF0F
+P 6500 5950
+F 0 "C6" H 6678 5996 50  0000 L CNN
+F 1 "15n" H 6678 5905 50  0000 L CNN
+F 2 "" H 6500 5950 50  0001 C CNN
+F 3 "~" H 6500 5950 50  0001 C CNN
+	1    6500 5950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
