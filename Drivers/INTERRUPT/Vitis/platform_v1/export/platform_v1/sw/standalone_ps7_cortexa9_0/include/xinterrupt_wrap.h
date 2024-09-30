@@ -49,7 +49,7 @@
 
 #define XINTERRUPT_DEFAULT_PRIORITY     0xA0U /* AXI INTC doesnt support priority setting, it is default priority for GIC interrupts */
 #define XINTC_TYPE_IS_SCUGIC		0U
-#define XINTC_TYPE_IS_INTC		1U
+#define XINTC_TYPE_IS_INTC		    1U
 #define XINTR_IS_EDGE_TRIGGERED		3U
 #define XINTR_IS_LEVEL_TRIGGERED	1U
 

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Thu Sep 26 13:46:15 2024
+//Date        : Mon Sep 30 09:36:33 2024
 //Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -64,6 +64,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 sws_4bits TRI_I" *) input [3:0]sws_4bits_tri_i;
 
   wire [3:0]axi_gpio_0_GPIO_TRI_I;
+  wire axi_gpio_0_ip2intc_irpt;
   wire [3:0]axi_gpio_1_GPIO_TRI_I;
   wire [3:0]axi_gpio_1_GPIO_TRI_O;
   wire [3:0]axi_gpio_1_GPIO_TRI_T;
@@ -170,6 +171,7 @@ module design_1
   assign leds_4bits_tri_t[3:0] = axi_gpio_1_GPIO_TRI_T;
   design_1_axi_gpio_0_0 axi_gpio_0
        (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
+        .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -233,6 +235,7 @@ module design_1
         .ENET0_MDIO_I(1'b0),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
+        .IRQ_F2P(axi_gpio_0_ip2intc_irpt),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),

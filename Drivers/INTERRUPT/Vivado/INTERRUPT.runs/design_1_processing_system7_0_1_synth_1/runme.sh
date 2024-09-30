@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Soeren-SDU/Desktop/Software_test/SW_LED/Vivado/SW_LED_test.runs/design_1_processing_system7_0_1_synth_1'
+HD_PWD='C:/Git/GitHub/MCS/Drivers/INTERRUPT/Vivado/INTERRUPT.runs/design_1_processing_system7_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
