@@ -13,3 +13,5 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.xpr
+update_compile_order -fileset sources_1
+write_hw_platform -fixed -include_bit -force -file C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/design_1_wrapper_SJJ.xsa

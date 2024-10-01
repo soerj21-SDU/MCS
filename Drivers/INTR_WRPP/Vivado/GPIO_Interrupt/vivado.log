@@ -31,3 +31,11 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 avail
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
 open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1596.586 ; gain = 463.676
+update_compile_order -fileset sources_1
+write_hw_platform -fixed -include_bit -force -file C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/design_1_wrapper_SJJ.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/design_1_wrapper_SJJ.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/design_1_wrapper_SJJ.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2023.2/data/embeddedsw) loading 2 seconds
+write_hw_platform: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1764.879 ; gain = 140.363

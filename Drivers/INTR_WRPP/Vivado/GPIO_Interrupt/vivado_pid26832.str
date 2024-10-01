@@ -163,3 +163,60 @@ Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt' since last save. 
 // Tcl Message: Scanning sources... Finished scanning sources 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'. 
+// [Engine Memory]: 1,251 MB (+7245kb) [00:00:29]
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1596.586 ; gain = 463.676 
+// Project name: GPIO_Interrupt; location: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bq (Open Project Progress)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al (PAResourceItoN.MainMenuMgr_IP, IP)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al (PAResourceItoN.MainMenuMgr_EXPORT, Export)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,258 MB. GUI used memory: 77 MB. Current time: 10/1/24, 9:17:22 AM CEST
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al (PAResourceItoN.MainMenuMgr_EXPORT, Export)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // ag (PAResourceItoN.MainMenuMgr_HELP, Help)
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // ag (PAResourceItoN.MainMenuMgr_HELP, Help)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // B (PAResourceCommand.PACommandNames_RUN_BITGEN, run_bitstream)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// 'cu' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "Cancel"); // JButton (OptionPane.button)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al (PAResourceItoN.MainMenuMgr_IP, IP)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al (PAResourceItoN.MainMenuMgr_TEXT_EDITOR, Text Editor)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al (PAResourceItoN.MainMenuMgr_EXPORT, Export)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al (PAResourceItoN.MainMenuMgr_EXPORT, Export)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al (PAResourceItoN.MainMenuMgr_TEXT_EDITOR, Text Editor)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al (PAResourceItoN.MainMenuMgr_EXPORT, Export)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao (PAResourceCommand.PACommandNames_EXPORT_HARDWARE, export_hardware_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag (PAResourceItoN.MainMenuMgr_FILE, File)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl (Dont Echo) Command: 'get_property pfm_name [get_files -all {C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd}]'
+// Tcl (Dont Echo) Command: 'get_property pfm_name [get_files -all {C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd}]'
+// Tcl (Dont Echo) Command: 'get_property pfm_name [get_files -all {C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd}]'
+selectButton("NEXT", "Next >"); // JButton (NEXT)
+selectRadioButton(PAResourceEtoH.ExportFixedPlatformWizard_INCLUDE_BITSTREAM, "Include bitstream. This platform includes the complete hardware implementation and bitstream, in addition to the hardware specification for software tools."); // b (PAResourceEtoH.ExportFixedPlatformWizard_INCLUDE_BITSTREAM)
+selectButton("NEXT", "Next >"); // JButton (NEXT)
+setText(PAResourceEtoH.ExportFixedPlatformWizard_XSA_FILE_NAME, "design_1_wrapper_SJJ", true); // Q (PAResourceEtoH.ExportFixedPlatformWizard_XSA_FILE_NAME)
+selectButton("NEXT", "Next >"); // JButton (NEXT)
+// Tcl (Dont Echo) Command: 'get_property pfm_name [get_files -all {C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd}]'
+selectButton("FINISH", "Finish"); // JButton (FINISH)
+// 'n' command handler elapsed time: 9 seconds
+dismissDialog("Export Hardware Platform"); // e (dialog0)
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/design_1_wrapper_SJJ.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/design_1_wrapper_SJJ.xsa ... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 77 MB. Current time: 10/1/24, 9:17:42 AM CEST
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/design_1_wrapper_SJJ.xsa 
+// Tcl Message: INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2023.2/data/embeddedsw) loading 2 seconds 
+// Tcl Message: write_hw_platform: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1764.879 ; gain = 140.363 
+// [Engine Memory]: 1,399 MB (+88869kb) [00:00:57]
+dismissDialog("Export Hardware Platform"); // bq (Export Hardware Platform Progress)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1206 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1087 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 78 MB. Current time: 10/1/24, 9:47:43 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 79 MB. Current time: 10/1/24, 10:17:43 AM CEST
+// [GUI Memory]: 156 MB (+1767kb) [01:13:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 60 MB. Current time: 10/1/24, 10:47:44 AM CEST
