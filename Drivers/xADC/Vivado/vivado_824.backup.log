@@ -1,0 +1,131 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Sep 27 13:19:18 2024
+# Process ID: 824
+# Current directory: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6584 C:\Users\miwoj\Desktop\Zybo\xADC\Vivado\Vivado.xpr
+# Log file: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/vivado.log
+# Journal file: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado\vivado.jou
+# Running On: mikkelsPC, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1522.859 ; gain = 292.891
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd>...
+Successfully read diagram <design_1> from block design file <C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1644.738 ; gain = 77.617
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+create_bd_cell: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1726.816 ; gain = 70.387
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+set_property CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xadc_wiz:3.3 xadc_wiz_0
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+create_bd_cell: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 2089.777 ; gain = 319.785
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+set_property -dict [list \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {true} \
+  CONFIG.CHANNEL_ENABLE_VBRAM {true} \
+  CONFIG.CHANNEL_ENABLE_VCCAUX {true} \
+  CONFIG.CHANNEL_ENABLE_VCCDDRO {true} \
+  CONFIG.CHANNEL_ENABLE_VCCINT {true} \
+  CONFIG.CHANNEL_ENABLE_VCCPAUX {true} \
+  CONFIG.CHANNEL_ENABLE_VCCPINT {true} \
+  CONFIG.CHANNEL_ENABLE_VP_VN {true} \
+  CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+  CONFIG.SEQUENCER_MODE {Continuous} \
+  CONFIG.SINGLE_CHANNEL_SELECTION {TEMPERATURE} \
+  CONFIG.XADC_STARUP_SELECTION {channel_sequencer} \
+] [get_bd_cells xadc_wiz_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/xadc_wiz_0/s_axi_lite} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins xadc_wiz_0/s_axi_lite]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment '/xadc_wiz_0/s_axi_lite/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C0_0000 [ 64K ]>.
+validate_bd_design
+generate_target all [get_files  C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\miwoj\Desktop\Zybo\xADC\Vivado\Vivado.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Verilog Output written to : c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/synth/design_1.v
+Verilog Output written to : c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+Exporting to file c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 2240.129 ; gain = 64.676
+catch { config_ip_cache -export [get_ips -all design_1_xadc_wiz_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xadc_wiz_0_0
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_rst_ps7_0_50M_0
+export_ip_user_files -of_objects [get_files C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_auto_pc_0_synth_1 design_1_processing_system7_0_0_synth_1 design_1_rst_ps7_0_50M_0_synth_1 design_1_xadc_wiz_0_0_synth_1 -jobs 6
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_rst_ps7_0_50M_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xadc_wiz_0_0
+[Fri Sep 27 13:27:00 2024] Launched design_1_auto_pc_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, design_1_xadc_wiz_0_0_synth_1...
+Run output will be captured here:
+design_1_auto_pc_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_xadc_wiz_0_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_xadc_wiz_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.ip_user_files -ipstatic_source_dir C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/modelsim} {questa=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/questa} {riviera=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/riviera} {activehdl=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd] -top
+import_files -force -norecurse c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_rst_ps7_0_50M_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_xadc_wiz_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_rst_ps7_0_50M_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xadc_wiz_0_0
+[Fri Sep 27 13:28:27 2024] Launched design_1_processing_system7_0_0_synth_1, design_1_xadc_wiz_0_0_synth_1, design_1_auto_pc_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_xadc_wiz_0_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_xadc_wiz_0_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+synth_1: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/synth_1/runme.log
+[Fri Sep 27 13:28:27 2024] Launched impl_1...
+Run output will be captured here: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2249.273 ; gain = 0.000
+write_hw_platform -fixed -include_bit -force -file C:/Users/miwoj/Desktop/Zybo/xADC/Vitis/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/miwoj/Desktop/Zybo/xADC/Vitis/design_1_wrapper.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/miwoj/Desktop/Zybo/xADC/Vitis/design_1_wrapper.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2023.2/data/embeddedsw) loading 2 seconds
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis

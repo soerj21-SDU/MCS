@@ -1,0 +1,11 @@
+13:35:08 INFO  : updated workspace path: 
+13:35:08 INFO  : updated workspace path: 
+13:35:08 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\repo.py -st  C:\Xilinx\Vitis\2023.2\data\embeddedsw && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+13:35:13 INFO  : Successfully created repository data at C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj11520763754053302187
+13:35:13 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj942243675773699213 -r C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj11520763754053302187\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+13:35:14 INFO  : Embedded Template List generated successfully
+13:35:14 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\repo.py -st  C:\Xilinx\Vitis\2023.2\data\embeddedsw && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+13:35:15 INFO  : Successfully created repository data at C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj4669511120738440260
+13:35:15 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj6000655395079775016 -r C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj4669511120738440260\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+13:35:15 INFO  : Embedded Template List generated successfully
+13:35:59 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\repo.py -st  C:\Xilinx\Vitis\2023.2\data\embeddedsw && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat

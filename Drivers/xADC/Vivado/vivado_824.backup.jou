@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Sep 27 13:19:18 2024
+# Process ID: 824
+# Current directory: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6584 C:\Users\miwoj\Desktop\Zybo\xADC\Vivado\Vivado.xpr
+# Log file: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/vivado.log
+# Journal file: C:/Users/miwoj/Desktop/Zybo/xADC/Vivado\vivado.jou
+# Running On: mikkelsPC, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xadc_wiz:3.3 xadc_wiz_0
+endgroup
+set_property -dict [list \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {true} \
+  CONFIG.CHANNEL_ENABLE_VBRAM {true} \
+  CONFIG.CHANNEL_ENABLE_VCCAUX {true} \
+  CONFIG.CHANNEL_ENABLE_VCCDDRO {true} \
+  CONFIG.CHANNEL_ENABLE_VCCINT {true} \
+  CONFIG.CHANNEL_ENABLE_VCCPAUX {true} \
+  CONFIG.CHANNEL_ENABLE_VCCPINT {true} \
+  CONFIG.CHANNEL_ENABLE_VP_VN {true} \
+  CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+  CONFIG.SEQUENCER_MODE {Continuous} \
+  CONFIG.SINGLE_CHANNEL_SELECTION {TEMPERATURE} \
+  CONFIG.XADC_STARUP_SELECTION {channel_sequencer} \
+] [get_bd_cells xadc_wiz_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/xadc_wiz_0/s_axi_lite} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins xadc_wiz_0/s_axi_lite]
+validate_bd_design
+generate_target all [get_files  C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_xadc_wiz_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+export_ip_user_files -of_objects [get_files C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_auto_pc_0_synth_1 design_1_processing_system7_0_0_synth_1 design_1_rst_ps7_0_50M_0_synth_1 design_1_xadc_wiz_0_0_synth_1 -jobs 6
+wait_on_run design_1_auto_pc_0_synth_1
+wait_on_run design_1_processing_system7_0_0_synth_1
+wait_on_run design_1_rst_ps7_0_50M_0_synth_1
+wait_on_run design_1_xadc_wiz_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.ip_user_files -ipstatic_source_dir C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/modelsim} {questa=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/questa} {riviera=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/riviera} {activehdl=C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.srcs/sources_1/bd/design_1/design_1.bd] -top
+import_files -force -norecurse c:/Users/miwoj/Desktop/Zybo/xADC/Vivado/Vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/miwoj/Desktop/Zybo/xADC/Vitis/design_1_wrapper.xsa
