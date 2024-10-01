@@ -563,17 +563,17 @@ libsrc/xiltimer/src/core/ttcps/clean:
 # Target rules for target libsrc/CMakeFiles/combined.dir
 
 # All Build rule for target.
-libsrc/CMakeFiles/combined.dir/all: libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/all
-libsrc/CMakeFiles/combined.dir/all: libsrc/gpio/src/CMakeFiles/gpio.dir/all
-libsrc/CMakeFiles/combined.dir/all: libsrc/dmaps/src/CMakeFiles/dmaps.dir/all
 libsrc/CMakeFiles/combined.dir/all: libsrc/devcfg/src/CMakeFiles/devcfg.dir/all
-libsrc/CMakeFiles/combined.dir/all: libsrc/scugic/src/CMakeFiles/scugic.dir/all
+libsrc/CMakeFiles/combined.dir/all: libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/all
+libsrc/CMakeFiles/combined.dir/all: libsrc/dmaps/src/CMakeFiles/dmaps.dir/all
 libsrc/CMakeFiles/combined.dir/all: libsrc/gpiops/src/CMakeFiles/gpiops.dir/all
+libsrc/CMakeFiles/combined.dir/all: libsrc/gpio/src/CMakeFiles/gpio.dir/all
 libsrc/CMakeFiles/combined.dir/all: libsrc/scutimer/src/CMakeFiles/scutimer.dir/all
 libsrc/CMakeFiles/combined.dir/all: libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/all
-libsrc/CMakeFiles/combined.dir/all: libsrc/xadcps/src/CMakeFiles/xadcps.dir/all
+libsrc/CMakeFiles/combined.dir/all: libsrc/scugic/src/CMakeFiles/scugic.dir/all
 libsrc/CMakeFiles/combined.dir/all: libsrc/ttcps/src/CMakeFiles/ttcps.dir/all
 libsrc/CMakeFiles/combined.dir/all: libsrc/uartps/src/CMakeFiles/uartps.dir/all
+libsrc/CMakeFiles/combined.dir/all: libsrc/xadcps/src/CMakeFiles/xadcps.dir/all
 	$(MAKE) $(MAKESILENT) -f libsrc/CMakeFiles/combined.dir/build.make libsrc/CMakeFiles/combined.dir/depend
 	$(MAKE) $(MAKESILENT) -f libsrc/CMakeFiles/combined.dir/build.make libsrc/CMakeFiles/combined.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vitis/platform_SJJ/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num= "Built target combined"

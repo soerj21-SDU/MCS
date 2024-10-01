@@ -220,3 +220,121 @@ dismissDialog("Export Hardware Platform"); // bq (Export Hardware Platform Progr
 // HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 79 MB. Current time: 10/1/24, 10:17:43 AM CEST
 // [GUI Memory]: 156 MB (+1767kb) [01:13:18]
 // HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 60 MB. Current time: 10/1/24, 10:47:44 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 59 MB. Current time: 10/1/24, 11:17:44 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 59 MB. Current time: 10/1/24, 11:47:44 AM CEST
+// Elapsed time: 9132 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd} 
+// Tcl Message: Reading block design file <C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1486 ms.
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1764.879 ; gain = 0.000 
+dismissDialog("Open Block Design"); // bq (Open Block Design Progress)
+// WARNING: HTimer (Open addressing views timer) is taking 84ms to process. Increasing delay to 1300 ms.
+// Elapsed time: 15 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_gpio_0/ip2intc_irpt]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_gpio_0/ip2intc_irpt]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_gpio_0/ip2intc_irpt]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+setText("Port Width", "1"); // v (Port Width)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Customize Pin"); // m (dialog1)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_gpio_0]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_gpio_0]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "IP Configuration", 1); // bb (PAResourceEtoH.HACGCTabbedPane_TABBED_PANE)
+// Elapsed time: 14 seconds
+selectCheckBox(PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS, "Show disabled ports", true); // f (PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS): TRUE
+selectCheckBox(PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS, "Show disabled ports", false); // f (PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS): FALSE
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Board", 0); // bb (PAResourceEtoH.HACGCTabbedPane_TABBED_PANE)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Re-customize IP"); // m (dialog2)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 69 MB. Current time: 10/1/24, 12:17:46 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 69 MB. Current time: 10/1/24, 12:47:49 PM CEST
+// Elapsed time: 5190 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_intf_nets /processing_system7_0_M_AXI_GP0]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 67 MB. Current time: 10/1/24, 1:17:52 PM CEST
+// Elapsed time: 34 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /processing_system7_0]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /processing_system7_0]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize IP"); // C (Re-customize IP Progress)
+// Elapsed time: 22 seconds
+selectButton("PS-PL Configuration", "PS-PL Configuration"); // j (PS-PL Configuration)
+selectButton("Peripheral I/O Pins", "Peripheral I/O Pins"); // j (Peripheral I/O Pins)
+// Elapsed time: 15 seconds
+expandTreeTable(PAResourceItoN.MIOTablePagePanel_MIO_TABLE, (String) null, 22); // aF.a (PAResourceItoN.MIOTablePagePanel_MIO_TABLE)
+collapseTreeTable(PAResourceItoN.MIOTablePagePanel_MIO_TABLE, (String) null, 22); // aF.a (PAResourceItoN.MIOTablePagePanel_MIO_TABLE)
+selectButton("MIO Configuration", "MIO Configuration"); // j (MIO Configuration)
+expandTreeTable(PAResourceItoN.MIOConfigTreeTablePanel_MIO_CONFIG_TREE_TABLE, "I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals ; I/O Peripherals", 1); // as (PAResourceItoN.MIOConfigTreeTablePanel_MIO_CONFIG_TREE_TABLE)
+expandTreeTable(PAResourceItoN.MIOConfigTreeTablePanel_MIO_CONFIG_TREE_TABLE, "GPIO ; GPIO ; GPIO ; GPIO ; GPIO ; GPIO ; GPIO ; GPIO", 16); // as (PAResourceItoN.MIOConfigTreeTablePanel_MIO_CONFIG_TREE_TABLE)
+selectButton("Clock Configuration", "Clock Configuration"); // j (Clock Configuration)
+selectButton("DDR Configuration", "DDR Configuration"); // j (DDR Configuration)
+selectButton("SMC Timing Calculation", "SMC Timing Calculation"); // j (SMC Timing Calculation)
+selectButton("Interrupts", "Interrupts"); // j (Interrupts)
+selectButton("PS-PL Configuration", "PS-PL Configuration"); // j (PS-PL Configuration)
+selectButton("Zynq Block Design", "Zynq Block Design"); // j (Zynq Block Design)
+dismissDialog("Re-customize IP"); // m (dialog3)
+// [GUI Memory]: 187 MB (+23834kb) [04:02:45]
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B (PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, System_regenerate_rsb_layout)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// [GUI Memory]: 197 MB (+663kb) [04:03:31]
+// Elapsed time: 93 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed time: 24 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /processing_system7_0]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /processing_system7_0]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /processing_system7_0/IRQ_F2P]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, FCLK_RESET0_N]", 23, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_F2P]", 24, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_F2P]", 24, false, false, false, false, false, true); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE) - Double Click
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_F2P]", 24, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_F2P]", 24, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_P2F_GPIO]", 25, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_F2P]", 24, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_P2F_GPIO]", 25, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_F2P]", 24, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_P2F_GPIO]", 25, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_P2F_GPIO]", 25, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, processing_system7_0, IRQ_F2P]", 24, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g (RDIResource.PropertiesView_TABBED_PANE)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Interface", 2); // g (RDIResource.PropertiesView_TABBED_PANE)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // g (RDIResource.PropertiesView_TABBED_PANE)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /axi_gpio_0_ip2intc_irpt]"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed time: 20 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 139, 51, 984, 500, false, false, false, true, false); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // fS (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// [GUI Memory]: 207 MB (+634kb) [04:10:28]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 118 MB. Current time: 10/1/24, 1:47:53 PM CEST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2427 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5470 ms. Increasing delay to 16410 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 350 ms. Decreasing delay to 2350 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 116 MB. Current time: 10/1/24, 2:17:56 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 116 MB. Current time: 10/1/24, 2:47:59 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 115 MB. Current time: 10/1/24, 3:18:01 PM CEST

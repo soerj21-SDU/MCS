@@ -51,6 +51,6 @@
     "emptyToolchainConfiguration": []
   },
   "previousBuildStatusMap": {
-    "export": "SUCCESS"
+    "export": "ERROR"
   }
 }
