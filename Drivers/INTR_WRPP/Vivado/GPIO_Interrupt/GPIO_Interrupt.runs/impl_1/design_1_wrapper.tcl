@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/impl_1/design_1_wrapper.tcl"
+  variable script "C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -126,25 +126,26 @@ set rc [catch {
   set_param runs.launchOptions { -jobs 6  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z010clg400-1
-  set_property board_part_repo_paths {C:/Users/miwoj/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part_repo_paths {C:/Users/Soeren-SDU/AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.cache/wt [current_project]
-  set_property parent.project_path C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.xpr [current_project]
-  set_property ip_output_repo C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.cache/wt [current_project]
+  set_property parent.project_path C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.xpr [current_project]
+  set_property ip_output_repo C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
+  read_xdc C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

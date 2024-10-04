@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Sep 30 12:43:09 2024
-| Host         : mikkelsPC running 64-bit major release  (build 9200)
+| Date         : Fri Oct  4 12:03:46 2024
+| Host         : Soeren-Laptop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : xc7z010clg400-1
@@ -162,10 +162,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_xbar_0                 |    1 |
 | design_1_rst_ps7_0_100M_0       |    1 |
 | design_1_processing_system7_0_0 |    1 |
+| design_1_axi_intc_0_1           |    1 |
+| design_1_axi_gpio_4_0           |    1 |
+| design_1_axi_gpio_3_0           |    1 |
+| design_1_axi_gpio_2_0           |    1 |
+| design_1_axi_gpio_0_2           |    1 |
 | design_1_axi_gpio_0_1           |    1 |
-| design_1_axi_gpio_0_0           |    1 |
-| design_1_auto_pc_2              |    1 |
-| design_1_auto_pc_1              |    1 |
 | design_1_auto_pc_0              |    1 |
 +---------------------------------+------+
 

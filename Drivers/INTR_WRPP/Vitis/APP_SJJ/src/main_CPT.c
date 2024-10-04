@@ -38,7 +38,7 @@ int main()
     init_platform();
     print("Starting program\n\r");
 
-    ConfigPtr = XGpio_LookupConfig(XPAR_AXI_GPIO_0_BASEADDR);
+    // ConfigPtr = XGpio_LookupConfig(XPAR_AXI_GPIO_0_BASEADDR);
 
     status = XSetupInterruptSystem(&buttons, myInterupt, GPIO_INTERRUPT_ID, XPAR_SCUGIC_SINGLE_DEVICE_ID, XINTERRUPT_DEFAULT_PRIORITY);
     if(status != XST_SUCCESS) 

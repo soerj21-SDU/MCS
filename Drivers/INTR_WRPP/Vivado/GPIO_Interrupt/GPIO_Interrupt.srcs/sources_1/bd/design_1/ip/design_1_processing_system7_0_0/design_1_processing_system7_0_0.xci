@@ -120,7 +120,7 @@
         "PCW_SMC_PERIPHERAL_FREQMHZ": [ { "value": "100", "resolve_type": "user", "format": "float", "enabled": false, "usage": "all" } ],
         "PCW_USB0_PERIPHERAL_FREQMHZ": [ { "value": "60", "value_src": "user", "resolve_type": "user", "format": "float", "enabled": false, "usage": "all" } ],
         "PCW_USB1_PERIPHERAL_FREQMHZ": [ { "value": "60", "resolve_type": "user", "format": "float", "enabled": false, "usage": "all" } ],
-        "PCW_SDIO_PERIPHERAL_FREQMHZ": [ { "value": "50", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
+        "PCW_SDIO_PERIPHERAL_FREQMHZ": [ { "value": "50", "value_src": "user", "resolve_type": "user", "format": "float", "enabled": false, "usage": "all" } ],
         "PCW_UART_PERIPHERAL_FREQMHZ": [ { "value": "100", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "PCW_SPI_PERIPHERAL_FREQMHZ": [ { "value": "166.666666", "resolve_type": "user", "format": "float", "enabled": false, "usage": "all" } ],
         "PCW_CAN_PERIPHERAL_FREQMHZ": [ { "value": "100", "resolve_type": "user", "format": "float", "enabled": false, "usage": "all" } ],
@@ -476,9 +476,9 @@
         "PCW_ENET0_ENET0_IO": [ { "value": "<Select>", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_ENET0_GRP_MDIO_ENABLE": [ { "value": "0", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_ENET0_GRP_MDIO_IO": [ { "value": "<Select>", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
-        "PCW_ENET_RESET_ENABLE": [ { "value": "1", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "PCW_ENET_RESET_ENABLE": [ { "value": "1", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_ENET_RESET_SELECT": [ { "value": "<Select>", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
-        "PCW_ENET0_RESET_ENABLE": [ { "value": "0", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "PCW_ENET0_RESET_ENABLE": [ { "value": "0", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_ENET0_RESET_IO": [ { "value": "<Select>", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_ENET1_PERIPHERAL_ENABLE": [ { "value": "0", "resolve_type": "user", "usage": "all" } ],
         "PCW_ENET1_ENET1_IO": [ { "value": "<Select>", "resolve_type": "user", "enabled": false, "usage": "all" } ],
@@ -559,8 +559,8 @@
         "PCW_USB0_USB0_IO": [ { "value": "<Select>", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_USB_RESET_ENABLE": [ { "value": "1", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "PCW_USB_RESET_SELECT": [ { "value": "<Select>", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
-        "PCW_USB0_RESET_ENABLE": [ { "value": "1", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
-        "PCW_USB0_RESET_IO": [ { "value": "MIO 46", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "PCW_USB0_RESET_ENABLE": [ { "value": "1", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
+        "PCW_USB0_RESET_IO": [ { "value": "MIO 46", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_USB1_PERIPHERAL_ENABLE": [ { "value": "0", "resolve_type": "user", "usage": "all" } ],
         "PCW_USB1_USB1_IO": [ { "value": "<Select>", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "PCW_USB1_RESET_ENABLE": [ { "value": "0", "value_src": "user", "resolve_type": "user", "enabled": false, "usage": "all" } ],
@@ -1178,7 +1178,7 @@
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
           "mode": "master",
           "parameters": {
-            "FREQ_HZ": [ { "value": "100000000", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "format": "float", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "1e+08", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "format": "float", "usage": "all" } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
             "CLK_DOMAIN": [ { "value": "design_1_processing_system7_0_0_FCLK_CLK0", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
@@ -1221,7 +1221,7 @@
           "mode": "slave",
           "parameters": {
             "SENSITIVITY": [ { "value": "LEVEL_HIGH", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "PortWidth": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
+            "PortWidth": [ { "value": "1", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "INTERRUPT": [ { "physical_name": "IRQ_F2P" } ]

@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Sep 30 12:16:26 2024
-# Process ID: 27288
-# Current directory: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/design_1_xbar_0_synth_1
+# Start of session at: Thu Oct  3 11:18:45 2024
+# Process ID: 22956
+# Current directory: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/design_1_xbar_0_synth_1
 # Command line: vivado.exe -log design_1_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_0.tcl
-# Log file: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
-# Journal file: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/design_1_xbar_0_synth_1\vivado.jou
-# Running On: mikkelsPC, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
+# Log file: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
+# Journal file: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/design_1_xbar_0_synth_1\vivado.jou
+# Running On: Soeren-Laptop, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
 #-----------------------------------------------------------
 source design_1_xbar_0.tcl -notrace

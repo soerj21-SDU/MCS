@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Sep 30 12:42:22 2024
-# Process ID: 26712
-# Current directory: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1
+# Start of session at: Fri Oct  4 12:02:43 2024
+# Process ID: 13304
+# Current directory: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1/design_1_wrapper.vds
-# Journal file: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1\vivado.jou
-# Running On: mikkelsPC, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
+# Log file: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Vivado/GPIO_Interrupt/GPIO_Interrupt.runs/synth_1\vivado.jou
+# Running On: Soeren-Laptop, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

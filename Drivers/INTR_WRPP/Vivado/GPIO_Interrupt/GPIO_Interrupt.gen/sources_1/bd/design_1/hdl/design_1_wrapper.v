@@ -2,8 +2,8 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Mon Sep 30 12:40:56 2024
-//Host        : mikkelsPC running 64-bit major release  (build 9200)
+//Date        : Fri Oct  4 12:02:38 2024
+//Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -32,7 +32,10 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    btns_4bits_tri_i,
+    btn_0,
+    btn_1,
+    btn_2,
+    btn_3,
     leds_4bits_tri_io);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -55,7 +58,10 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [3:0]btns_4bits_tri_i;
+  input btn_0;
+  input btn_1;
+  input btn_2;
+  input btn_3;
   inout [3:0]leds_4bits_tri_io;
 
   wire [14:0]DDR_addr;
@@ -79,7 +85,10 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [3:0]btns_4bits_tri_i;
+  wire btn_0;
+  wire btn_1;
+  wire btn_2;
+  wire btn_3;
   wire [0:0]leds_4bits_tri_i_0;
   wire [1:1]leds_4bits_tri_i_1;
   wire [2:2]leds_4bits_tri_i_2;
@@ -119,7 +128,10 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .btns_4bits_tri_i(btns_4bits_tri_i),
+        .btn_0(btn_0),
+        .btn_1(btn_1),
+        .btn_2(btn_2),
+        .btn_3(btn_3),
         .leds_4bits_tri_i({leds_4bits_tri_i_3,leds_4bits_tri_i_2,leds_4bits_tri_i_1,leds_4bits_tri_i_0}),
         .leds_4bits_tri_o({leds_4bits_tri_o_3,leds_4bits_tri_o_2,leds_4bits_tri_o_1,leds_4bits_tri_o_0}),
         .leds_4bits_tri_t({leds_4bits_tri_t_3,leds_4bits_tri_t_2,leds_4bits_tri_t_1,leds_4bits_tri_t_0}));

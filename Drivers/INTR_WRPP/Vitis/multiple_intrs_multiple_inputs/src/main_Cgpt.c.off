@@ -1,0 +1,86 @@
+#include "xgpio.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include "sleep.h"
+#include "xinterrupt_wrap.h"
+#include <xil_printf.h>
+
+// Define instances for GPIO and interrupt controller
+XGpio BUTTON_1;
+XScuGic Intc;
+int status; 
+
+// Base addresses for GPIO and interrupt controller
+#define GPIO_INTERRUPT_ID_BUTTON_0 XPAR_AXI_GPIO_0_INTERRUPTS
+#define GPIO_0_BASEADDR XPAR_AXI_GPIO_0_BASEADDR
+#define INTC_BASEADDR XPAR_AXI_INTC_0_BASEADDR
+#define GPIO_INTERRUPT_MASK 0x1
+
+// Interrupt IDs for each button
+// #define BUTTON1_INT_ID XPAR_XGPIO_0_INTERRUPT_PARENT
+// #define BUTTON2_INT_ID XPAR_XGPIO_2_INTERRUPT_PARENT
+// #define BUTTON3_INT_ID XPAR_XGPIO_3_INTERRUPT_PARENT
+// #define BUTTON4_INT_ID XPAR_XGPIO_4_INTERRUPT_PARENT
+
+// Interrupt handlers for each button
+void Button1Handler(void) {
+    
+    XGpio_InterruptClear(&BUTTON_1, GPIO_INTERRUPT_MASK);
+    print("Interrupt 1\n\r");
+}
+
+// void Button2Handler(void) {
+//     print("Interrupt 2\n\r");
+// }
+
+// void Button3Handler(void) {
+//     print("Interrupt 3\n\r");
+// }
+
+// void Button4Handler(void) {
+//     print("Interrupt 4\n\r");
+// }
+
+int main() {
+    // Initialize GPIO and interrupt controller
+    status = XGpio_Initialize(&BUTTON_1, 0x41200000);
+    // status = XGpio_Initialize(&BUTTON_1, GPIO_0_BASEADDR);
+    print("Debug 1\n\r");
+    XGpio_SetDataDirection(&BUTTON_1, 1, 0xFF);
+    // XScuGic_Initialize(&Intc, INTC_BASEADDR);
+    print("Debug 2\n\r");
+    // Register interrupt handlers
+    // XScuGic_Connect(&Intc, BUTTON1_INT_ID, (Xil_ExceptionHandler)Button1Handler, &Gpio);
+    // XScuGic_Connect(&Intc, BUTTON2_INT_ID, (Xil_ExceptionHandler)Button2Handler, &Gpio);
+    // XScuGic_Connect(&Intc, BUTTON3_INT_ID, (Xil_ExceptionHandler)Button3Handler, &Gpio);
+    // XScuGic_Connect(&Intc, BUTTON4_INT_ID, (Xil_ExceptionHandler)Button4Handler, &Gpio);
+    status = XSetupInterruptSystem(&BUTTON_1, Button1Handler, 0x2000, XPAR_SCUGIC_SINGLE_DEVICE_ID, XINTERRUPT_DEFAULT_PRIORITY);
+    // status = XSetupInterruptSystem(&BUTTON_1, Button1Handler, GPIO_INTERRUPT_ID_BUTTON_0, XPAR_SCUGIC_SINGLE_DEVICE_ID, XINTERRUPT_DEFAULT_PRIORITY);
+    print("Debug 3\n\r");
+    if(status != XST_SUCCESS) 
+    {
+        return XST_FAILURE;
+        print("Fail 1\n\r");
+    }
+    // Enable interrupts
+    // XScuGic_Enable(&Intc, BUTTON1_INT_ID);
+    // XScuGic_Enable(&Intc, BUTTON2_INT_ID);
+    // XScuGic_Enable(&Intc, BUTTON3_INT_ID);
+    // XScuGic_Enable(&Intc, BUTTON4_INT_ID);
+
+    XGpio_InterruptEnable(&BUTTON_1, GPIO_INTERRUPT_MASK);
+    print("Debug 4\n\r");
+    XGpio_InterruptGlobalEnable(&BUTTON_1);
+    print("Debug 5\n\r");
+
+    // Enable interrupts in the processor
+    // Xil_ExceptionEnable();
+
+    while (1) {
+        // Main loop
+        print("In While\n\r");
+        sleep(1);
+    }
+
+    return 0;
+}
