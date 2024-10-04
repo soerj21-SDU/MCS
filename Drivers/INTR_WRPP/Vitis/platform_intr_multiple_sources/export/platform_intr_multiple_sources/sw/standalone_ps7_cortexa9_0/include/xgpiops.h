@@ -91,7 +91,7 @@
 * 1.00a sv   01/15/10 First Release
 * 1.01a sv   04/15/12 Removed the APIs XGpioPs_SetMode, XGpioPs_SetModePin
 *                     XGpioPs_GetMode, XGpioPs_GetModePin as they are not
-*		      relevant to Zynq device.The interrupts are disabled
+*		      relevant to Zynq device. The interrupts are disabled
 *		      for output pins on all banks during initialization.
 * 1.02a hk   08/22/13 Added low level reset API
 * 2.1   hk   04/29/14 Use Input data register DATA_RO for read. CR# 771667.
