@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.16)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/Hello_worldExample.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/UserConfig.cmake)
-set(APP_NAME multiple_intrs_multiple_inputs)
+set(APP_NAME GPIO_PS_TEST)
 project(${APP_NAME})
 
 enable_language(C ASM CXX)
@@ -35,28 +35,11 @@ collect(PROJECT_LIB_DEPS xiltimer;xilflash)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 collect(PROJECT_LIB_DEPS gcc)
 collect(PROJECT_LIB_DEPS c)
 
+collect (PROJECT_LIB_SOURCES helloworld.c)
 collect (PROJECT_LIB_SOURCES platform.c)
-collect (PROJECT_LIB_SOURCES test.c)
 collector_list (_sources PROJECT_LIB_SOURCES)
 foreach (source ${_sources})
     get_filename_component(ext ${source} EXT)
