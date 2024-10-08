@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = MCS
+the_ROM_image:
+{
+	[bootloader]C:\Users\matt\Vivado_Projects\AMS2_FSBL\AMS2_FSBL.sdk\AMS2_FSBL\Debug\AMS2_FSBL.elf
+	C:\Users\matt\Vivado_Projects\AMS2\AMS2.sdk\design_1_wrapper_hw_platform_0\design_1_wrapper.bit
+	C:\Users\matt\Vivado_Projects\AMS2\AMS2.sdk\AMS\Debug\AMS.elf
+}
