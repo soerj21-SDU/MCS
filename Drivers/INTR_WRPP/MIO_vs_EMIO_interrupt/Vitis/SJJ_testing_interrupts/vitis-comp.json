@@ -1,0 +1,18 @@
+{
+  "name": "SJJ_testing_interrupts",
+  "type": "HOST",
+  "platform": "C:\\Git\\GitHub\\MCS\\Drivers\\INTR_WRPP\\MIO_vs_EMIO_interrupt\\Vitis\\platform_SJJ\\export\\platform_SJJ\\platform_SJJ.xpfm",
+  "domain": "standalone_ps7_cortexa9_0",
+  "cpuInstance": "ps7_cortexa9_0",
+  "cpuType": "cortex-a9",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_ps7_cortexa9_0",
+  "applicationFlow": "EMBEDDED",
+  "previousBuildStatusMap": {
+    "hw": "SUCCESS"
+  }
+}

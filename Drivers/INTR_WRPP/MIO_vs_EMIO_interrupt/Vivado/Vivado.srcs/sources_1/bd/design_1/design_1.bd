@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1F93B8D982AC6E82",
+      "boundary_crc": "0x227FD65A725644AC",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../Vivado.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -208,6 +208,19 @@
         "direction": "O",
         "left": "1",
         "right": "0"
+      },
+      "GPIO_I": {
+        "type": "intr",
+        "direction": "I",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default_prop"
+          },
+          "SENSITIVITY": {
+            "value": "EDGE_RISING"
+          }
+        }
       }
     },
     "components": {
@@ -873,9 +886,6 @@
           "PCW_SD0_PERIPHERAL_ENABLE": {
             "value": "0"
           },
-          "PCW_SDIO_PERIPHERAL_FREQMHZ": {
-            "value": "50"
-          },
           "PCW_SDIO_PERIPHERAL_VALID": {
             "value": "0"
           },
@@ -1362,6 +1372,12 @@
       }
     },
     "nets": {
+      "GPIO_I_1": {
+        "ports": [
+          "GPIO_I",
+          "processing_system7_0/GPIO_I"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",

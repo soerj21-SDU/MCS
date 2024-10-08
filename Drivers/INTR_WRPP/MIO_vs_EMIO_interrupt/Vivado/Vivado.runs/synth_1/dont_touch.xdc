@@ -21,4 +21,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rs
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
 
-# XDC: c:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vivado/Vivado.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: c:/Git/GitHub/MCS/Drivers/INTR_WRPP/MIO_vs_EMIO_interrupt/Vivado/Vivado.gen/sources_1/bd/design_1/design_1_ooc.xdc

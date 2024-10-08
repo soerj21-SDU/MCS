@@ -1,4 +1,6 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vivado/Vivado.srcs/constrs_1/new/myConstraints.xdc rfile:../../../Vivado.srcs/constrs_1/new/myConstraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Git/GitHub/MCS/Drivers/INTR_WRPP/MIO_vs_EMIO_interrupt/Vivado/Vivado.srcs/constrs_1/new/myConstraints.xdc rfile:../../../Vivado.srcs/constrs_1/new/myConstraints.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { GPIO_I[0] }]; #IO_L20N_T3_34 Sch=BTN0
 set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { LEDs_2lower_tri_o[0] }]; #IO_L23P_T3_35 Sch=LED0
 set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]

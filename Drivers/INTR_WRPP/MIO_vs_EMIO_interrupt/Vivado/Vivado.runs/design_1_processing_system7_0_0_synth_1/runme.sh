@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vivado/Vivado.runs/design_1_processing_system7_0_0_synth_1'
+HD_PWD='C:/Git/GitHub/MCS/Drivers/INTR_WRPP/MIO_vs_EMIO_interrupt/Vivado/Vivado.runs/design_1_processing_system7_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

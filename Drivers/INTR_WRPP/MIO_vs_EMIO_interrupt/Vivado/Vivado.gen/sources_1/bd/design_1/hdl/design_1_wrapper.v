@@ -2,8 +2,8 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Thu Oct  3 11:35:49 2024
-//Host        : mikkelsPC running 64-bit major release  (build 9200)
+//Date        : Tue Oct  8 15:44:38 2024
+//Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -32,6 +32,7 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    GPIO_I,
     GPIO_O,
     LEDs_2lower_tri_o);
   inout [14:0]DDR_addr;
@@ -55,6 +56,7 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input GPIO_I;
   output [1:0]GPIO_O;
   output [1:0]LEDs_2lower_tri_o;
 
@@ -79,6 +81,7 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire GPIO_I;
   wire [1:0]GPIO_O;
   wire [1:0]LEDs_2lower_tri_o;
 
@@ -104,6 +107,7 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .GPIO_I(GPIO_I),
         .GPIO_O(GPIO_O),
         .LEDs_2lower_tri_o(LEDs_2lower_tri_o));
 endmodule

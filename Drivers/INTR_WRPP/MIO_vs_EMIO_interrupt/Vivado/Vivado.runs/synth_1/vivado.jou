@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Oct  3 11:35:54 2024
-# Process ID: 9208
-# Current directory: C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vivado/Vivado.runs/synth_1
+# Start of session at: Tue Oct  8 15:48:22 2024
+# Process ID: 26888
+# Current directory: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/MIO_vs_EMIO_interrupt/Vivado/Vivado.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vivado/Vivado.runs/synth_1/design_1_wrapper.vds
-# Journal file: C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vivado/Vivado.runs/synth_1\vivado.jou
-# Running On: mikkelsPC, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
+# Log file: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/MIO_vs_EMIO_interrupt/Vivado/Vivado.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/Git/GitHub/MCS/Drivers/INTR_WRPP/MIO_vs_EMIO_interrupt/Vivado/Vivado.runs/synth_1\vivado.jou
+# Running On: Soeren-Laptop, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
