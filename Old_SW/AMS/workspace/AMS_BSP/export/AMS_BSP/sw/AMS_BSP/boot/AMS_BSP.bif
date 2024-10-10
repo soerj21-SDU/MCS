@@ -1,0 +1,7 @@
+/*AMS_BSP*/
+the_ROM_image:
+{
+  [bootloader]<AMS_BSP/boot/fsbl.elf>
+   <bitstream> 
+  <elf>
+}
