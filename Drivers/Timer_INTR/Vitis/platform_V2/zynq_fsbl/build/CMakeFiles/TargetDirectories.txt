@@ -1,0 +1,3 @@
+C:/Git/GitHub/MCS/Drivers/Timer_INTR/Vitis/platform_V2/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+C:/Git/GitHub/MCS/Drivers/Timer_INTR/Vitis/platform_V2/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+C:/Git/GitHub/MCS/Drivers/Timer_INTR/Vitis/platform_V2/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir
