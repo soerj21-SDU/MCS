@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Soeren-SDU" Host="SOEREN-LAPTOP" Pid="6588" HostCore="8" HostMemory="016969424896">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Soeren-SDU" Host="SOEREN-LAPTOP" Pid="21748" HostCore="8" HostMemory="016969424896">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Soeren-SDU" Host="SOEREN-LAPTOP" Pid="25204" HostCore="8" HostMemory="016969424896">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Soeren-SDU" Host="SOEREN-LAPTOP" Pid="3968" HostCore="8" HostMemory="016969424896">
+    </Process>
+</ProcessHandle>

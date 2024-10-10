@@ -1,0 +1,3 @@
+C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Direct_interrupt_test/Vitis/Only_Zynq/platform/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Direct_interrupt_test/Vitis/Only_Zynq/platform/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+C:/Git/GitHub/MCS/Drivers/INTR_WRPP/Direct_interrupt_test/Vitis/Only_Zynq/platform/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir
