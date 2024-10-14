@@ -1,0 +1,157 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "7bff671f-2f7d-4dcb-82cb-7f168fb2ab46")
+	(paper "A4")
+	(lib_symbols)
+	(text "Shutdown Circuit"
+		(exclude_from_sim no)
+		(at 171.958 21.082 0)
+		(effects
+			(font
+				(size 4 4)
+			)
+		)
+		(uuid "1ef438f3-adac-4101-bd3f-e715bfb08fa7")
+	)
+	(text "Actuators\n"
+		(exclude_from_sim no)
+		(at 50.292 20.828 0)
+		(effects
+			(font
+				(size 4 4)
+			)
+		)
+		(uuid "368c622d-a0cf-4df8-80e2-2aca79e4aa3e")
+	)
+	(text "CAN"
+		(exclude_from_sim no)
+		(at 112.014 21.082 0)
+		(effects
+			(font
+				(size 4 4)
+			)
+		)
+		(uuid "9a0a6400-cd19-4068-b3ef-0257579bd1fe")
+	)
+	(sheet
+		(at 148.59 29.21)
+		(size 53.34 48.26)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "78c8d89b-2ca5-43d4-ab8e-91cd7a25b2de")
+		(property "Sheetname" "Shutdown Circuit"
+			(at 148.59 28.4984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Shutdown_Circuit.kicad_sch"
+			(at 148.59 78.0546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Testbench"
+				(path "/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 29.21)
+		(size 52.07 48.26)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "91fc52e8-d123-4e03-9a67-b86afe193964")
+		(property "Sheetname" "CAN"
+			(at 86.36 28.4984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "CAN.kicad_sch"
+			(at 86.36 78.0546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Testbench"
+				(path "/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 29.21)
+		(size 52.07 48.26)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b5476738-2c8a-49c6-ba84-2d36332775a6")
+		(property "Sheetname" "Actuators"
+			(at 24.13 28.4984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Actuator.kicad_sch"
+			(at 24.13 78.0546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Testbench"
+				(path "/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
