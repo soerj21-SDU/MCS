@@ -1122,6 +1122,16 @@
 		)
 		(uuid "14653b48-cf44-460c-8358-59dbfde70d49")
 	)
+	(text "Filtered GND for CAN\n"
+		(exclude_from_sim no)
+		(at 68.072 71.882 0)
+		(effects
+			(font
+				(size 4 4)
+			)
+		)
+		(uuid "4bd317e6-4abe-492c-8d3e-e05783aafe07")
+	)
 	(text "CANBUS0_H\n\n"
 		(exclude_from_sim no)
 		(at 51.308 44.196 0)

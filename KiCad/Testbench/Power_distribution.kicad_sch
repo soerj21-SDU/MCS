@@ -749,7 +749,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 143.51) (xy 198.12 143.51)
+			(xy 171.45 130.81) (xy 179.07 130.81)
 		)
 		(stroke
 			(width 0)
@@ -809,7 +809,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 146.05) (xy 213.36 146.05)
+			(xy 191.77 133.35) (xy 194.31 133.35)
 		)
 		(stroke
 			(width 0)
@@ -859,7 +859,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 140.97) (xy 198.12 140.97)
+			(xy 171.45 128.27) (xy 179.07 128.27)
 		)
 		(stroke
 			(width 0)
@@ -869,7 +869,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 143.51) (xy 213.36 143.51)
+			(xy 191.77 130.81) (xy 194.31 130.81)
 		)
 		(stroke
 			(width 0)
@@ -879,7 +879,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 146.05) (xy 198.12 146.05)
+			(xy 171.45 133.35) (xy 179.07 133.35)
 		)
 		(stroke
 			(width 0)
@@ -929,7 +929,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 140.97) (xy 213.36 140.97)
+			(xy 191.77 128.27) (xy 194.31 128.27)
 		)
 		(stroke
 			(width 0)
@@ -1072,7 +1072,7 @@
 		(uuid "65e2c461-3176-4bbe-bb8c-6f1a6c688505")
 	)
 	(label "2-E1"
-		(at 213.36 140.97 0)
+		(at 194.31 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1083,7 +1083,7 @@
 		(uuid "6e839bdf-0667-4f73-a987-00ce17e169d5")
 	)
 	(label "2-C1"
-		(at 213.36 146.05 0)
+		(at 194.31 133.35 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1094,7 +1094,7 @@
 		(uuid "6f126bc5-3293-44f7-80a7-9b1472baa3a1")
 	)
 	(label "2-B1"
-		(at 213.36 143.51 0)
+		(at 194.31 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1105,7 +1105,7 @@
 		(uuid "7514e0dc-edad-48e2-adfe-685ed8332d2a")
 	)
 	(label "2-D1"
-		(at 190.5 146.05 0)
+		(at 171.45 133.35 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1116,7 +1116,7 @@
 		(uuid "97750ccf-f65e-4ab4-9a48-3862b3805476")
 	)
 	(label "2-A1"
-		(at 190.5 143.51 0)
+		(at 171.45 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1149,7 +1149,7 @@
 		(uuid "e81a2447-9ca0-4cdf-9978-085a01919ff4")
 	)
 	(label "2-A4"
-		(at 190.5 140.97 0)
+		(at 171.45 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1713,7 +1713,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x03_Counter_Clockwise")
-		(at 203.2 143.51 0)
+		(at 184.15 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1722,7 +1722,7 @@
 		(fields_autoplaced yes)
 		(uuid "74a1bfe0-8b36-428b-bb04-fffa1e04240a")
 		(property "Reference" "J18"
-			(at 204.47 134.62 0)
+			(at 185.42 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1730,7 +1730,7 @@
 			)
 		)
 		(property "Value" "Conn_02x03_Counter_Clockwise"
-			(at 204.47 137.16 0)
+			(at 185.42 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1738,7 +1738,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-06A_2x03_P4.20mm_Vertical"
-			(at 203.2 143.51 0)
+			(at 184.15 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1747,7 +1747,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 203.2 143.51 0)
+			(at 184.15 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1756,7 +1756,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x03, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 203.2 143.51 0)
+			(at 184.15 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
