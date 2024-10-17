@@ -1965,6 +1965,16 @@
 		)
 		(uuid "5da8369f-53ce-4078-9ade-f12836b476aa")
 	)
+	(text "LED color: GREEN"
+		(exclude_from_sim no)
+		(at 31.242 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "70ad89cd-8c7a-46d9-b18b-708adb985d6e")
+	)
 	(text "TP0_Ground"
 		(exclude_from_sim no)
 		(at 42.926 148.082 0)
