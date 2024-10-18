@@ -1,0 +1,3 @@
+C:/Users/miwoj/Desktop/Zybo/xADC/Vitis/hello_world/build/CMakeFiles/hello_world.elf.dir
+C:/Users/miwoj/Desktop/Zybo/xADC/Vitis/hello_world/build/CMakeFiles/edit_cache.dir
+C:/Users/miwoj/Desktop/Zybo/xADC/Vitis/hello_world/build/CMakeFiles/rebuild_cache.dir

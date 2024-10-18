@@ -1,0 +1,109 @@
+// #include "xparameters.h"
+// #include "xgpio.h"
+// #include "xil_exception.h"
+// #include "xinterrupt_wrap.h"
+#include "interrupts.h"
+
+#define	XGPIO_AXI_BASEADDRESS	XPAR_AXI_GPIO_0_BASEADDR 
+#define GPIO_CHANNEL1		1
+#define GPIO_ALL_LEDS		0xFFFF
+#define GPIO_ALL_BUTTONS	0xFFFF
+#define BUTTON_CHANNEL	 1	
+#define LED_CHANNEL	 2	
+#define LED_DELAY	1000000
+#define INTR_DELAY	0x00FFFFFF
+
+#define BUTTON_INTERRUPT XGPIO_IR_CH1_MASK  /* Channel 1 Interrupt Mask */
+
+/* The following constant determines which buttons must be pressed at the same time to cause interrupt processing to stop and start */
+#define INTERRUPT_CONTROL_VALUE 0x7
+
+
+
+
+/************************** Function Prototypes ******************************/
+// void GpioHandler(void *CallBackRef);
+
+// int GpioIntrExample(XGpio *InstancePtr,
+// 		    UINTPTR BaseAddress,
+// 		    u16 IntrMask, u32 *DataRead);
+
+/************************** Variable Definitions *****************************/
+XGpio Gpio_inst; /* The Instance of the GPIO Driver */
+static u16 GlobalIntrMask; /* GPIO channel mask that is needed by the Interrupt Handler */
+static volatile u32 IntrFlag; /* Interrupt Handler Flag */
+
+/****************************************************************************/
+
+int main(void)
+{
+	int Status;
+	u32 DataRead;
+
+	Status = GpioIntrExample(&Gpio_inst,   XGPIO_AXI_BASEADDRESS,      GPIO_CHANNEL1,    &DataRead);
+        if (Status != XST_SUCCESS) 
+        {
+            print("I died");
+            return XST_FAILURE;
+        }
+    
+	return XST_SUCCESS;
+}
+
+
+int GpioIntrExample(XGpio *InstancePtr,    UINTPTR BaseAddress,    u16 IntrMask,    u32 *DataRead)
+{
+	int Status;
+	u32 delay;
+
+	XGpio_Config *ConfigPtr;                         // TILFØJET
+	ConfigPtr = XGpio_LookupConfig(BaseAddress);    // TILFØJET
+
+	Status = XGpio_Initialize(InstancePtr, BaseAddress);
+        if (Status != XST_SUCCESS) 
+        {
+            print("I died at XGPIO initialize");
+            return XST_FAILURE;
+        }
+
+	Status = XSetupInterruptSystem(InstancePtr,     &GpioHandler,    ConfigPtr->IntrId,     ConfigPtr->IntrParent,    XINTERRUPT_DEFAULT_PRIORITY);
+
+	XGpio_InterruptEnable(InstancePtr, IntrMask);
+	XGpio_InterruptGlobalEnable(InstancePtr);
+        if (Status != XST_SUCCESS) 
+        {
+            print("I died at Interrupt");
+            return XST_FAILURE;
+        }
+
+	IntrFlag = 0;
+	delay = 0;
+
+	while (!IntrFlag && (delay < INTR_DELAY)) {
+		delay++;
+	}
+
+
+	XDisconnectInterruptCntrl(ConfigPtr->IntrId, ConfigPtr->IntrParent);
+
+
+	*DataRead = IntrFlag;
+
+	return Status;
+}
+
+
+
+void GpioHandler(void *CallbackRef)
+{
+	XGpio *GpioPtr = (XGpio *)CallbackRef;
+
+	IntrFlag = 1;
+
+    print("I HAVE BEEN INTERRUPTED"); 
+
+	/* Clear the Interrupt */
+	XGpio_InterruptClear(GpioPtr, GlobalIntrMask);
+
+}
+

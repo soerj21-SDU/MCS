@@ -1,0 +1,440 @@
+12:47:04 INFO  : updated workspace path: C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis
+12:47:04 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis
+12:47:04 INFO  : updated workspace path: C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis
+12:47:06 INFO  : Successfully created repository data at C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj14244693192478602163
+12:47:06 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj13547805003583900265 -r C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj14244693192478602163\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:47:06 INFO  : Embedded Template List generated successfully
+12:47:06 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\repo.py -st   C:\Xilinx\Vitis\2023.2\data\embeddedsw && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:47:08 INFO  : Successfully created repository data at C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis
+12:47:08 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj6457321371292080357 -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:47:08 INFO  : Embedded Template List generated successfully
+12:47:08 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj11061197238296625349 -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:47:09 INFO  : Embedded Template List generated successfully
+12:47:28 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\validate_bsp.py -t hello_world -d c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:47:29 INFO  : Successfully validated template hello_world
+12:47:31 INFO  : lopper command to create baremetal application :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//create_app.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -t hello_world -d c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -n app -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml
+12:47:31 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\validate_bsp.py -t hello_world -d c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:47:31 INFO  : Successfully validated template hello_world
+12:47:31 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\create_app.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -t hello_world -d c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -n app -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:47:36 INFO  : Successfully Created Application sources at C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/src
+12:47:36 INFO  : Successfully created Application C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src
+12:47:36 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app
+12:47:36 INFO  : The hardware specification used by project 'C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+12:47:36 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\_ide\bitstream' in project 'C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app'.
+12:47:36 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\_ide\psinit' in project 'C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app'.
+12:50:44 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O  . C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\hw\sdt\system-top.dts -- baremetal_getsupported_comp_xlnx ps7_cortexa9_0 C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:50:45 INFO  : Supported Library List generated.
+12:50:49 INFO  : Adding Library to the given BSP C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+12:50:49 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\config_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -al  xilflash C:\Xilinx\Vitis\2023.2\data\embeddedsw\lib\sw_services\xilflash_v4_10 -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:50:50 INFO  : Library added to BSP successfully
+12:50:50 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O  . C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\hw\sdt\system-top.dts -- baremetal_getsupported_comp_xlnx ps7_cortexa9_0 C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:50:51 INFO  : Supported Library List generated.
+12:50:53 INFO  : Updating Examples in Driver C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+12:50:53 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\load_example.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:51:00 INFO  : -- The C compiler identification is GNU 12.2.0
+12:51:00 INFO  : -- The CXX compiler identification is GNU 12.2.0
+12:51:00 INFO  : -- Detecting C compiler ABI info
+12:51:00 INFO  : -- Detecting C compiler ABI info - done
+12:51:00 INFO  : -- Check for working C compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe - skipped
+12:51:00 INFO  : -- Detecting C compile features
+12:51:00 INFO  : -- Detecting C compile features - done
+12:51:00 INFO  : -- Detecting CXX compiler ABI info
+12:51:00 INFO  : -- Detecting CXX compiler ABI info - done
+12:51:00 INFO  : -- Check for working CXX compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe - skipped
+12:51:00 INFO  : -- Detecting CXX compile features
+12:51:00 INFO  : -- Detecting CXX compile features - done
+12:51:00 INFO  : -- Configuring done
+12:51:00 INFO  : -- Generating done
+12:51:00 INFO  : CMake Warning:
+12:51:00 INFO  :   Manually-specified variables were not used by the project:
+12:51:00 INFO  : 
+12:51:00 INFO  :     CMAKE_LIBRARY_PATH
+12:51:00 INFO  : 
+12:51:00 INFO  : 
+12:51:00 INFO  : -- Build files have been written to: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/exmetadata
+12:51:00 INFO  : Updated Examples in Driver
+12:53:07 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O  . C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\hw\sdt\system-top.dts -- baremetal_getsupported_comp_xlnx ps7_cortexa9_0 C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:53:08 INFO  : Supported Library List generated.
+12:53:09 INFO  : Regenerating BSP 
+12:53:09 INFO  : lopper command to regenerate BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//regen_bsp.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\hw\sdt\system-top.dts -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml
+12:53:09 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\regen_bsp.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\hw\sdt\system-top.dts -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -r C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:53:23 INFO  : -- The C compiler identification is GNU 12.2.0
+12:53:23 INFO  : -- The CXX compiler identification is GNU 12.2.0
+12:53:23 INFO  : -- Detecting C compiler ABI info
+12:53:23 INFO  : -- Detecting C compiler ABI info - done
+12:53:23 INFO  : -- Check for working C compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe - skipped
+12:53:23 INFO  : -- Detecting C compile features
+12:53:23 INFO  : -- Detecting C compile features - done
+12:53:23 INFO  : -- Detecting CXX compiler ABI info
+12:53:23 INFO  : -- Detecting CXX compiler ABI info - done
+12:53:23 INFO  : -- Check for working CXX compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe - skipped
+12:53:23 INFO  : -- Detecting CXX compile features
+12:53:23 INFO  : -- Detecting CXX compile features - done
+12:53:23 INFO  : -- Configuring done
+12:53:23 INFO  : -- Generating done
+12:53:23 INFO  : CMake Warning:
+12:53:23 INFO  :   Manually-specified variables were not used by the project:
+12:53:23 INFO  : 
+12:53:23 INFO  :     CMAKE_LIBRARY_PATH
+12:53:23 INFO  : 
+12:53:23 INFO  : 
+12:53:23 INFO  : -- Build files have been written to: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+12:53:23 INFO  : -- Configuring done
+12:53:23 INFO  : -- Generating done
+12:53:23 INFO  : -- Build files have been written to: C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+12:53:23 INFO  : Successfully created Domain at C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+12:53:23 INFO  : BSP regenerated successfully
+12:53:23 INFO  : BSP regeneration finished successfully
+12:53:23 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O  . C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\hw\sdt\system-top.dts -- baremetal_getsupported_comp_xlnx ps7_cortexa9_0 C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:53:24 INFO  : Supported Library List generated.
+12:53:42 INFO  : BSP build will be initiated for Domain zynq_fsbl
+12:53:42 INFO  : BSP build will be initiated for Domain standalone_ps7_cortexa9_0
+12:53:42 INFO  : Generating BSP for the domain C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+12:53:42 INFO  : lopper command to build BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+12:53:42 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:53:42 INFO  : Generating BSP for the domain C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp
+12:53:42 INFO  : lopper command to build BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp
+12:53:42 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:54:04 INFO  : Domain build successfully
+12:54:04 INFO  : Domain build successfully
+12:54:04 INFO  : Generating Boot ELFs
+12:54:04 INFO  : lopper command to build baremetal application :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_app.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl -b C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\build
+12:54:04 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl -b C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:54:08 INFO  : Successfully building the baremetal applicationC:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\build
+12:54:08 INFO  : Generating Export directory
+12:54:08 INFO  : Platform Build Finished successfully.
+12:58:57 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+12:59:05 INFO  : XSDB server has started successfully from frontend.
+12:59:05 INFO  : It has taken  2secs.
+12:59:06 INFO  : Connection to XSDB Server established.
+12:59:06 INFO  : It has taken  1secs.
+12:59:06 INFO  : Done
+12:59:08 INFO  : connect -url tcp:127.0.0.1:3121
+12:59:10 INFO  : bpremove -all
+12:59:11 INFO  : Context for 'APU' is selected.
+12:59:11 INFO  : System reset is completed.
+12:59:14 INFO  : 'after 3000' command is executed.
+12:59:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+12:59:15 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+12:59:15 INFO  : targets -set -nocase -filter {name =~"APU*"}
+12:59:15 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+12:59:15 INFO  : configparams force-mem-access 1
+12:59:15 INFO  : targets -set -nocase -filter {name =~"APU*"}
+12:59:15 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+12:59:16 INFO  : ps7_init
+12:59:16 INFO  : ps7_post_config
+12:59:16 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+12:59:16 INFO  : rst -processor
+12:59:16 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+12:59:16 INFO  : con
+12:59:16 INFO  : configparams force-mem-access 0
+12:59:17 INFO  : Testing the connection for 127.0.0.1
+12:59:35 INFO  : disconnect
+12:59:48 INFO  : connect -url tcp:127.0.0.1:3121
+12:59:48 INFO  : bpremove -all
+12:59:48 INFO  : Context for 'APU' is selected.
+12:59:48 INFO  : System reset is completed.
+12:59:51 INFO  : 'after 3000' command is executed.
+12:59:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+12:59:52 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+12:59:52 INFO  : targets -set -nocase -filter {name =~"APU*"}
+12:59:54 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+12:59:54 INFO  : configparams force-mem-access 1
+12:59:54 INFO  : targets -set -nocase -filter {name =~"APU*"}
+12:59:54 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+12:59:55 INFO  : ps7_init
+12:59:55 INFO  : ps7_post_config
+12:59:55 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+12:59:55 INFO  : rst -processor
+12:59:55 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+12:59:55 INFO  : con
+12:59:55 INFO  : configparams force-mem-access 0
+12:59:56 INFO  : Testing the connection for 127.0.0.1
+15:21:01 INFO  : BSP build will be initiated for Domain zynq_fsbl
+15:21:01 INFO  : BSP build will be initiated for Domain standalone_ps7_cortexa9_0
+15:21:01 INFO  : Generating BSP for the domain C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp
+15:21:01 INFO  : Generating BSP for the domain C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+15:21:01 INFO  : lopper command to build BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp
+15:21:01 INFO  : lopper command to build BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+15:21:01 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:21:01 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:21:27 INFO  : Domain build successfully
+15:21:27 INFO  : Domain build successfully
+15:21:27 INFO  : Generating Boot ELFs
+15:21:27 INFO  : lopper command to build baremetal application :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_app.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl -b C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\build
+15:21:27 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl -b C:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:21:29 INFO  : Successfully building the baremetal applicationC:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\platform\zynq_fsbl\build
+15:21:29 INFO  : Generating Export directory
+15:21:29 INFO  : Platform Build Finished successfully.
+15:21:35 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:21:38 ERROR : app build failed. 
+15:22:02 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:22:03 ERROR : app build failed. 
+15:22:08 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:22:11 ERROR : app build failed. 
+15:22:29 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:22:30 ERROR : app build failed. 
+15:22:34 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:22:34 ERROR : app build failed. 
+15:23:07 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:23:11 INFO  : connect -url tcp:127.0.0.1:3121
+15:23:11 INFO  : bpremove -all
+15:23:11 INFO  : Context for 'APU' is selected.
+15:23:11 INFO  : System reset is completed.
+15:23:14 INFO  : 'after 3000' command is executed.
+15:23:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:23:16 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:23:16 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:23:16 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:23:16 INFO  : configparams force-mem-access 1
+15:23:16 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:23:16 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:23:16 INFO  : ps7_init
+15:23:16 INFO  : ps7_post_config
+15:23:16 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:23:16 INFO  : rst -processor
+15:23:16 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:23:16 INFO  : con
+15:23:16 INFO  : configparams force-mem-access 0
+15:23:17 INFO  : Testing the connection for 127.0.0.1
+15:23:45 INFO  : connect -url tcp:127.0.0.1:3121
+15:23:45 INFO  : bpremove -all
+15:23:45 INFO  : Context for 'APU' is selected.
+15:23:46 INFO  : System reset is completed.
+15:23:49 INFO  : 'after 3000' command is executed.
+15:23:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:23:50 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:23:50 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:23:50 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:23:50 INFO  : configparams force-mem-access 1
+15:23:50 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:23:50 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:23:50 INFO  : ps7_init
+15:23:50 INFO  : ps7_post_config
+15:23:50 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:23:50 INFO  : rst -processor
+15:23:50 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:23:51 INFO  : bpadd main
+15:23:51 INFO  : con
+15:23:51 INFO  : configparams force-mem-access 0
+15:23:52 INFO  : Testing the connection for 127.0.0.1
+15:23:54 INFO  : disconnect
+15:23:55 INFO  : connect -url tcp:127.0.0.1:3121
+15:23:55 INFO  : bpremove -all
+15:23:57 INFO  : Context for 'APU' is selected.
+15:23:57 INFO  : System reset is completed.
+15:24:01 INFO  : 'after 3000' command is executed.
+15:24:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:24:02 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:24:02 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:24:04 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:24:04 INFO  : configparams force-mem-access 1
+15:24:04 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:24:04 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:24:04 INFO  : ps7_init
+15:24:04 INFO  : ps7_post_config
+15:24:04 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:24:04 INFO  : rst -processor
+15:24:04 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:24:04 INFO  : bpadd main
+15:24:04 INFO  : con
+15:24:04 INFO  : configparams force-mem-access 0
+15:24:05 INFO  : Testing the connection for 127.0.0.1
+15:25:35 INFO  : disconnect
+15:25:36 ERROR : no channel specified
+15:25:36 ERROR : Error in handling the notification no channel specified
+15:25:37 INFO  : connect -url tcp:127.0.0.1:3121
+15:25:37 INFO  : bpremove -all
+15:25:37 INFO  : Context for 'APU' is selected.
+15:25:37 INFO  : System reset is completed.
+15:25:40 INFO  : 'after 3000' command is executed.
+15:25:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:25:42 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:25:42 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:25:44 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:25:44 INFO  : configparams force-mem-access 1
+15:25:44 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:25:44 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:25:44 INFO  : ps7_init
+15:25:44 INFO  : ps7_post_config
+15:25:44 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:25:44 INFO  : rst -processor
+15:25:44 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:25:44 INFO  : bpadd main
+15:25:44 INFO  : con
+15:25:44 INFO  : configparams force-mem-access 0
+15:25:45 INFO  : Testing the connection for 127.0.0.1
+15:26:40 INFO  : disconnect
+15:26:41 INFO  : connect -url tcp:127.0.0.1:3121
+15:26:41 INFO  : bpremove -all
+15:26:42 INFO  : Context for 'APU' is selected.
+15:26:42 INFO  : System reset is completed.
+15:26:45 INFO  : 'after 3000' command is executed.
+15:26:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:26:46 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:26:46 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:26:48 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:26:48 INFO  : configparams force-mem-access 1
+15:26:48 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:26:48 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:26:48 INFO  : ps7_init
+15:26:48 INFO  : ps7_post_config
+15:26:48 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:26:48 INFO  : rst -processor
+15:26:48 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:26:48 INFO  : bpadd main
+15:26:48 INFO  : con
+15:26:48 INFO  : configparams force-mem-access 0
+15:26:49 INFO  : Testing the connection for 127.0.0.1
+15:28:45 INFO  : disconnect
+15:28:47 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:28:53 INFO  : connect -url tcp:127.0.0.1:3121
+15:28:53 INFO  : bpremove -all
+15:28:53 INFO  : Context for 'APU' is selected.
+15:28:53 INFO  : System reset is completed.
+15:28:56 INFO  : 'after 3000' command is executed.
+15:28:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:28:57 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:28:57 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:28:59 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:28:59 INFO  : configparams force-mem-access 1
+15:28:59 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:28:59 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:28:59 INFO  : ps7_init
+15:28:59 INFO  : ps7_post_config
+15:28:59 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:28:59 INFO  : rst -processor
+15:28:59 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:28:59 INFO  : con
+15:28:59 INFO  : configparams force-mem-access 0
+15:29:00 INFO  : Testing the connection for 127.0.0.1
+15:29:15 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:29:21 INFO  : connect -url tcp:127.0.0.1:3121
+15:29:21 INFO  : bpremove -all
+15:29:21 INFO  : Context for 'APU' is selected.
+15:29:21 INFO  : System reset is completed.
+15:29:24 INFO  : 'after 3000' command is executed.
+15:29:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:29:26 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:29:26 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:29:26 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:29:26 INFO  : configparams force-mem-access 1
+15:29:26 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:29:26 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:29:26 INFO  : ps7_init
+15:29:26 INFO  : ps7_post_config
+15:29:26 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:29:26 INFO  : rst -processor
+15:29:26 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:29:26 INFO  : con
+15:29:26 INFO  : configparams force-mem-access 0
+15:29:27 INFO  : Testing the connection for 127.0.0.1
+15:29:33 INFO  : disconnect
+15:32:19 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:32:28 INFO  : connect -url tcp:127.0.0.1:3121
+15:32:28 INFO  : bpremove -all
+15:32:28 INFO  : Context for 'APU' is selected.
+15:32:28 INFO  : System reset is completed.
+15:32:31 INFO  : 'after 3000' command is executed.
+15:32:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:32:33 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:32:33 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:32:35 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:32:35 INFO  : configparams force-mem-access 1
+15:32:35 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:32:35 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:32:35 INFO  : ps7_init
+15:32:35 INFO  : ps7_post_config
+15:32:35 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:32:35 INFO  : rst -processor
+15:32:35 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:32:35 INFO  : con
+15:32:35 INFO  : configparams force-mem-access 0
+15:32:36 INFO  : Testing the connection for 127.0.0.1
+15:32:43 INFO  : disconnect
+15:32:53 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:33:02 INFO  : connect -url tcp:127.0.0.1:3121
+15:33:02 INFO  : bpremove -all
+15:33:02 INFO  : Context for 'APU' is selected.
+15:33:03 INFO  : System reset is completed.
+15:33:06 INFO  : 'after 3000' command is executed.
+15:33:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:33:07 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:33:07 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:33:09 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:33:09 INFO  : configparams force-mem-access 1
+15:33:09 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:33:09 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:33:09 INFO  : ps7_init
+15:33:09 INFO  : ps7_post_config
+15:33:09 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:33:09 INFO  : rst -processor
+15:33:09 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:33:09 INFO  : con
+15:33:09 INFO  : configparams force-mem-access 0
+15:33:10 INFO  : Testing the connection for 127.0.0.1
+15:33:43 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:33:47 INFO  : connect -url tcp:127.0.0.1:3121
+15:33:47 INFO  : bpremove -all
+15:33:47 INFO  : Context for 'APU' is selected.
+15:33:47 INFO  : System reset is completed.
+15:33:50 INFO  : 'after 3000' command is executed.
+15:33:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:33:52 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:33:52 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:33:52 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:33:52 INFO  : configparams force-mem-access 1
+15:33:52 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:33:52 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:33:52 INFO  : ps7_init
+15:33:52 INFO  : ps7_post_config
+15:33:52 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:33:52 INFO  : rst -processor
+15:33:52 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:33:52 INFO  : con
+15:33:52 INFO  : configparams force-mem-access 0
+15:33:53 INFO  : Testing the connection for 127.0.0.1
+15:33:56 INFO  : disconnect
+15:34:01 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:34:09 INFO  : connect -url tcp:127.0.0.1:3121
+15:34:09 INFO  : bpremove -all
+15:34:09 INFO  : Context for 'APU' is selected.
+15:34:09 INFO  : System reset is completed.
+15:34:12 INFO  : 'after 3000' command is executed.
+15:34:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:34:13 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:34:13 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:34:15 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:34:15 INFO  : configparams force-mem-access 1
+15:34:15 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:34:15 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:34:16 INFO  : ps7_init
+15:34:16 INFO  : ps7_post_config
+15:34:16 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:34:16 INFO  : rst -processor
+15:34:16 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:34:16 INFO  : con
+15:34:16 INFO  : configparams force-mem-access 0
+15:34:17 INFO  : Testing the connection for 127.0.0.1
+15:35:56 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\GPIO_Interrupt\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+15:36:01 INFO  : connect -url tcp:127.0.0.1:3121
+15:36:01 INFO  : bpremove -all
+15:36:01 INFO  : Context for 'APU' is selected.
+15:36:01 INFO  : System reset is completed.
+15:36:04 INFO  : 'after 3000' command is executed.
+15:36:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+15:36:05 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+15:36:05 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:36:05 INFO  : loadhw -hw c:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+15:36:05 INFO  : configparams force-mem-access 1
+15:36:05 INFO  : targets -set -nocase -filter {name =~"APU*"}
+15:36:05 INFO  : source C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/_ide/psinit/ps7_init.tcl
+15:36:05 INFO  : ps7_init
+15:36:05 INFO  : ps7_post_config
+15:36:05 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+15:36:06 INFO  : rst -processor
+15:36:06 INFO  : dow C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/app.elf
+15:36:06 INFO  : con
+15:36:06 INFO  : configparams force-mem-access 0
+15:36:07 INFO  : Testing the connection for 127.0.0.1
+15:57:45 INFO  : disconnect

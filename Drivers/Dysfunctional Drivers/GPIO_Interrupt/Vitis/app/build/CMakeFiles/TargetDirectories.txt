@@ -1,0 +1,3 @@
+C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/CMakeFiles/app.elf.dir
+C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/CMakeFiles/edit_cache.dir
+C:/Users/miwoj/Desktop/Zybo/GPIO_Interrupt/Vitis/app/build/CMakeFiles/rebuild_cache.dir

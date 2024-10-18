@@ -1,0 +1,230 @@
+11:43:05 INFO  : updated workspace path: C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:43:05 INFO  : Marking the target connection as default Local
+11:43:05 INFO  : Marking the target connection as default Linux Agent
+11:43:05 INFO  : Marking the target connection as default XRTServer
+11:43:05 INFO  : Marking the target connection as default LinuxEmulation
+11:43:05 INFO  : Marking the target connection as default QEMU
+11:43:05 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:43:05 INFO  : updated workspace path: C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:43:05 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:43:08 INFO  : Successfully created repository data at C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj5623043115992894814
+11:43:08 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj2188640252289836046 -r C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj5623043115992894814\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:08 INFO  : Embedded Template List generated successfully
+11:43:08 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\repo.py -st   C:\Xilinx\Vitis\2023.2\data\embeddedsw && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:10 INFO  : Successfully created repository data at C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:43:10 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj737238861885185883 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:10 INFO  : Embedded Template List generated successfully
+11:43:10 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj6196848961812258900 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:11 INFO  : Embedded Template List generated successfully
+11:43:39 INFO  : Found no platform with name 'design_1_wrapper' in install repositories
+11:43:39 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && xsct.bat C:\Xilinx\Vitis\2023.2\vitisng-server\scripts\platformutil.tcl C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\design_1_wrapper.xsa C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.rigel_lopper_temp_platform\design_1_wrapper\hw\sdt && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:50 INFO  : INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vitis/2023.2/data/embeddedsw) loading 3 seconds
+11:43:50 INFO  : WARNING: [Common 17-673] Cannot get value of property 'C_QSPI_MODE' because this property is not valid in conjunction with other property setting on this object.
+11:43:50 INFO  : WARNING: [Common 17-673] Cannot get value of property 'C_EMIO_GPIO_WIDTH' because this property is not valid in conjunction with other property setting on this object.
+11:43:50 INFO  : WARNING: [Common 17-673] Cannot get value of property 'C_MIO_GPIO_MASK' because this property is not valid in conjunction with other property setting on this object.
+11:43:50 INFO  : SDT generated successfully
+11:43:50 INFO  : Lopper command for cpu List generation: lopper -O C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.rigel_lopper -f -i C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Lib\site-packages\lopper\lops\lop-cpulist.dts C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.rigel_lopper_temp_platform\design_1_wrapper\hw\sdt\system-top.dts
+11:43:50 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.rigel_lopper -f -i C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Lib\site-packages\lopper\lops\lop-cpulist.dts C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.rigel_lopper_temp_platform\design_1_wrapper\hw\sdt\system-top.dts && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:51 INFO  : ps7_cortexa9_0
+11:43:51 INFO  : ps7_cortexa9_1
+11:43:51 INFO  : CPU List generated successfully
+11:43:57 INFO  : Platform  platform creation started.
+11:43:57 INFO  : Found no platform with name 'design_1_wrapper' in install repositories
+11:43:58 INFO  : Lopper command for cpu List generation: lopper -O C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.rigel_lopper -f -i C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Lib\site-packages\lopper\lops\lop-cpulist.dts C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts
+11:43:58 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.rigel_lopper -f -i C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Lib\site-packages\lopper\lops\lop-cpulist.dts C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:59 INFO  : ps7_cortexa9_0
+11:43:59 INFO  : ps7_cortexa9_1
+11:43:59 INFO  : CPU List generated successfully
+11:43:59 INFO  : SDT generated successfully.
+11:43:59 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform
+11:43:59 INFO  : ZYNQ: Using the QEMU args from install at  : C:\Xilinx\Vitis\2023.2\data\emulation\platforms\zynq\sw\a9_linux\qemu\qemu_args.txt
+11:43:59 INFO  : ZYNQ: Using the QEMU args from install at  : C:\Xilinx\Vitis\2023.2\data\emulation\platforms\zynq\sw\a9_standalone\qemu\qemu_args.txt
+11:43:59 INFO  : ZYNQ: Using the QEMU args from install at  : C:\Xilinx\Vitis\2023.2\data\emulation\platforms\zynq\sw\a9_standalone\qemu\qemu_args.txt
+11:43:59 INFO  : lopper command to generate BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//create_bsp.py -w C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -p ps7_cortexa9_0 -o standalone -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -t empty_application -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml
+11:43:59 INFO  : lopper command to generate BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//create_bsp.py -w C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp -p ps7_cortexa9_0 -o standalone -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -t zynq_fsbl -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml
+11:43:59 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\create_bsp.py -w C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -p ps7_cortexa9_0 -o standalone -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -t empty_application -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:43:59 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\create_bsp.py -w C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp -p ps7_cortexa9_0 -o standalone -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -t zynq_fsbl -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:44:23 INFO  : -- The C compiler identification is GNU 12.2.0
+11:44:23 INFO  : -- The CXX compiler identification is GNU 12.2.0
+11:44:23 INFO  : -- Detecting C compiler ABI info
+11:44:23 INFO  : -- Detecting C compiler ABI info - done
+11:44:23 INFO  : -- Check for working C compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe - skipped
+11:44:23 INFO  : -- Detecting C compile features
+11:44:23 INFO  : -- Detecting C compile features - done
+11:44:23 INFO  : -- Detecting CXX compiler ABI info
+11:44:23 INFO  : -- Detecting CXX compiler ABI info - done
+11:44:23 INFO  : -- Check for working CXX compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe - skipped
+11:44:23 INFO  : -- Detecting CXX compile features
+11:44:23 INFO  : -- Detecting CXX compile features - done
+11:44:23 INFO  : -- Configuring done
+11:44:23 INFO  : -- Generating done
+11:44:23 INFO  : CMake Warning:
+11:44:23 INFO  :   Manually-specified variables were not used by the project:
+11:44:23 INFO  : 
+11:44:23 INFO  :     CMAKE_LIBRARY_PATH
+11:44:23 INFO  : 
+11:44:23 INFO  : 
+11:44:23 INFO  : -- Build files have been written to: C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+11:44:23 INFO  : Successfully created Domain at C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+11:44:23 INFO  : Successfully Generated Domain C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+11:44:23 INFO  : Domain standalone_ps7_cortexa9_0 added successfully.
+11:44:24 INFO  : -- The C compiler identification is GNU 12.2.0
+11:44:24 INFO  : -- The CXX compiler identification is GNU 12.2.0
+11:44:24 INFO  : -- Detecting C compiler ABI info
+11:44:24 INFO  : -- Detecting C compiler ABI info - done
+11:44:24 INFO  : -- Check for working C compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe - skipped
+11:44:24 INFO  : -- Detecting C compile features
+11:44:24 INFO  : -- Detecting C compile features - done
+11:44:24 INFO  : -- Detecting CXX compiler ABI info
+11:44:24 INFO  : -- Detecting CXX compiler ABI info - done
+11:44:24 INFO  : -- Check for working CXX compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe - skipped
+11:44:24 INFO  : -- Detecting CXX compile features
+11:44:24 INFO  : -- Detecting CXX compile features - done
+11:44:24 INFO  : -- Configuring done
+11:44:24 INFO  : -- Generating done
+11:44:24 INFO  : CMake Warning:
+11:44:24 INFO  :   Manually-specified variables were not used by the project:
+11:44:24 INFO  : 
+11:44:24 INFO  :     CMAKE_LIBRARY_PATH
+11:44:24 INFO  : 
+11:44:24 INFO  : 
+11:44:24 INFO  : -- Build files have been written to: C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp
+11:44:24 INFO  : Successfully created Domain at C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/zynq_fsbl/zynq_fsbl_bsp
+11:44:24 INFO  : Successfully Generated Domain C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp
+11:44:24 INFO  : lopper command to create baremetal application :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//create_app.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl -t zynq_fsbl -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp -n fsbl -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml
+11:44:24 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\validate_bsp.py -t zynq_fsbl -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:44:25 INFO  : Successfully validated template zynq_fsbl
+11:44:25 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\create_app.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl -t zynq_fsbl -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp -n fsbl -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:44:28 INFO  : Successfully Created Application sources at C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/zynq_fsbl
+11:44:28 INFO  : Successfully created Application C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl
+11:44:28 INFO  : Platform FSBL Boot domain added successfully.
+11:44:28 INFO  : Platform creation finished successfully.
+11:44:28 INFO  : Platform Quick Build initiated.
+11:44:28 INFO  : Generating Export directory
+11:44:29 INFO  : Generated platform metadata for creating application(s) based on platform platform.
+11:44:52 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\validate_bsp.py -t hello_world -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:44:53 INFO  : Successfully validated template hello_world
+11:44:55 INFO  : lopper command to create baremetal application :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//create_app.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\src -t hello_world -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -n app -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml
+11:44:55 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\validate_bsp.py -t hello_world -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:44:55 INFO  : Successfully validated template hello_world
+11:44:55 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\create_app.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\src -t hello_world -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\export\platform\sw\standalone_ps7_cortexa9_0 -n app -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:44:59 INFO  : Successfully Created Application sources at C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/app/src
+11:44:59 INFO  : Successfully created Application C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\src
+11:44:59 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app
+11:44:59 INFO  : The hardware specification used by project 'C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+11:44:59 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\_ide\bitstream' in project 'C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app'.
+11:44:59 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\_ide\psinit' in project 'C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app'.
+11:45:07 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O  . C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -- baremetal_getsupported_comp_xlnx ps7_cortexa9_0 C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:45:08 INFO  : Supported Library List generated.
+11:45:12 INFO  : Adding Library to the given BSP C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+11:45:12 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\config_bsp.py -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -al  xilflash C:\Xilinx\Vitis\2023.2\data\embeddedsw\lib\sw_services\xilflash_v4_10 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:45:14 INFO  : Library added to BSP successfully
+11:45:14 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O  . C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -- baremetal_getsupported_comp_xlnx ps7_cortexa9_0 C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:45:15 INFO  : Supported Library List generated.
+11:45:19 INFO  : Regenerating BSP 
+11:45:19 INFO  : lopper command to regenerate BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//regen_bsp.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml
+11:45:19 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\regen_bsp.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:45:33 INFO  : -- The C compiler identification is GNU 12.2.0
+11:45:33 INFO  : -- The CXX compiler identification is GNU 12.2.0
+11:45:33 INFO  : -- Detecting C compiler ABI info
+11:45:33 INFO  : -- Detecting C compiler ABI info - done
+11:45:33 INFO  : -- Check for working C compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe - skipped
+11:45:33 INFO  : -- Detecting C compile features
+11:45:33 INFO  : -- Detecting C compile features - done
+11:45:33 INFO  : -- Detecting CXX compiler ABI info
+11:45:33 INFO  : -- Detecting CXX compiler ABI info - done
+11:45:33 INFO  : -- Check for working CXX compiler: C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe - skipped
+11:45:33 INFO  : -- Detecting CXX compile features
+11:45:33 INFO  : -- Detecting CXX compile features - done
+11:45:33 INFO  : -- Configuring done
+11:45:33 INFO  : -- Generating done
+11:45:33 INFO  : CMake Warning:
+11:45:33 INFO  :   Manually-specified variables were not used by the project:
+11:45:33 INFO  : 
+11:45:33 INFO  :     CMAKE_LIBRARY_PATH
+11:45:33 INFO  : 
+11:45:33 INFO  : 
+11:45:33 INFO  : -- Build files have been written to: C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+11:45:33 INFO  : -- Configuring done
+11:45:33 INFO  : -- Generating done
+11:45:33 INFO  : -- Build files have been written to: C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+11:45:33 INFO  : Successfully created Domain at C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+11:45:33 INFO  : BSP regenerated successfully
+11:45:33 INFO  : BSP regeneration finished successfully
+11:45:33 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && lopper -O  . C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\hw\sdt\system-top.dts -- baremetal_getsupported_comp_xlnx ps7_cortexa9_0 C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:45:34 INFO  : Supported Library List generated.
+11:45:42 INFO  : BSP build will be initiated for Domain zynq_fsbl
+11:45:42 INFO  : Generating BSP for the domain C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp
+11:45:42 INFO  : lopper command to build BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp
+11:45:42 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\zynq_fsbl_bsp && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:45:42 INFO  : BSP build will be initiated for Domain standalone_ps7_cortexa9_0
+11:45:42 INFO  : Generating BSP for the domain C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+11:45:42 INFO  : lopper command to build BSP :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+11:45:42 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_bsp.py -d C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:46:06 INFO  : Domain build successfully
+11:46:06 INFO  : Domain build successfully
+11:46:06 INFO  : Generating Boot ELFs
+11:46:06 INFO  : lopper command to build baremetal application :python C:\Xilinx\Vitis\2023.2\data\embeddedsw/scripts/pyesw//build_app.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl -b C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\build
+11:46:06 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl -b C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:46:10 INFO  : Successfully building the baremetal applicationC:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\platform\zynq_fsbl\build
+11:46:10 INFO  : Generating Export directory
+11:46:11 INFO  : Platform Build Finished successfully.
+11:46:15 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+13:44:38 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+08:05:06 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj4547529220648190862 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+08:05:08 INFO  : updated workspace path: C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+08:05:09 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+08:05:10 INFO  : Embedded Template List generated successfully
+08:05:10 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj16126345830080230048 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+08:05:11 INFO  : Embedded Template List generated successfully
+09:53:25 INFO  : connection terminated
+09:53:25 INFO  : connection terminated
+09:53:25 INFO  : scheduling shutdown timer for 2 seconds ...
+09:53:25 INFO  : scheduling shutdown timer for 2 seconds ...
+09:53:27 INFO  : Terminating Vitis C++ Server
+09:53:27 INFO  : Terminating Vitis C++ Server
+09:53:27 INFO  : Vitis C++ Server terminated
+11:34:17 INFO  : updated workspace path: C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:34:17 INFO  : created .gitignore file for the project C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:34:17 INFO  : updated workspace path: C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis
+11:34:19 INFO  : Successfully created repository data at C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj6246051342701071816
+11:34:19 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj7007764184196580900 -r C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj6246051342701071816\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:34:19 INFO  : Embedded Template List generated successfully
+11:34:19 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj9509819720601876731 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:34:20 INFO  : Embedded Template List generated successfully
+11:34:20 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\miwoj\AppData\Local\Temp\rigel_lopper_miwoj11022924512881577004 -r C:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\.repo.yaml && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:34:21 INFO  : Embedded Template List generated successfully
+11:45:03 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2023.2\data\embeddedsw\scripts\pyesw\\build_app.py -s c:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\src -b c:\Users\miwoj\Desktop\Zybo\MIO_vs_EMIO_GPIO\Vitis\app\build && C:\Xilinx\Vitis\2023.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+11:46:30 INFO  : XSDB server has started successfully from frontend.
+11:46:30 INFO  : It has taken  2secs.
+11:46:31 INFO  : Connection to XSDB Server established.
+11:46:31 INFO  : It has taken  1secs.
+11:46:31 INFO  : Done
+11:46:33 INFO  : connect -url tcp:127.0.0.1:3121
+11:46:36 INFO  : bpremove -all
+11:46:36 INFO  : Context for 'APU' is selected.
+11:46:36 INFO  : System reset is completed.
+11:46:39 INFO  : 'after 3000' command is executed.
+11:46:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279785460A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279785460A-13722093-0"}' command is executed.
+11:46:41 INFO  : Device configured successfully with "C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/app/_ide/bitstream/design_1_wrapper.bit"
+11:46:41 INFO  : targets -set -nocase -filter {name =~"APU*"}
+11:46:41 INFO  : loadhw -hw C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/platform/export/platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+11:46:41 INFO  : configparams force-mem-access 1
+11:46:41 INFO  : targets -set -nocase -filter {name =~"APU*"}
+11:46:41 INFO  : source C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/app/_ide/psinit/ps7_init.tcl
+11:46:41 INFO  : ps7_init
+11:46:41 INFO  : ps7_post_config
+11:46:41 INFO  : targets -set -nocase -filter {name =~ "*A9*#0"}
+11:46:41 INFO  : rst -processor
+11:46:41 INFO  : dow C:/Users/miwoj/Desktop/Zybo/MIO_vs_EMIO_GPIO/Vitis/app/build/app.elf
+11:46:41 INFO  : con
+11:46:41 INFO  : configparams force-mem-access 0
+11:46:42 INFO  : Testing the connection for 127.0.0.1
+11:47:43 INFO  : connection terminated
+11:47:43 INFO  : connection terminated
+11:47:43 INFO  : scheduling shutdown timer for 2 seconds ...
+11:47:43 INFO  : scheduling shutdown timer for 2 seconds ...
+11:47:45 INFO  : Terminating Vitis C++ Server
+11:47:45 INFO  : Terminating Vitis C++ Server
+11:47:45 INFO  : Vitis C++ Server terminated
+11:47:45 INFO  : Vitis C++ Server terminated
