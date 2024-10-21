@@ -24401,7 +24401,7 @@
 		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "LED handsolder")
 		(property "Reference" "D11"
-			(at 0.225 1.85 -180)
+			(at 0.225 1.85 180)
 			(layer "B.SilkS")
 			(uuid "40b94ff1-cdea-424c-870d-c1ec7b1cd939")
 			(effects
@@ -31258,7 +31258,7 @@
 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R30"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "B.SilkS")
 			(uuid "870297df-6f35-406a-91ce-9a071de1db2f")
 			(effects
@@ -31270,7 +31270,7 @@
 			)
 		)
 		(property "Value" "R1k1"
-			(at 0 -1.82 360)
+			(at 0 -1.82 0)
 			(layer "B.Fab")
 			(uuid "e62be773-cb3d-4d81-a81f-270fd2ae7312")
 			(effects
@@ -31429,7 +31429,7 @@
 			(uuid "bab5550c-2f95-429b-bea7-5e8ce5e8c62a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "42775909-b009-47a1-9a19-5cf020b120a1")
 			(effects
@@ -40340,7 +40340,7 @@
 				(xy 33.766537 152.381459) (xy 33.766559 152.381479) (xy 34.222861 152.837781) (xy 37.57286 156.187781)
 				(xy 37.572861 156.187782) (xy 37.644649 156.25957) (xy 37.712219 156.32714) (xy 37.87608 156.436628)
 				(xy 37.876086 156.436632) (xy 37.946239 156.46569) (xy 38.058164 156.512051) (xy 38.251454 156.550499)
-				(xy 38.251457 156.5505) (xy 38.251459 156.5505) (xy 38.5255 156.5505) (xy 38.592539 156.570185)
+				(xy 38.251457 156.5505) (xy 38.251459 156.5505) (xy 38.44854 156.5505) (xy 38.5255 156.5505) (xy 38.592539 156.570185)
 				(xy 38.638294 156.622989) (xy 38.6495 156.6745) (xy 38.6495 157.000015) (xy 38.66 157.102795) (xy 38.660001 157.102797)
 				(xy 38.677161 157.154581) (xy 38.715186 157.269335) (xy 38.715187 157.269337) (xy 38.807286 157.418651)
 				(xy 38.807289 157.418655) (xy 38.931344 157.54271) (xy 38.931348 157.542713) (xy 39.080662 157.634812)
