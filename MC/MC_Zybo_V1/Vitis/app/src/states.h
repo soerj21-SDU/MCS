@@ -8,11 +8,11 @@
 #define ST_DRIVE              6 
 #define ST_ERROR              0 
 
+uint8_t state = ST_INIT;
 
-
-void st_Init()
-{
-        // initialize Zynq
-    init_SDC();
-}
+// void st_Init()
+// {
+//         // initialize Zynq
+//     init_SDC();
+// }
 

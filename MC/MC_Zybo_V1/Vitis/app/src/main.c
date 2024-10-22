@@ -18,8 +18,7 @@
 
 int DELAY = 100000000;
 
-uint8_t state = ST_INIT;
-
+// state = ST_INIT;
 
 
 
@@ -37,6 +36,8 @@ while(1)
     {
         case (ST_INIT) : //---------------------------------------
         {
+            print ("\n In INIT state");
+
             status = init_SDC();
                 if (status != XST_SUCCESS)
                 {
@@ -51,13 +52,9 @@ while(1)
 
         case (ST_IDLE) : //---------------------------------------
         {
+            print ("\n In IDLE state");
+            for(int i = 0; i < DELAY; i++) {};
 
-            while(1)
-            {
-                for(int i = 0; i < DELAY; i++) {};
-                print("\n I am waiting on an interrupt");
-                for(int i = 0; i < DELAY; i++) {};
-            }    
 
             break; 
         }
@@ -89,6 +86,9 @@ while(1)
         
         case (ST_ERROR) : //---------------------------------------
         {
+            print ("I am in error");
+            for(int i = 0; i < DELAY; i++) {};
+
             //Communication error
             //communication lost
             // timeouts

@@ -7,6 +7,7 @@
 
 #include "GPIO.h"
 #include "interrupts.h"
+// #include "states.h" 
 
 #define DIR_INPUT 1 
 #define DIR_OUTPUT 0
@@ -37,9 +38,14 @@
 #define  TSMS_index              15
 
 
-// uint16_t SDC_input; 
-extern XGpio SDC_axi_gpio_inst;
+extern u16 GlobalIntrMask;
+// extern state; 
 
+// void GpioHandler(void *CallbackRef);
+void SDC_ISR(void *CallbackRef);
+
+
+extern XGpio SDC_axi_gpio_inst;
 
 int init_SDC();
 uint32_t  SDC_read_as_register (uint32_t *SDC_register);

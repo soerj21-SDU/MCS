@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA3CB6B83EA132F38",
+      "boundary_crc": "0x7FE60D1C9A86233D",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../Vivado.gen/sources_1/bd/Block_Diagram",
       "name": "Block_Diagram",
@@ -189,6 +189,36 @@
             "direction": "IO"
           }
         }
+      },
+      "CAN_0_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:can:1.0",
+        "vlnv": "xilinx.com:interface:can_rtl:1.0",
+        "port_maps": {
+          "TX": {
+            "physical_name": "CAN_0_0_tx",
+            "direction": "O"
+          },
+          "RX": {
+            "physical_name": "CAN_0_0_rx",
+            "direction": "I"
+          }
+        }
+      },
+      "CAN_1_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:can:1.0",
+        "vlnv": "xilinx.com:interface:can_rtl:1.0",
+        "port_maps": {
+          "TX": {
+            "physical_name": "CAN_1_0_tx",
+            "direction": "O"
+          },
+          "RX": {
+            "physical_name": "CAN_1_0_rx",
+            "direction": "I"
+          }
+        }
       }
     },
     "ports": {
@@ -203,6 +233,15 @@
       },
       "sw3": {
         "direction": "I"
+      },
+      "TTC0_WAVE0_OUT_0": {
+        "direction": "O"
+      },
+      "TTC0_WAVE1_OUT_0": {
+        "direction": "O"
+      },
+      "TTC0_WAVE2_OUT_0": {
+        "direction": "O"
       }
     },
     "components": {
@@ -217,7 +256,7 @@
             "value": "650.000000"
           },
           "PCW_ACT_CAN_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "100.000000"
           },
           "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
             "value": "10.096154"
@@ -285,6 +324,30 @@
           "PCW_APU_PERIPHERAL_FREQMHZ": {
             "value": "650"
           },
+          "PCW_CAN0_CAN0_IO": {
+            "value": "EMIO"
+          },
+          "PCW_CAN0_GRP_CLK_ENABLE": {
+            "value": "0"
+          },
+          "PCW_CAN0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_CAN1_CAN1_IO": {
+            "value": "EMIO"
+          },
+          "PCW_CAN1_GRP_CLK_ENABLE": {
+            "value": "0"
+          },
+          "PCW_CAN1_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_CAN_PERIPHERAL_FREQMHZ": {
+            "value": "100"
+          },
+          "PCW_CAN_PERIPHERAL_VALID": {
+            "value": "1"
+          },
           "PCW_CLK0_FREQ": {
             "value": "100000000"
           },
@@ -306,8 +369,17 @@
           "PCW_ENET0_PERIPHERAL_ENABLE": {
             "value": "0"
           },
-          "PCW_ENET_RESET_ENABLE": {
-            "value": "0"
+          "PCW_EN_CAN0": {
+            "value": "1"
+          },
+          "PCW_EN_CAN1": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_CAN0": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_CAN1": {
+            "value": "1"
           },
           "PCW_EN_EMIO_TTC0": {
             "value": "1"
@@ -842,9 +914,6 @@
           },
           "PCW_SD0_PERIPHERAL_ENABLE": {
             "value": "0"
-          },
-          "PCW_SDIO_PERIPHERAL_FREQMHZ": {
-            "value": "50"
           },
           "PCW_SDIO_PERIPHERAL_VALID": {
             "value": "0"
@@ -1399,6 +1468,18 @@
       }
     },
     "interface_nets": {
+      "processing_system7_0_CAN_0": {
+        "interface_ports": [
+          "CAN_0_0",
+          "processing_system7_0/CAN_0"
+        ]
+      },
+      "processing_system7_0_CAN_1": {
+        "interface_ports": [
+          "CAN_1_0",
+          "processing_system7_0/CAN_1"
+        ]
+      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -1453,6 +1534,24 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "rst_ps7_0_100M/ext_reset_in"
+        ]
+      },
+      "processing_system7_0_TTC0_WAVE0_OUT": {
+        "ports": [
+          "processing_system7_0/TTC0_WAVE0_OUT",
+          "TTC0_WAVE0_OUT_0"
+        ]
+      },
+      "processing_system7_0_TTC0_WAVE1_OUT": {
+        "ports": [
+          "processing_system7_0/TTC0_WAVE1_OUT",
+          "TTC0_WAVE1_OUT_0"
+        ]
+      },
+      "processing_system7_0_TTC0_WAVE2_OUT": {
+        "ports": [
+          "processing_system7_0/TTC0_WAVE2_OUT",
+          "TTC0_WAVE2_OUT_0"
         ]
       },
       "rst_ps7_0_100M_peripheral_aresetn": {

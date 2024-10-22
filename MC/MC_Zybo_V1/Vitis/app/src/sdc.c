@@ -3,14 +3,32 @@
 
 XGpio SDC_axi_gpio_inst; 
 
+void SDC_ISR (void *CallbackRef)
+{
+    XGpio *GpioPtr = (XGpio *)CallbackRef;
+
+    const char* broken_node = get_first_broken_node();
+    printf("SDC broken at: %s\n", broken_node);
+    
+    if (broken_node != "All nodes are connected" )
+    {
+        // state = ST_ERROR; 
+    }
+
+    XGpio_InterruptClear(GpioPtr,  GlobalIntrMask);     
+}
+
 int init_SDC()
 {
     int status;
+    // print ("\n Setting up SDC AXI GPIO");
     status = setup_AXI_GPIO(SDC_AXI_Address, &SDC_axi_gpio_inst, GPIO_CHANNEL_1, DIR_INPUT);
-    status = setupInterrupts(&SDC_axi_gpio_inst,   SDC_AXI_Address,      1);
+    // print ("\n Setting up SDC AXI Interrupt");
+    status = setupInterrupts(&SDC_axi_gpio_inst, SDC_AXI_Address, 1, &SDC_ISR);
 
     return status;
 }
+
 
 
 
