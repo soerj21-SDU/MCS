@@ -234,11 +234,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      "power_pin_not_driven|520700|381000|02ec65e4-720a-4b1d-8666-d9482d260e94|00000000-0000-0000-0000-000000000000|/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46/78c8d89b-2ca5-43d4-ab8e-91cd7a25b2de|/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46/78c8d89b-2ca5-43d4-ab8e-91cd7a25b2de|",
-      "power_pin_not_driven|520700|660400|66698251-6b8b-4c8d-bab3-31ab6465ad57|00000000-0000-0000-0000-000000000000|/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46/78c8d89b-2ca5-43d4-ab8e-91cd7a25b2de|/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46/78c8d89b-2ca5-43d4-ab8e-91cd7a25b2de|",
-      "power_pin_not_driven|622300|914400|e1ae7407-7fb5-4abd-9ab5-20a9c591184c|00000000-0000-0000-0000-000000000000|/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46/91fc52e8-d123-4e03-9a67-b86afe193964|/7bff671f-2f7d-4dcb-82cb-7f168fb2ab46/91fc52e8-d123-4e03-9a67-b86afe193964|"
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
