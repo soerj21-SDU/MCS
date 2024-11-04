@@ -1,0 +1,3 @@
+domain_path: C:\Git\GitHub\MCS\Drivers\xADC_external\Vitis\platform_V2\export\platform_V2\sw\standalone_ps7_cortexa9_0
+app_src_dir: C:\Xilinx\Vitis\2023.2\data\embeddedsw\lib\sw_apps\empty_application
+template: empty_application
