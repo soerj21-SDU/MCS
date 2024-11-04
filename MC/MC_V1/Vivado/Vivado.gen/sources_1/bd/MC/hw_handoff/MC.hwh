@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Oct 24 10:26:13 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov  1 14:37:39 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:picozed_7020_som:part0:1.2" DEVICE="7z020" NAME="MC" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="I" NAME="BOTS_I" SIGIS="undef" SIGNAME="External_Ports_BOTS_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="BOTS_I"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="CAN_0_rx" SIGIS="undef" SIGNAME="processing_system7_0_CAN0_PHY_RX">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="CAN0_PHY_RX"/>
@@ -22,6 +27,11 @@
     <PORT DIR="O" NAME="CAN_1_tx" SIGIS="undef" SIGNAME="processing_system7_0_CAN1_PHY_TX">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="CAN1_PHY_TX"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="COCKPIT_EMERGENCY_I" SIGIS="undef" SIGNAME="External_Ports_COCKPIT_EMERGENCY_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="COCKPIT_EMERGENCY_I"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" LEFT="14" NAME="DDR_addr" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_Addr">
@@ -89,7 +99,7 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_RAS_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="DDR_reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
+    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DRSTB"/>
       </CONNECTIONS>
@@ -129,6 +139,51 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="FL_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_FL_WHEEL_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="FL_WHEEL_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="FR_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_FR_WHEEL_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="FR_WHEEL_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="INERTIA_I" SIGIS="undef" SIGNAME="External_Ports_INERTIA_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="INERTIA_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="L_EMERGENCY_BUTTON_I" SIGIS="undef" SIGNAME="External_Ports_L_EMERGENCY_BUTTON_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="L_EMERGENCY_BUTTON_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="PL_ALIVE_LED" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlconstant" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RL_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_RL_WHEEL_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="RL_WHEEL_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RR_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_RR_WHEEL_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="RR_WHEEL_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="R_EMERGENCY_BUTTON_I" SIGIS="undef" SIGNAME="External_Ports_R_EMERGENCY_BUTTON_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="R_EMERGENCY_BUTTON_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SDC_SUPPLY_I" SIGIS="undef" SIGNAME="External_Ports_SDC_SUPPLY_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="SDC_SUPPLY_I"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="SPI0_MISO_I" SIGIS="undef" SIGNAME="External_Ports_SPI0_MISO_I">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="SPI0_MISO_I"/>
@@ -147,6 +202,11 @@
     <PORT DIR="O" NAME="SPI0_SS_O" SIGIS="undef" SIGNAME="processing_system7_0_SPI0_SS_O">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="SPI0_SS_O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="TSMS_I" SIGIS="undef" SIGNAME="External_Ports_TSMS_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="TSMS_I"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="UART0_CTSN" SIGIS="undef" SIGNAME="External_Ports_UART0_CTSN">
@@ -235,12 +295,16 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="ClK_divider" VALUE="100000000"/>
-        <PARAMETER NAME="No_of_inputs" VALUE="17"/>
+        <PARAMETER NAME="NO_OF_SDC_NODES" VALUE="17"/>
         <PARAMETER NAME="Component_Name" VALUE="MC_SDC_Monitor_CAR_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="BOTS_I" SIGIS="undef"/>
+        <PORT DIR="I" NAME="BOTS_I" SIGIS="undef" SIGNAME="External_Ports_BOTS_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BOTS_I"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="BSPD_I" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
@@ -251,34 +315,86 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="COCKPIT_EMERGENCY_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="FL_WHEEL_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="FR_WHEEL_I" SIGIS="undef"/>
+        <PORT DIR="I" NAME="COCKPIT_EMERGENCY_I" SIGIS="undef" SIGNAME="External_Ports_COCKPIT_EMERGENCY_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="COCKPIT_EMERGENCY_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="FL_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_FL_WHEEL_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="FL_WHEEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="FR_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_FR_WHEEL_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="FR_WHEEL_I"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="HVD_I" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="INERTIA_I" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="16" NAME="IS_SDC_CLOSED_VECTOR_O" RIGHT="0" SIGIS="undef" SIGNAME="SDC_Monitor_CAR_0_IS_SDC_CLOSED_VECTOR_O">
+        <PORT DIR="I" NAME="INERTIA_I" SIGIS="undef" SIGNAME="External_Ports_INERTIA_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="INERTIA_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_EMERGENCY_BUTTON_I" SIGIS="undef" SIGNAME="External_Ports_L_EMERGENCY_BUTTON_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="L_EMERGENCY_BUTTON_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RL_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_RL_WHEEL_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RL_WHEEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RR_WHEEL_I" SIGIS="undef" SIGNAME="External_Ports_RR_WHEEL_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RR_WHEEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="R_EMERGENCY_BUTTON_I" SIGIS="undef" SIGNAME="External_Ports_R_EMERGENCY_BUTTON_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R_EMERGENCY_BUTTON_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="SDC_SUPPLY_I" SIGIS="undef" SIGNAME="External_Ports_SDC_SUPPLY_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SDC_SUPPLY_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="SDC_VECTOR_O" RIGHT="0" SIGIS="undef" SIGNAME="SDC_Monitor_CAR_0_SDC_VECTOR_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="L_EMERGENCY_BUTTON_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RL_WHEEL_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RR_WHEEL_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="R_EMERGENCY_BUTTON_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="SDC_SUPPLY_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="TSAC_AMS_ENABLE_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="TSAC_HV_CONNECTOR_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="TSAC_IMD_I" SIGIS="undef"/>
+        <PORT DIR="I" NAME="TSAC_AMS_ENABLE_I" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="TSAC_HV_CONNECTOR_I" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="TSAC_IMD_I" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="TSMP_I" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="TSMS_I" SIGIS="undef"/>
+        <PORT DIR="I" NAME="TSMS_I" SIGIS="undef" SIGNAME="External_Ports_TSMS_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="TSMS_I"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -332,7 +448,7 @@
             <REGISTER NAME="GPIO2_DATA">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -345,14 +461,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO2_TRI">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -365,7 +481,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -456,11 +572,11 @@
         <PARAMETER NAME="C_ALL_INPUTS" VALUE="1"/>
         <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="0"/>
         <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="0"/>
-        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="1"/>
         <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
         <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
-        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_GPIO_WIDTH" VALUE="17"/>
         <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="1"/>
         <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
@@ -477,9 +593,9 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4120FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="16" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="SDC_Monitor_CAR_0_IS_SDC_CLOSED_VECTOR_O">
+        <PORT DIR="I" LEFT="16" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="SDC_Monitor_CAR_0_SDC_VECTOR_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="IS_SDC_CLOSED_VECTOR_O"/>
+            <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="SDC_VECTOR_O"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="ip2intc_irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_gpio_0_ip2intc_irpt">
@@ -2899,6 +3015,23 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="9" FULLNAME="/xlconstant" HWVERSION="1.1" INSTANCE="xlconstant" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="MC_xlconstant_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PL_ALIVE_LED"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="9" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -2927,6 +3060,9 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="TSAC_HV_CONNECTOR_I"/>
+            <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="TSAC_IMD_I"/>
+            <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="TSAC_AMS_ENABLE_I"/>
             <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="BSPD_I"/>
             <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="HVD_I"/>
             <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="TSMP_I"/>

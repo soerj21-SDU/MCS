@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1729758375" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/MC_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1730469206" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/MC_wrapper.dcp">
   <File Type="PA-TCL" Name="MC_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="MC_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="MC_wrapper_reports.tcl"/>
@@ -30,6 +30,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/CLK_divider.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="MC_wrapper"/>
@@ -45,6 +52,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Constraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -66,7 +74,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="MC_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="MC_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="MC_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="MC_SDC_Monitor_CAR_0_0"/>

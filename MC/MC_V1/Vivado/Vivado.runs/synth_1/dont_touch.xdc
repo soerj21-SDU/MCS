@@ -27,6 +27,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_SDC_Moni
 # IP: bd/MC/ip/MC_xlconstant_1_1/MC_xlconstant_1_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xlconstant_1_1 || ORIG_REF_NAME==MC_xlconstant_1_1} -quiet] -quiet
 
+# IP: bd/MC/ip/MC_xlconstant_2_0/MC_xlconstant_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xlconstant_2_0 || ORIG_REF_NAME==MC_xlconstant_2_0} -quiet] -quiet
+
 # IP: bd/MC/ip/MC_auto_pc_0/MC_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_auto_pc_0 || ORIG_REF_NAME==MC_auto_pc_0} -quiet] -quiet
 

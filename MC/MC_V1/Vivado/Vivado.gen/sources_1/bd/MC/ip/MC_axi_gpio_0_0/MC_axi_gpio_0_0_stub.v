@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Thu Oct 24 10:27:11 2024
+// Date        : Wed Oct 30 14:40:33 2024
 // Host        : mikkelsPC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_axi_gpio_0_0/MC_axi_gpio_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top MC_axi_gpio_0_0 -prefix
+//               MC_axi_gpio_0_0_ MC_axi_gpio_0_0_stub.v
 // Design      : MC_axi_gpio_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -75,7 +76,7 @@ set_property ip_output_repo c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.cache/ip [curren
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd
+read_vhdl -library xil_defaultlib C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd
 add_files C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/bd/MC/MC.bd
 set_property used_in_implementation false [get_files -all c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_processing_system7_0_0/MC_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_axi_gpio_0_0/MC_axi_gpio_0_0_board.xdc]

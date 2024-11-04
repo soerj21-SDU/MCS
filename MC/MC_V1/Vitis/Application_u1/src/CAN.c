@@ -134,8 +134,13 @@ void CAN_enter_snoop_mode(XCanPs *InstancePtr)
 
 bool CAN_is_TX_ready(XCanPs *InstancePtr) 
 {
-	return XCanPs_IsTxFifoFull(InstancePtr);
-    
+    return XCanPs_IsTxDone(InstancePtr);
+}
+
+
+bool CAN_is_TX_FIFO_Full(XCanPs *InstancePtr) 
+{
+    return XCanPs_IsTxFifoFull(InstancePtr);
 }
 
 
@@ -143,10 +148,6 @@ bool CAN_is_RX_ready(XCanPs *InstancePtr)
 {
     return XCanPs_IsRxEmpty(InstancePtr);
 }
-
-
-
-
 
 
 

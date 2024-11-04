@@ -73,7 +73,7 @@ ENTITY MC_SDC_Monitor_CAR_0_0 IS
     HVD_I : IN STD_LOGIC;
     TSMP_I : IN STD_LOGIC;
     TSMS_I : IN STD_LOGIC;
-    IS_SDC_CLOSED_VECTOR_O : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
+    SDC_VECTOR_O : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
   );
 END MC_SDC_Monitor_CAR_0_0;
 
@@ -82,7 +82,7 @@ ARCHITECTURE MC_SDC_Monitor_CAR_0_0_arch OF MC_SDC_Monitor_CAR_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF MC_SDC_Monitor_CAR_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT SDC_Monitor_CAR IS
     GENERIC (
-      No_of_inputs : INTEGER;
+      NO_OF_SDC_NODES : INTEGER;
       ClK_divider : INTEGER
     );
     PORT (
@@ -104,7 +104,7 @@ ARCHITECTURE MC_SDC_Monitor_CAR_0_0_arch OF MC_SDC_Monitor_CAR_0_0 IS
       HVD_I : IN STD_LOGIC;
       TSMP_I : IN STD_LOGIC;
       TSMS_I : IN STD_LOGIC;
-      IS_SDC_CLOSED_VECTOR_O : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
+      SDC_VECTOR_O : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
     );
   END COMPONENT SDC_Monitor_CAR;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -112,13 +112,13 @@ ARCHITECTURE MC_SDC_Monitor_CAR_0_0_arch OF MC_SDC_Monitor_CAR_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF MC_SDC_Monitor_CAR_0_0_arch : ARCHITECTURE IS "MC_SDC_Monitor_CAR_0_0,SDC_Monitor_CAR,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF MC_SDC_Monitor_CAR_0_0_arch: ARCHITECTURE IS "MC_SDC_Monitor_CAR_0_0,SDC_Monitor_CAR,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SDC_Monitor_CAR,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,No_of_inputs=17,ClK_divider=100000000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF MC_SDC_Monitor_CAR_0_0_arch: ARCHITECTURE IS "MC_SDC_Monitor_CAR_0_0,SDC_Monitor_CAR,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SDC_Monitor_CAR,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,NO_OF_SDC_NODES=17,ClK_divider=100000000}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF MC_SDC_Monitor_CAR_0_0_arch: ARCHITECTURE IS "module_ref";
 BEGIN
   U0 : SDC_Monitor_CAR
     GENERIC MAP (
-      No_of_inputs => 17,
+      NO_OF_SDC_NODES => 17,
       ClK_divider => 100000000
     )
     PORT MAP (
@@ -140,6 +140,6 @@ BEGIN
       HVD_I => HVD_I,
       TSMP_I => TSMP_I,
       TSMS_I => TSMS_I,
-      IS_SDC_CLOSED_VECTOR_O => IS_SDC_CLOSED_VECTOR_O
+      SDC_VECTOR_O => SDC_VECTOR_O
     );
 END MC_SDC_Monitor_CAR_0_0_arch;

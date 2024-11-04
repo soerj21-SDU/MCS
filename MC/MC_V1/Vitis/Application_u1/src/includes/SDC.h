@@ -7,35 +7,29 @@
 
 #include "GPIO.h"
 #include "interrupts.h"
-// #include "states.h" 
-
-#define DIR_INPUT 1 
-#define DIR_OUTPUT 0
 
 #define SDC_AXI_Address XPAR_AXI_GPIO_0_BASEADDR
 
-#define GPIO_CHANNEL_1 1 
-#define GPIO_CHANNEL_2 2
+#define NO_OF_SDC_NODES 17
+#define SDC_BROKEN_NODE_STATE 0
 
-#define NO_OF_SDC_NODES 16
-#define SDC_BROKEN_NODE 0
-
-#define Cockpit_emergency_index  0
-#define  BOTS_index              1
-#define  inertia_index           2
-#define  L_emergency_btn_index   3
-#define  R_emergency_btn_index   4
-#define  FR_wheel_index          5
-#define  FL_wheel_index          6
-#define  RR_wheel_index          7
-#define  RL_wheel_index          8
-#define  HV_CONNECTOR_TSAC_index 9
-#define  IMD_TSAC_Index          10
-#define  AMS_TSAC_index          11
-#define  BSPD_index              12
-#define  HVD_index               13
-#define  TSMP_index              14
-#define  TSMS_index              15
+#define  Supply_index             0 
+#define  Cockpit_emergency_index  1
+#define  BOTS_index               2
+#define  inertia_index            3
+#define  L_emergency_btn_index    4
+#define  R_emergency_btn_index    5
+#define  FR_wheel_index           6
+#define  FL_wheel_index           7
+#define  RR_wheel_index           8
+#define  RL_wheel_index           9
+#define  HV_CONNECTOR_TSAC_index  10
+#define  IMD_TSAC_Index           11
+#define  AMS_TSAC_index           12
+#define  BSPD_index               13
+#define  HVD_index                14
+#define  TSMP_index               15
+#define  TSMS_index               16
 
 
 extern u16 GlobalIntrMask;

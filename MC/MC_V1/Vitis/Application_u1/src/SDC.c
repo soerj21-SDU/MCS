@@ -8,12 +8,12 @@ void SDC_ISR (void *CallbackRef)
     XGpio *GpioPtr = (XGpio *)CallbackRef;
 
     const char* broken_node = get_first_broken_node();
-    printf("SDC broken at: %s\n", broken_node);
+
+    printf("\nSDC broken at: %s\n", broken_node);
     
-    // if (broken_node != "All nodes are connected" )
-    // {
-    //     // state = ST_ERROR; 
-    // }
+    if (broken_node != "All nodes are connected" )
+    {
+    }
 
     XGpio_InterruptClear(GpioPtr,  GlobalIntrMask);     
 }
@@ -21,22 +21,20 @@ void SDC_ISR (void *CallbackRef)
 int init_SDC()
 {
     int status;
-    // print ("\n Setting up SDC AXI GPIO");
+    print ("\n Setting up SDC AXI GPIO");
     status = setup_AXI_GPIO(SDC_AXI_Address, &SDC_axi_gpio_inst, GPIO_CHANNEL_1, DIR_INPUT);
-    // print ("\n Setting up SDC AXI Interrupt");
+    
+    print ("\n Setting up SDC AXI Interrupt");
     status = setupInterrupts(&SDC_axi_gpio_inst, SDC_AXI_Address, 1, &SDC_ISR);
 
     return status;
 }
 
 
-
-
 uint32_t  SDC_read_as_register (uint32_t *SDC_register)
 {
     return *SDC_register = XGpio_DiscreteRead(&SDC_axi_gpio_inst, GPIO_CHANNEL_1); 
 }
-
 
 
 void SDC_read_as_array( uint32_t uint32_array[ NO_OF_SDC_NODES ] )  
@@ -51,7 +49,6 @@ void SDC_read_as_array( uint32_t uint32_array[ NO_OF_SDC_NODES ] )
 }
 
 
-
 bool is_SDC_Completed()
 {
     uint32_t temp;
@@ -59,7 +56,10 @@ bool is_SDC_Completed()
 
     uint32_t mask = (1U << NO_OF_SDC_NODES) - 1; // create a mask with all bits set to 1.
 
-    if ( temp != mask ) {return FALSE;}
+    if ( temp != mask ) 
+    {
+        return FALSE;
+    }
 
     return TRUE;
 }
@@ -68,11 +68,13 @@ bool is_SDC_Completed()
 const char* get_first_broken_node()
 {
     uint32_t SDC_array[ NO_OF_SDC_NODES ] = {0};
+
     SDC_read_as_array(SDC_array);
 
 
-    const char* node_names[NO_OF_SDC_NODES] = 
+    const char* node_array[NO_OF_SDC_NODES] = 
     {
+        "Shutdown Circuit Supply", 
         "Cockpit Emergency Button",
         "BOTS",
         "Inertia",
@@ -93,9 +95,9 @@ const char* get_first_broken_node()
 
     for (int i = 0; i < NO_OF_SDC_NODES; i++) 
     {
-        if (SDC_array[i] == SDC_BROKEN_NODE) 
+        if (SDC_array[i] == SDC_BROKEN_NODE_STATE) 
         {  
-            return node_names[i];  
+            return node_array[i];  
         }
     }
 
@@ -106,9 +108,9 @@ bool get_SDC_Cockpit_Emergency_Btn_Status()
 {
     uint8_t temp; 
     SDC_read_as_register((uint32_t *) &temp);
-    return ( (temp >> Cockpit_emergency_index) & 0x01 );
+    return ( (temp >> Cockpit_emergency_index)   &    0x01  );
 }
-
+ 
 bool get_SDC_BOTS_Status()
 {
     uint8_t temp; 

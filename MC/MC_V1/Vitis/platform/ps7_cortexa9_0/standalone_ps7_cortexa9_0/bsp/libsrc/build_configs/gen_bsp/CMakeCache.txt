@@ -271,6 +271,12 @@ TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP
 //Extra CFLAGS
 TOOLCHAIN_EXTRA_C_FLAGS:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
 
+//Enables support for AMD family devices
+XILFLASH_enable_amd:BOOL=OFF
+
+//Enables support for Intel family devices
+XILFLASH_enable_intel:BOOL=ON
+
 //Enable Interval Timer
 XILTIMER_en_interval_timer:BOOL=OFF
 
@@ -507,6 +513,15 @@ xadcps_IS_TOP_LEVEL:STATIC=OFF
 xadcps_SOURCE_DIR:STATIC=C:/B_Git/MCS/MC/MC_V1/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xadcps/src
 
 //Value Computed by CMake
+xilflash_BINARY_DIR:STATIC=C:/B_Git/MCS/MC/MC_V1/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xilflash/src
+
+//Value Computed by CMake
+xilflash_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+xilflash_SOURCE_DIR:STATIC=C:/B_Git/MCS/MC/MC_V1/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xilflash/src
+
+//Value Computed by CMake
 xilstandalone_BINARY_DIR:STATIC=C:/B_Git/MCS/MC/MC_V1/Vitis/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src
 
 //Value Computed by CMake
@@ -634,7 +649,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=31
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=33
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

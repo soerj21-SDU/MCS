@@ -251,6 +251,13 @@ drv_info:
 lib_info:
   xiltimer:
     path: C:\Vitis\2024.1\data\embeddedsw\lib\sw_services\xiltimer_v2_0
+  xilflash:
+    path: C:\Vitis\2024.1\data\embeddedsw\lib\sw_services\xilflash_v4_11
+    examples:
+      xilflash_devicecontrol_example.c: []
+      xilflash_platform_flash_example.c: []
+      xilflash_protection_example.c: []
+      xilflash_readwrite_example.c: []
 lib_config:
   xiltimer:
     XILTIMER_en_interval_timer:
@@ -285,3 +292,24 @@ lib_config:
       - ps7_ttc_0
       - ps7_scutimer_0
       description: This parameter is used to select specific timer for tick functionality
+  xilflash:
+    XILFLASH_enable_amd:
+      name: XILFLASH_enable_amd
+      permission: read_write
+      type: boolean
+      value: 'false'
+      default: 'false'
+      options:
+      - 'true'
+      - 'false'
+      description: Enables support for AMD family devices
+    XILFLASH_enable_intel:
+      name: XILFLASH_enable_intel
+      permission: read_write
+      type: boolean
+      value: 'true'
+      default: 'true'
+      options:
+      - 'true'
+      - 'false'
+      description: Enables support for Intel family devices

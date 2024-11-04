@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Thu Oct 24 10:28:11 2024
+| Date         : Fri Nov  1 14:40:08 2024
 | Host         : mikkelsPC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MC_wrapper_utilization_synth.rpt -pb MC_wrapper_utilization_synth.pb
 | Design       : MC_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   12 |     0 |          0 |       125 |  9.60 |
+| Bonded IOB                  |   24 |     0 |          0 |       125 | 19.20 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,8 +149,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    7 |                  IO |
-| IBUF     |    5 |                  IO |
+| IBUF     |   16 |                  IO |
+| OBUF     |    8 |                  IO |
 +----------+------+---------------------+
 
 

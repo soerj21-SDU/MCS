@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8E5E81245BB43818",
+      "boundary_crc": "0x1D5B712EF9FA1AE",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Vivado.gen/sources_1/bd/MC",
       "name": "MC",
@@ -21,7 +21,8 @@
       "rst_ps7_0_100M": "",
       "xlconstant_0": "",
       "SDC_Monitor_CAR_0": "",
-      "xlconstant_1": ""
+      "xlconstant_1": "",
+      "xlconstant": ""
     },
     "interface_ports": {
       "DDR": {
@@ -247,6 +248,44 @@
       },
       "SPI0_SS_O": {
         "direction": "O"
+      },
+      "SDC_SUPPLY_I": {
+        "direction": "I"
+      },
+      "COCKPIT_EMERGENCY_I": {
+        "direction": "I"
+      },
+      "BOTS_I": {
+        "direction": "I"
+      },
+      "L_EMERGENCY_BUTTON_I": {
+        "direction": "I"
+      },
+      "INERTIA_I": {
+        "direction": "I"
+      },
+      "R_EMERGENCY_BUTTON_I": {
+        "direction": "I"
+      },
+      "RL_WHEEL_I": {
+        "direction": "I"
+      },
+      "FR_WHEEL_I": {
+        "direction": "I"
+      },
+      "FL_WHEEL_I": {
+        "direction": "I"
+      },
+      "RR_WHEEL_I": {
+        "direction": "I"
+      },
+      "TSMS_I": {
+        "direction": "I"
+      },
+      "PL_ALIVE_LED": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
       }
     },
     "components": {
@@ -1427,6 +1466,9 @@
           },
           "C_INTERRUPT_PRESENT": {
             "value": "1"
+          },
+          "C_IS_DUAL": {
+            "value": "0"
           }
         }
       },
@@ -1664,11 +1706,6 @@
         "xci_name": "MC_SDC_Monitor_CAR_0_0",
         "xci_path": "ip\\MC_SDC_Monitor_CAR_0_0\\MC_SDC_Monitor_CAR_0_0.xci",
         "inst_hier_path": "SDC_Monitor_CAR_0",
-        "parameters": {
-          "No_of_inputs": {
-            "value": "17"
-          }
-        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "SDC_Monitor_CAR",
@@ -1743,7 +1780,7 @@
           "TSMS_I": {
             "direction": "I"
           },
-          "IS_SDC_CLOSED_VECTOR_O": {
+          "SDC_VECTOR_O": {
             "direction": "O",
             "left": "16",
             "right": "0"
@@ -1756,6 +1793,13 @@
         "xci_name": "MC_xlconstant_1_1",
         "xci_path": "ip\\MC_xlconstant_1_1\\MC_xlconstant_1_1.xci",
         "inst_hier_path": "xlconstant_1"
+      },
+      "xlconstant": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "MC_xlconstant_2_0",
+        "xci_path": "ip\\MC_xlconstant_2_0\\MC_xlconstant_2_0.xci",
+        "inst_hier_path": "xlconstant"
       }
     },
     "interface_nets": {
@@ -1797,16 +1841,82 @@
       }
     },
     "nets": {
-      "SDC_Monitor_CAR_0_IS_SDC_CLOSED_VECTOR_O": {
+      "BOTS_I_0_1": {
         "ports": [
-          "SDC_Monitor_CAR_0/IS_SDC_CLOSED_VECTOR_O",
+          "BOTS_I",
+          "SDC_Monitor_CAR_0/BOTS_I"
+        ]
+      },
+      "COCKPIT_EMERGENCY_I_0_1": {
+        "ports": [
+          "COCKPIT_EMERGENCY_I",
+          "SDC_Monitor_CAR_0/COCKPIT_EMERGENCY_I"
+        ]
+      },
+      "FL_WHEEL_I_0_1": {
+        "ports": [
+          "FL_WHEEL_I",
+          "SDC_Monitor_CAR_0/FL_WHEEL_I"
+        ]
+      },
+      "FR_WHEEL_I_0_1": {
+        "ports": [
+          "FR_WHEEL_I",
+          "SDC_Monitor_CAR_0/FR_WHEEL_I"
+        ]
+      },
+      "INERTIA_I_0_1": {
+        "ports": [
+          "INERTIA_I",
+          "SDC_Monitor_CAR_0/INERTIA_I"
+        ]
+      },
+      "L_EMERGENCY_BUTTON_I_0_1": {
+        "ports": [
+          "L_EMERGENCY_BUTTON_I",
+          "SDC_Monitor_CAR_0/L_EMERGENCY_BUTTON_I"
+        ]
+      },
+      "RL_WHEEL_I_0_1": {
+        "ports": [
+          "RL_WHEEL_I",
+          "SDC_Monitor_CAR_0/RL_WHEEL_I"
+        ]
+      },
+      "RR_WHEEL_I_0_1": {
+        "ports": [
+          "RR_WHEEL_I",
+          "SDC_Monitor_CAR_0/RR_WHEEL_I"
+        ]
+      },
+      "R_EMERGENCY_BUTTON_I_0_1": {
+        "ports": [
+          "R_EMERGENCY_BUTTON_I",
+          "SDC_Monitor_CAR_0/R_EMERGENCY_BUTTON_I"
+        ]
+      },
+      "SDC_Monitor_CAR_0_SDC_VECTOR_O": {
+        "ports": [
+          "SDC_Monitor_CAR_0/SDC_VECTOR_O",
           "axi_gpio_0/gpio_io_i"
+        ]
+      },
+      "SDC_SUPPLY_I_0_1": {
+        "ports": [
+          "SDC_SUPPLY_I",
+          "SDC_Monitor_CAR_0/SDC_SUPPLY_I"
         ]
       },
       "SPI0_MISO_I_0_1": {
         "ports": [
           "SPI0_MISO_I",
           "processing_system7_0/SPI0_MISO_I"
+        ]
+      },
+      "TSMS_I_0_1": {
+        "ports": [
+          "TSMS_I",
+          "SDC_Monitor_CAR_0/TSMS_I"
         ]
       },
       "UART0_CTSN_0_1": {
@@ -1893,9 +2003,18 @@
       "xlconstant_1_dout": {
         "ports": [
           "xlconstant_1/dout",
+          "SDC_Monitor_CAR_0/TSAC_HV_CONNECTOR_I",
+          "SDC_Monitor_CAR_0/TSAC_IMD_I",
+          "SDC_Monitor_CAR_0/TSAC_AMS_ENABLE_I",
           "SDC_Monitor_CAR_0/BSPD_I",
           "SDC_Monitor_CAR_0/HVD_I",
           "SDC_Monitor_CAR_0/TSMP_I"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant/dout",
+          "PL_ALIVE_LED"
         ]
       }
     },

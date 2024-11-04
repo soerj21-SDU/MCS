@@ -23,11 +23,14 @@ int setup_AXI_GPIO (UINTPTR AXI_GPIO_BaseAddress,   XGpio *instancePtr, u8 chann
             xil_printf("Gpio Initialization Failed\r\n");
             return XST_FAILURE;
         }
-            XGpio_SetDataDirection(instancePtr, channel, direction);
+    XGpio_SetDataDirection(instancePtr, channel, direction);
 
     return XST_SUCCESS;
 }
 
+// write 
+// set
+// clear
 
 
 

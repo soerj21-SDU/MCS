@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Thu Oct 24 10:26:12 2024
+--Date        : Fri Nov  1 14:37:38 2024
 --Host        : mikkelsPC running 64-bit major release  (build 9200)
 --Command     : generate_target MC.bd
 --Design      : MC
@@ -580,10 +580,12 @@ use UNISIM.VCOMPONENTS.ALL;
 -- BSPD_I, TSMP_I, HVD_I are not included on the PCB. Must be added in a future edition
   entity MC is
   port (
+    BOTS_I : in STD_LOGIC;
     CAN_0_rx : in STD_LOGIC;
     CAN_0_tx : out STD_LOGIC;
     CAN_1_rx : in STD_LOGIC;
     CAN_1_tx : out STD_LOGIC;
+    COCKPIT_EMERGENCY_I : in STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -605,17 +607,27 @@ use UNISIM.VCOMPONENTS.ALL;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FL_WHEEL_I : in STD_LOGIC;
+    FR_WHEEL_I : in STD_LOGIC;
+    INERTIA_I : in STD_LOGIC;
+    L_EMERGENCY_BUTTON_I : in STD_LOGIC;
+    PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 );
+    RL_WHEEL_I : in STD_LOGIC;
+    RR_WHEEL_I : in STD_LOGIC;
+    R_EMERGENCY_BUTTON_I : in STD_LOGIC;
+    SDC_SUPPLY_I : in STD_LOGIC;
     SPI0_MISO_I : in STD_LOGIC;
     SPI0_MOSI_O : out STD_LOGIC;
     SPI0_SCLK_O : out STD_LOGIC;
     SPI0_SS_O : out STD_LOGIC;
+    TSMS_I : in STD_LOGIC;
     UART0_CTSN : in STD_LOGIC;
     UART0_RTSN : out STD_LOGIC;
     UART0_RX : in STD_LOGIC;
     UART0_TX : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of MC : entity is "MC,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MC,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=1,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of MC : entity is "MC,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MC,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=10,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,""""""da_axi4_cnt""""""=1,""""""da_board_cnt""""""=1,""""""da_ps7_cnt""""""=1,""da_axi4_cnt""=1,""da_board_cnt""=1,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of MC : entity is "MC.hwdef";
 end MC;
@@ -781,7 +793,7 @@ architecture STRUCTURE of MC is
     HVD_I : in STD_LOGIC;
     TSMP_I : in STD_LOGIC;
     TSMS_I : in STD_LOGIC;
-    IS_SDC_CLOSED_VECTOR_O : out STD_LOGIC_VECTOR ( 16 downto 0 )
+    SDC_VECTOR_O : out STD_LOGIC_VECTOR ( 16 downto 0 )
   );
   end component MC_SDC_Monitor_CAR_0_0;
   component MC_xlconstant_1_1 is
@@ -789,8 +801,24 @@ architecture STRUCTURE of MC is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component MC_xlconstant_1_1;
-  signal SDC_Monitor_CAR_0_IS_SDC_CLOSED_VECTOR_O : STD_LOGIC_VECTOR ( 16 downto 0 );
+  component MC_xlconstant_2_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component MC_xlconstant_2_0;
+  signal BOTS_I_0_1 : STD_LOGIC;
+  signal COCKPIT_EMERGENCY_I_0_1 : STD_LOGIC;
+  signal FL_WHEEL_I_0_1 : STD_LOGIC;
+  signal FR_WHEEL_I_0_1 : STD_LOGIC;
+  signal INERTIA_I_0_1 : STD_LOGIC;
+  signal L_EMERGENCY_BUTTON_I_0_1 : STD_LOGIC;
+  signal RL_WHEEL_I_0_1 : STD_LOGIC;
+  signal RR_WHEEL_I_0_1 : STD_LOGIC;
+  signal R_EMERGENCY_BUTTON_I_0_1 : STD_LOGIC;
+  signal SDC_Monitor_CAR_0_SDC_VECTOR_O : STD_LOGIC_VECTOR ( 16 downto 0 );
+  signal SDC_SUPPLY_I_0_1 : STD_LOGIC;
   signal SPI0_MISO_I_0_1 : STD_LOGIC;
+  signal TSMS_I_0_1 : STD_LOGIC;
   signal UART0_CTSN_0_1 : STD_LOGIC;
   signal UART0_RX_0_1 : STD_LOGIC;
   signal axi_gpio_0_ip2intc_irpt : STD_LOGIC;
@@ -884,6 +912,7 @@ architecture STRUCTURE of MC is
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlconstant_2_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_SPI0_MISO_O_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_SPI0_MISO_T_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_SPI0_MOSI_T_UNCONNECTED : STD_LOGIC;
@@ -900,10 +929,10 @@ architecture STRUCTURE of MC is
   signal NLW_rst_ps7_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of CAN_0_rx : signal is "xilinx.com:interface:can:1.0 CAN_0 ";
-  attribute X_INTERFACE_INFO of CAN_0_tx : signal is "xilinx.com:interface:can:1.0 CAN_0 ";
-  attribute X_INTERFACE_INFO of CAN_1_rx : signal is "xilinx.com:interface:can:1.0 CAN_1 ";
-  attribute X_INTERFACE_INFO of CAN_1_tx : signal is "xilinx.com:interface:can:1.0 CAN_1 ";
+  attribute X_INTERFACE_INFO of CAN_0_rx : signal is "xilinx.com:interface:can:1.0 CAN_0 RX";
+  attribute X_INTERFACE_INFO of CAN_0_tx : signal is "xilinx.com:interface:can:1.0 CAN_0 TX";
+  attribute X_INTERFACE_INFO of CAN_1_rx : signal is "xilinx.com:interface:can:1.0 CAN_1 RX";
+  attribute X_INTERFACE_INFO of CAN_1_tx : signal is "xilinx.com:interface:can:1.0 CAN_1 TX";
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
   attribute X_INTERFACE_INFO of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
@@ -929,12 +958,24 @@ architecture STRUCTURE of MC is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
+  BOTS_I_0_1 <= BOTS_I;
   CAN_0_tx <= processing_system7_0_CAN_0_TX;
   CAN_1_tx <= processing_system7_0_CAN_1_TX;
+  COCKPIT_EMERGENCY_I_0_1 <= COCKPIT_EMERGENCY_I;
+  FL_WHEEL_I_0_1 <= FL_WHEEL_I;
+  FR_WHEEL_I_0_1 <= FR_WHEEL_I;
+  INERTIA_I_0_1 <= INERTIA_I;
+  L_EMERGENCY_BUTTON_I_0_1 <= L_EMERGENCY_BUTTON_I;
+  PL_ALIVE_LED(0) <= xlconstant_2_dout(0);
+  RL_WHEEL_I_0_1 <= RL_WHEEL_I;
+  RR_WHEEL_I_0_1 <= RR_WHEEL_I;
+  R_EMERGENCY_BUTTON_I_0_1 <= R_EMERGENCY_BUTTON_I;
+  SDC_SUPPLY_I_0_1 <= SDC_SUPPLY_I;
   SPI0_MISO_I_0_1 <= SPI0_MISO_I;
   SPI0_MOSI_O <= processing_system7_0_SPI0_MOSI_O;
   SPI0_SCLK_O <= processing_system7_0_SPI0_SCLK_O;
   SPI0_SS_O <= processing_system7_0_SPI0_SS_O;
+  TSMS_I_0_1 <= TSMS_I;
   UART0_CTSN_0_1 <= UART0_CTSN;
   UART0_RTSN <= processing_system7_0_UART0_RTSN;
   UART0_RX_0_1 <= UART0_RX;
@@ -943,29 +984,29 @@ begin
   processing_system7_0_CAN_1_RX <= CAN_1_rx;
 SDC_Monitor_CAR_0: component MC_SDC_Monitor_CAR_0_0
      port map (
-      BOTS_I => '1',
+      BOTS_I => BOTS_I_0_1,
       BSPD_I => xlconstant_1_dout(0),
       CLK_I => processing_system7_0_FCLK_CLK0,
-      COCKPIT_EMERGENCY_I => '1',
-      FL_WHEEL_I => '1',
-      FR_WHEEL_I => '1',
+      COCKPIT_EMERGENCY_I => COCKPIT_EMERGENCY_I_0_1,
+      FL_WHEEL_I => FL_WHEEL_I_0_1,
+      FR_WHEEL_I => FR_WHEEL_I_0_1,
       HVD_I => xlconstant_1_dout(0),
-      INERTIA_I => '1',
-      IS_SDC_CLOSED_VECTOR_O(16 downto 0) => SDC_Monitor_CAR_0_IS_SDC_CLOSED_VECTOR_O(16 downto 0),
-      L_EMERGENCY_BUTTON_I => '1',
-      RL_WHEEL_I => '1',
-      RR_WHEEL_I => '1',
-      R_EMERGENCY_BUTTON_I => '1',
-      SDC_SUPPLY_I => '1',
-      TSAC_AMS_ENABLE_I => '1',
-      TSAC_HV_CONNECTOR_I => '1',
-      TSAC_IMD_I => '1',
+      INERTIA_I => INERTIA_I_0_1,
+      L_EMERGENCY_BUTTON_I => L_EMERGENCY_BUTTON_I_0_1,
+      RL_WHEEL_I => RL_WHEEL_I_0_1,
+      RR_WHEEL_I => RR_WHEEL_I_0_1,
+      R_EMERGENCY_BUTTON_I => R_EMERGENCY_BUTTON_I_0_1,
+      SDC_SUPPLY_I => SDC_SUPPLY_I_0_1,
+      SDC_VECTOR_O(16 downto 0) => SDC_Monitor_CAR_0_SDC_VECTOR_O(16 downto 0),
+      TSAC_AMS_ENABLE_I => xlconstant_1_dout(0),
+      TSAC_HV_CONNECTOR_I => xlconstant_1_dout(0),
+      TSAC_IMD_I => xlconstant_1_dout(0),
       TSMP_I => xlconstant_1_dout(0),
-      TSMS_I => '1'
+      TSMS_I => TSMS_I_0_1
     );
 axi_gpio_0: component MC_axi_gpio_0_0
      port map (
-      gpio_io_i(16 downto 0) => SDC_Monitor_CAR_0_IS_SDC_CLOSED_VECTOR_O(16 downto 0),
+      gpio_io_i(16 downto 0) => SDC_Monitor_CAR_0_SDC_VECTOR_O(16 downto 0),
       ip2intc_irpt => axi_gpio_0_ip2intc_irpt,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(8 downto 0),
@@ -1158,6 +1199,10 @@ rst_ps7_0_100M: component MC_rst_ps7_0_100M_0
       peripheral_aresetn(0) => rst_ps7_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
+    );
+xlconstant: component MC_xlconstant_2_0
+     port map (
+      dout(0) => xlconstant_2_dout(0)
     );
 xlconstant_0: component MC_xlconstant_0_0
      port map (

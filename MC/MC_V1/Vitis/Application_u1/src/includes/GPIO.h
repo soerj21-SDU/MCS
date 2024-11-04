@@ -2,6 +2,12 @@
 #include "xparameters.h"
 #include "xgpio.h"
 
+#define GPIO_CHANNEL_1 1 
+#define GPIO_CHANNEL_2 2
+
+#define DIR_INPUT 1 
+#define DIR_OUTPUT 0
+
 int setup_AXI_GPIO (UINTPTR AXI_GPIO_BaseAddress,   XGpio *instancePtr, u8 channel, u8 direction );
 
 // int  setup_PS_GPIO  (u32 BaseAddr,   XGpioPs *GPIO_inst,   u8 pin,  u8 direction,   XGpioPs_Config *GPIO_ConfigPtr);

@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Thu Oct 24 10:22:55 2024
+// Date        : Fri Nov  1 14:39:05 2024
 // Host        : mikkelsPC running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_SDC_Monitor_CAR_0_0/MC_SDC_Monitor_CAR_0_0_sim_netlist.v
@@ -35,7 +35,7 @@ module MC_SDC_Monitor_CAR_0_0
     HVD_I,
     TSMP_I,
     TSMS_I,
-    IS_SDC_CLOSED_VECTOR_O);
+    SDC_VECTOR_O);
   input CLK_I;
   input SDC_SUPPLY_I;
   input COCKPIT_EMERGENCY_I;
@@ -54,9 +54,8 @@ module MC_SDC_Monitor_CAR_0_0
   input HVD_I;
   input TSMP_I;
   input TSMS_I;
-  output [16:0]IS_SDC_CLOSED_VECTOR_O;
+  output [16:0]SDC_VECTOR_O;
 
-  wire \<const0> ;
   wire BOTS_I;
   wire BSPD_I;
   wire CLK_I;
@@ -65,129 +64,38 @@ module MC_SDC_Monitor_CAR_0_0
   wire FR_WHEEL_I;
   wire HVD_I;
   wire INERTIA_I;
-  wire [15:0]\^IS_SDC_CLOSED_VECTOR_O ;
   wire L_EMERGENCY_BUTTON_I;
   wire RL_WHEEL_I;
   wire RR_WHEEL_I;
   wire R_EMERGENCY_BUTTON_I;
+  wire SDC_SUPPLY_I;
+  wire [16:0]SDC_VECTOR_O;
   wire TSAC_AMS_ENABLE_I;
   wire TSAC_HV_CONNECTOR_I;
   wire TSAC_IMD_I;
   wire TSMP_I;
   wire TSMS_I;
 
-  assign IS_SDC_CLOSED_VECTOR_O[16] = \<const0> ;
-  assign IS_SDC_CLOSED_VECTOR_O[15:0] = \^IS_SDC_CLOSED_VECTOR_O [15:0];
-  GND GND
-       (.G(\<const0> ));
   MC_SDC_Monitor_CAR_0_0_SDC_Monitor_CAR U0
-       (.BOTS_I(BOTS_I),
-        .BSPD_I(BSPD_I),
-        .CLK_I(CLK_I),
-        .COCKPIT_EMERGENCY_I(COCKPIT_EMERGENCY_I),
-        .FL_WHEEL_I(FL_WHEEL_I),
-        .FR_WHEEL_I(FR_WHEEL_I),
-        .HVD_I(HVD_I),
-        .INERTIA_I(INERTIA_I),
-        .IS_SDC_CLOSED_VECTOR_O(\^IS_SDC_CLOSED_VECTOR_O ),
-        .L_EMERGENCY_BUTTON_I(L_EMERGENCY_BUTTON_I),
-        .RL_WHEEL_I(RL_WHEEL_I),
-        .RR_WHEEL_I(RR_WHEEL_I),
-        .R_EMERGENCY_BUTTON_I(R_EMERGENCY_BUTTON_I),
-        .TSAC_AMS_ENABLE_I(TSAC_AMS_ENABLE_I),
-        .TSAC_HV_CONNECTOR_I(TSAC_HV_CONNECTOR_I),
-        .TSAC_IMD_I(TSAC_IMD_I),
-        .TSMP_I(TSMP_I),
-        .TSMS_I(TSMS_I));
+       (.CLK_I(CLK_I),
+        .D({TSMS_I,TSMP_I,HVD_I,BSPD_I,TSAC_AMS_ENABLE_I,TSAC_IMD_I,TSAC_HV_CONNECTOR_I,RL_WHEEL_I,RR_WHEEL_I,FL_WHEEL_I,FR_WHEEL_I,R_EMERGENCY_BUTTON_I,L_EMERGENCY_BUTTON_I,INERTIA_I,BOTS_I,COCKPIT_EMERGENCY_I,SDC_SUPPLY_I}),
+        .SDC_VECTOR_O(SDC_VECTOR_O));
 endmodule
 
 (* ORIG_REF_NAME = "SDC_Monitor_CAR" *) 
 module MC_SDC_Monitor_CAR_0_0_SDC_Monitor_CAR
-   (IS_SDC_CLOSED_VECTOR_O,
-    TSMS_I,
-    TSMP_I,
-    HVD_I,
-    BSPD_I,
-    TSAC_AMS_ENABLE_I,
-    TSAC_IMD_I,
-    TSAC_HV_CONNECTOR_I,
-    RL_WHEEL_I,
-    RR_WHEEL_I,
-    FL_WHEEL_I,
-    FR_WHEEL_I,
-    R_EMERGENCY_BUTTON_I,
-    L_EMERGENCY_BUTTON_I,
-    INERTIA_I,
-    BOTS_I,
-    COCKPIT_EMERGENCY_I,
+   (SDC_VECTOR_O,
+    D,
     CLK_I);
-  output [15:0]IS_SDC_CLOSED_VECTOR_O;
-  input TSMS_I;
-  input TSMP_I;
-  input HVD_I;
-  input BSPD_I;
-  input TSAC_AMS_ENABLE_I;
-  input TSAC_IMD_I;
-  input TSAC_HV_CONNECTOR_I;
-  input RL_WHEEL_I;
-  input RR_WHEEL_I;
-  input FL_WHEEL_I;
-  input FR_WHEEL_I;
-  input R_EMERGENCY_BUTTON_I;
-  input L_EMERGENCY_BUTTON_I;
-  input INERTIA_I;
-  input BOTS_I;
-  input COCKPIT_EMERGENCY_I;
+  output [16:0]SDC_VECTOR_O;
+  input [16:0]D;
   input CLK_I;
 
-  wire BOTS_I;
-  wire BSPD_I;
   wire CLK_I;
-  wire COCKPIT_EMERGENCY_I;
-  wire FL_WHEEL_I;
-  wire FR_WHEEL_I;
-  wire HVD_I;
-  wire INERTIA_I;
-  wire [15:0]IS_SDC_CLOSED_VECTOR_O;
-  wire L_EMERGENCY_BUTTON_I;
-  wire RL_WHEEL_I;
-  wire RR_WHEEL_I;
-  wire R_EMERGENCY_BUTTON_I;
-  wire TSAC_AMS_ENABLE_I;
-  wire TSAC_HV_CONNECTOR_I;
-  wire TSAC_IMD_I;
-  wire TSMP_I;
-  wire TSMS_I;
-  wire [30:0]counter;
-  wire counter0_carry__0_n_0;
-  wire counter0_carry__0_n_1;
-  wire counter0_carry__0_n_2;
-  wire counter0_carry__0_n_3;
-  wire counter0_carry__1_n_0;
-  wire counter0_carry__1_n_1;
-  wire counter0_carry__1_n_2;
-  wire counter0_carry__1_n_3;
-  wire counter0_carry__2_n_0;
-  wire counter0_carry__2_n_1;
-  wire counter0_carry__2_n_2;
-  wire counter0_carry__2_n_3;
-  wire counter0_carry__3_n_0;
-  wire counter0_carry__3_n_1;
-  wire counter0_carry__3_n_2;
-  wire counter0_carry__3_n_3;
-  wire counter0_carry__4_n_0;
-  wire counter0_carry__4_n_1;
-  wire counter0_carry__4_n_2;
-  wire counter0_carry__4_n_3;
-  wire counter0_carry__5_n_0;
-  wire counter0_carry__5_n_1;
-  wire counter0_carry__5_n_2;
-  wire counter0_carry__5_n_3;
-  wire counter0_carry__6_n_3;
-  wire counter0_carry_n_0;
-  wire counter0_carry_n_1;
-  wire counter0_carry_n_2;
-  wire counter0_carry_n_3;
+  wire [16:0]D;
+  wire [16:0]SDC_VECTOR_O;
+  (* MARK_DEBUG *) wire [30:0]counter;
+  wire \counter[30]_i_10_n_0 ;
   wire \counter[30]_i_2_n_0 ;
   wire \counter[30]_i_3_n_0 ;
   wire \counter[30]_i_4_n_0 ;
@@ -196,582 +104,691 @@ module MC_SDC_Monitor_CAR_0_0_SDC_Monitor_CAR
   wire \counter[30]_i_7_n_0 ;
   wire \counter[30]_i_8_n_0 ;
   wire \counter[30]_i_9_n_0 ;
-  wire p_0_in;
+  wire counter_reg0;
+  wire \counter_reg0_inferred__0/i__carry__0_n_0 ;
+  wire \counter_reg0_inferred__0/i__carry__0_n_1 ;
+  wire \counter_reg0_inferred__0/i__carry__0_n_2 ;
+  wire \counter_reg0_inferred__0/i__carry__0_n_3 ;
+  wire \counter_reg0_inferred__0/i__carry__1_n_0 ;
+  wire \counter_reg0_inferred__0/i__carry__1_n_1 ;
+  wire \counter_reg0_inferred__0/i__carry__1_n_2 ;
+  wire \counter_reg0_inferred__0/i__carry__1_n_3 ;
+  wire \counter_reg0_inferred__0/i__carry__2_n_0 ;
+  wire \counter_reg0_inferred__0/i__carry__2_n_1 ;
+  wire \counter_reg0_inferred__0/i__carry__2_n_2 ;
+  wire \counter_reg0_inferred__0/i__carry__2_n_3 ;
+  wire \counter_reg0_inferred__0/i__carry__3_n_0 ;
+  wire \counter_reg0_inferred__0/i__carry__3_n_1 ;
+  wire \counter_reg0_inferred__0/i__carry__3_n_2 ;
+  wire \counter_reg0_inferred__0/i__carry__3_n_3 ;
+  wire \counter_reg0_inferred__0/i__carry__4_n_0 ;
+  wire \counter_reg0_inferred__0/i__carry__4_n_1 ;
+  wire \counter_reg0_inferred__0/i__carry__4_n_2 ;
+  wire \counter_reg0_inferred__0/i__carry__4_n_3 ;
+  wire \counter_reg0_inferred__0/i__carry__5_n_0 ;
+  wire \counter_reg0_inferred__0/i__carry__5_n_1 ;
+  wire \counter_reg0_inferred__0/i__carry__5_n_2 ;
+  wire \counter_reg0_inferred__0/i__carry__5_n_3 ;
+  wire \counter_reg0_inferred__0/i__carry__6_n_3 ;
+  wire \counter_reg0_inferred__0/i__carry_n_0 ;
+  wire \counter_reg0_inferred__0/i__carry_n_1 ;
+  wire \counter_reg0_inferred__0/i__carry_n_2 ;
+  wire \counter_reg0_inferred__0/i__carry_n_3 ;
   wire [30:0]p_1_in;
+  (* MARK_DEBUG *) wire startup_delay_1sec;
   wire startup_delay_1sec_i_1_n_0;
-  wire startup_delay_1sec_reg_n_0;
-  wire [3:1]NLW_counter0_carry__6_CO_UNCONNECTED;
-  wire [3:2]NLW_counter0_carry__6_O_UNCONNECTED;
+  wire [3:1]\NLW_counter_reg0_inferred__0/i__carry__6_CO_UNCONNECTED ;
+  wire [3:2]\NLW_counter_reg0_inferred__0/i__carry__6_O_UNCONNECTED ;
 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[0] 
+    \SDC_VECTOR_O_reg[0] 
        (.CLR(1'b0),
-        .D(COCKPIT_EMERGENCY_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[0]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[0]));
+        .Q(SDC_VECTOR_O[0]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[10] 
+    \SDC_VECTOR_O_reg[10] 
        (.CLR(1'b0),
-        .D(TSAC_IMD_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[10]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[10]));
+        .Q(SDC_VECTOR_O[10]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[11] 
+    \SDC_VECTOR_O_reg[11] 
        (.CLR(1'b0),
-        .D(TSAC_AMS_ENABLE_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[11]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[11]));
+        .Q(SDC_VECTOR_O[11]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[12] 
+    \SDC_VECTOR_O_reg[12] 
        (.CLR(1'b0),
-        .D(BSPD_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[12]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[12]));
+        .Q(SDC_VECTOR_O[12]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[13] 
+    \SDC_VECTOR_O_reg[13] 
        (.CLR(1'b0),
-        .D(HVD_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[13]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[13]));
+        .Q(SDC_VECTOR_O[13]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[14] 
+    \SDC_VECTOR_O_reg[14] 
        (.CLR(1'b0),
-        .D(TSMP_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[14]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[14]));
+        .Q(SDC_VECTOR_O[14]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[15] 
+    \SDC_VECTOR_O_reg[15] 
        (.CLR(1'b0),
-        .D(TSMS_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[15]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[15]));
+        .Q(SDC_VECTOR_O[15]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[1] 
+    \SDC_VECTOR_O_reg[16] 
        (.CLR(1'b0),
-        .D(BOTS_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[16]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[1]));
+        .Q(SDC_VECTOR_O[16]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[2] 
+    \SDC_VECTOR_O_reg[1] 
        (.CLR(1'b0),
-        .D(INERTIA_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[1]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[2]));
+        .Q(SDC_VECTOR_O[1]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[3] 
+    \SDC_VECTOR_O_reg[2] 
        (.CLR(1'b0),
-        .D(L_EMERGENCY_BUTTON_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[2]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[3]));
+        .Q(SDC_VECTOR_O[2]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[4] 
+    \SDC_VECTOR_O_reg[3] 
        (.CLR(1'b0),
-        .D(R_EMERGENCY_BUTTON_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[3]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[4]));
+        .Q(SDC_VECTOR_O[3]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[5] 
+    \SDC_VECTOR_O_reg[4] 
        (.CLR(1'b0),
-        .D(FR_WHEEL_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[4]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[5]));
+        .Q(SDC_VECTOR_O[4]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[6] 
+    \SDC_VECTOR_O_reg[5] 
        (.CLR(1'b0),
-        .D(FL_WHEEL_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[5]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[6]));
+        .Q(SDC_VECTOR_O[5]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[7] 
+    \SDC_VECTOR_O_reg[6] 
        (.CLR(1'b0),
-        .D(RR_WHEEL_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[6]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[7]));
+        .Q(SDC_VECTOR_O[6]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[8] 
+    \SDC_VECTOR_O_reg[7] 
        (.CLR(1'b0),
-        .D(RL_WHEEL_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[7]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[8]));
+        .Q(SDC_VECTOR_O[7]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
     .INIT(1'b0)) 
-    \IS_SDC_CLOSED_VECTOR_O_reg[9] 
+    \SDC_VECTOR_O_reg[8] 
        (.CLR(1'b0),
-        .D(TSAC_HV_CONNECTOR_I),
-        .G(startup_delay_1sec_reg_n_0),
+        .D(D[8]),
+        .G(startup_delay_1sec),
         .GE(1'b1),
-        .Q(IS_SDC_CLOSED_VECTOR_O[9]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry
-       (.CI(1'b0),
-        .CO({counter0_carry_n_0,counter0_carry_n_1,counter0_carry_n_2,counter0_carry_n_3}),
-        .CYINIT(counter[0]),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(p_1_in[4:1]),
-        .S(counter[4:1]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__0
-       (.CI(counter0_carry_n_0),
-        .CO({counter0_carry__0_n_0,counter0_carry__0_n_1,counter0_carry__0_n_2,counter0_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(p_1_in[8:5]),
-        .S(counter[8:5]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__1
-       (.CI(counter0_carry__0_n_0),
-        .CO({counter0_carry__1_n_0,counter0_carry__1_n_1,counter0_carry__1_n_2,counter0_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(p_1_in[12:9]),
-        .S(counter[12:9]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__2
-       (.CI(counter0_carry__1_n_0),
-        .CO({counter0_carry__2_n_0,counter0_carry__2_n_1,counter0_carry__2_n_2,counter0_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(p_1_in[16:13]),
-        .S(counter[16:13]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__3
-       (.CI(counter0_carry__2_n_0),
-        .CO({counter0_carry__3_n_0,counter0_carry__3_n_1,counter0_carry__3_n_2,counter0_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(p_1_in[20:17]),
-        .S(counter[20:17]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__4
-       (.CI(counter0_carry__3_n_0),
-        .CO({counter0_carry__4_n_0,counter0_carry__4_n_1,counter0_carry__4_n_2,counter0_carry__4_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(p_1_in[24:21]),
-        .S(counter[24:21]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__5
-       (.CI(counter0_carry__4_n_0),
-        .CO({counter0_carry__5_n_0,counter0_carry__5_n_1,counter0_carry__5_n_2,counter0_carry__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(p_1_in[28:25]),
-        .S(counter[28:25]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__6
-       (.CI(counter0_carry__5_n_0),
-        .CO({NLW_counter0_carry__6_CO_UNCONNECTED[3:1],counter0_carry__6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_counter0_carry__6_O_UNCONNECTED[3:2],p_1_in[30:29]}),
-        .S({1'b0,1'b0,counter[30:29]}));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+        .Q(SDC_VECTOR_O[8]));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \SDC_VECTOR_O_reg[9] 
+       (.CLR(1'b0),
+        .D(D[9]),
+        .G(startup_delay_1sec),
+        .GE(1'b1),
+        .Q(SDC_VECTOR_O[9]));
   LUT1 #(
     .INIT(2'h1)) 
     \counter[0]_i_1 
        (.I0(counter[0]),
         .O(p_1_in[0]));
-  LUT3 #(
-    .INIT(8'h02)) 
+  LUT4 #(
+    .INIT(16'h0004)) 
     \counter[30]_i_1 
-       (.I0(\counter[30]_i_2_n_0 ),
-        .I1(\counter[30]_i_3_n_0 ),
-        .I2(\counter[30]_i_4_n_0 ),
-        .O(p_0_in));
-  LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    \counter[30]_i_2 
-       (.I0(\counter[30]_i_5_n_0 ),
-        .I1(\counter[30]_i_6_n_0 ),
-        .I2(\counter[30]_i_7_n_0 ),
-        .I3(counter[1]),
-        .I4(counter[11]),
-        .I5(counter[2]),
-        .O(\counter[30]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFEFF)) 
-    \counter[30]_i_3 
-       (.I0(counter[9]),
-        .I1(counter[25]),
-        .I2(counter[17]),
-        .I3(counter[22]),
-        .I4(\counter[30]_i_8_n_0 ),
-        .O(\counter[30]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFEFF)) 
-    \counter[30]_i_4 
-       (.I0(counter[0]),
-        .I1(counter[3]),
-        .I2(counter[28]),
-        .I3(counter[8]),
-        .I4(\counter[30]_i_9_n_0 ),
-        .O(\counter[30]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hEFFF)) 
-    \counter[30]_i_5 
-       (.I0(counter[30]),
-        .I1(counter[4]),
-        .I2(counter[15]),
-        .I3(counter[24]),
-        .O(\counter[30]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'h0040)) 
-    \counter[30]_i_6 
-       (.I0(counter[12]),
-        .I1(counter[23]),
-        .I2(counter[21]),
-        .I3(counter[10]),
-        .O(\counter[30]_i_6_n_0 ));
+       (.I0(\counter[30]_i_3_n_0 ),
+        .I1(\counter[30]_i_4_n_0 ),
+        .I2(\counter[30]_i_5_n_0 ),
+        .I3(\counter[30]_i_6_n_0 ),
+        .O(counter_reg0));
   LUT4 #(
     .INIT(16'hFFDF)) 
-    \counter[30]_i_7 
-       (.I0(counter[14]),
-        .I1(counter[7]),
-        .I2(counter[13]),
+    \counter[30]_i_10 
+       (.I0(counter[8]),
+        .I1(counter[3]),
+        .I2(counter[26]),
+        .I3(counter[19]),
+        .O(\counter[30]_i_10_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \counter[30]_i_2 
+       (.I0(startup_delay_1sec),
+        .O(\counter[30]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \counter[30]_i_3 
+       (.I0(startup_delay_1sec),
+        .I1(counter[0]),
+        .I2(counter[17]),
+        .I3(counter[28]),
+        .I4(\counter[30]_i_7_n_0 ),
+        .O(\counter[30]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000010)) 
+    \counter[30]_i_4 
+       (.I0(counter[7]),
+        .I1(counter[6]),
+        .I2(counter[16]),
         .I3(counter[29]),
+        .I4(\counter[30]_i_8_n_0 ),
+        .O(\counter[30]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFEFFF)) 
+    \counter[30]_i_5 
+       (.I0(counter[5]),
+        .I1(counter[4]),
+        .I2(counter[20]),
+        .I3(counter[22]),
+        .I4(\counter[30]_i_9_n_0 ),
+        .O(\counter[30]_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFBFF)) 
+    \counter[30]_i_6 
+       (.I0(counter[10]),
+        .I1(counter[14]),
+        .I2(counter[25]),
+        .I3(counter[23]),
+        .I4(\counter[30]_i_10_n_0 ),
+        .O(\counter[30]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    \counter[30]_i_7 
+       (.I0(counter[9]),
+        .I1(counter[2]),
+        .I2(counter[21]),
+        .I3(counter[18]),
         .O(\counter[30]_i_7_n_0 ));
   LUT4 #(
-    .INIT(16'hFF7F)) 
+    .INIT(16'hEFFF)) 
     \counter[30]_i_8 
-       (.I0(counter[18]),
-        .I1(counter[20]),
-        .I2(counter[26]),
-        .I3(counter[6]),
+       (.I0(counter[30]),
+        .I1(counter[12]),
+        .I2(counter[24]),
+        .I3(counter[13]),
         .O(\counter[30]_i_8_n_0 ));
   LUT4 #(
     .INIT(16'hFFEF)) 
     \counter[30]_i_9 
-       (.I0(counter[19]),
-        .I1(counter[5]),
-        .I2(counter[16]),
+       (.I0(counter[11]),
+        .I1(counter[1]),
+        .I2(counter[15]),
         .I3(counter[27]),
         .O(\counter[30]_i_9_n_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry 
+       (.CI(1'b0),
+        .CO({\counter_reg0_inferred__0/i__carry_n_0 ,\counter_reg0_inferred__0/i__carry_n_1 ,\counter_reg0_inferred__0/i__carry_n_2 ,\counter_reg0_inferred__0/i__carry_n_3 }),
+        .CYINIT(counter[0]),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(p_1_in[4:1]),
+        .S(counter[4:1]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry__0 
+       (.CI(\counter_reg0_inferred__0/i__carry_n_0 ),
+        .CO({\counter_reg0_inferred__0/i__carry__0_n_0 ,\counter_reg0_inferred__0/i__carry__0_n_1 ,\counter_reg0_inferred__0/i__carry__0_n_2 ,\counter_reg0_inferred__0/i__carry__0_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(p_1_in[8:5]),
+        .S(counter[8:5]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry__1 
+       (.CI(\counter_reg0_inferred__0/i__carry__0_n_0 ),
+        .CO({\counter_reg0_inferred__0/i__carry__1_n_0 ,\counter_reg0_inferred__0/i__carry__1_n_1 ,\counter_reg0_inferred__0/i__carry__1_n_2 ,\counter_reg0_inferred__0/i__carry__1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(p_1_in[12:9]),
+        .S(counter[12:9]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry__2 
+       (.CI(\counter_reg0_inferred__0/i__carry__1_n_0 ),
+        .CO({\counter_reg0_inferred__0/i__carry__2_n_0 ,\counter_reg0_inferred__0/i__carry__2_n_1 ,\counter_reg0_inferred__0/i__carry__2_n_2 ,\counter_reg0_inferred__0/i__carry__2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(p_1_in[16:13]),
+        .S(counter[16:13]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry__3 
+       (.CI(\counter_reg0_inferred__0/i__carry__2_n_0 ),
+        .CO({\counter_reg0_inferred__0/i__carry__3_n_0 ,\counter_reg0_inferred__0/i__carry__3_n_1 ,\counter_reg0_inferred__0/i__carry__3_n_2 ,\counter_reg0_inferred__0/i__carry__3_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(p_1_in[20:17]),
+        .S(counter[20:17]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry__4 
+       (.CI(\counter_reg0_inferred__0/i__carry__3_n_0 ),
+        .CO({\counter_reg0_inferred__0/i__carry__4_n_0 ,\counter_reg0_inferred__0/i__carry__4_n_1 ,\counter_reg0_inferred__0/i__carry__4_n_2 ,\counter_reg0_inferred__0/i__carry__4_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(p_1_in[24:21]),
+        .S(counter[24:21]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry__5 
+       (.CI(\counter_reg0_inferred__0/i__carry__4_n_0 ),
+        .CO({\counter_reg0_inferred__0/i__carry__5_n_0 ,\counter_reg0_inferred__0/i__carry__5_n_1 ,\counter_reg0_inferred__0/i__carry__5_n_2 ,\counter_reg0_inferred__0/i__carry__5_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(p_1_in[28:25]),
+        .S(counter[28:25]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \counter_reg0_inferred__0/i__carry__6 
+       (.CI(\counter_reg0_inferred__0/i__carry__5_n_0 ),
+        .CO({\NLW_counter_reg0_inferred__0/i__carry__6_CO_UNCONNECTED [3:1],\counter_reg0_inferred__0/i__carry__6_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_counter_reg0_inferred__0/i__carry__6_O_UNCONNECTED [3:2],p_1_in[30:29]}),
+        .S({1'b0,1'b0,counter[30:29]}));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[0] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[0]),
         .Q(counter[0]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[10] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[10]),
         .Q(counter[10]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[11] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[11]),
         .Q(counter[11]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[12] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[12]),
         .Q(counter[12]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[13] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[13]),
         .Q(counter[13]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[14] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[14]),
         .Q(counter[14]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[15] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[15]),
         .Q(counter[15]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[16] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[16]),
         .Q(counter[16]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[17] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[17]),
         .Q(counter[17]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[18] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[18]),
         .Q(counter[18]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[19] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[19]),
         .Q(counter[19]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[1] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[1]),
         .Q(counter[1]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[20] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[20]),
         .Q(counter[20]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[21] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[21]),
         .Q(counter[21]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[22] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[22]),
         .Q(counter[22]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[23] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[23]),
         .Q(counter[23]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[24] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[24]),
         .Q(counter[24]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[25] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[25]),
         .Q(counter[25]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[26] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[26]),
         .Q(counter[26]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[27] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[27]),
         .Q(counter[27]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[28] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[28]),
         .Q(counter[28]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[29] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[29]),
         .Q(counter[29]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[2] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[2]),
         .Q(counter[2]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[30] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[30]),
         .Q(counter[30]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[3] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[3]),
         .Q(counter[3]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[4] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[4]),
         .Q(counter[4]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[5] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[5]),
         .Q(counter[5]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[6] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[6]),
         .Q(counter[6]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[7] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[7]),
         .Q(counter[7]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[8] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[8]),
         .Q(counter[8]),
-        .R(p_0_in));
+        .R(counter_reg0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[9] 
        (.C(CLK_I),
-        .CE(1'b1),
+        .CE(\counter[30]_i_2_n_0 ),
         .D(p_1_in[9]),
         .Q(counter[9]),
-        .R(p_0_in));
-  LUT4 #(
-    .INIT(16'hABAA)) 
+        .R(counter_reg0));
+  LUT6 #(
+    .INIT(64'h88888888888F8888)) 
     startup_delay_1sec_i_1
-       (.I0(startup_delay_1sec_reg_n_0),
-        .I1(\counter[30]_i_4_n_0 ),
-        .I2(\counter[30]_i_3_n_0 ),
-        .I3(\counter[30]_i_2_n_0 ),
+       (.I0(startup_delay_1sec),
+        .I1(startup_delay_1sec),
+        .I2(\counter[30]_i_6_n_0 ),
+        .I3(\counter[30]_i_5_n_0 ),
+        .I4(\counter[30]_i_4_n_0 ),
+        .I5(\counter[30]_i_3_n_0 ),
         .O(startup_delay_1sec_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE #(
     .INIT(1'b0)) 
     startup_delay_1sec_reg
        (.C(CLK_I),
         .CE(1'b1),
         .D(startup_delay_1sec_i_1_n_0),
-        .Q(startup_delay_1sec_reg_n_0),
+        .Q(startup_delay_1sec),
         .R(1'b0));
 endmodule
 `ifndef GLBL

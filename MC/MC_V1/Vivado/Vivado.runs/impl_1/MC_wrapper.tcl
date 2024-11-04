@@ -105,40 +105,15 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 6  }
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part_repo_paths {C:/B_Git/MCS/MC/Board_files/picozed_7020_som} [current_project]
-  set_property board_part em.avnet.com:picozed_7020_som:part0:1.2 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.runs/impl_1/MC_wrapper.dcp
   set_property webtalk.parent_dir C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.cache/wt [current_project]
   set_property parent.project_path C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.xpr [current_project]
   set_property ip_output_repo C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-OPTRACE "set parameters" END { }
-OPTRACE "add files" START { }
-  add_files -quiet C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.runs/synth_1/MC_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/bd/MC/MC.bd
-  set_param project.isImplRun false
-OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/constrs_1/new/Constraints.xdc
-OPTRACE "read constraints: implementation" END { }
-OPTRACE "read constraints: implementation_pre" START { }
-OPTRACE "read constraints: implementation_pre" END { }
-OPTRACE "add files" END { }
-OPTRACE "link_design" START { }
-  set_param project.isImplRun true
-  link_design -top MC_wrapper -part xc7z020clg400-1 
-OPTRACE "link_design" END { }
-  set_param project.isImplRun false
-OPTRACE "gray box cells" START { }
-OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

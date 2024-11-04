@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Thu Oct 24 10:26:12 2024
+--Date        : Fri Nov  1 14:37:38 2024
 --Host        : mikkelsPC running 64-bit major release  (build 9200)
 --Command     : generate_target MC_wrapper.bd
 --Design      : MC_wrapper
@@ -14,10 +14,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity MC_wrapper is
   port (
+    BOTS_I : in STD_LOGIC;
     CAN_0_rx : in STD_LOGIC;
     CAN_0_tx : out STD_LOGIC;
     CAN_1_rx : in STD_LOGIC;
     CAN_1_tx : out STD_LOGIC;
+    COCKPIT_EMERGENCY_I : in STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -39,10 +41,20 @@ entity MC_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FL_WHEEL_I : in STD_LOGIC;
+    FR_WHEEL_I : in STD_LOGIC;
+    INERTIA_I : in STD_LOGIC;
+    L_EMERGENCY_BUTTON_I : in STD_LOGIC;
+    PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 );
+    RL_WHEEL_I : in STD_LOGIC;
+    RR_WHEEL_I : in STD_LOGIC;
+    R_EMERGENCY_BUTTON_I : in STD_LOGIC;
+    SDC_SUPPLY_I : in STD_LOGIC;
     SPI0_MISO_I : in STD_LOGIC;
     SPI0_MOSI_O : out STD_LOGIC;
     SPI0_SCLK_O : out STD_LOGIC;
     SPI0_SS_O : out STD_LOGIC;
+    TSMS_I : in STD_LOGIC;
     UART0_CTSN : in STD_LOGIC;
     UART0_RTSN : out STD_LOGIC;
     UART0_RX : in STD_LOGIC;
@@ -74,6 +86,10 @@ architecture STRUCTURE of MC_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
+    CAN_0_tx : out STD_LOGIC;
+    CAN_0_rx : in STD_LOGIC;
+    CAN_1_tx : out STD_LOGIC;
+    CAN_1_rx : in STD_LOGIC;
     UART0_RTSN : out STD_LOGIC;
     UART0_TX : out STD_LOGIC;
     UART0_CTSN : in STD_LOGIC;
@@ -82,19 +98,29 @@ architecture STRUCTURE of MC_wrapper is
     SPI0_MOSI_O : out STD_LOGIC;
     SPI0_MISO_I : in STD_LOGIC;
     SPI0_SS_O : out STD_LOGIC;
-    CAN_0_tx : out STD_LOGIC;
-    CAN_0_rx : in STD_LOGIC;
-    CAN_1_tx : out STD_LOGIC;
-    CAN_1_rx : in STD_LOGIC
+    SDC_SUPPLY_I : in STD_LOGIC;
+    COCKPIT_EMERGENCY_I : in STD_LOGIC;
+    BOTS_I : in STD_LOGIC;
+    L_EMERGENCY_BUTTON_I : in STD_LOGIC;
+    INERTIA_I : in STD_LOGIC;
+    R_EMERGENCY_BUTTON_I : in STD_LOGIC;
+    RL_WHEEL_I : in STD_LOGIC;
+    FR_WHEEL_I : in STD_LOGIC;
+    FL_WHEEL_I : in STD_LOGIC;
+    RR_WHEEL_I : in STD_LOGIC;
+    TSMS_I : in STD_LOGIC;
+    PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component MC;
 begin
 MC_i: component MC
      port map (
+      BOTS_I => BOTS_I,
       CAN_0_rx => CAN_0_rx,
       CAN_0_tx => CAN_0_tx,
       CAN_1_rx => CAN_1_rx,
       CAN_1_tx => CAN_1_tx,
+      COCKPIT_EMERGENCY_I => COCKPIT_EMERGENCY_I,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),
       DDR_cas_n => DDR_cas_n,
@@ -116,10 +142,20 @@ MC_i: component MC
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      FL_WHEEL_I => FL_WHEEL_I,
+      FR_WHEEL_I => FR_WHEEL_I,
+      INERTIA_I => INERTIA_I,
+      L_EMERGENCY_BUTTON_I => L_EMERGENCY_BUTTON_I,
+      PL_ALIVE_LED(0) => PL_ALIVE_LED(0),
+      RL_WHEEL_I => RL_WHEEL_I,
+      RR_WHEEL_I => RR_WHEEL_I,
+      R_EMERGENCY_BUTTON_I => R_EMERGENCY_BUTTON_I,
+      SDC_SUPPLY_I => SDC_SUPPLY_I,
       SPI0_MISO_I => SPI0_MISO_I,
       SPI0_MOSI_O => SPI0_MOSI_O,
       SPI0_SCLK_O => SPI0_SCLK_O,
       SPI0_SS_O => SPI0_SS_O,
+      TSMS_I => TSMS_I,
       UART0_CTSN => UART0_CTSN,
       UART0_RTSN => UART0_RTSN,
       UART0_RX => UART0_RX,
