@@ -1,2 +1,0 @@
-arm-none-eabi-ar qc libsysmon.a CMakeFiles/sysmon.dir/xsysmon.c.obj CMakeFiles/sysmon.dir/xsysmon_g.c.obj CMakeFiles/sysmon.dir/xsysmon_intr.c.obj CMakeFiles/sysmon.dir/xsysmon_selftest.c.obj CMakeFiles/sysmon.dir/xsysmon_sinit.c.obj
-C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-ranlib.exe libsysmon.a
