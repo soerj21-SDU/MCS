@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -75,7 +74,7 @@ set_property ip_output_repo c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_t
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+read_verilog -library xil_defaultlib C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
@@ -88,10 +87,10 @@ set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Driv
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -106,6 +105,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

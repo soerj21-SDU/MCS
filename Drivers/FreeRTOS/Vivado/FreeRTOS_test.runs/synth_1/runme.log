@@ -8,37 +8,42 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Nov  5 15:56:03 2024
+  **** Start of session at: Thu Nov  7 07:35:29 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 611.020 ; gain = 199.359
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 612.652 ; gain = 198.145
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11924
+INFO: [Synth 8-7075] Helper process launched with PID 33092
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1491.789 ; gain = 447.863
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.965 ; gain = 448.348
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:257]
 WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:257]
 WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:257]
@@ -56,17 +61,17 @@ INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (0#1) [c
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:1369]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (0#1) [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:1369]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:1501]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (0#1) [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:1501]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_xbar_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:1064]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:1064]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:1064]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (0#1) [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:432]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-45008-Soeren-Laptop/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/.Xil/Vivado-14492-Soeren-Laptop/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:423]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:423]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:423]
@@ -75,7 +80,7 @@ WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [c:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_UYSKKA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_UYSKKA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_14WQB4R is either unconnected or has no load
@@ -99,18 +104,18 @@ WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_ps7_0_axi_periph_0 i
 WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1608.863 ; gain = 564.938
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1611.039 ; gain = 564.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1608.863 ; gain = 564.938
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1611.039 ; gain = 564.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1608.863 ; gain = 564.938
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1611.039 ; gain = 564.422
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1608.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1611.039 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -135,21 +140,23 @@ Parsing XDC File [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/s
 Finished Parsing XDC File [C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1643.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1634.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1643.859 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1634.262 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -424,10 +431,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph/s00_c
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -458,25 +465,25 @@ WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_ps7_0_axi_periph_0 i
 WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -494,37 +501,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -558,28 +565,28 @@ Report Cell Usage:
 |9     |IOBUF                         |     4|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:31 . Memory (MB): peak = 1643.859 ; gain = 564.938
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1643.859 ; gain = 599.934
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 1634.262 ; gain = 564.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1634.262 ; gain = 587.645
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1643.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1634.262 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1643.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1634.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
 
 Synth Design complete | Checksum: 8c9a8416
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+56 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1643.859 ; gain = 1015.035
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1643.859 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1634.262 ; gain = 991.312
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1634.262 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov  5 15:56:59 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  7 07:36:45 2024...
