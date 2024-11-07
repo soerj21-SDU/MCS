@@ -30,71 +30,33 @@
 #define Baseaddr_SWS XPAR_AXI_GPIO_1_BASEADDR
 #define Baseaddr_LED XPAR_AXI_GPIO_2_BASEADDR
 
-#define TIMER_ID	1
-#define DELAY_10_SECONDS	10000UL
-#define DELAY_1_SECOND		1000UL
-#define TIMER_CHECK_THRESHOLD	9
 /*-----------------------------------------------------------*/
 
-/* The Tx and Rx tasks as described at the top of this file. */
-static void prvTxTask( void *pvParameters );
-static void prvRxTask( void *pvParameters );
-static void task_Hello_world(void *pvParameters );
-static void vTimerCallback( TimerHandle_t pxTimer );
+static void task_LED_flash(void *pvParameters );
 /*-----------------------------------------------------------*/
 
 /* The queue used by the Tx and Rx tasks, as described at the top of this
 file. */
-static TaskHandle_t xTxTask;
-static TaskHandle_t xRxTask;
 static TaskHandle_t Hello_world;
 static QueueHandle_t xQueue = NULL;
-static TimerHandle_t xTimer = NULL;
 char HWstring[15] = "Hello World";
-long RxtaskCntr = 0;
 
 // Hardware defines
 XGpio GPIO_LED;
 int LED_status;
 
-#if (configSUPPORT_STATIC_ALLOCATION == 1)
-#define QUEUE_BUFFER_SIZE		100
-
-uint8_t ucQueueStorageArea[ QUEUE_BUFFER_SIZE ];
-StackType_t xStack1[ configMINIMAL_STACK_SIZE ];
-StackType_t xStack2[ configMINIMAL_STACK_SIZE ];
-StaticTask_t xTxBuffer,xRxBuffer;
-StaticTimer_t xTimerBuffer;
-static StaticQueue_t xStaticQueue;
-#endif
-
 int main( void )
 {
-	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
     LED_status = initialize_LEDs(&GPIO_LED, Baseaddr_LED);    
 
 
 	xil_printf( "Hello from Freertos example main\r\n" );
 	
-    // xTaskCreate( 	prvTxTask, 					/* The function that implements the task. */
-	// 				( const char * ) "Tx", 		/* Text name for the task, provided to assist debugging only. */
-	// 				configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
-	// 				NULL, 						/* The task parameter is not used, so set to NULL. */
-	// 				tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
-	// 				&xTxTask );
-
-	// xTaskCreate( prvRxTask,
-	// 			 ( const char * ) "GB",
-	// 			 configMINIMAL_STACK_SIZE,
-	// 			 NULL,
-	// 			 tskIDLE_PRIORITY + 1,
-	// 			 &xRxTask );
-
-    xTaskCreate(task_Hello_world,
-                (const char *) "Hello world task",
-                configMINIMAL_STACK_SIZE,
-                NULL,
-                tskIDLE_PRIORITY + 2,
+    xTaskCreate(task_LED_flash,
+                (const char *) "Hello world task", 	/* The function that implements the task. */
+			configMINIMAL_STACK_SIZE,				/* Text name for the task, provided to assist debugging only. */
+                NULL,								/* The stack allocated to the task. */
+			tskIDLE_PRIORITY,					/* The task runs at the idle priority. */
                 &Hello_world);
 
 	/* Create the queue used by the tasks.  The Rx task has a higher priority
@@ -107,26 +69,6 @@ int main( void )
 	/* Check the queue was created. */
 	configASSERT( xQueue );
 
-	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
-	 after 10 seconds and the timer call back would get called. In the timer call back
-	 checks are done to ensure that the tasks have been running properly till then.
-	 The tasks are deleted in the timer call back and a message is printed to convey that
-	 the example has run successfully.
-	 The timer expiry is set to 10 seconds and the timer set to not auto reload. */
-	xTimer = xTimerCreate( (const char *) "Timer",
-							x10seconds,
-							pdFALSE,
-							(void *) TIMER_ID,
-							vTimerCallback);
-	/* Check the timer was created. */
-	configASSERT( xTimer );
-
-
-	/* start the timer with a block time of 0 ticks. This means as soon
-	   as the schedule starts the timer will start running and will expire after
-	   10 seconds */
-	xTimerStart( xTimer, 0 );
-
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
 
@@ -138,72 +80,8 @@ int main( void )
 	for( ;; );
 }
 
-
 /*-----------------------------------------------------------*/
-static void prvTxTask( void *pvParameters )
-{
-const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
-
-	for( ;; )
-	{
-		/* Delay for 1 second. */
-		vTaskDelay( x1second );
-
-		/* Send the next value on the queue.  The queue should always be
-		empty at this point so a block time of 0 is used. */
-		xQueueSend( xQueue,			/* The queue being written to. */
-					HWstring, /* The address of the data being sent. */
-					0UL );			/* The block time. */
-	}
-}
-
-/*-----------------------------------------------------------*/
-static void prvRxTask( void *pvParameters )
-{
-char Recdstring[15] = "";
-
-	for( ;; )
-	{
-		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueue,				/* The queue being read. */
-						Recdstring,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
-
-		/* Print the received data. */
-		xil_printf( "Rx task received string from Tx task: %s\r\n", Recdstring );
-		RxtaskCntr++;
-	}
-}
-
-/*-----------------------------------------------------------*/
-static void vTimerCallback( TimerHandle_t pxTimer )
-{
-	long lTimerId;
-	configASSERT( pxTimer );
-
-	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
-
-	if (lTimerId != TIMER_ID) {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	/* If the RxtaskCntr is updated every time the Rx task is called. The
-	 Rx task is called every time the Tx task sends a message. The Tx task
-	 sends a message every 1 second.
-	 The timer expires after 10 seconds. We expect the RxtaskCntr to at least
-	 have a value of 9 (TIMER_CHECK_THRESHOLD) when the timer expires. */
-	if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
-		xil_printf("Successfully ran FreeRTOS Hello World Example");
-	} else {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	// vTaskDelete( xRxTask );
-	// vTaskDelete( xTxTask );
-	vTaskDelete( Hello_world );
-}
-
-static void task_Hello_world(void *pvParameters)
+static void task_LED_flash(void *pvParameters)
 {
     for( ;; ){
 
@@ -212,5 +90,4 @@ static void task_Hello_world(void *pvParameters)
 
     vTaskDelay(pdMS_TO_TICKS(2000)); // 2000 ms delay
     }
-
 }

@@ -66,3 +66,6 @@ INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
 INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/design_1_wrapper_V1.xsa
 INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2024.1/data/embeddedsw) loading 1 seconds
 write_hw_platform: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2009.160 ; gain = 181.324
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+set_property offset 0x41220000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_2_Reg}]
