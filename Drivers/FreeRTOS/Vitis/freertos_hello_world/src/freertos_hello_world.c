@@ -21,6 +21,7 @@
 #include "xparameters.h"
 #include <FreeRTOSConfig.h>
 #include <projdefs.h>
+#include <xgpio.h>
 
 /* Soeren includes */
 #include "hardware.h"
@@ -30,34 +31,49 @@
 #define Baseaddr_SWS XPAR_AXI_GPIO_1_BASEADDR
 #define Baseaddr_LED XPAR_AXI_GPIO_2_BASEADDR
 
+/*   Tasks   */
 /*-----------------------------------------------------------*/
 
-static void task_LED_flash(void *pvParameters );
+static void task_LED(void *pvParameters );
+static void task_SWS(void *pvParameters);
 /*-----------------------------------------------------------*/
 
 /* The queue used by the Tx and Rx tasks, as described at the top of this
 file. */
-static TaskHandle_t Hello_world;
+static TaskHandle_t TaskHandle_LED;
+static TaskHandle_t TaskHandle_SWS;
 static QueueHandle_t xQueue = NULL;
 char HWstring[15] = "Hello World";
 
 // Hardware defines
 XGpio GPIO_LED;
+XGpio GPIO_SWS;
 int LED_status;
+int SWS_status;
+
+int sws_value; 
 
 int main( void )
 {
     LED_status = initialize_LEDs(&GPIO_LED, Baseaddr_LED);    
+    SWS_status = initialize_SWS(&GPIO_SWS, Baseaddr_SWS);
 
 
 	xil_printf( "Hello from Freertos example main\r\n" );
 	
-    xTaskCreate(task_LED_flash,
-                (const char *) "Hello world task", 	/* The function that implements the task. */
+    xTaskCreate(task_LED,
+                (const char *) "LED task", 	/* The function that implements the task. */
 			configMINIMAL_STACK_SIZE,				/* Text name for the task, provided to assist debugging only. */
                 NULL,								/* The stack allocated to the task. */
 			tskIDLE_PRIORITY,					/* The task runs at the idle priority. */
-                &Hello_world);
+                &TaskHandle_LED);
+
+    xTaskCreate(task_SWS,
+                (const char *) "SWS task", 	/* The function that implements the task. */
+			configMINIMAL_STACK_SIZE,				/* Text name for the task, provided to assist debugging only. */
+                NULL,								/* The stack allocated to the task. */
+			tskIDLE_PRIORITY + 1,					/* The task priority. */
+                &TaskHandle_SWS);
 
 	/* Create the queue used by the tasks.  The Rx task has a higher priority
 	than the Tx task, so will preempt the Tx task and remove values from the
@@ -81,13 +97,40 @@ int main( void )
 }
 
 /*-----------------------------------------------------------*/
-static void task_LED_flash(void *pvParameters)
+static void task_LED(void *pvParameters)
+{
+    for (;;)
+    {
+        switch (sws_value)
+        {
+        case 1:
+            xil_printf("In LED task\r\n");
+            toggle_LED(&GPIO_LED);
+            vTaskDelay(pdMS_TO_TICKS(500)); // 500 ms delay
+            break;
+
+        case 2:
+            xil_printf("In LED task\r\n");
+            toggle_LED(&GPIO_LED);
+            vTaskDelay(pdMS_TO_TICKS(250)); // 250 ms delay
+            break;
+
+        default:
+            xil_printf("In LED task\r\n");
+            toggle_LED(&GPIO_LED);
+            vTaskDelay(pdMS_TO_TICKS(1000)); // 1000 ms delay
+            break;
+        }
+    }
+}
+
+static void task_SWS(void *pvParameters)
 {
     for( ;; ){
 
-    print("In Hellow_world task\r\n");
-    toggle_LED(&GPIO_LED);
-
-    vTaskDelay(pdMS_TO_TICKS(2000)); // 2000 ms delay
+    // print("In SWS task\r\n");
+    read_SWS(&GPIO_SWS);
+	sws_value = get_SWS_value(&GPIO_SWS);
+    vTaskDelay(pdMS_TO_TICKS(500)); // 500 ms (1 sec) delay
     }
 }
