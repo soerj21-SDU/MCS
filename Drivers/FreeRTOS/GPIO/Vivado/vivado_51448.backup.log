@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Nov  7 07:33:39 2024
+# Process ID: 51448
+# Current directory: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent54312 C:\Git\GitHub\MCS\Drivers\FreeRTOS\Vivado\FreeRTOS_test.xpr
+# Log file: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/vivado.log
+# Journal file: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado\vivado.jou
+# Running On        :Soeren-Laptop
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16969 MB
+# Swap memory       :13421 MB
+# Total Virtual     :30391 MB
+# Available Virtual :10607 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1664.094 ; gain = 504.531
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/design_1_wrapper.dcp to C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Nov  7 07:35:26 2024] Launched synth_1...
+Run output will be captured here: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/synth_1/runme.log
+[Thu Nov  7 07:35:26 2024] Launched impl_1...
+Run output will be captured here: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.runs/impl_1/runme.log
+open_bd_design {C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Successfully read diagram <design_1> from block design file <C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1789.824 ; gain = 96.176
+write_hw_platform -fixed -include_bit -force -file C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/design_1_wrapper_V1.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/design_1_wrapper_V1.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/design_1_wrapper_V1.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2024.1/data/embeddedsw) loading 1 seconds
+write_hw_platform: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2009.160 ; gain = 181.324
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+set_property offset 0x41220000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_2_Reg}]
+save_bd_design
+Wrote  : <C:\Git\GitHub\MCS\Drivers\FreeRTOS\Vivado\FreeRTOS_test.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Git/GitHub/MCS/Drivers/FreeRTOS/Vivado/FreeRTOS_test.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  7 14:34:41 2024...
