@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEEB231FE577766E6",
+      "boundary_crc": "0x5E564A989FA9D61D",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -248,62 +248,62 @@
           }
         }
       },
-      "Vaux6_0": {
+      "Vaux6": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
         "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
         "port_maps": {
           "V_N": {
-            "physical_name": "Vaux6_0_v_n",
+            "physical_name": "Vaux6_v_n",
             "direction": "I"
           },
           "V_P": {
-            "physical_name": "Vaux6_0_v_p",
+            "physical_name": "Vaux6_v_p",
             "direction": "I"
           }
         }
       },
-      "Vaux7_0": {
+      "Vaux7": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
         "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
         "port_maps": {
           "V_N": {
-            "physical_name": "Vaux7_0_v_n",
+            "physical_name": "Vaux7_v_n",
             "direction": "I"
           },
           "V_P": {
-            "physical_name": "Vaux7_0_v_p",
+            "physical_name": "Vaux7_v_p",
             "direction": "I"
           }
         }
       },
-      "Vaux14_0": {
+      "Vaux14": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
         "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
         "port_maps": {
           "V_N": {
-            "physical_name": "Vaux14_0_v_n",
+            "physical_name": "Vaux14_v_n",
             "direction": "I"
           },
           "V_P": {
-            "physical_name": "Vaux14_0_v_p",
+            "physical_name": "Vaux14_v_p",
             "direction": "I"
           }
         }
       },
-      "Vaux15_0": {
+      "Vaux15": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
         "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
         "port_maps": {
           "V_N": {
-            "physical_name": "Vaux15_0_v_n",
+            "physical_name": "Vaux15_v_n",
             "direction": "I"
           },
           "V_P": {
-            "physical_name": "Vaux15_0_v_p",
+            "physical_name": "Vaux15_v_p",
             "direction": "I"
           }
         }
@@ -1902,25 +1902,25 @@
     "interface_nets": {
       "Vaux14_0_1": {
         "interface_ports": [
-          "Vaux14_0",
+          "Vaux14",
           "xadc_wiz_0/Vaux14"
         ]
       },
       "Vaux15_0_1": {
         "interface_ports": [
-          "Vaux15_0",
+          "Vaux15",
           "xadc_wiz_0/Vaux15"
         ]
       },
       "Vaux6_0_1": {
         "interface_ports": [
-          "Vaux6_0",
+          "Vaux6",
           "xadc_wiz_0/Vaux6"
         ]
       },
       "Vaux7_0_1": {
         "interface_ports": [
-          "Vaux7_0",
+          "Vaux7",
           "xadc_wiz_0/Vaux7"
         ]
       },

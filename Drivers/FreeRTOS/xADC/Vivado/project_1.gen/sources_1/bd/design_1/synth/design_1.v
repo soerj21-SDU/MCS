@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Thu Nov  7 15:19:20 2024
+//Date        : Mon Nov 11 09:37:43 2024
 //Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -33,14 +33,14 @@ module design_1
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    Vaux14_0_v_n,
-    Vaux14_0_v_p,
-    Vaux15_0_v_n,
-    Vaux15_0_v_p,
-    Vaux6_0_v_n,
-    Vaux6_0_v_p,
-    Vaux7_0_v_n,
-    Vaux7_0_v_p,
+    Vaux14_v_n,
+    Vaux14_v_p,
+    Vaux15_v_n,
+    Vaux15_v_p,
+    Vaux6_v_n,
+    Vaux6_v_p,
+    Vaux7_v_n,
+    Vaux7_v_p,
     btns_4bits_tri_i,
     leds_4bits_tri_i,
     leds_4bits_tri_o,
@@ -67,14 +67,14 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux14_0 V_N" *) input Vaux14_0_v_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux14_0 V_P" *) input Vaux14_0_v_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux15_0 V_N" *) input Vaux15_0_v_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux15_0 V_P" *) input Vaux15_0_v_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux6_0 V_N" *) input Vaux6_0_v_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux6_0 V_P" *) input Vaux6_0_v_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux7_0 V_N" *) input Vaux7_0_v_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux7_0 V_P" *) input Vaux7_0_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux14 " *) input Vaux14_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux14 " *) input Vaux14_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux15 " *) input Vaux15_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux15 " *) input Vaux15_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux6 " *) input Vaux6_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux6 " *) input Vaux6_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux7 " *) input Vaux7_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux7 " *) input Vaux7_v_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 btns_4bits TRI_I" *) input [3:0]btns_4bits_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 leds_4bits TRI_I" *) input [3:0]leds_4bits_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 leds_4bits TRI_O" *) output [3:0]leds_4bits_tri_o;
@@ -225,14 +225,14 @@ module design_1
   wire [0:0]ps7_0_axi_periph_M03_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
 
-  assign Vaux14_0_1_V_N = Vaux14_0_v_n;
-  assign Vaux14_0_1_V_P = Vaux14_0_v_p;
-  assign Vaux15_0_1_V_N = Vaux15_0_v_n;
-  assign Vaux15_0_1_V_P = Vaux15_0_v_p;
-  assign Vaux6_0_1_V_N = Vaux6_0_v_n;
-  assign Vaux6_0_1_V_P = Vaux6_0_v_p;
-  assign Vaux7_0_1_V_N = Vaux7_0_v_n;
-  assign Vaux7_0_1_V_P = Vaux7_0_v_p;
+  assign Vaux14_0_1_V_N = Vaux14_v_n;
+  assign Vaux14_0_1_V_P = Vaux14_v_p;
+  assign Vaux15_0_1_V_N = Vaux15_v_n;
+  assign Vaux15_0_1_V_P = Vaux15_v_p;
+  assign Vaux6_0_1_V_N = Vaux6_v_n;
+  assign Vaux6_0_1_V_P = Vaux6_v_p;
+  assign Vaux7_0_1_V_N = Vaux7_v_n;
+  assign Vaux7_0_1_V_P = Vaux7_v_p;
   assign axi_gpio_0_GPIO_TRI_I = btns_4bits_tri_i[3:0];
   assign axi_gpio_1_GPIO_TRI_I = leds_4bits_tri_i[3:0];
   assign axi_gpio_2_GPIO_TRI_I = sws_4bits_tri_i[3:0];

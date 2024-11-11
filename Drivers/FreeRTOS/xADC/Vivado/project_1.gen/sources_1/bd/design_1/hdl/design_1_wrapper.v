@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Thu Nov  7 15:19:20 2024
+//Date        : Mon Nov 11 09:37:43 2024
 //Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -32,14 +32,14 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    Vaux14_0_v_n,
-    Vaux14_0_v_p,
-    Vaux15_0_v_n,
-    Vaux15_0_v_p,
-    Vaux6_0_v_n,
-    Vaux6_0_v_p,
-    Vaux7_0_v_n,
-    Vaux7_0_v_p,
+    Vaux14_v_n,
+    Vaux14_v_p,
+    Vaux15_v_n,
+    Vaux15_v_p,
+    Vaux6_v_n,
+    Vaux6_v_p,
+    Vaux7_v_n,
+    Vaux7_v_p,
     btns_4bits_tri_i,
     leds_4bits_tri_io,
     sws_4bits_tri_i);
@@ -64,14 +64,14 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input Vaux14_0_v_n;
-  input Vaux14_0_v_p;
-  input Vaux15_0_v_n;
-  input Vaux15_0_v_p;
-  input Vaux6_0_v_n;
-  input Vaux6_0_v_p;
-  input Vaux7_0_v_n;
-  input Vaux7_0_v_p;
+  input Vaux14_v_n;
+  input Vaux14_v_p;
+  input Vaux15_v_n;
+  input Vaux15_v_p;
+  input Vaux6_v_n;
+  input Vaux6_v_p;
+  input Vaux7_v_n;
+  input Vaux7_v_p;
   input [3:0]btns_4bits_tri_i;
   inout [3:0]leds_4bits_tri_io;
   input [3:0]sws_4bits_tri_i;
@@ -97,14 +97,14 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire Vaux14_0_v_n;
-  wire Vaux14_0_v_p;
-  wire Vaux15_0_v_n;
-  wire Vaux15_0_v_p;
-  wire Vaux6_0_v_n;
-  wire Vaux6_0_v_p;
-  wire Vaux7_0_v_n;
-  wire Vaux7_0_v_p;
+  wire Vaux14_v_n;
+  wire Vaux14_v_p;
+  wire Vaux15_v_n;
+  wire Vaux15_v_p;
+  wire Vaux6_v_n;
+  wire Vaux6_v_p;
+  wire Vaux7_v_n;
+  wire Vaux7_v_p;
   wire [3:0]btns_4bits_tri_i;
   wire [0:0]leds_4bits_tri_i_0;
   wire [1:1]leds_4bits_tri_i_1;
@@ -146,14 +146,14 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .Vaux14_0_v_n(Vaux14_0_v_n),
-        .Vaux14_0_v_p(Vaux14_0_v_p),
-        .Vaux15_0_v_n(Vaux15_0_v_n),
-        .Vaux15_0_v_p(Vaux15_0_v_p),
-        .Vaux6_0_v_n(Vaux6_0_v_n),
-        .Vaux6_0_v_p(Vaux6_0_v_p),
-        .Vaux7_0_v_n(Vaux7_0_v_n),
-        .Vaux7_0_v_p(Vaux7_0_v_p),
+        .Vaux14_v_n(Vaux14_v_n),
+        .Vaux14_v_p(Vaux14_v_p),
+        .Vaux15_v_n(Vaux15_v_n),
+        .Vaux15_v_p(Vaux15_v_p),
+        .Vaux6_v_n(Vaux6_v_n),
+        .Vaux6_v_p(Vaux6_v_p),
+        .Vaux7_v_n(Vaux7_v_n),
+        .Vaux7_v_p(Vaux7_v_p),
         .btns_4bits_tri_i(btns_4bits_tri_i),
         .leds_4bits_tri_i({leds_4bits_tri_i_3,leds_4bits_tri_i_2,leds_4bits_tri_i_1,leds_4bits_tri_i_0}),
         .leds_4bits_tri_o({leds_4bits_tri_o_3,leds_4bits_tri_o_2,leds_4bits_tri_o_1,leds_4bits_tri_o_0}),

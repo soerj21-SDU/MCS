@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  7 15:19:43 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 11 09:37:44 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -69,7 +69,7 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_RAS_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="DDR_reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
+    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DRSTB"/>
       </CONNECTIONS>
@@ -109,42 +109,42 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux14_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn14">
+    <PORT DIR="I" NAME="Vaux14_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn14">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn14"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux14_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp14">
+    <PORT DIR="I" NAME="Vaux14_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp14">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp14"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux15_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn15">
+    <PORT DIR="I" NAME="Vaux15_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn15">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn15"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux15_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp15">
+    <PORT DIR="I" NAME="Vaux15_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp15">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp15"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux6_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn6">
+    <PORT DIR="I" NAME="Vaux6_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn6">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn6"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux6_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp6">
+    <PORT DIR="I" NAME="Vaux6_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp6">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp6"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux7_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn7">
+    <PORT DIR="I" NAME="Vaux7_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn7">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn7"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux7_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp7">
+    <PORT DIR="I" NAME="Vaux7_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp7">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp7"/>
       </CONNECTIONS>
@@ -238,28 +238,28 @@
         <PORTMAP LOGICAL="TRI_I" PHYSICAL="sws_4bits_tri_i"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_Vaux6_0" NAME="Vaux6_0" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_Vaux6" NAME="Vaux6" TYPE="TARGET">
       <PORTMAPS>
-        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux6_0_v_n"/>
-        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux6_0_v_p"/>
+        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux6_v_n"/>
+        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux6_v_p"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_Vaux7_0" NAME="Vaux7_0" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_Vaux7" NAME="Vaux7" TYPE="TARGET">
       <PORTMAPS>
-        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux7_0_v_n"/>
-        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux7_0_v_p"/>
+        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux7_v_n"/>
+        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux7_v_p"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_Vaux14_0" NAME="Vaux14_0" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_Vaux14" NAME="Vaux14" TYPE="TARGET">
       <PORTMAPS>
-        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux14_0_v_n"/>
-        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux14_0_v_p"/>
+        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux14_v_n"/>
+        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux14_v_p"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_Vaux15_0" NAME="Vaux15_0" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_Vaux15" NAME="Vaux15" TYPE="TARGET">
       <PORTMAPS>
-        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux15_0_v_n"/>
-        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux15_0_v_p"/>
+        <PORTMAP LOGICAL="V_N" PHYSICAL="Vaux15_v_n"/>
+        <PORTMAP LOGICAL="V_P" PHYSICAL="Vaux15_v_p"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -4223,42 +4223,42 @@
         <PORT DIR="O" NAME="user_temp_alarm_out" SIGIS="undef"/>
         <PORT DIR="I" NAME="vauxn6" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn6">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux6_0_v_n"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux6_v_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vauxn7" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn7">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux7_0_v_n"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux7_v_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vauxn14" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn14">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux14_0_v_n"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux14_v_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vauxn15" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn15">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux15_0_v_n"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux15_v_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vauxp6" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp6">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux6_0_v_p"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux6_v_p"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vauxp7" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp7">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux7_0_v_p"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux7_v_p"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vauxp14" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp14">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux14_0_v_p"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux14_v_p"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vauxp15" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp15">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux15_0_v_p"/>
+            <CONNECTION INSTANCE="design_1_imp" PORT="Vaux15_v_p"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vccaux_alarm_out" SIGIS="undef"/>
@@ -4328,25 +4328,25 @@
             <PORTMAP LOGICAL="V_P" PHYSICAL="vp_in"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="External_Interface_Vaux6_0" NAME="Vaux6" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_Vaux6" NAME="Vaux6" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="V_N" PHYSICAL="vauxn6"/>
             <PORTMAP LOGICAL="V_P" PHYSICAL="vauxp6"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="External_Interface_Vaux7_0" NAME="Vaux7" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_Vaux7" NAME="Vaux7" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="V_N" PHYSICAL="vauxn7"/>
             <PORTMAP LOGICAL="V_P" PHYSICAL="vauxp7"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="External_Interface_Vaux14_0" NAME="Vaux14" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_Vaux14" NAME="Vaux14" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="V_N" PHYSICAL="vauxn14"/>
             <PORTMAP LOGICAL="V_P" PHYSICAL="vauxp14"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="External_Interface_Vaux15_0" NAME="Vaux15" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_Vaux15" NAME="Vaux15" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="V_N" PHYSICAL="vauxn15"/>
             <PORTMAP LOGICAL="V_P" PHYSICAL="vauxp15"/>
