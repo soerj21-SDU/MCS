@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/B_Git/MCS/Drivers/xADC2/vivado/vivado.runs/impl_1'
+HD_PWD='C:/B_Git/MCS/Drivers/xADC_AUX_Zybo/vivado/vivado.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
