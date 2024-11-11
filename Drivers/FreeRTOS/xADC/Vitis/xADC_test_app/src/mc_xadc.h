@@ -21,3 +21,5 @@ u16 xadc_get_aux(u16 channel);
 
 float xADC_get_converted_voltage(u16 channel);
 
+float xADC_convert_voltage(u16 raw_data);
+

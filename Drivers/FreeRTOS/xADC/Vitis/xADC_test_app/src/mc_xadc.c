@@ -48,3 +48,10 @@ float xADC_get_converted_voltage(u16 channel)
 
     return voltage;
 }
+float xADC_convert_voltage(u16 raw_data)
+{
+    float voltage;
+    voltage = ( (float)raw_data * 1.0  )    /    ( (float) 4095.0 ) ;
+
+    return voltage;
+}

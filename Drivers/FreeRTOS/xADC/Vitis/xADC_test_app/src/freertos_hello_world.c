@@ -26,12 +26,13 @@
 /* Soeren includes */
 #include "hardware.h"
 #include "mc_xadc.h"
+#include <stdio.h>
 
 /* Defines baseadresses */
 #define Baseaddr_BTNS XPAR_AXI_GPIO_0_BASEADDR
 #define Baseaddr_SWS XPAR_AXI_GPIO_2_BASEADDR
 #define Baseaddr_LED XPAR_AXI_GPIO_1_BASEADDR
-#define Baseaddr_xADC_wiz XPAR_XADC_WIZ_0_BASEADDR
+#define Baseaddr_xADC XPAR_XXADCPS_0_BASEADDR
 
 /* Other defines  */
 #define xADC_channel 14
@@ -68,7 +69,19 @@ int main( void )
 {
     LED_status = initialize_LEDs(&GPIO_LED, Baseaddr_LED);    
     SWS_status = initialize_SWS(&GPIO_SWS, Baseaddr_SWS);
-    xADC_status = xadc_init(Baseaddr_xADC_wiz);
+    xADC_status = xadc_init(Baseaddr_xADC);
+    if (xADC_status == XST_FAILURE) 
+    {
+        xil_printf("\r\nXADC Initialization error.\r\n");
+    } 
+    else 
+    {
+        xil_printf("\r\nInitialization completed successfully.\r\n");
+        xADC_raw_value = xadc_get_aux(xADC_channel);
+        xADC_converted_value = xADC_get_converted_voltage(xADC_channel);
+        xil_printf("xADC channel %d.\r\n",xADC_channel);
+        printf("Reading %f V.\r\n", xADC_converted_value); // Floats are not supportet in "xil_printf.h"
+    }
 
 
 	xil_printf( "Hello from FreeRTOS example main\r\n" );
@@ -160,8 +173,9 @@ static void task_xADC(void *pvParameters)
     for( ;; ){
         xADC_raw_value = xadc_get_aux(xADC_channel);
         xADC_converted_value = xADC_get_converted_voltage(xADC_channel);
-        xil_printf("xADC channel %d. \n\r",xADC_channel, xADC_converted_value);
-        xil_printf("Reading %.3f V.\n\r",xADC_channel, xADC_converted_value);
+        xil_printf("xADC channel %d.\r\n",xADC_channel);
+        xil_printf("xADC raw %d.\r\n",xADC_raw_value);
+        printf("xADC voltage %.3f V.\r\n", xADC_converted_value);
         vTaskDelay(pdMS_TO_TICKS(1000*2)); // 1000 ms (1 sec) delay 
     }
 }
