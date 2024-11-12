@@ -1,0 +1,121 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.972824",
+   "Default View_TopLeft":"-240,308",
+   "ExpandedHierarchyInLayout":"",
+   "comment_0":"BSPD_I, TSMP_I, HVD_I are not included on the PCB. Must be added in a future edition",
+   "commentid":"comment_0|",
+   "font_comment_0":"18",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1540 -y 1210 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1540 -y 1230 -defaultsOSRD
+preplace port CAN_0 -pg 1 -lvl 5 -x 1540 -y 1470 -defaultsOSRD
+preplace port CAN_1 -pg 1 -lvl 5 -x 1540 -y 1490 -defaultsOSRD
+preplace port Vaux3_SW -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace port Vaux4_DASHAMSC -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace port Vaux5_LVSV -pg 1 -lvl 0 -x 0 -y 540 -defaultsOSRD
+preplace port Vaux6_BrakeC -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace port Vaux7_PoEC -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
+preplace port Vaux8_BP0 -pg 1 -lvl 0 -x 0 -y 800 -defaultsOSRD
+preplace port Vaux9_TP1 -pg 1 -lvl 0 -x 0 -y 820 -defaultsOSRD
+preplace port Vaux10_TSCINV12C -pg 1 -lvl 0 -x 0 -y 840 -defaultsOSRD
+preplace port Vaux11_RTDSC -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port Vaux12_CoolC -pg 1 -lvl 0 -x 0 -y 880 -defaultsOSRD
+preplace port Vaux13_LVSC -pg 1 -lvl 0 -x 0 -y 900 -defaultsOSRD
+preplace port port-id_UART0_RTSN -pg 1 -lvl 5 -x 1540 -y 1270 -defaultsOSRD
+preplace port port-id_UART0_TX -pg 1 -lvl 5 -x 1540 -y 1290 -defaultsOSRD
+preplace port port-id_UART0_CTSN -pg 1 -lvl 0 -x 0 -y 1680 -defaultsOSRD
+preplace port port-id_UART0_RX -pg 1 -lvl 0 -x 0 -y 1700 -defaultsOSRD
+preplace port port-id_SPI0_SCLK_O -pg 1 -lvl 5 -x 1540 -y 1370 -defaultsOSRD
+preplace port port-id_SPI0_MOSI_O -pg 1 -lvl 5 -x 1540 -y 1390 -defaultsOSRD
+preplace port port-id_SPI0_MISO_I -pg 1 -lvl 0 -x 0 -y 1660 -defaultsOSRD
+preplace port port-id_SPI0_SS_O -pg 1 -lvl 5 -x 1540 -y 1450 -defaultsOSRD
+preplace port port-id_SDC_SUPPLY_I -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_COCKPIT_EMERGENCY_I -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_BOTS_I -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_L_EMERGENCY_BUTTON_I -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_INERTIA_I -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_R_EMERGENCY_BUTTON_I -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_RL_WHEEL_I -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port port-id_FR_WHEEL_I -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_FL_WHEEL_I -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_RR_WHEEL_I -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_TSMS_I -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace port Vaux2_NetINV34C -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
+preplace port Vaux0_BP1 -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port Vaux1_TP0 -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace portBus PL_ALIVE_LED -pg 1 -lvl 5 -x 1540 -y 1880 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 4 -x 1260 -y 1410 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 1260 -y 1060 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 830 -y 650 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -x 410 -y 1000 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 4 -x 1260 -y 1750 -defaultsOSRD
+preplace inst SDC_Monitor_CAR_0 -pg 1 -lvl 2 -x 410 -y 230 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 100 -y 320 -defaultsOSRD
+preplace inst xlconstant -pg 1 -lvl 4 -x 1260 -y 1880 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 4 -x 1260 -y 770 -defaultsOSRD
+preplace netloc BOTS_I_0_1 1 0 2 NJ 120 NJ
+preplace netloc COCKPIT_EMERGENCY_I_0_1 1 0 2 NJ 100 NJ
+preplace netloc FL_WHEEL_I_0_1 1 0 2 NJ 220 NJ
+preplace netloc FR_WHEEL_I_0_1 1 0 2 NJ 200 NJ
+preplace netloc INERTIA_I_0_1 1 0 2 NJ 140 NJ
+preplace netloc L_EMERGENCY_BUTTON_I_0_1 1 0 2 NJ 160 NJ
+preplace netloc RL_WHEEL_I_0_1 1 0 2 NJ 260 NJ
+preplace netloc RR_WHEEL_I_0_1 1 0 2 NJ 240 NJ
+preplace netloc R_EMERGENCY_BUTTON_I_0_1 1 0 2 NJ 180 NJ
+preplace netloc SDC_Monitor_CAR_0_SDC_VECTOR_O 1 2 3 NJ 230 NJ 230 1470
+preplace netloc SDC_SUPPLY_I_0_1 1 0 2 NJ 80 NJ
+preplace netloc SPI0_MISO_I_0_1 1 0 5 NJ 1660 NJ 1660 NJ 1660 980J 1670 1470
+preplace netloc TSMS_I_0_1 1 0 2 NJ 400 NJ
+preplace netloc UART0_CTSN_0_1 1 0 5 NJ 1680 NJ 1680 NJ 1680 NJ 1680 1520
+preplace netloc UART0_RX_0_1 1 0 5 20J 1690 NJ 1690 NJ 1690 NJ 1690 1500
+preplace netloc axi_gpio_0_ip2intc_irpt 1 3 2 1050 1140 1470
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 4 200 590 640 920 1030 1150 1480
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 4 200 1810 NJ 1810 NJ 1810 1480
+preplace netloc processing_system7_0_SPI0_MOSI_O 1 4 1 NJ 1390
+preplace netloc processing_system7_0_SPI0_SCLK_O 1 4 1 NJ 1370
+preplace netloc processing_system7_0_SPI0_SS_O 1 4 1 NJ 1450
+preplace netloc processing_system7_0_UART0_RTSN 1 4 1 NJ 1270
+preplace netloc processing_system7_0_UART0_TX 1 4 1 NJ 1290
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 650 940 1010
+preplace netloc xlconstant_0_dout 1 4 1 1490 1430n
+preplace netloc xlconstant_1_dout 1 1 1 180 280n
+preplace netloc xlconstant_2_dout 1 4 1 NJ 1880
+preplace netloc processing_system7_0_CAN_0 1 4 1 NJ 1470
+preplace netloc processing_system7_0_CAN_1 1 4 1 NJ 1490
+preplace netloc processing_system7_0_DDR 1 4 1 NJ 1210
+preplace netloc processing_system7_0_FIXED_IO 1 4 1 NJ 1230
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 3 680 490 NJ 490 1510
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 990 640n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 980 600n
+preplace netloc Vaux0_0_1 1 0 4 NJ 440 190J 460 NJ 460 1040J
+preplace netloc Vaux1_0_1 1 0 4 NJ 460 180J 470 NJ 470 1030J
+preplace netloc Vaux2_0_1 1 0 4 NJ 480 NJ 480 NJ 480 1020J
+preplace netloc Vaux3_0_1 1 0 4 NJ 500 NJ 500 NJ 500 1010J
+preplace netloc Vaux4_0_1 1 0 4 20J 510 NJ 510 NJ 510 1000J
+preplace netloc Vaux5_0_1 1 0 4 NJ 540 NJ 540 670J 790 1000J
+preplace netloc Vaux6_0_1 1 0 4 NJ 760 NJ 760 660J 800 1020J
+preplace netloc Vaux7_0_1 1 0 4 NJ 780 NJ 780 630J 820 1030J
+preplace netloc Vaux8_0_1 1 0 4 NJ 800 NJ 800 620J 810 1040J
+preplace netloc Vaux9_0_1 1 0 4 NJ 820 NJ 820 620J 830 1040J
+preplace netloc Vaux10_0_1 1 0 4 NJ 840 NJ 840 NJ 840 NJ
+preplace netloc Vaux11_0_1 1 0 4 NJ 860 NJ 860 NJ 860 NJ
+preplace netloc Vaux12_0_1 1 0 4 NJ 880 NJ 880 NJ 880 NJ
+preplace netloc Vaux13_0_1 1 0 4 NJ 900 NJ 900 NJ 900 NJ
+preplace cgraphic comment_0 place top 423 -47 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 0 100 410 830 1260 1540
+pagesize -pg 1 -db -bbox -sgen -240 0 1720 1940
+"
+}
+{
+   """""da_axi4_cnt""""":"1",
+   """""da_board_cnt""""":"1",
+   """""da_ps7_cnt""""":"1",
+   """da_axi4_cnt""":"1",
+   """da_board_cnt""":"1",
+   "da_axi4_cnt":"1"
+}
+{
+   "/comment_0":"comment_0"
+}
