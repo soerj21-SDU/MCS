@@ -36,6 +36,7 @@
 
 /* Other defines  */
 #define xADC_channel 14
+#define time_multiplier 2
 
 /*   Tasks   */
 /*-----------------------------------------------------------*/
@@ -139,19 +140,19 @@ static void task_LED(void *pvParameters)
         case 1:
             xil_printf("In LED task case 1\r\n");
             toggle_LED(&GPIO_LED);
-            vTaskDelay(pdMS_TO_TICKS(500*2)); // 500 ms delay
+            vTaskDelay(pdMS_TO_TICKS(500*time_multiplier)); // 500 ms delay
             break;
 
         case 2:
             xil_printf("In LED task case 2\r\n");
             toggle_LED(&GPIO_LED);
-            vTaskDelay(pdMS_TO_TICKS(250*2)); // 250 ms delay
+            vTaskDelay(pdMS_TO_TICKS(250*time_multiplier)); // 250 ms delay
             break;
 
         default:
             xil_printf("In LED task deafult task\r\n");
             toggle_LED(&GPIO_LED);
-            vTaskDelay(pdMS_TO_TICKS(1000*2)); // 1000 ms delay
+            vTaskDelay(pdMS_TO_TICKS(1000*time_multiplier)); // 1000 ms delay
             break;
         }
     }
@@ -164,7 +165,7 @@ static void task_SWS(void *pvParameters)
     // print("In SWS task\r\n");
     read_SWS(&GPIO_SWS);
 	sws_value = get_SWS_value(&GPIO_SWS);
-    vTaskDelay(pdMS_TO_TICKS(500*2)); // 500 ms (.5 sec) delay
+    vTaskDelay(pdMS_TO_TICKS(500*time_multiplier)); // 500 ms (.5 sec) delay
     }
 }
 
@@ -176,6 +177,6 @@ static void task_xADC(void *pvParameters)
         xil_printf("xADC channel %d.\r\n",xADC_channel);
         xil_printf("xADC raw %d.\r\n",xADC_raw_value);
         printf("xADC voltage %.3f V.\r\n", xADC_converted_value);
-        vTaskDelay(pdMS_TO_TICKS(1000*2)); // 1000 ms (1 sec) delay 
+        vTaskDelay(pdMS_TO_TICKS(1000*time_multiplier)); // 1000 ms (1 sec) delay 
     }
 }
