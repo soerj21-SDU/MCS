@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Nov 12 10:13:47 2024
+# Process ID: 1632
+# Current directory: C:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19184 C:\Git\GitHub\MCS\MC\MC_state_machine\V1\Vivado\Vivado.xpr
+# Log file: C:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado/vivado.log
+# Journal file: C:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado\vivado.jou
+# Running On        :Soeren-Laptop
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16969 MB
+# Swap memory       :16106 MB
+# Total Virtual     :33075 MB
+# Available Virtual :19339 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado/Vivado.xpr

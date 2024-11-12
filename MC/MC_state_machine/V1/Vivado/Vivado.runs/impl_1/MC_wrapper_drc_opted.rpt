@@ -1,0 +1,49 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Nov 12 11:40:24 2024
+| Host         : Soeren-Laptop running 64-bit major release  (build 9200)
+| Command      : report_drc -file MC_wrapper_drc_opted.rpt -pb MC_wrapper_drc_opted.pb -rpx MC_wrapper_drc_opted.rpx
+| Design       : MC_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++---------+----------+----------------------+------------+
+| Rule    | Severity | Description          | Violations |
++---------+----------+----------------------+------------+
+| BIVC-1  | Error    | Bank IO standard Vcc | 1          |
+| PLCK-87 | Error    | Clock Placer Checks  | 1          |
++---------+----------+----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BIVC-1#1 Error
+Bank IO standard Vcc  - IOBank:35
+Conflicting Vcc voltages in bank 35. For example, the following two ports in this bank have conflicting VCCOs:  
+Vaux0_BP1_v_n (LVCMOS18, requiring VCCO=1.800) and BOTS_I (LVCMOS33, requiring VCCO=3.300)
+Related violations: <none>
+
+PLCK-87#1 Error
+Clock Placer Checks  
+IO/clock placer failed to collectively place all IOs and clock instances. This is likely due to design requirements or user constraints specified in the constraint file such as IO standards, bank/voltage/DCI/VREF specifications, together with the part and package being used for the implementation. Please check the above for any possible conflicts.
+
+Related violations: <none>
+
+
