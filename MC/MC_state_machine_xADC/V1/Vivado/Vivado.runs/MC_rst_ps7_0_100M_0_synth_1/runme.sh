@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/Vitis/2024.1/bin;C:/Vivado/2024.1/ids_lite/ISE/bin/nt64;C:/Vivado/2024.1/ids_lite/ISE/lib/nt64:C:/Vivado/2024.1/bin
+  PATH=C:/Xilinx/Vitis/2024.1/bin;C:/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2024.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2024.1/bin
 else
-  PATH=C:/Vitis/2024.1/bin;C:/Vivado/2024.1/ids_lite/ISE/bin/nt64;C:/Vivado/2024.1/ids_lite/ISE/lib/nt64:C:/Vivado/2024.1/bin:$PATH
+  PATH=C:/Xilinx/Vitis/2024.1/bin;C:/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2024.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2024.1/bin:$PATH
 fi
 export PATH
 
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.runs/MC_rst_ps7_0_100M_0_synth_1'
+HD_PWD='C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.runs/MC_rst_ps7_0_100M_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Nov 12 11:37:25 2024
-# Process ID: 5660
-# Current directory: C:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado/Vivado.runs/MC_processing_system7_0_0_synth_1
+# Start of session at: Tue Nov 12 15:54:32 2024
+# Process ID: 3112
+# Current directory: C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.runs/MC_processing_system7_0_0_synth_1
 # Command line: vivado.exe -log MC_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MC_processing_system7_0_0.tcl
-# Log file: C:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado/Vivado.runs/MC_processing_system7_0_0_synth_1/MC_processing_system7_0_0.vds
-# Journal file: C:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado/Vivado.runs/MC_processing_system7_0_0_synth_1\vivado.jou
+# Log file: C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.runs/MC_processing_system7_0_0_synth_1/MC_processing_system7_0_0.vds
+# Journal file: C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.runs/MC_processing_system7_0_0_synth_1\vivado.jou
 # Running On        :Soeren-Laptop
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :22631
@@ -19,6 +19,6 @@
 # Host memory       :16969 MB
 # Swap memory       :16106 MB
 # Total Virtual     :33075 MB
-# Available Virtual :14012 MB
+# Available Virtual :13961 MB
 #-----------------------------------------------------------
 source MC_processing_system7_0_0.tcl -notrace

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x62880FFEFD34E22C",
+      "boundary_crc": "0x978F9D1837FF81E9",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Vivado.gen/sources_1/bd/MC",
       "name": "MC",
@@ -12,7 +12,6 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "axi_gpio_0": "",
       "ps7_0_axi_periph": {
         "xbar": "",
         "s00_couplers": {
@@ -23,8 +22,6 @@
       },
       "rst_ps7_0_100M": "",
       "xlconstant_0": "",
-      "SDC_Monitor_CAR_0": "",
-      "xlconstant_1": "",
       "xlconstant": "",
       "xadc_wiz_0": ""
     },
@@ -462,39 +459,6 @@
       },
       "SPI0_SS_O": {
         "direction": "O"
-      },
-      "SDC_SUPPLY_I": {
-        "direction": "I"
-      },
-      "COCKPIT_EMERGENCY_I": {
-        "direction": "I"
-      },
-      "BOTS_I": {
-        "direction": "I"
-      },
-      "L_EMERGENCY_BUTTON_I": {
-        "direction": "I"
-      },
-      "INERTIA_I": {
-        "direction": "I"
-      },
-      "R_EMERGENCY_BUTTON_I": {
-        "direction": "I"
-      },
-      "RL_WHEEL_I": {
-        "direction": "I"
-      },
-      "FR_WHEEL_I": {
-        "direction": "I"
-      },
-      "FL_WHEEL_I": {
-        "direction": "I"
-      },
-      "RR_WHEEL_I": {
-        "direction": "I"
-      },
-      "TSMS_I": {
-        "direction": "I"
       },
       "PL_ALIVE_LED": {
         "direction": "O",
@@ -1342,7 +1306,7 @@
             "value": "1"
           },
           "PCW_QSPI_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "200"
           },
           "PCW_QSPI_QSPI_IO": {
             "value": "MIO 1 .. 6"
@@ -1662,27 +1626,6 @@
                 }
               }
             }
-          }
-        }
-      },
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "ip_revision": "33",
-        "xci_name": "MC_axi_gpio_0_0",
-        "xci_path": "ip\\MC_axi_gpio_0_0\\MC_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio_0",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "17"
-          },
-          "C_INTERRUPT_PRESENT": {
-            "value": "1"
-          },
-          "C_IS_DUAL": {
-            "value": "0"
           }
         }
       },
@@ -2099,100 +2042,6 @@
         "xci_path": "ip\\MC_xlconstant_0_0\\MC_xlconstant_0_0.xci",
         "inst_hier_path": "xlconstant_0"
       },
-      "SDC_Monitor_CAR_0": {
-        "vlnv": "xilinx.com:module_ref:SDC_Monitor_CAR:1.0",
-        "ip_revision": "1",
-        "xci_name": "MC_SDC_Monitor_CAR_0_0",
-        "xci_path": "ip\\MC_SDC_Monitor_CAR_0_0\\MC_SDC_Monitor_CAR_0_0.xci",
-        "inst_hier_path": "SDC_Monitor_CAR_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "SDC_Monitor_CAR",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "CLK_I": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "MC_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SDC_SUPPLY_I": {
-            "direction": "I"
-          },
-          "COCKPIT_EMERGENCY_I": {
-            "direction": "I"
-          },
-          "BOTS_I": {
-            "direction": "I"
-          },
-          "INERTIA_I": {
-            "direction": "I"
-          },
-          "L_EMERGENCY_BUTTON_I": {
-            "direction": "I"
-          },
-          "R_EMERGENCY_BUTTON_I": {
-            "direction": "I"
-          },
-          "FR_WHEEL_I": {
-            "direction": "I"
-          },
-          "FL_WHEEL_I": {
-            "direction": "I"
-          },
-          "RR_WHEEL_I": {
-            "direction": "I"
-          },
-          "RL_WHEEL_I": {
-            "direction": "I"
-          },
-          "TSAC_HV_CONNECTOR_I": {
-            "direction": "I"
-          },
-          "TSAC_IMD_I": {
-            "direction": "I"
-          },
-          "TSAC_AMS_ENABLE_I": {
-            "direction": "I"
-          },
-          "BSPD_I": {
-            "direction": "I"
-          },
-          "HVD_I": {
-            "direction": "I"
-          },
-          "TSMP_I": {
-            "direction": "I"
-          },
-          "TSMS_I": {
-            "direction": "I"
-          },
-          "SDC_VECTOR_O": {
-            "direction": "O",
-            "left": "16",
-            "right": "0"
-          }
-        }
-      },
-      "xlconstant_1": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "9",
-        "xci_name": "MC_xlconstant_1_1",
-        "xci_path": "ip\\MC_xlconstant_1_1\\MC_xlconstant_1_1.xci",
-        "inst_hier_path": "xlconstant_1"
-      },
       "xlconstant": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "9",
@@ -2382,12 +2231,6 @@
           "ps7_0_axi_periph/S00_AXI"
         ]
       },
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
       "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M01_AXI",
@@ -2396,82 +2239,10 @@
       }
     },
     "nets": {
-      "BOTS_I_0_1": {
-        "ports": [
-          "BOTS_I",
-          "SDC_Monitor_CAR_0/BOTS_I"
-        ]
-      },
-      "COCKPIT_EMERGENCY_I_0_1": {
-        "ports": [
-          "COCKPIT_EMERGENCY_I",
-          "SDC_Monitor_CAR_0/COCKPIT_EMERGENCY_I"
-        ]
-      },
-      "FL_WHEEL_I_0_1": {
-        "ports": [
-          "FL_WHEEL_I",
-          "SDC_Monitor_CAR_0/FL_WHEEL_I"
-        ]
-      },
-      "FR_WHEEL_I_0_1": {
-        "ports": [
-          "FR_WHEEL_I",
-          "SDC_Monitor_CAR_0/FR_WHEEL_I"
-        ]
-      },
-      "INERTIA_I_0_1": {
-        "ports": [
-          "INERTIA_I",
-          "SDC_Monitor_CAR_0/INERTIA_I"
-        ]
-      },
-      "L_EMERGENCY_BUTTON_I_0_1": {
-        "ports": [
-          "L_EMERGENCY_BUTTON_I",
-          "SDC_Monitor_CAR_0/L_EMERGENCY_BUTTON_I"
-        ]
-      },
-      "RL_WHEEL_I_0_1": {
-        "ports": [
-          "RL_WHEEL_I",
-          "SDC_Monitor_CAR_0/RL_WHEEL_I"
-        ]
-      },
-      "RR_WHEEL_I_0_1": {
-        "ports": [
-          "RR_WHEEL_I",
-          "SDC_Monitor_CAR_0/RR_WHEEL_I"
-        ]
-      },
-      "R_EMERGENCY_BUTTON_I_0_1": {
-        "ports": [
-          "R_EMERGENCY_BUTTON_I",
-          "SDC_Monitor_CAR_0/R_EMERGENCY_BUTTON_I"
-        ]
-      },
-      "SDC_Monitor_CAR_0_SDC_VECTOR_O": {
-        "ports": [
-          "SDC_Monitor_CAR_0/SDC_VECTOR_O",
-          "axi_gpio_0/gpio_io_i"
-        ]
-      },
-      "SDC_SUPPLY_I_0_1": {
-        "ports": [
-          "SDC_SUPPLY_I",
-          "SDC_Monitor_CAR_0/SDC_SUPPLY_I"
-        ]
-      },
       "SPI0_MISO_I_0_1": {
         "ports": [
           "SPI0_MISO_I",
           "processing_system7_0/SPI0_MISO_I"
-        ]
-      },
-      "TSMS_I_0_1": {
-        "ports": [
-          "TSMS_I",
-          "SDC_Monitor_CAR_0/TSMS_I"
         ]
       },
       "UART0_CTSN_0_1": {
@@ -2486,24 +2257,16 @@
           "processing_system7_0/UART0_RX"
         ]
       },
-      "axi_gpio_0_ip2intc_irpt": {
-        "ports": [
-          "axi_gpio_0/ip2intc_irpt",
-          "processing_system7_0/IRQ_F2P"
-        ]
-      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "axi_gpio_0/s_axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "xadc_wiz_0/s_axi_aclk",
-          "ps7_0_axi_periph/M01_ACLK",
-          "SDC_Monitor_CAR_0/CLK_I"
+          "ps7_0_axi_periph/M01_ACLK"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2546,7 +2309,6 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "ps7_0_axi_periph/S00_ARESETN",
-          "axi_gpio_0/s_axi_aresetn",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "xadc_wiz_0/s_axi_aresetn",
@@ -2559,17 +2321,6 @@
           "processing_system7_0/SPI0_SS_I"
         ]
       },
-      "xlconstant_1_dout": {
-        "ports": [
-          "xlconstant_1/dout",
-          "SDC_Monitor_CAR_0/TSAC_HV_CONNECTOR_I",
-          "SDC_Monitor_CAR_0/TSAC_IMD_I",
-          "SDC_Monitor_CAR_0/TSAC_AMS_ENABLE_I",
-          "SDC_Monitor_CAR_0/BSPD_I",
-          "SDC_Monitor_CAR_0/HVD_I",
-          "SDC_Monitor_CAR_0/TSMP_I"
-        ]
-      },
       "xlconstant_2_dout": {
         "ports": [
           "xlconstant/dout",
@@ -2577,21 +2328,11 @@
         ]
       }
     },
-    "comments": {
-      "/": {
-        "comment_0": "BSPD_I, TSMP_I, HVD_I are not included on the PCB. Must be added in a future edition"
-      }
-    },
     "addressing": {
       "/processing_system7_0": {
         "address_spaces": {
           "Data": {
             "segments": {
-              "SEG_axi_gpio_0_Reg": {
-                "address_block": "/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x41200000",
-                "range": "64K"
-              },
               "SEG_xadc_wiz_0_Reg": {
                 "address_block": "/xadc_wiz_0/s_axi_lite/Reg",
                 "offset": "0x43C00000",

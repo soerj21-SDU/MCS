@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x62880FFEFD34E22C",
+      "boundary_crc": "0x1D5B712EF9FA1AE",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Vivado.gen/sources_1/bd/MC",
       "name": "MC",
@@ -25,8 +25,7 @@
       "xlconstant_0": "",
       "SDC_Monitor_CAR_0": "",
       "xlconstant_1": "",
-      "xlconstant": "",
-      "xadc_wiz_0": ""
+      "xlconstant": ""
     },
     "interface_ports": {
       "DDR": {
@@ -223,216 +222,6 @@
           },
           "RX": {
             "physical_name": "CAN_1_rx",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux0_BP1": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux0_BP1_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux0_BP1_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux1_TP0": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux1_TP0_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux1_TP0_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux2_NetINV34C": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux2_NetINV34C_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux2_NetINV34C_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux3_SW": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux3_SW_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux3_SW_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux4_DASHAMSC": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux4_DASHAMSC_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux4_DASHAMSC_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux5_LVSV": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux5_LVSV_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux5_LVSV_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux6_BrakeC": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux6_BrakeC_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux6_BrakeC_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux7_PoEC": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux7_PoEC_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux7_PoEC_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux8_BP0": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux8_BP0_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux8_BP0_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux9_TP1": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux9_TP1_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux9_TP1_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux10_TSCINV12C": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux10_TSCINV12C_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux10_TSCINV12C_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux11_RTDSC": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux11_RTDSC_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux11_RTDSC_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux12_CoolC": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux12_CoolC_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux12_CoolC_v_p",
-            "direction": "I"
-          }
-        }
-      },
-      "Vaux13_LVSC": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
-        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
-        "port_maps": {
-          "V_N": {
-            "physical_name": "Vaux13_LVSC_v_n",
-            "direction": "I"
-          },
-          "V_P": {
-            "physical_name": "Vaux13_LVSC_v_p",
             "direction": "I"
           }
         }
@@ -1342,7 +1131,7 @@
             "value": "1"
           },
           "PCW_QSPI_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "200"
           },
           "PCW_QSPI_QSPI_IO": {
             "value": "MIO 1 .. 6"
@@ -2115,7 +1904,7 @@
             "direction": "I",
             "parameters": {
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "PHASE": {
@@ -2199,159 +1988,9 @@
         "xci_name": "MC_xlconstant_2_0",
         "xci_path": "ip\\MC_xlconstant_2_0\\MC_xlconstant_2_0.xci",
         "inst_hier_path": "xlconstant"
-      },
-      "xadc_wiz_0": {
-        "vlnv": "xilinx.com:ip:xadc_wiz:3.3",
-        "ip_revision": "10",
-        "xci_name": "MC_xadc_wiz_0_0",
-        "xci_path": "ip\\MC_xadc_wiz_0_0\\MC_xadc_wiz_0_0.xci",
-        "inst_hier_path": "xadc_wiz_0",
-        "parameters": {
-          "CHANNEL_ENABLE_VAUXP0_VAUXN0": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP10_VAUXN10": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP11_VAUXN11": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP12_VAUXN12": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP13_VAUXN13": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP1_VAUXN1": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP2_VAUXN2": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP3_VAUXN3": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP4_VAUXN4": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP5_VAUXN5": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP6_VAUXN6": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP7_VAUXN7": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP8_VAUXN8": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VAUXP9_VAUXN9": {
-            "value": "true"
-          },
-          "CHANNEL_ENABLE_VP_VN": {
-            "value": "false"
-          },
-          "EXTERNAL_MUX_CHANNEL": {
-            "value": "VP_VN"
-          },
-          "SEQUENCER_MODE": {
-            "value": "Continuous"
-          },
-          "SINGLE_CHANNEL_SELECTION": {
-            "value": "TEMPERATURE"
-          },
-          "XADC_STARUP_SELECTION": {
-            "value": "channel_sequencer"
-          }
-        }
       }
     },
     "interface_nets": {
-      "Vaux0_0_1": {
-        "interface_ports": [
-          "Vaux0_BP1",
-          "xadc_wiz_0/Vaux0"
-        ]
-      },
-      "Vaux10_0_1": {
-        "interface_ports": [
-          "Vaux10_TSCINV12C",
-          "xadc_wiz_0/Vaux10"
-        ]
-      },
-      "Vaux11_0_1": {
-        "interface_ports": [
-          "Vaux11_RTDSC",
-          "xadc_wiz_0/Vaux11"
-        ]
-      },
-      "Vaux12_0_1": {
-        "interface_ports": [
-          "Vaux12_CoolC",
-          "xadc_wiz_0/Vaux12"
-        ]
-      },
-      "Vaux13_0_1": {
-        "interface_ports": [
-          "Vaux13_LVSC",
-          "xadc_wiz_0/Vaux13"
-        ]
-      },
-      "Vaux1_0_1": {
-        "interface_ports": [
-          "Vaux1_TP0",
-          "xadc_wiz_0/Vaux1"
-        ]
-      },
-      "Vaux2_0_1": {
-        "interface_ports": [
-          "Vaux2_NetINV34C",
-          "xadc_wiz_0/Vaux2"
-        ]
-      },
-      "Vaux3_0_1": {
-        "interface_ports": [
-          "Vaux3_SW",
-          "xadc_wiz_0/Vaux3"
-        ]
-      },
-      "Vaux4_0_1": {
-        "interface_ports": [
-          "Vaux4_DASHAMSC",
-          "xadc_wiz_0/Vaux4"
-        ]
-      },
-      "Vaux5_0_1": {
-        "interface_ports": [
-          "Vaux5_LVSV",
-          "xadc_wiz_0/Vaux5"
-        ]
-      },
-      "Vaux6_0_1": {
-        "interface_ports": [
-          "Vaux6_BrakeC",
-          "xadc_wiz_0/Vaux6"
-        ]
-      },
-      "Vaux7_0_1": {
-        "interface_ports": [
-          "Vaux7_PoEC",
-          "xadc_wiz_0/Vaux7"
-        ]
-      },
-      "Vaux8_0_1": {
-        "interface_ports": [
-          "Vaux8_BP0",
-          "xadc_wiz_0/Vaux8"
-        ]
-      },
-      "Vaux9_0_1": {
-        "interface_ports": [
-          "Vaux9_TP1",
-          "xadc_wiz_0/Vaux9"
-        ]
-      },
       "processing_system7_0_CAN_0": {
         "interface_ports": [
           "CAN_0",
@@ -2386,12 +2025,6 @@
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
           "axi_gpio_0/S_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "xadc_wiz_0/s_axi_lite"
         ]
       }
     },
@@ -2501,7 +2134,6 @@
           "axi_gpio_0/s_axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "xadc_wiz_0/s_axi_aclk",
           "ps7_0_axi_periph/M01_ACLK",
           "SDC_Monitor_CAR_0/CLK_I"
         ]
@@ -2549,7 +2181,6 @@
           "axi_gpio_0/s_axi_aresetn",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
-          "xadc_wiz_0/s_axi_aresetn",
           "ps7_0_axi_periph/M01_ARESETN"
         ]
       },
@@ -2590,11 +2221,6 @@
               "SEG_axi_gpio_0_Reg": {
                 "address_block": "/axi_gpio_0/S_AXI/Reg",
                 "offset": "0x41200000",
-                "range": "64K"
-              },
-              "SEG_xadc_wiz_0_Reg": {
-                "address_block": "/xadc_wiz_0/s_axi_lite/Reg",
-                "offset": "0x43C00000",
                 "range": "64K"
               }
             }

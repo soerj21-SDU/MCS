@@ -15,9 +15,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_axi_gpio
 # IP: bd/MC/ip/MC_xbar_0/MC_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xbar_0 || ORIG_REF_NAME==MC_xbar_0} -quiet] -quiet
 
-# IP: bd/MC/ip/MC_auto_pc_0/MC_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_auto_pc_0 || ORIG_REF_NAME==MC_auto_pc_0} -quiet] -quiet
-
 # IP: bd/MC/ip/MC_ps7_0_axi_periph_0/MC_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_ps7_0_axi_periph_0 || ORIG_REF_NAME==MC_ps7_0_axi_periph_0} -quiet] -quiet
 
@@ -36,7 +33,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xlconsta
 # IP: bd/MC/ip/MC_xlconstant_2_0/MC_xlconstant_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xlconstant_2_0 || ORIG_REF_NAME==MC_xlconstant_2_0} -quiet] -quiet
 
-# IP: bd/MC/ip/MC_xadc_wiz_0_0/MC_xadc_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xadc_wiz_0_0 || ORIG_REF_NAME==MC_xadc_wiz_0_0} -quiet] -quiet
+# IP: bd/MC/ip/MC_auto_pc_0/MC_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_auto_pc_0 || ORIG_REF_NAME==MC_auto_pc_0} -quiet] -quiet
 
-# XDC: c:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado/Vivado.gen/sources_1/bd/MC/MC_ooc.xdc
+# XDC: c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/MC_ooc.xdc

@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Tue Nov 12 11:36:52 2024
+--Date        : Tue Nov 12 15:44:33 2024
 --Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target MC.bd
 --Design      : MC
@@ -117,97 +117,107 @@ entity m01_couplers_imp_I0E1BJ is
   port (
     M_ACLK : in STD_LOGIC;
     M_ARESETN : in STD_LOGIC;
-    M_AXI_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_araddr : out STD_LOGIC;
+    M_AXI_arprot : out STD_LOGIC;
     M_AXI_arready : in STD_LOGIC;
     M_AXI_arvalid : out STD_LOGIC;
-    M_AXI_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_awaddr : out STD_LOGIC;
+    M_AXI_awprot : out STD_LOGIC;
     M_AXI_awready : in STD_LOGIC;
     M_AXI_awvalid : out STD_LOGIC;
     M_AXI_bready : out STD_LOGIC;
-    M_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_bresp : in STD_LOGIC;
     M_AXI_bvalid : in STD_LOGIC;
-    M_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_rdata : in STD_LOGIC;
     M_AXI_rready : out STD_LOGIC;
-    M_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_rresp : in STD_LOGIC;
     M_AXI_rvalid : in STD_LOGIC;
-    M_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_wdata : out STD_LOGIC;
     M_AXI_wready : in STD_LOGIC;
-    M_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_wstrb : out STD_LOGIC;
     M_AXI_wvalid : out STD_LOGIC;
     S_ACLK : in STD_LOGIC;
     S_ARESETN : in STD_LOGIC;
-    S_AXI_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_araddr : in STD_LOGIC;
+    S_AXI_arprot : in STD_LOGIC;
     S_AXI_arready : out STD_LOGIC;
     S_AXI_arvalid : in STD_LOGIC;
-    S_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_awaddr : in STD_LOGIC;
+    S_AXI_awprot : in STD_LOGIC;
     S_AXI_awready : out STD_LOGIC;
     S_AXI_awvalid : in STD_LOGIC;
     S_AXI_bready : in STD_LOGIC;
-    S_AXI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_bresp : out STD_LOGIC;
     S_AXI_bvalid : out STD_LOGIC;
-    S_AXI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_rdata : out STD_LOGIC;
     S_AXI_rready : in STD_LOGIC;
-    S_AXI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_rresp : out STD_LOGIC;
     S_AXI_rvalid : out STD_LOGIC;
-    S_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_wdata : in STD_LOGIC;
     S_AXI_wready : out STD_LOGIC;
-    S_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_wstrb : in STD_LOGIC;
     S_AXI_wvalid : in STD_LOGIC
   );
 end m01_couplers_imp_I0E1BJ;
 
 architecture STRUCTURE of m01_couplers_imp_I0E1BJ is
-  signal m01_couplers_to_m01_couplers_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_m01_couplers_ARADDR : STD_LOGIC;
+  signal m01_couplers_to_m01_couplers_ARPROT : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_ARREADY : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_ARVALID : STD_LOGIC;
-  signal m01_couplers_to_m01_couplers_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_m01_couplers_AWADDR : STD_LOGIC;
+  signal m01_couplers_to_m01_couplers_AWPROT : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_AWREADY : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_AWVALID : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_BREADY : STD_LOGIC;
-  signal m01_couplers_to_m01_couplers_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal m01_couplers_to_m01_couplers_BRESP : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_BVALID : STD_LOGIC;
-  signal m01_couplers_to_m01_couplers_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_m01_couplers_RDATA : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_RREADY : STD_LOGIC;
-  signal m01_couplers_to_m01_couplers_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal m01_couplers_to_m01_couplers_RRESP : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_RVALID : STD_LOGIC;
-  signal m01_couplers_to_m01_couplers_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_m01_couplers_WDATA : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_WREADY : STD_LOGIC;
-  signal m01_couplers_to_m01_couplers_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal m01_couplers_to_m01_couplers_WSTRB : STD_LOGIC;
   signal m01_couplers_to_m01_couplers_WVALID : STD_LOGIC;
 begin
-  M_AXI_araddr(31 downto 0) <= m01_couplers_to_m01_couplers_ARADDR(31 downto 0);
+  M_AXI_araddr <= m01_couplers_to_m01_couplers_ARADDR;
+  M_AXI_arprot <= m01_couplers_to_m01_couplers_ARPROT;
   M_AXI_arvalid <= m01_couplers_to_m01_couplers_ARVALID;
-  M_AXI_awaddr(31 downto 0) <= m01_couplers_to_m01_couplers_AWADDR(31 downto 0);
+  M_AXI_awaddr <= m01_couplers_to_m01_couplers_AWADDR;
+  M_AXI_awprot <= m01_couplers_to_m01_couplers_AWPROT;
   M_AXI_awvalid <= m01_couplers_to_m01_couplers_AWVALID;
   M_AXI_bready <= m01_couplers_to_m01_couplers_BREADY;
   M_AXI_rready <= m01_couplers_to_m01_couplers_RREADY;
-  M_AXI_wdata(31 downto 0) <= m01_couplers_to_m01_couplers_WDATA(31 downto 0);
-  M_AXI_wstrb(3 downto 0) <= m01_couplers_to_m01_couplers_WSTRB(3 downto 0);
+  M_AXI_wdata <= m01_couplers_to_m01_couplers_WDATA;
+  M_AXI_wstrb <= m01_couplers_to_m01_couplers_WSTRB;
   M_AXI_wvalid <= m01_couplers_to_m01_couplers_WVALID;
   S_AXI_arready <= m01_couplers_to_m01_couplers_ARREADY;
   S_AXI_awready <= m01_couplers_to_m01_couplers_AWREADY;
-  S_AXI_bresp(1 downto 0) <= m01_couplers_to_m01_couplers_BRESP(1 downto 0);
+  S_AXI_bresp <= m01_couplers_to_m01_couplers_BRESP;
   S_AXI_bvalid <= m01_couplers_to_m01_couplers_BVALID;
-  S_AXI_rdata(31 downto 0) <= m01_couplers_to_m01_couplers_RDATA(31 downto 0);
-  S_AXI_rresp(1 downto 0) <= m01_couplers_to_m01_couplers_RRESP(1 downto 0);
+  S_AXI_rdata <= m01_couplers_to_m01_couplers_RDATA;
+  S_AXI_rresp <= m01_couplers_to_m01_couplers_RRESP;
   S_AXI_rvalid <= m01_couplers_to_m01_couplers_RVALID;
   S_AXI_wready <= m01_couplers_to_m01_couplers_WREADY;
-  m01_couplers_to_m01_couplers_ARADDR(31 downto 0) <= S_AXI_araddr(31 downto 0);
+  m01_couplers_to_m01_couplers_ARADDR <= S_AXI_araddr;
+  m01_couplers_to_m01_couplers_ARPROT <= S_AXI_arprot;
   m01_couplers_to_m01_couplers_ARREADY <= M_AXI_arready;
   m01_couplers_to_m01_couplers_ARVALID <= S_AXI_arvalid;
-  m01_couplers_to_m01_couplers_AWADDR(31 downto 0) <= S_AXI_awaddr(31 downto 0);
+  m01_couplers_to_m01_couplers_AWADDR <= S_AXI_awaddr;
+  m01_couplers_to_m01_couplers_AWPROT <= S_AXI_awprot;
   m01_couplers_to_m01_couplers_AWREADY <= M_AXI_awready;
   m01_couplers_to_m01_couplers_AWVALID <= S_AXI_awvalid;
   m01_couplers_to_m01_couplers_BREADY <= S_AXI_bready;
-  m01_couplers_to_m01_couplers_BRESP(1 downto 0) <= M_AXI_bresp(1 downto 0);
+  m01_couplers_to_m01_couplers_BRESP <= M_AXI_bresp;
   m01_couplers_to_m01_couplers_BVALID <= M_AXI_bvalid;
-  m01_couplers_to_m01_couplers_RDATA(31 downto 0) <= M_AXI_rdata(31 downto 0);
+  m01_couplers_to_m01_couplers_RDATA <= M_AXI_rdata;
   m01_couplers_to_m01_couplers_RREADY <= S_AXI_rready;
-  m01_couplers_to_m01_couplers_RRESP(1 downto 0) <= M_AXI_rresp(1 downto 0);
+  m01_couplers_to_m01_couplers_RRESP <= M_AXI_rresp;
   m01_couplers_to_m01_couplers_RVALID <= M_AXI_rvalid;
-  m01_couplers_to_m01_couplers_WDATA(31 downto 0) <= S_AXI_wdata(31 downto 0);
+  m01_couplers_to_m01_couplers_WDATA <= S_AXI_wdata;
   m01_couplers_to_m01_couplers_WREADY <= M_AXI_wready;
-  m01_couplers_to_m01_couplers_WSTRB(3 downto 0) <= S_AXI_wstrb(3 downto 0);
+  m01_couplers_to_m01_couplers_WSTRB <= S_AXI_wstrb;
   m01_couplers_to_m01_couplers_WVALID <= S_AXI_wvalid;
 end STRUCTURE;
 library IEEE;
@@ -555,22 +565,24 @@ entity MC_ps7_0_axi_periph_0 is
     M00_AXI_wvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
     M01_ACLK : in STD_LOGIC;
     M01_ARESETN : in STD_LOGIC;
-    M01_AXI_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_araddr : out STD_LOGIC;
+    M01_AXI_arprot : out STD_LOGIC;
     M01_AXI_arready : in STD_LOGIC;
     M01_AXI_arvalid : out STD_LOGIC;
-    M01_AXI_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_awaddr : out STD_LOGIC;
+    M01_AXI_awprot : out STD_LOGIC;
     M01_AXI_awready : in STD_LOGIC;
     M01_AXI_awvalid : out STD_LOGIC;
     M01_AXI_bready : out STD_LOGIC;
-    M01_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M01_AXI_bresp : in STD_LOGIC;
     M01_AXI_bvalid : in STD_LOGIC;
-    M01_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_rdata : in STD_LOGIC;
     M01_AXI_rready : out STD_LOGIC;
-    M01_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M01_AXI_rresp : in STD_LOGIC;
     M01_AXI_rvalid : in STD_LOGIC;
-    M01_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_wdata : out STD_LOGIC;
     M01_AXI_wready : in STD_LOGIC;
-    M01_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M01_AXI_wstrb : out STD_LOGIC;
     M01_AXI_wvalid : out STD_LOGIC;
     S00_ACLK : in STD_LOGIC;
     S00_ARESETN : in STD_LOGIC;
@@ -677,22 +689,24 @@ architecture STRUCTURE of MC_ps7_0_axi_periph_0 is
   signal m00_couplers_to_ps7_0_axi_periph_WREADY : STD_LOGIC_VECTOR ( 0 to 0 );
   signal m00_couplers_to_ps7_0_axi_periph_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m00_couplers_to_ps7_0_axi_periph_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal m01_couplers_to_ps7_0_axi_periph_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_ps7_0_axi_periph_ARADDR : STD_LOGIC;
+  signal m01_couplers_to_ps7_0_axi_periph_ARPROT : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_ARREADY : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_ARVALID : STD_LOGIC;
-  signal m01_couplers_to_ps7_0_axi_periph_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_ps7_0_axi_periph_AWADDR : STD_LOGIC;
+  signal m01_couplers_to_ps7_0_axi_periph_AWPROT : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_AWREADY : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_AWVALID : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_BREADY : STD_LOGIC;
-  signal m01_couplers_to_ps7_0_axi_periph_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal m01_couplers_to_ps7_0_axi_periph_BRESP : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_BVALID : STD_LOGIC;
-  signal m01_couplers_to_ps7_0_axi_periph_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_ps7_0_axi_periph_RDATA : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_RREADY : STD_LOGIC;
-  signal m01_couplers_to_ps7_0_axi_periph_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal m01_couplers_to_ps7_0_axi_periph_RRESP : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_RVALID : STD_LOGIC;
-  signal m01_couplers_to_ps7_0_axi_periph_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal m01_couplers_to_ps7_0_axi_periph_WDATA : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_WREADY : STD_LOGIC;
-  signal m01_couplers_to_ps7_0_axi_periph_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal m01_couplers_to_ps7_0_axi_periph_WSTRB : STD_LOGIC;
   signal m01_couplers_to_ps7_0_axi_periph_WVALID : STD_LOGIC;
   signal ps7_0_axi_periph_ACLK_net : STD_LOGIC;
   signal ps7_0_axi_periph_ARESETN_net : STD_LOGIC;
@@ -771,24 +785,26 @@ architecture STRUCTURE of MC_ps7_0_axi_periph_0 is
   signal xbar_to_m00_couplers_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal xbar_to_m00_couplers_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xbar_to_m01_couplers_ARADDR : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal xbar_to_m01_couplers_ARPROT : STD_LOGIC_VECTOR ( 5 downto 3 );
   signal xbar_to_m01_couplers_ARREADY : STD_LOGIC;
   signal xbar_to_m01_couplers_ARVALID : STD_LOGIC_VECTOR ( 1 to 1 );
   signal xbar_to_m01_couplers_AWADDR : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal xbar_to_m01_couplers_AWPROT : STD_LOGIC_VECTOR ( 5 downto 3 );
   signal xbar_to_m01_couplers_AWREADY : STD_LOGIC;
   signal xbar_to_m01_couplers_AWVALID : STD_LOGIC_VECTOR ( 1 to 1 );
   signal xbar_to_m01_couplers_BREADY : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal xbar_to_m01_couplers_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal xbar_to_m01_couplers_BRESP : STD_LOGIC;
   signal xbar_to_m01_couplers_BVALID : STD_LOGIC;
-  signal xbar_to_m01_couplers_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal xbar_to_m01_couplers_RDATA : STD_LOGIC;
   signal xbar_to_m01_couplers_RREADY : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal xbar_to_m01_couplers_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal xbar_to_m01_couplers_RRESP : STD_LOGIC;
   signal xbar_to_m01_couplers_RVALID : STD_LOGIC;
   signal xbar_to_m01_couplers_WDATA : STD_LOGIC_VECTOR ( 63 downto 32 );
   signal xbar_to_m01_couplers_WREADY : STD_LOGIC;
   signal xbar_to_m01_couplers_WSTRB : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal xbar_to_m01_couplers_WVALID : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal NLW_xbar_m_axi_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal NLW_xbar_m_axi_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_xbar_m_axi_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_xbar_m_axi_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
 begin
   M00_AXI_araddr(31 downto 0) <= m00_couplers_to_ps7_0_axi_periph_ARADDR(31 downto 0);
   M00_AXI_arvalid(0) <= m00_couplers_to_ps7_0_axi_periph_ARVALID(0);
@@ -799,14 +815,16 @@ begin
   M00_AXI_wdata(31 downto 0) <= m00_couplers_to_ps7_0_axi_periph_WDATA(31 downto 0);
   M00_AXI_wstrb(3 downto 0) <= m00_couplers_to_ps7_0_axi_periph_WSTRB(3 downto 0);
   M00_AXI_wvalid(0) <= m00_couplers_to_ps7_0_axi_periph_WVALID(0);
-  M01_AXI_araddr(31 downto 0) <= m01_couplers_to_ps7_0_axi_periph_ARADDR(31 downto 0);
+  M01_AXI_araddr <= m01_couplers_to_ps7_0_axi_periph_ARADDR;
+  M01_AXI_arprot <= m01_couplers_to_ps7_0_axi_periph_ARPROT;
   M01_AXI_arvalid <= m01_couplers_to_ps7_0_axi_periph_ARVALID;
-  M01_AXI_awaddr(31 downto 0) <= m01_couplers_to_ps7_0_axi_periph_AWADDR(31 downto 0);
+  M01_AXI_awaddr <= m01_couplers_to_ps7_0_axi_periph_AWADDR;
+  M01_AXI_awprot <= m01_couplers_to_ps7_0_axi_periph_AWPROT;
   M01_AXI_awvalid <= m01_couplers_to_ps7_0_axi_periph_AWVALID;
   M01_AXI_bready <= m01_couplers_to_ps7_0_axi_periph_BREADY;
   M01_AXI_rready <= m01_couplers_to_ps7_0_axi_periph_RREADY;
-  M01_AXI_wdata(31 downto 0) <= m01_couplers_to_ps7_0_axi_periph_WDATA(31 downto 0);
-  M01_AXI_wstrb(3 downto 0) <= m01_couplers_to_ps7_0_axi_periph_WSTRB(3 downto 0);
+  M01_AXI_wdata <= m01_couplers_to_ps7_0_axi_periph_WDATA;
+  M01_AXI_wstrb <= m01_couplers_to_ps7_0_axi_periph_WSTRB;
   M01_AXI_wvalid <= m01_couplers_to_ps7_0_axi_periph_WVALID;
   S00_AXI_arready <= ps7_0_axi_periph_to_s00_couplers_ARREADY;
   S00_AXI_awready <= ps7_0_axi_periph_to_s00_couplers_AWREADY;
@@ -829,10 +847,10 @@ begin
   m00_couplers_to_ps7_0_axi_periph_WREADY(0) <= M00_AXI_wready(0);
   m01_couplers_to_ps7_0_axi_periph_ARREADY <= M01_AXI_arready;
   m01_couplers_to_ps7_0_axi_periph_AWREADY <= M01_AXI_awready;
-  m01_couplers_to_ps7_0_axi_periph_BRESP(1 downto 0) <= M01_AXI_bresp(1 downto 0);
+  m01_couplers_to_ps7_0_axi_periph_BRESP <= M01_AXI_bresp;
   m01_couplers_to_ps7_0_axi_periph_BVALID <= M01_AXI_bvalid;
-  m01_couplers_to_ps7_0_axi_periph_RDATA(31 downto 0) <= M01_AXI_rdata(31 downto 0);
-  m01_couplers_to_ps7_0_axi_periph_RRESP(1 downto 0) <= M01_AXI_rresp(1 downto 0);
+  m01_couplers_to_ps7_0_axi_periph_RDATA <= M01_AXI_rdata;
+  m01_couplers_to_ps7_0_axi_periph_RRESP <= M01_AXI_rresp;
   m01_couplers_to_ps7_0_axi_periph_RVALID <= M01_AXI_rvalid;
   m01_couplers_to_ps7_0_axi_periph_WREADY <= M01_AXI_wready;
   ps7_0_axi_periph_ACLK_net <= ACLK;
@@ -909,41 +927,45 @@ m01_couplers: entity work.m01_couplers_imp_I0E1BJ
      port map (
       M_ACLK => ps7_0_axi_periph_ACLK_net,
       M_ARESETN => ps7_0_axi_periph_ARESETN_net,
-      M_AXI_araddr(31 downto 0) => m01_couplers_to_ps7_0_axi_periph_ARADDR(31 downto 0),
+      M_AXI_araddr => m01_couplers_to_ps7_0_axi_periph_ARADDR,
+      M_AXI_arprot => m01_couplers_to_ps7_0_axi_periph_ARPROT,
       M_AXI_arready => m01_couplers_to_ps7_0_axi_periph_ARREADY,
       M_AXI_arvalid => m01_couplers_to_ps7_0_axi_periph_ARVALID,
-      M_AXI_awaddr(31 downto 0) => m01_couplers_to_ps7_0_axi_periph_AWADDR(31 downto 0),
+      M_AXI_awaddr => m01_couplers_to_ps7_0_axi_periph_AWADDR,
+      M_AXI_awprot => m01_couplers_to_ps7_0_axi_periph_AWPROT,
       M_AXI_awready => m01_couplers_to_ps7_0_axi_periph_AWREADY,
       M_AXI_awvalid => m01_couplers_to_ps7_0_axi_periph_AWVALID,
       M_AXI_bready => m01_couplers_to_ps7_0_axi_periph_BREADY,
-      M_AXI_bresp(1 downto 0) => m01_couplers_to_ps7_0_axi_periph_BRESP(1 downto 0),
+      M_AXI_bresp => m01_couplers_to_ps7_0_axi_periph_BRESP,
       M_AXI_bvalid => m01_couplers_to_ps7_0_axi_periph_BVALID,
-      M_AXI_rdata(31 downto 0) => m01_couplers_to_ps7_0_axi_periph_RDATA(31 downto 0),
+      M_AXI_rdata => m01_couplers_to_ps7_0_axi_periph_RDATA,
       M_AXI_rready => m01_couplers_to_ps7_0_axi_periph_RREADY,
-      M_AXI_rresp(1 downto 0) => m01_couplers_to_ps7_0_axi_periph_RRESP(1 downto 0),
+      M_AXI_rresp => m01_couplers_to_ps7_0_axi_periph_RRESP,
       M_AXI_rvalid => m01_couplers_to_ps7_0_axi_periph_RVALID,
-      M_AXI_wdata(31 downto 0) => m01_couplers_to_ps7_0_axi_periph_WDATA(31 downto 0),
+      M_AXI_wdata => m01_couplers_to_ps7_0_axi_periph_WDATA,
       M_AXI_wready => m01_couplers_to_ps7_0_axi_periph_WREADY,
-      M_AXI_wstrb(3 downto 0) => m01_couplers_to_ps7_0_axi_periph_WSTRB(3 downto 0),
+      M_AXI_wstrb => m01_couplers_to_ps7_0_axi_periph_WSTRB,
       M_AXI_wvalid => m01_couplers_to_ps7_0_axi_periph_WVALID,
       S_ACLK => ps7_0_axi_periph_ACLK_net,
       S_ARESETN => ps7_0_axi_periph_ARESETN_net,
-      S_AXI_araddr(31 downto 0) => xbar_to_m01_couplers_ARADDR(63 downto 32),
+      S_AXI_araddr => xbar_to_m01_couplers_ARADDR(32),
+      S_AXI_arprot => xbar_to_m01_couplers_ARPROT(3),
       S_AXI_arready => xbar_to_m01_couplers_ARREADY,
       S_AXI_arvalid => xbar_to_m01_couplers_ARVALID(1),
-      S_AXI_awaddr(31 downto 0) => xbar_to_m01_couplers_AWADDR(63 downto 32),
+      S_AXI_awaddr => xbar_to_m01_couplers_AWADDR(32),
+      S_AXI_awprot => xbar_to_m01_couplers_AWPROT(3),
       S_AXI_awready => xbar_to_m01_couplers_AWREADY,
       S_AXI_awvalid => xbar_to_m01_couplers_AWVALID(1),
       S_AXI_bready => xbar_to_m01_couplers_BREADY(1),
-      S_AXI_bresp(1 downto 0) => xbar_to_m01_couplers_BRESP(1 downto 0),
+      S_AXI_bresp => xbar_to_m01_couplers_BRESP,
       S_AXI_bvalid => xbar_to_m01_couplers_BVALID,
-      S_AXI_rdata(31 downto 0) => xbar_to_m01_couplers_RDATA(31 downto 0),
+      S_AXI_rdata => xbar_to_m01_couplers_RDATA,
       S_AXI_rready => xbar_to_m01_couplers_RREADY(1),
-      S_AXI_rresp(1 downto 0) => xbar_to_m01_couplers_RRESP(1 downto 0),
+      S_AXI_rresp => xbar_to_m01_couplers_RRESP,
       S_AXI_rvalid => xbar_to_m01_couplers_RVALID,
-      S_AXI_wdata(31 downto 0) => xbar_to_m01_couplers_WDATA(63 downto 32),
+      S_AXI_wdata => xbar_to_m01_couplers_WDATA(32),
       S_AXI_wready => xbar_to_m01_couplers_WREADY,
-      S_AXI_wstrb(3 downto 0) => xbar_to_m01_couplers_WSTRB(7 downto 4),
+      S_AXI_wstrb => xbar_to_m01_couplers_WSTRB(4),
       S_AXI_wvalid => xbar_to_m01_couplers_WVALID(1)
     );
 s00_couplers: entity work.s00_couplers_imp_WUMUUK
@@ -1016,29 +1038,64 @@ xbar: component MC_xbar_0
       aresetn => ps7_0_axi_periph_ARESETN_net,
       m_axi_araddr(63 downto 32) => xbar_to_m01_couplers_ARADDR(63 downto 32),
       m_axi_araddr(31 downto 0) => xbar_to_m00_couplers_ARADDR(31 downto 0),
-      m_axi_arprot(5 downto 0) => NLW_xbar_m_axi_arprot_UNCONNECTED(5 downto 0),
+      m_axi_arprot(5 downto 3) => xbar_to_m01_couplers_ARPROT(5 downto 3),
+      m_axi_arprot(2 downto 0) => NLW_xbar_m_axi_arprot_UNCONNECTED(2 downto 0),
       m_axi_arready(1) => xbar_to_m01_couplers_ARREADY,
       m_axi_arready(0) => xbar_to_m00_couplers_ARREADY(0),
       m_axi_arvalid(1) => xbar_to_m01_couplers_ARVALID(1),
       m_axi_arvalid(0) => xbar_to_m00_couplers_ARVALID(0),
       m_axi_awaddr(63 downto 32) => xbar_to_m01_couplers_AWADDR(63 downto 32),
       m_axi_awaddr(31 downto 0) => xbar_to_m00_couplers_AWADDR(31 downto 0),
-      m_axi_awprot(5 downto 0) => NLW_xbar_m_axi_awprot_UNCONNECTED(5 downto 0),
+      m_axi_awprot(5 downto 3) => xbar_to_m01_couplers_AWPROT(5 downto 3),
+      m_axi_awprot(2 downto 0) => NLW_xbar_m_axi_awprot_UNCONNECTED(2 downto 0),
       m_axi_awready(1) => xbar_to_m01_couplers_AWREADY,
       m_axi_awready(0) => xbar_to_m00_couplers_AWREADY(0),
       m_axi_awvalid(1) => xbar_to_m01_couplers_AWVALID(1),
       m_axi_awvalid(0) => xbar_to_m00_couplers_AWVALID(0),
       m_axi_bready(1) => xbar_to_m01_couplers_BREADY(1),
       m_axi_bready(0) => xbar_to_m00_couplers_BREADY(0),
-      m_axi_bresp(3 downto 2) => xbar_to_m01_couplers_BRESP(1 downto 0),
+      m_axi_bresp(3) => xbar_to_m01_couplers_BRESP,
+      m_axi_bresp(2) => xbar_to_m01_couplers_BRESP,
       m_axi_bresp(1 downto 0) => xbar_to_m00_couplers_BRESP(1 downto 0),
       m_axi_bvalid(1) => xbar_to_m01_couplers_BVALID,
       m_axi_bvalid(0) => xbar_to_m00_couplers_BVALID(0),
-      m_axi_rdata(63 downto 32) => xbar_to_m01_couplers_RDATA(31 downto 0),
+      m_axi_rdata(63) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(62) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(61) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(60) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(59) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(58) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(57) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(56) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(55) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(54) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(53) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(52) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(51) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(50) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(49) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(48) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(47) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(46) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(45) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(44) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(43) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(42) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(41) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(40) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(39) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(38) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(37) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(36) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(35) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(34) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(33) => xbar_to_m01_couplers_RDATA,
+      m_axi_rdata(32) => xbar_to_m01_couplers_RDATA,
       m_axi_rdata(31 downto 0) => xbar_to_m00_couplers_RDATA(31 downto 0),
       m_axi_rready(1) => xbar_to_m01_couplers_RREADY(1),
       m_axi_rready(0) => xbar_to_m00_couplers_RREADY(0),
-      m_axi_rresp(3 downto 2) => xbar_to_m01_couplers_RRESP(1 downto 0),
+      m_axi_rresp(3) => xbar_to_m01_couplers_RRESP,
+      m_axi_rresp(2) => xbar_to_m01_couplers_RRESP,
       m_axi_rresp(1 downto 0) => xbar_to_m00_couplers_RRESP(1 downto 0),
       m_axi_rvalid(1) => xbar_to_m01_couplers_RVALID,
       m_axi_rvalid(0) => xbar_to_m00_couplers_RVALID(0),
@@ -1122,38 +1179,10 @@ use UNISIM.VCOMPONENTS.ALL;
     UART0_CTSN : in STD_LOGIC;
     UART0_RTSN : out STD_LOGIC;
     UART0_RX : in STD_LOGIC;
-    UART0_TX : out STD_LOGIC;
-    Vaux0_BP1_v_n : in STD_LOGIC;
-    Vaux0_BP1_v_p : in STD_LOGIC;
-    Vaux10_TSCINV12C_v_n : in STD_LOGIC;
-    Vaux10_TSCINV12C_v_p : in STD_LOGIC;
-    Vaux11_RTDSC_v_n : in STD_LOGIC;
-    Vaux11_RTDSC_v_p : in STD_LOGIC;
-    Vaux12_CoolC_v_n : in STD_LOGIC;
-    Vaux12_CoolC_v_p : in STD_LOGIC;
-    Vaux13_LVSC_v_n : in STD_LOGIC;
-    Vaux13_LVSC_v_p : in STD_LOGIC;
-    Vaux1_TP0_v_n : in STD_LOGIC;
-    Vaux1_TP0_v_p : in STD_LOGIC;
-    Vaux2_NetINV34C_v_n : in STD_LOGIC;
-    Vaux2_NetINV34C_v_p : in STD_LOGIC;
-    Vaux3_SW_v_n : in STD_LOGIC;
-    Vaux3_SW_v_p : in STD_LOGIC;
-    Vaux4_DASHAMSC_v_n : in STD_LOGIC;
-    Vaux4_DASHAMSC_v_p : in STD_LOGIC;
-    Vaux5_LVSV_v_n : in STD_LOGIC;
-    Vaux5_LVSV_v_p : in STD_LOGIC;
-    Vaux6_BrakeC_v_n : in STD_LOGIC;
-    Vaux6_BrakeC_v_p : in STD_LOGIC;
-    Vaux7_PoEC_v_n : in STD_LOGIC;
-    Vaux7_PoEC_v_p : in STD_LOGIC;
-    Vaux8_BP0_v_n : in STD_LOGIC;
-    Vaux8_BP0_v_p : in STD_LOGIC;
-    Vaux9_TP1_v_n : in STD_LOGIC;
-    Vaux9_TP1_v_p : in STD_LOGIC
+    UART0_TX : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of MC : entity is "MC,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MC,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=14,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,""""""""da_axi4_cnt""""""""=1,""""""""da_board_cnt""""""""=1,""""""""da_ps7_cnt""""""""=1,""""da_axi4_cnt""""=1,""""da_board_cnt""""=1,da_axi4_cnt=1,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of MC : entity is "MC,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=MC,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,""""""""""da_axi4_cnt""""""""""=1,""""""""""da_board_cnt""""""""""=1,""""""""""da_ps7_cnt""""""""""=1,""""""da_axi4_cnt""""""=1,""""""da_board_cnt""""""=1,""da_axi4_cnt""=1,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of MC : entity is "MC.hwdef";
 end MC;
@@ -1332,72 +1361,6 @@ architecture STRUCTURE of MC is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component MC_xlconstant_2_0;
-  component MC_xadc_wiz_0_0 is
-  port (
-    s_axi_aclk : in STD_LOGIC;
-    s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    s_axi_awvalid : in STD_LOGIC;
-    s_axi_awready : out STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_wvalid : in STD_LOGIC;
-    s_axi_wready : out STD_LOGIC;
-    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_bvalid : out STD_LOGIC;
-    s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    s_axi_arvalid : in STD_LOGIC;
-    s_axi_arready : out STD_LOGIC;
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_rvalid : out STD_LOGIC;
-    s_axi_rready : in STD_LOGIC;
-    ip2intc_irpt : out STD_LOGIC;
-    vp_in : in STD_LOGIC;
-    vn_in : in STD_LOGIC;
-    vauxp0 : in STD_LOGIC;
-    vauxn0 : in STD_LOGIC;
-    vauxp1 : in STD_LOGIC;
-    vauxn1 : in STD_LOGIC;
-    vauxp2 : in STD_LOGIC;
-    vauxn2 : in STD_LOGIC;
-    vauxp3 : in STD_LOGIC;
-    vauxn3 : in STD_LOGIC;
-    vauxp4 : in STD_LOGIC;
-    vauxn4 : in STD_LOGIC;
-    vauxp5 : in STD_LOGIC;
-    vauxn5 : in STD_LOGIC;
-    vauxp6 : in STD_LOGIC;
-    vauxn6 : in STD_LOGIC;
-    vauxp7 : in STD_LOGIC;
-    vauxn7 : in STD_LOGIC;
-    vauxp8 : in STD_LOGIC;
-    vauxn8 : in STD_LOGIC;
-    vauxp9 : in STD_LOGIC;
-    vauxn9 : in STD_LOGIC;
-    vauxp10 : in STD_LOGIC;
-    vauxn10 : in STD_LOGIC;
-    vauxp11 : in STD_LOGIC;
-    vauxn11 : in STD_LOGIC;
-    vauxp12 : in STD_LOGIC;
-    vauxn12 : in STD_LOGIC;
-    vauxp13 : in STD_LOGIC;
-    vauxn13 : in STD_LOGIC;
-    user_temp_alarm_out : out STD_LOGIC;
-    vccint_alarm_out : out STD_LOGIC;
-    vccaux_alarm_out : out STD_LOGIC;
-    vccpint_alarm_out : out STD_LOGIC;
-    vccpaux_alarm_out : out STD_LOGIC;
-    vccddro_alarm_out : out STD_LOGIC;
-    ot_out : out STD_LOGIC;
-    channel_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    eoc_out : out STD_LOGIC;
-    alarm_out : out STD_LOGIC;
-    eos_out : out STD_LOGIC;
-    busy_out : out STD_LOGIC
-  );
-  end component MC_xadc_wiz_0_0;
   signal BOTS_I_0_1 : STD_LOGIC;
   signal COCKPIT_EMERGENCY_I_0_1 : STD_LOGIC;
   signal FL_WHEEL_I_0_1 : STD_LOGIC;
@@ -1413,34 +1376,6 @@ architecture STRUCTURE of MC is
   signal TSMS_I_0_1 : STD_LOGIC;
   signal UART0_CTSN_0_1 : STD_LOGIC;
   signal UART0_RX_0_1 : STD_LOGIC;
-  signal Vaux0_0_1_V_N : STD_LOGIC;
-  signal Vaux0_0_1_V_P : STD_LOGIC;
-  signal Vaux10_0_1_V_N : STD_LOGIC;
-  signal Vaux10_0_1_V_P : STD_LOGIC;
-  signal Vaux11_0_1_V_N : STD_LOGIC;
-  signal Vaux11_0_1_V_P : STD_LOGIC;
-  signal Vaux12_0_1_V_N : STD_LOGIC;
-  signal Vaux12_0_1_V_P : STD_LOGIC;
-  signal Vaux13_0_1_V_N : STD_LOGIC;
-  signal Vaux13_0_1_V_P : STD_LOGIC;
-  signal Vaux1_0_1_V_N : STD_LOGIC;
-  signal Vaux1_0_1_V_P : STD_LOGIC;
-  signal Vaux2_0_1_V_N : STD_LOGIC;
-  signal Vaux2_0_1_V_P : STD_LOGIC;
-  signal Vaux3_0_1_V_N : STD_LOGIC;
-  signal Vaux3_0_1_V_P : STD_LOGIC;
-  signal Vaux4_0_1_V_N : STD_LOGIC;
-  signal Vaux4_0_1_V_P : STD_LOGIC;
-  signal Vaux5_0_1_V_N : STD_LOGIC;
-  signal Vaux5_0_1_V_P : STD_LOGIC;
-  signal Vaux6_0_1_V_N : STD_LOGIC;
-  signal Vaux6_0_1_V_P : STD_LOGIC;
-  signal Vaux7_0_1_V_N : STD_LOGIC;
-  signal Vaux7_0_1_V_P : STD_LOGIC;
-  signal Vaux8_0_1_V_N : STD_LOGIC;
-  signal Vaux8_0_1_V_P : STD_LOGIC;
-  signal Vaux9_0_1_V_N : STD_LOGIC;
-  signal Vaux9_0_1_V_P : STD_LOGIC;
   signal axi_gpio_0_ip2intc_irpt : STD_LOGIC;
   signal processing_system7_0_CAN_0_RX : STD_LOGIC;
   signal processing_system7_0_CAN_0_TX : STD_LOGIC;
@@ -1529,23 +1464,6 @@ architecture STRUCTURE of MC is
   signal ps7_0_axi_periph_M00_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal ps7_0_axi_periph_M01_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal ps7_0_axi_periph_M01_AXI_ARREADY : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_ARVALID : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal ps7_0_axi_periph_M01_AXI_AWREADY : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_AWVALID : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_BREADY : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal ps7_0_axi_periph_M01_AXI_BVALID : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal ps7_0_axi_periph_M01_AXI_RREADY : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal ps7_0_axi_periph_M01_AXI_RVALID : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal ps7_0_axi_periph_M01_AXI_WREADY : STD_LOGIC;
-  signal ps7_0_axi_periph_M01_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal ps7_0_axi_periph_M01_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1561,23 +1479,21 @@ architecture STRUCTURE of MC is
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_UART0_DTRN_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_araddr_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_arprot_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_arvalid_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_awaddr_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_awprot_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_awvalid_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_bready_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_rready_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_wdata_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_wstrb_UNCONNECTED : STD_LOGIC;
+  signal NLW_ps7_0_axi_periph_M01_AXI_wvalid_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_xadc_wiz_0_alarm_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_busy_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_eoc_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_eos_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_ip2intc_irpt_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_ot_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_user_temp_alarm_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_vccaux_alarm_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_vccddro_alarm_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_vccint_alarm_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_vccpaux_alarm_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_vccpint_alarm_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_xadc_wiz_0_channel_out_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of CAN_0_rx : signal is "xilinx.com:interface:can:1.0 CAN_0 RX";
   attribute X_INTERFACE_INFO of CAN_0_tx : signal is "xilinx.com:interface:can:1.0 CAN_0 TX";
@@ -1599,34 +1515,6 @@ architecture STRUCTURE of MC is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of Vaux0_BP1_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux0_BP1 ";
-  attribute X_INTERFACE_INFO of Vaux0_BP1_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux0_BP1 ";
-  attribute X_INTERFACE_INFO of Vaux10_TSCINV12C_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux10_TSCINV12C ";
-  attribute X_INTERFACE_INFO of Vaux10_TSCINV12C_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux10_TSCINV12C ";
-  attribute X_INTERFACE_INFO of Vaux11_RTDSC_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux11_RTDSC ";
-  attribute X_INTERFACE_INFO of Vaux11_RTDSC_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux11_RTDSC ";
-  attribute X_INTERFACE_INFO of Vaux12_CoolC_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux12_CoolC ";
-  attribute X_INTERFACE_INFO of Vaux12_CoolC_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux12_CoolC ";
-  attribute X_INTERFACE_INFO of Vaux13_LVSC_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux13_LVSC ";
-  attribute X_INTERFACE_INFO of Vaux13_LVSC_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux13_LVSC ";
-  attribute X_INTERFACE_INFO of Vaux1_TP0_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux1_TP0 ";
-  attribute X_INTERFACE_INFO of Vaux1_TP0_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux1_TP0 ";
-  attribute X_INTERFACE_INFO of Vaux2_NetINV34C_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux2_NetINV34C ";
-  attribute X_INTERFACE_INFO of Vaux2_NetINV34C_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux2_NetINV34C ";
-  attribute X_INTERFACE_INFO of Vaux3_SW_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux3_SW ";
-  attribute X_INTERFACE_INFO of Vaux3_SW_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux3_SW ";
-  attribute X_INTERFACE_INFO of Vaux4_DASHAMSC_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux4_DASHAMSC ";
-  attribute X_INTERFACE_INFO of Vaux4_DASHAMSC_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux4_DASHAMSC ";
-  attribute X_INTERFACE_INFO of Vaux5_LVSV_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux5_LVSV ";
-  attribute X_INTERFACE_INFO of Vaux5_LVSV_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux5_LVSV ";
-  attribute X_INTERFACE_INFO of Vaux6_BrakeC_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux6_BrakeC ";
-  attribute X_INTERFACE_INFO of Vaux6_BrakeC_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux6_BrakeC ";
-  attribute X_INTERFACE_INFO of Vaux7_PoEC_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux7_PoEC ";
-  attribute X_INTERFACE_INFO of Vaux7_PoEC_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux7_PoEC ";
-  attribute X_INTERFACE_INFO of Vaux8_BP0_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux8_BP0 ";
-  attribute X_INTERFACE_INFO of Vaux8_BP0_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux8_BP0 ";
-  attribute X_INTERFACE_INFO of Vaux9_TP1_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux9_TP1 ";
-  attribute X_INTERFACE_INFO of Vaux9_TP1_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux9_TP1 ";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -1658,34 +1546,6 @@ begin
   UART0_RTSN <= processing_system7_0_UART0_RTSN;
   UART0_RX_0_1 <= UART0_RX;
   UART0_TX <= processing_system7_0_UART0_TX;
-  Vaux0_0_1_V_N <= Vaux0_BP1_v_n;
-  Vaux0_0_1_V_P <= Vaux0_BP1_v_p;
-  Vaux10_0_1_V_N <= Vaux10_TSCINV12C_v_n;
-  Vaux10_0_1_V_P <= Vaux10_TSCINV12C_v_p;
-  Vaux11_0_1_V_N <= Vaux11_RTDSC_v_n;
-  Vaux11_0_1_V_P <= Vaux11_RTDSC_v_p;
-  Vaux12_0_1_V_N <= Vaux12_CoolC_v_n;
-  Vaux12_0_1_V_P <= Vaux12_CoolC_v_p;
-  Vaux13_0_1_V_N <= Vaux13_LVSC_v_n;
-  Vaux13_0_1_V_P <= Vaux13_LVSC_v_p;
-  Vaux1_0_1_V_N <= Vaux1_TP0_v_n;
-  Vaux1_0_1_V_P <= Vaux1_TP0_v_p;
-  Vaux2_0_1_V_N <= Vaux2_NetINV34C_v_n;
-  Vaux2_0_1_V_P <= Vaux2_NetINV34C_v_p;
-  Vaux3_0_1_V_N <= Vaux3_SW_v_n;
-  Vaux3_0_1_V_P <= Vaux3_SW_v_p;
-  Vaux4_0_1_V_N <= Vaux4_DASHAMSC_v_n;
-  Vaux4_0_1_V_P <= Vaux4_DASHAMSC_v_p;
-  Vaux5_0_1_V_N <= Vaux5_LVSV_v_n;
-  Vaux5_0_1_V_P <= Vaux5_LVSV_v_p;
-  Vaux6_0_1_V_N <= Vaux6_BrakeC_v_n;
-  Vaux6_0_1_V_P <= Vaux6_BrakeC_v_p;
-  Vaux7_0_1_V_N <= Vaux7_PoEC_v_n;
-  Vaux7_0_1_V_P <= Vaux7_PoEC_v_p;
-  Vaux8_0_1_V_N <= Vaux8_BP0_v_n;
-  Vaux8_0_1_V_P <= Vaux8_BP0_v_p;
-  Vaux9_0_1_V_N <= Vaux9_TP1_v_n;
-  Vaux9_0_1_V_P <= Vaux9_TP1_v_p;
   processing_system7_0_CAN_0_RX <= CAN_0_rx;
   processing_system7_0_CAN_1_RX <= CAN_1_rx;
 SDC_Monitor_CAR_0: component MC_SDC_Monitor_CAR_0_0
@@ -1854,23 +1714,25 @@ ps7_0_axi_periph: entity work.MC_ps7_0_axi_periph_0
       M00_AXI_wvalid(0) => ps7_0_axi_periph_M00_AXI_WVALID(0),
       M01_ACLK => processing_system7_0_FCLK_CLK0,
       M01_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
-      M01_AXI_araddr(31 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(31 downto 0),
-      M01_AXI_arready => ps7_0_axi_periph_M01_AXI_ARREADY,
-      M01_AXI_arvalid => ps7_0_axi_periph_M01_AXI_ARVALID,
-      M01_AXI_awaddr(31 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(31 downto 0),
-      M01_AXI_awready => ps7_0_axi_periph_M01_AXI_AWREADY,
-      M01_AXI_awvalid => ps7_0_axi_periph_M01_AXI_AWVALID,
-      M01_AXI_bready => ps7_0_axi_periph_M01_AXI_BREADY,
-      M01_AXI_bresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_BRESP(1 downto 0),
-      M01_AXI_bvalid => ps7_0_axi_periph_M01_AXI_BVALID,
-      M01_AXI_rdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_RDATA(31 downto 0),
-      M01_AXI_rready => ps7_0_axi_periph_M01_AXI_RREADY,
-      M01_AXI_rresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_RRESP(1 downto 0),
-      M01_AXI_rvalid => ps7_0_axi_periph_M01_AXI_RVALID,
-      M01_AXI_wdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_WDATA(31 downto 0),
-      M01_AXI_wready => ps7_0_axi_periph_M01_AXI_WREADY,
-      M01_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
-      M01_AXI_wvalid => ps7_0_axi_periph_M01_AXI_WVALID,
+      M01_AXI_araddr => NLW_ps7_0_axi_periph_M01_AXI_araddr_UNCONNECTED,
+      M01_AXI_arprot => NLW_ps7_0_axi_periph_M01_AXI_arprot_UNCONNECTED,
+      M01_AXI_arready => '0',
+      M01_AXI_arvalid => NLW_ps7_0_axi_periph_M01_AXI_arvalid_UNCONNECTED,
+      M01_AXI_awaddr => NLW_ps7_0_axi_periph_M01_AXI_awaddr_UNCONNECTED,
+      M01_AXI_awprot => NLW_ps7_0_axi_periph_M01_AXI_awprot_UNCONNECTED,
+      M01_AXI_awready => '0',
+      M01_AXI_awvalid => NLW_ps7_0_axi_periph_M01_AXI_awvalid_UNCONNECTED,
+      M01_AXI_bready => NLW_ps7_0_axi_periph_M01_AXI_bready_UNCONNECTED,
+      M01_AXI_bresp => '0',
+      M01_AXI_bvalid => '0',
+      M01_AXI_rdata => '0',
+      M01_AXI_rready => NLW_ps7_0_axi_periph_M01_AXI_rready_UNCONNECTED,
+      M01_AXI_rresp => '0',
+      M01_AXI_rvalid => '0',
+      M01_AXI_wdata => NLW_ps7_0_axi_periph_M01_AXI_wdata_UNCONNECTED,
+      M01_AXI_wready => '0',
+      M01_AXI_wstrb => NLW_ps7_0_axi_periph_M01_AXI_wstrb_UNCONNECTED,
+      M01_AXI_wvalid => NLW_ps7_0_axi_periph_M01_AXI_wvalid_UNCONNECTED,
       S00_ACLK => processing_system7_0_FCLK_CLK0,
       S00_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
       S00_AXI_araddr(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
@@ -1924,71 +1786,6 @@ rst_ps7_0_100M: component MC_rst_ps7_0_100M_0
       peripheral_aresetn(0) => rst_ps7_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
-    );
-xadc_wiz_0: component MC_xadc_wiz_0_0
-     port map (
-      alarm_out => NLW_xadc_wiz_0_alarm_out_UNCONNECTED,
-      busy_out => NLW_xadc_wiz_0_busy_out_UNCONNECTED,
-      channel_out(4 downto 0) => NLW_xadc_wiz_0_channel_out_UNCONNECTED(4 downto 0),
-      eoc_out => NLW_xadc_wiz_0_eoc_out_UNCONNECTED,
-      eos_out => NLW_xadc_wiz_0_eos_out_UNCONNECTED,
-      ip2intc_irpt => NLW_xadc_wiz_0_ip2intc_irpt_UNCONNECTED,
-      ot_out => NLW_xadc_wiz_0_ot_out_UNCONNECTED,
-      s_axi_aclk => processing_system7_0_FCLK_CLK0,
-      s_axi_araddr(10 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(10 downto 0),
-      s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
-      s_axi_arready => ps7_0_axi_periph_M01_AXI_ARREADY,
-      s_axi_arvalid => ps7_0_axi_periph_M01_AXI_ARVALID,
-      s_axi_awaddr(10 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(10 downto 0),
-      s_axi_awready => ps7_0_axi_periph_M01_AXI_AWREADY,
-      s_axi_awvalid => ps7_0_axi_periph_M01_AXI_AWVALID,
-      s_axi_bready => ps7_0_axi_periph_M01_AXI_BREADY,
-      s_axi_bresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_BRESP(1 downto 0),
-      s_axi_bvalid => ps7_0_axi_periph_M01_AXI_BVALID,
-      s_axi_rdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_RDATA(31 downto 0),
-      s_axi_rready => ps7_0_axi_periph_M01_AXI_RREADY,
-      s_axi_rresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_RRESP(1 downto 0),
-      s_axi_rvalid => ps7_0_axi_periph_M01_AXI_RVALID,
-      s_axi_wdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_WDATA(31 downto 0),
-      s_axi_wready => ps7_0_axi_periph_M01_AXI_WREADY,
-      s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
-      s_axi_wvalid => ps7_0_axi_periph_M01_AXI_WVALID,
-      user_temp_alarm_out => NLW_xadc_wiz_0_user_temp_alarm_out_UNCONNECTED,
-      vauxn0 => Vaux0_0_1_V_N,
-      vauxn1 => Vaux1_0_1_V_N,
-      vauxn10 => Vaux10_0_1_V_N,
-      vauxn11 => Vaux11_0_1_V_N,
-      vauxn12 => Vaux12_0_1_V_N,
-      vauxn13 => Vaux13_0_1_V_N,
-      vauxn2 => Vaux2_0_1_V_N,
-      vauxn3 => Vaux3_0_1_V_N,
-      vauxn4 => Vaux4_0_1_V_N,
-      vauxn5 => Vaux5_0_1_V_N,
-      vauxn6 => Vaux6_0_1_V_N,
-      vauxn7 => Vaux7_0_1_V_N,
-      vauxn8 => Vaux8_0_1_V_N,
-      vauxn9 => Vaux9_0_1_V_N,
-      vauxp0 => Vaux0_0_1_V_P,
-      vauxp1 => Vaux1_0_1_V_P,
-      vauxp10 => Vaux10_0_1_V_P,
-      vauxp11 => Vaux11_0_1_V_P,
-      vauxp12 => Vaux12_0_1_V_P,
-      vauxp13 => Vaux13_0_1_V_P,
-      vauxp2 => Vaux2_0_1_V_P,
-      vauxp3 => Vaux3_0_1_V_P,
-      vauxp4 => Vaux4_0_1_V_P,
-      vauxp5 => Vaux5_0_1_V_P,
-      vauxp6 => Vaux6_0_1_V_P,
-      vauxp7 => Vaux7_0_1_V_P,
-      vauxp8 => Vaux8_0_1_V_P,
-      vauxp9 => Vaux9_0_1_V_P,
-      vccaux_alarm_out => NLW_xadc_wiz_0_vccaux_alarm_out_UNCONNECTED,
-      vccddro_alarm_out => NLW_xadc_wiz_0_vccddro_alarm_out_UNCONNECTED,
-      vccint_alarm_out => NLW_xadc_wiz_0_vccint_alarm_out_UNCONNECTED,
-      vccpaux_alarm_out => NLW_xadc_wiz_0_vccpaux_alarm_out_UNCONNECTED,
-      vccpint_alarm_out => NLW_xadc_wiz_0_vccpint_alarm_out_UNCONNECTED,
-      vn_in => '0',
-      vp_in => '0'
     );
 xlconstant: component MC_xlconstant_2_0
      port map (

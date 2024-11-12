@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Tue Nov 12 11:38:10 2024
+// Date        : Tue Nov 12 15:56:09 2024
 // Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Git/GitHub/MCS/MC/MC_state_machine/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_processing_system7_0_0/MC_processing_system7_0_0_stub.v
+//               c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_processing_system7_0_0/MC_processing_system7_0_0_stub.v
 // Design      : MC_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

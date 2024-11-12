@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Tue Nov 12 11:36:52 2024
+--Date        : Tue Nov 12 15:44:33 2024
 --Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target MC_wrapper.bd
 --Design      : MC_wrapper
@@ -58,35 +58,7 @@ entity MC_wrapper is
     UART0_CTSN : in STD_LOGIC;
     UART0_RTSN : out STD_LOGIC;
     UART0_RX : in STD_LOGIC;
-    UART0_TX : out STD_LOGIC;
-    Vaux0_BP1_v_n : in STD_LOGIC;
-    Vaux0_BP1_v_p : in STD_LOGIC;
-    Vaux10_TSCINV12C_v_n : in STD_LOGIC;
-    Vaux10_TSCINV12C_v_p : in STD_LOGIC;
-    Vaux11_RTDSC_v_n : in STD_LOGIC;
-    Vaux11_RTDSC_v_p : in STD_LOGIC;
-    Vaux12_CoolC_v_n : in STD_LOGIC;
-    Vaux12_CoolC_v_p : in STD_LOGIC;
-    Vaux13_LVSC_v_n : in STD_LOGIC;
-    Vaux13_LVSC_v_p : in STD_LOGIC;
-    Vaux1_TP0_v_n : in STD_LOGIC;
-    Vaux1_TP0_v_p : in STD_LOGIC;
-    Vaux2_NetINV34C_v_n : in STD_LOGIC;
-    Vaux2_NetINV34C_v_p : in STD_LOGIC;
-    Vaux3_SW_v_n : in STD_LOGIC;
-    Vaux3_SW_v_p : in STD_LOGIC;
-    Vaux4_DASHAMSC_v_n : in STD_LOGIC;
-    Vaux4_DASHAMSC_v_p : in STD_LOGIC;
-    Vaux5_LVSV_v_n : in STD_LOGIC;
-    Vaux5_LVSV_v_p : in STD_LOGIC;
-    Vaux6_BrakeC_v_n : in STD_LOGIC;
-    Vaux6_BrakeC_v_p : in STD_LOGIC;
-    Vaux7_PoEC_v_n : in STD_LOGIC;
-    Vaux7_PoEC_v_p : in STD_LOGIC;
-    Vaux8_BP0_v_n : in STD_LOGIC;
-    Vaux8_BP0_v_p : in STD_LOGIC;
-    Vaux9_TP1_v_n : in STD_LOGIC;
-    Vaux9_TP1_v_p : in STD_LOGIC
+    UART0_TX : out STD_LOGIC
   );
 end MC_wrapper;
 
@@ -137,35 +109,7 @@ architecture STRUCTURE of MC_wrapper is
     FL_WHEEL_I : in STD_LOGIC;
     RR_WHEEL_I : in STD_LOGIC;
     TSMS_I : in STD_LOGIC;
-    PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 );
-    Vaux0_BP1_v_n : in STD_LOGIC;
-    Vaux0_BP1_v_p : in STD_LOGIC;
-    Vaux1_TP0_v_n : in STD_LOGIC;
-    Vaux1_TP0_v_p : in STD_LOGIC;
-    Vaux2_NetINV34C_v_n : in STD_LOGIC;
-    Vaux2_NetINV34C_v_p : in STD_LOGIC;
-    Vaux3_SW_v_n : in STD_LOGIC;
-    Vaux3_SW_v_p : in STD_LOGIC;
-    Vaux4_DASHAMSC_v_n : in STD_LOGIC;
-    Vaux4_DASHAMSC_v_p : in STD_LOGIC;
-    Vaux5_LVSV_v_n : in STD_LOGIC;
-    Vaux5_LVSV_v_p : in STD_LOGIC;
-    Vaux6_BrakeC_v_n : in STD_LOGIC;
-    Vaux6_BrakeC_v_p : in STD_LOGIC;
-    Vaux7_PoEC_v_n : in STD_LOGIC;
-    Vaux7_PoEC_v_p : in STD_LOGIC;
-    Vaux8_BP0_v_n : in STD_LOGIC;
-    Vaux8_BP0_v_p : in STD_LOGIC;
-    Vaux9_TP1_v_n : in STD_LOGIC;
-    Vaux9_TP1_v_p : in STD_LOGIC;
-    Vaux10_TSCINV12C_v_n : in STD_LOGIC;
-    Vaux10_TSCINV12C_v_p : in STD_LOGIC;
-    Vaux11_RTDSC_v_n : in STD_LOGIC;
-    Vaux11_RTDSC_v_p : in STD_LOGIC;
-    Vaux12_CoolC_v_n : in STD_LOGIC;
-    Vaux12_CoolC_v_p : in STD_LOGIC;
-    Vaux13_LVSC_v_n : in STD_LOGIC;
-    Vaux13_LVSC_v_p : in STD_LOGIC
+    PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component MC;
 begin
@@ -215,34 +159,6 @@ MC_i: component MC
       UART0_CTSN => UART0_CTSN,
       UART0_RTSN => UART0_RTSN,
       UART0_RX => UART0_RX,
-      UART0_TX => UART0_TX,
-      Vaux0_BP1_v_n => Vaux0_BP1_v_n,
-      Vaux0_BP1_v_p => Vaux0_BP1_v_p,
-      Vaux10_TSCINV12C_v_n => Vaux10_TSCINV12C_v_n,
-      Vaux10_TSCINV12C_v_p => Vaux10_TSCINV12C_v_p,
-      Vaux11_RTDSC_v_n => Vaux11_RTDSC_v_n,
-      Vaux11_RTDSC_v_p => Vaux11_RTDSC_v_p,
-      Vaux12_CoolC_v_n => Vaux12_CoolC_v_n,
-      Vaux12_CoolC_v_p => Vaux12_CoolC_v_p,
-      Vaux13_LVSC_v_n => Vaux13_LVSC_v_n,
-      Vaux13_LVSC_v_p => Vaux13_LVSC_v_p,
-      Vaux1_TP0_v_n => Vaux1_TP0_v_n,
-      Vaux1_TP0_v_p => Vaux1_TP0_v_p,
-      Vaux2_NetINV34C_v_n => Vaux2_NetINV34C_v_n,
-      Vaux2_NetINV34C_v_p => Vaux2_NetINV34C_v_p,
-      Vaux3_SW_v_n => Vaux3_SW_v_n,
-      Vaux3_SW_v_p => Vaux3_SW_v_p,
-      Vaux4_DASHAMSC_v_n => Vaux4_DASHAMSC_v_n,
-      Vaux4_DASHAMSC_v_p => Vaux4_DASHAMSC_v_p,
-      Vaux5_LVSV_v_n => Vaux5_LVSV_v_n,
-      Vaux5_LVSV_v_p => Vaux5_LVSV_v_p,
-      Vaux6_BrakeC_v_n => Vaux6_BrakeC_v_n,
-      Vaux6_BrakeC_v_p => Vaux6_BrakeC_v_p,
-      Vaux7_PoEC_v_n => Vaux7_PoEC_v_n,
-      Vaux7_PoEC_v_p => Vaux7_PoEC_v_p,
-      Vaux8_BP0_v_n => Vaux8_BP0_v_n,
-      Vaux8_BP0_v_p => Vaux8_BP0_v_p,
-      Vaux9_TP1_v_n => Vaux9_TP1_v_n,
-      Vaux9_TP1_v_p => Vaux9_TP1_v_p
+      UART0_TX => UART0_TX
     );
 end STRUCTURE;
