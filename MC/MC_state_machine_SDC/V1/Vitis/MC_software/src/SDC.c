@@ -1,4 +1,6 @@
 #include "SDC.h"
+#include <string.h>
+#include "xgpiops.h"
 
 
 XGpio SDC_axi_gpio_inst; 
@@ -11,7 +13,7 @@ void SDC_ISR (void *CallbackRef)
 
     printf("\nSDC broken at: %s\n", broken_node);
     
-    if (broken_node != "All nodes are connected" )
+    if (strcmp(broken_node, "All nodes are connected")!= 0)
     {
     }
 

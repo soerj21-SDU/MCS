@@ -22,9 +22,7 @@
 #include <portmacro.h>
 
 #include <stdio.h>
-#include "GPIO.h"
 #include "states.h"
-#include "SDC.h"
 
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
@@ -99,7 +97,7 @@ static void main_state_machine_task( void *pvParameters )
         switch (state) {
             case ST_IDLE:
             {
-                printf("Init state");
+                state = state_idle();
                 break;                
             }
         }
@@ -107,7 +105,7 @@ static void main_state_machine_task( void *pvParameters )
         switch (state) {
             case ST_LV_SYSTEMS_ACTIVE:
             {
-                printf("Init state");
+                state = state_lv_systems_active();
                 break;                
             }
         }
@@ -146,9 +144,10 @@ static void main_state_machine_task( void *pvParameters )
                 break;                
             }
         }
-
+        vTaskDelay(100); // 100 ms delay
 	}
 }
+
 
 
 /*-----------------------------------------------------------*/

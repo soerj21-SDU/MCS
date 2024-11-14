@@ -1,7 +1,8 @@
 #include "GPIO.h"
 #include <xgpio.h>
 #include <xgpiops.h>
-
+#include <xstatus.h>
+#include "states.h"
 
 
 
@@ -29,9 +30,9 @@ int setup_AXI_GPIO (UINTPTR AXI_GPIO_BaseAddress,   XGpio *instancePtr, u8 chann
 
     return XST_SUCCESS;
 }
-int setup_MIO_GPIO(UINTPTR MIO_GPIO_BaseAddress, XGpioPs_Config* ConfigPtr ,XGpioPs* instancePtr, u8 channel, u8 direction){
-    ConfigPtr = XGpioPs_LookupConfig(MIO_GPIO_BaseAddress);
-    int status = XGpioPs_CfgInitialize(instancePtr, ConfigPtr, XPAR_XGPIOPS_0_BASEADDR);
+int setup_MIO_GPIO(UINTPTR MIO_GPIO_BaseAdrr, XGpioPs_Config* ConfigPtr ,XGpioPs* instancePtr, u8 channel, u8 direction){
+    ConfigPtr = XGpioPs_LookupConfig(MIO_GPIO_BaseAdrr);
+    int status = XGpioPs_CfgInitialize(instancePtr, ConfigPtr, MIO_GPIO_BaseAdrr);
         if (status != XST_SUCCESS) 
     {
         printf("setup_MIO_GPIO failed\r\n");
@@ -39,6 +40,7 @@ int setup_MIO_GPIO(UINTPTR MIO_GPIO_BaseAddress, XGpioPs_Config* ConfigPtr ,XGpi
     }
     XGpioPs_SetDirectionPin(instancePtr, channel, direction);
     XGpioPs_SetOutputEnablePin(instancePtr, channel, 1);
+    return XST_SUCCESS;
     }
 
 // write 

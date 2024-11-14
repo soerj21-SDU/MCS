@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Nov 14 11:54:12 2024
-# Process ID: 29392
+# Start of session at: Thu Nov 14 14:03:29 2024
+# Process ID: 31736
 # Current directory: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/MC_xbar_0_synth_1
 # Command line: vivado.exe -log MC_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MC_xbar_0.tcl
 # Log file: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/MC_xbar_0_synth_1/MC_xbar_0.vds
@@ -19,6 +19,6 @@
 # Host memory       :16969 MB
 # Swap memory       :16106 MB
 # Total Virtual     :33075 MB
-# Available Virtual :13467 MB
+# Available Virtual :11989 MB
 #-----------------------------------------------------------
 source MC_xbar_0.tcl -notrace

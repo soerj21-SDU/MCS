@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Thu Nov 14 11:55:35 2024
+// Date        : Thu Nov 14 14:06:20 2024
 // Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xbar_0/MC_xbar_0_stub.v
