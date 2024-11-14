@@ -53,7 +53,7 @@ int main()
             case (ST_IDLE) : //----------------------------------------------------------------------------
             { 
 
-
+// JEG ER NÅET HERHERTUL------------------------------------------------------------------------------------
                 print("\nSending data...");
                 CAN_Send_TestFrame(&CAN0_PS_inst);
                 // for (int i = 0; i < XCANPS_MAX_FRAME_SIZE_IN_WORDS; i++) 
@@ -63,14 +63,14 @@ int main()
 
 
                 print("\nReceiveing data...");
-                // for (int i = 0; i < XCANPS_MAX_FRAME_SIZE_IN_WORDS; i++) 
-                // {
-                //     printf("\nRxFrame[%d] = %u", i, RxFrame[i]);
-                // }
+                for (int i = 0; i < 16; i++) 
+                {
+                    printf("\nRxFrame[%d] = %u", i, RxFrame[i]);
+                }
 
-                // print("\nprinting id...");
+                print("\nprinting id...");
 
-                printf("\nRxFrame[0] = 11-bit ID = %u", RxFrame[0]);
+                // printf("\nRxFrame[0] = 11-bit ID = %u", RxFrame[0]);
                 // printf("\n%u", RxFrame[0]);
 
 

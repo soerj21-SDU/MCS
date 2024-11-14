@@ -9,8 +9,8 @@ XCanPs_Config *CAN_CFG_ptr;
 u32 TxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS] = {0};
 u32 RxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS]  ={0};
 
+// Shared variables used to test the callback mode
 static volatile int LoopbackError;	/* Asynchronous error occurred */
-
 static volatile int RecvDone;		/* Received a frame */
 static volatile int SendDone;		/* Frame was sent successfully */
 
@@ -40,22 +40,24 @@ int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress)
 	XCanPs_SetHandler(CanInstPtr,   XCANPS_HANDLER_ERROR,   (void *)ErrorHandler,   (void *)CanInstPtr);
 	XCanPs_SetHandler(CanInstPtr,   XCANPS_HANDLER_EVENT,   (void *)EventHandler,   (void *)CanInstPtr);
 
+    /* Initialize the flags.*/
+	SendDone = FALSE;
+	RecvDone = FALSE;
+	LoopbackError = FALSE;
+
     status = setup_CAN_Interrupt(CanInstPtr,  BaseAddress, 1);
         if (status != XST_SUCCESS) 
         {
             return XST_FAILURE;
         }
 
-    /* Initialize the flags.*/
-	SendDone = FALSE;
-	RecvDone = FALSE;
-	LoopbackError = FALSE;
 
 
 
 
 
-
+XCanPs_IsTxDone
+XCanPs_IsRxEmpty
 
 	// XCanPs_EnterMode(CanInstPtr, XCANPS_MODE_LOOPBACK);	// Enter Loop Back Mode.
 	//     while (XCanPs_GetMode(CanInstPtr) != XCANPS_MODE_LOOPBACK);
@@ -83,7 +85,7 @@ void CAN_Config(XCanPs *InstancePtr)
     	while (XCanPs_GetMode(InstancePtr) != XCANPS_MODE_CONFIG);
     
     /* Setup Baud Rate Prescaler Register (BRPR) and Bit Timing Register (BTR). */
-    XCanPs_SetBaudRatePrescaler(InstancePtr, BRPR_BAUD_PRESCALER);	// Set Baud Rate Prescaler
+    XCanPs_SetBaudRatePrescaler(InstancePtr, BRPR_BAUD_PRESCALAR);	// Set Baud Rate Prescaler
     XCanPs_SetBitTiming(InstancePtr,    BTR_SYNCJUMPWIDTH,    BTR_SECOND_TIMESEGMENT,    BTR_FIRST_TIMESEGMENT);
 }
 
@@ -145,8 +147,11 @@ void CAN_Send_TestFrame(XCanPs *InstancePtr)
 	int Index;
 	int Status;
 
-	TxFrame[0] = (u32)XCanPs_CreateIdValue((u32)TEST_MESSAGE_ID, 0, 0, 0, 0);	// Create value for message identifier
-	TxFrame[1] = (u32)XCanPs_CreateDlcValue((u32)FRAME_DATA_LENGTH); // Create value for Data Length Code Register. (how many data bytes in frame)
+    // Create value for identifier field
+	TxFrame[0] = (u32)XCanPs_CreateIdValue(  (u32)TEST_MESSAGE_ID,   DISABLE_SRR,   DISABLE_IDE,   NO_EXTENDED_ID,   SET_RTR);	
+
+    // Create value for Data Length Code Register. (how many data bytes in frame)
+	TxFrame[1] = (u32)XCanPs_CreateDlcValue((u32)FRAME_DATA_LENGTH); 
 
 
 	// Now fill in the data field with known values so we can verify them on receive. 
@@ -210,7 +215,7 @@ static void RecvHandler(void *CallBackRef)
 	int Index;
 	u8 *FramePtr;
 
-	Status = XCanPs_Recv(CanPtr, RxFrame);
+    Status = XCanPs_Recv(CanPtr, RxFrame);
         if (Status != XST_SUCCESS) 
         {
             LoopbackError = TRUE;

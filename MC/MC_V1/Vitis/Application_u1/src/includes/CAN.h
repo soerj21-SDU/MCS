@@ -5,36 +5,74 @@
 #include "xinterrupt_wrap.h"
 #include <stdint.h>
 #include <stdbool.h>
-
+#include "xil_exception.h"
 #include "interrupts.h"
-
-// CAN Clock, as set in Vivado, is 23.8 (24) MHz.
-
- // CAN_controller_clock / (Prescaler + 1) = quantum clock (from XCanPs_SetBaudRatePrescaler documentation). 
-#define BRPR_BAUD_PRESCALER 2 // f_TQ = 23.8 MHz / (BRPR_BAUD_PRESCALER + 1) = 7.99 MHz --> time quantum, t_TQ = 1 / 7.f_TQ = 0.126 us 
-
-
-// These timing parameters are set to give  a 1 Mbps baud rate with a CAN_controller_clock of 23.8 MHz. 77.77% sampling point.
-#define BTR_SYNCJUMPWIDTH		3 // Bit Timing Register (BTR) 
-#define BTR_FIRST_TIMESEGMENT	3
-#define BTR_SECOND_TIMESEGMENT	2
-// BIT_RATE = f_tq / (BTR_SYNCJUMPWIDTH + BTR_FIRST_TIMESEGMENT + BTR_SECOND_TIMESEGMENT) = 7.99 MHz * (3 + 3 + 2) = 0.99875 Mbit/s
 
 #define XCANPS_MAX_FRAME_SIZE_IN_WORDS      (XCANPS_MAX_FRAME_SIZE / sizeof(u32))
 #define FRAME_DATA_LENGTH	                8 /* Frame Data-field length */
-#define TEST_MESSAGE_ID		                2000
 #define CAN0_base_address                   XPAR_XCANPS_0_BASEADDR
 #define CAN1_base_address                   XPAR_XCANPS_1_BASEADDR
+#define TEST_MESSAGE_ID		                2000
 
+
+
+// // JONAS AND SEBASTIAN'S CALCULATIONS:---------------------------------------------------------------------------------
+// // CAN Clock, as set in Vivado, is 23.8 (24) MHz.
+
+//  // CAN_controller_clock / (Prescaler + 1) = quantum clock (from XCanPs_SetBaudRatePrescaler documentation). 
+// #define BRPR_BAUD_PRESCALER 2 // f_TQ = 23.8 MHz / (BRPR_BAUD_PRESCALER + 1) = 7.99 MHz --> time quantum, t_TQ = 1 / 7.f_TQ = 0.126 us 
+
+// // These timing parameters are set to give  a 1 Mbps baud rate with a CAN_controller_clock of 23.8 MHz. 77.77% sampling point.
+// #define BTR_SYNCJUMPWIDTH		3 // Bit Timing Register (BTR) 
+// #define BTR_FIRST_TIMESEGMENT	3
+// #define BTR_SECOND_TIMESEGMENT	2
+// // BIT_RATE = f_tq / (BTR_SYNCJUMPWIDTH + BTR_FIRST_TIMESEGMENT + BTR_SECOND_TIMESEGMENT) = 7.99 MHz * (3 + 3 + 2) = 0.99875 Mbit/s
+// // :--------------------------------------------------------------------------------------------------------------
+
+
+
+
+/*
+ * The Baud Rate Prescaler Register (BRPR) and Bit Timing Register (BTR)
+ * are setup such that CAN baud rate equals 40Kbps, assuming that the
+ * the CAN clock is 24MHz. The user needs to modify these values based on
+ * the desired baud rate and the CAN clock frequency. For more information
+ * see the CAN 2.0A, CAN 2.0B, ISO 11898-1 specifications.
+
+ * Timing parameters to be set in the Bit Timing Register (BTR).
+ * These values are for a 40 Kbps baudrate assuming the CAN input clock
+ * frequency is 24 MHz.
+ */
+#define BTR_SYNCJUMPWIDTH		3
+#define BTR_SECOND_TIMESEGMENT	2
+#define BTR_FIRST_TIMESEGMENT	15
+
+/*
+ * The Baud rate Prescalar value in the Baud Rate Prescaler Register
+ * needs to be set based on the input clock  frequency to the CAN core and
+ * the desired CAN baud rate.
+ * This value is for a 40 Kbps baudrate assuming the CAN input clock frequency
+ * is 24 MHz.
+ */
+#define BRPR_BAUD_PRESCALAR	29
+
+// Identifier field 
+#define NO_EXTENDED_ID   0 // If not using any extended ID,  "no ID"
+#define DISABLE_IDE      0 // DISABLE ID_EXTENSION_IDE
+#define SET_SRR       1 // ENABLE_SUBSTITUTE_REMOTE_TRANSMISSION_REQUEST_SRR
+#define DISABLE_SRR      0 // NO_SUBSTITUTE_REMOTE_TRANSMISSION_REQUEST_SRR
+#define SET_RTR       1 // REMOTE_TRANSMISSION_REQUEST
+#define DISABLE_RTR      0 // DISABLE_REMOTE_TRANSMISSION_REQUEST
 
 extern XCanPs  CAN0_PS_inst;
 extern XCanPs  CAN1_PS_inst;
 extern XCanPs_Config *CAN_CFG_ptr;
 
 int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress); // Initializes the CAN hardware to 1 Mbit/s and runs checks as needed
-void CAN_Config(XCanPs *InstancePtr);                       
+void CAN_Config(XCanPs *InstancePtr);           
+void CAN_Send_TestFrame(XCanPs *InstancePtr);
+
 int CAN_send(XCanPs *InstancePtr, u32 *frameptr);      // Sends the data stored within the transmit buffer
-// int CAN_receive(XCanPs *InstancePtr, u32 *frameptr);   // Puts received data into the receive buffer
 void CAN_enter_normal_mode(XCanPs *InstancePtr) ;     
 void CAN_enter_loopback_mode(XCanPs *InstancePtr);     // Zynq talks with itself. 
 void CAN_enter_sleep_mode(XCanPs *InstancePtr);        // low-power mode. 
@@ -42,8 +80,6 @@ void CAN_enter_snoop_mode(XCanPs *InstancePtr);        // can sniff/snoop on CAN
 bool CAN_is_TX_ready(XCanPs *InstancePtr);             // Checks whether TX  is ready 
 bool CAN_is_TX_FIFO_Full(XCanPs *InstancePtr);        
 bool CAN_is_RX_ready(XCanPs *InstancePtr);             // Checks whether RX FIFO is ready or empty
-void CAN_Send_TestFrame(XCanPs *InstancePtr);
-// void CAN_Receive_TestFrame(XCanPs *InstancePtr);
 
 static void SendHandler(void *CallBackRef);
 static void RecvHandler(void *CallBackRef);
