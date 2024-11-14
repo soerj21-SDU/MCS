@@ -146,7 +146,7 @@ static void main_state_machine_task( void *pvParameters )
                 break;                
             }
         }
-
+        vTaskDelay(100); // 100 ms delay
 	}
 }
 
