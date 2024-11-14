@@ -3,8 +3,8 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "C:\\B_Git\\MCS\\MC\\MC_V1\\Vitis\\MC_wrapper_v2.xsa",
-    "xsaPathInPlatform": "platform\\hw\\MC_wrapper_v2.xsa",
+    "xsa": "C:\\B_Git\\MCS\\MC\\MC_V1\\Vitis\\MC_wrapper.xsa",
+    "xsaPathInPlatform": "platform\\hw\\MC_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
     "isCustomFSBL": false,

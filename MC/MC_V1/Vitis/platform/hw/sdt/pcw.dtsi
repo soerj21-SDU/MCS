@@ -226,7 +226,7 @@
 		xlnx,rable = <0>;
 		status = "okay";
 		xlnx,interconnect-s-axi-masters = "ps7_cortexa9_0.M_AXI_DP , & , ps7_cortexa9_1.M_AXI_DP";
-		xlnx,can-clk-freq-hz = <100000000>;
+		xlnx,can-clk-freq-hz = <23809525>;
 		xlnx,ip-name = "ps7_can";
 		xlnx,name = "ps7_can_0";
 	};
@@ -246,7 +246,7 @@
 		xlnx,rable = <0>;
 		status = "okay";
 		xlnx,interconnect-s-axi-masters = "ps7_cortexa9_0.M_AXI_DP , & , ps7_cortexa9_1.M_AXI_DP";
-		xlnx,can-clk-freq-hz = <100000000>;
+		xlnx,can-clk-freq-hz = <23809525>;
 		xlnx,ip-name = "ps7_can";
 		xlnx,name = "ps7_can_1";
 	};

@@ -1,8 +1,8 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Fri Nov  1 14:59:24 2024
+| Date         : Thu Nov 14 08:36:20 2024
 | Host         : mikkelsPC
-| Design       : checkpoint_MC_wrapper
+| Design       : design_1
 | Device       : xc7z020-clg400-1--
 -------------------------------------
 

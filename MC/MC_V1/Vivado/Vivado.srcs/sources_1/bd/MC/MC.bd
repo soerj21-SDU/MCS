@@ -300,7 +300,7 @@
             "value": "666.666687"
           },
           "PCW_ACT_CAN_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "23.809525"
           },
           "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
             "value": "10.158730"
@@ -390,7 +390,7 @@
             "value": "1"
           },
           "PCW_CAN_PERIPHERAL_FREQMHZ": {
-            "value": "100"
+            "value": "24"
           },
           "PCW_CAN_PERIPHERAL_VALID": {
             "value": "1"
@@ -1128,7 +1128,7 @@
             "value": "1"
           },
           "PCW_QSPI_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "200"
           },
           "PCW_QSPI_QSPI_IO": {
             "value": "MIO 1 .. 6"

@@ -63,6 +63,8 @@ int main(void)
 int CanPsIntrExample(XCanPs *CanInstPtr, UINTPTR BaseAddress) 
 {
 	int Status;
+	XCanPs_Config *ConfigPtr;
+
 
 	/* Initialize the Can device.*/
 	ConfigPtr = XCanPs_LookupConfig(BaseAddress);

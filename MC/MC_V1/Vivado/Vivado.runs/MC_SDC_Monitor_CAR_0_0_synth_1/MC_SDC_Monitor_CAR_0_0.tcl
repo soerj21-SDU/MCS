@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "MC_SDC_Monitor_CAR_0_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/mref

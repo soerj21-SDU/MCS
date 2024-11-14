@@ -21,7 +21,7 @@
 				"resetSystem": true,
 				"programDevice": true,
 				"resetAPU": false,
-				"bitstreamFile": "C:\\B_Git\\MCS\\MC\\MC_V1\\Vitis\\platform\\hw\\sdt\\MC_wrapper_v2.bit",
+				"bitstreamFile": "C:\\B_Git\\MCS\\MC\\MC_V1\\Vitis\\platform\\hw\\sdt\\MC_wrapper.bit",
 				"zynqInitialization": {
 					"isFsbl": false,
 					"usingFSBL": {

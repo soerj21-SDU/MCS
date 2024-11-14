@@ -25,18 +25,18 @@ int main()
         {
             case (ST_INIT) : //----------------------------------------------------------------------------
             {
-                status = init_SDC();
-                    if (status != XST_SUCCESS)
-                    {
-                        print ("Initialization of Shutdown Circuit failed.");
-                        return XST_FAILURE;
-                    }
-
-                // status = CAN_init(&CAN0_PS_inst, CAN0_base_address);
-                //     if (status != XST_SUCCESS) {
-                //         xil_printf("Initialization of CAN0 failed.");
+                // status = init_SDC();
+                //     if (status != XST_SUCCESS)
+                //     {
+                //         print ("Initialization of Shutdown Circuit failed.");
                 //         return XST_FAILURE;
                 //     }
+
+                status = CAN_init(&CAN0_PS_inst, CAN0_base_address);
+                    if (status != XST_SUCCESS) {
+                        xil_printf("Initialization of CAN0 failed.");
+                        return XST_FAILURE;
+                    }
 
                 // status = CAN_init(&CAN1_PS_inst, CAN1_base_address);
                 //     if (status != XST_SUCCESS) {
@@ -44,31 +44,50 @@ int main()
                 //         return XST_FAILURE;
                 //     }
 
-
-
+                CAN_enter_loopback_mode(&CAN0_PS_inst);
+                    
                 state = ST_IDLE;
                 break;
             }
 
             case (ST_IDLE) : //----------------------------------------------------------------------------
             { 
-                bool k;
 
-                for(int i = 0; i < DELAY; i++){};
 
-                // k = get_SDC_BOTS_Status();
-                // if (k == true)
+                print("\nSending data...");
+                CAN_Send_TestFrame(&CAN0_PS_inst);
+                // for (int i = 0; i < XCANPS_MAX_FRAME_SIZE_IN_WORDS; i++) 
                 // {
-                //     print("\nBOTS is connected");
+                //     printf("\nTxFrame[%d] = %u", i, TxFrame[i]);
                 // }
-                // else if (k == FALSE)
+
+
+                print("\nReceiveing data...");
+                // for (int i = 0; i < XCANPS_MAX_FRAME_SIZE_IN_WORDS; i++) 
                 // {
-                //     print("\nK is not connected");
+                //     printf("\nRxFrame[%d] = %u", i, RxFrame[i]);
                 // }
-                for(int i = 0; i < DELAY; i++){};
+
+                // print("\nprinting id...");
+
+                printf("\nRxFrame[0] = 11-bit ID = %u", RxFrame[0]);
+                // printf("\n%u", RxFrame[0]);
 
 
-                // CAN_enter_loopback_mode(&CAN0_PS_inst);
+                printf("\nI am stupid.");
+
+
+
+
+                for(int i = 0; i < 1000000000; i++)
+                {
+
+                } //1 sec delay
+
+
+
+
+
                 // CAN_enter_loopback_mode(&CAN1_PS_inst);
 
                 
@@ -92,7 +111,6 @@ int main()
 
                 
                 // do // Receive a frame and verify contents. This function returns XST_FAILURE if RX FIFO is empty.
-
                 // {
                 //     status = CAN_receive(&CAN0_PS_inst, RxFrame0);
                 // }

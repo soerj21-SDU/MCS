@@ -153,6 +153,7 @@ set_property MARK_DEBUG true [get_nets {MC_i/SDC_Monitor_CAR_0/U0/SDC_VECTOR_O[8
 set_property MARK_DEBUG true [get_nets {MC_i/SDC_Monitor_CAR_0/U0/SDC_VECTOR_O[12]}]
 set_property MARK_DEBUG true [get_nets {MC_i/SDC_Monitor_CAR_0/U0/SDC_VECTOR_O[15]}]
 set_property MARK_DEBUG true [get_nets {MC_i/SDC_Monitor_CAR_0/U0/SDC_VECTOR_O[16]}]
+
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]

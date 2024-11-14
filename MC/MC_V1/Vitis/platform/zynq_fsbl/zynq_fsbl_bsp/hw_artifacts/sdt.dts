@@ -220,7 +220,7 @@
                         rx-fifo-depth = <0x40>;
                         xlnx,rable = <0x0>;
                         xlnx,interconnect-s-axi-masters = "ps7_cortexa9_0.M_AXI_DP , & , ps7_cortexa9_1.M_AXI_DP";
-                        xlnx,can-clk-freq-hz = <0x5f5e100>;
+                        xlnx,can-clk-freq-hz = <0x16b4df5>;
                         xlnx,ip-name = "ps7_can";
                         xlnx,name = "ps7_can_0";
                         phandle = <0xa>;
@@ -239,7 +239,7 @@
                         rx-fifo-depth = <0x40>;
                         xlnx,rable = <0x0>;
                         xlnx,interconnect-s-axi-masters = "ps7_cortexa9_0.M_AXI_DP , & , ps7_cortexa9_1.M_AXI_DP";
-                        xlnx,can-clk-freq-hz = <0x5f5e100>;
+                        xlnx,can-clk-freq-hz = <0x16b4df5>;
                         xlnx,ip-name = "ps7_can";
                         xlnx,name = "ps7_can_1";
                         phandle = <0xb>;

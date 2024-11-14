@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "MC_processing_system7_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -76,7 +77,7 @@ set_property ip_output_repo c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.cache/ip [curren
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/bd/MC/ip/MC_processing_system7_0_0/MC_processing_system7_0_0.xci
+read_ip -quiet C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/bd/MC/ip/MC_processing_system7_0_0/MC_processing_system7_0_0.xci
 set_property used_in_implementation false [get_files -all c:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_processing_system7_0_0/MC_processing_system7_0_0.xdc]
 
 OPTRACE "Adding files" END { }

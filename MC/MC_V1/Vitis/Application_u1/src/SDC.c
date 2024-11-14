@@ -25,7 +25,7 @@ int init_SDC()
     status = setup_AXI_GPIO(SDC_AXI_Address, &SDC_axi_gpio_inst, GPIO_CHANNEL_1, DIR_INPUT);
     
     print ("\n Setting up SDC AXI Interrupt");
-    status = setupInterrupts(&SDC_axi_gpio_inst, SDC_AXI_Address, 1, &SDC_ISR);
+    status = setup_GPIO_Interrupt(&SDC_axi_gpio_inst, SDC_AXI_Address, 1, &SDC_ISR);
 
     return status;
 }

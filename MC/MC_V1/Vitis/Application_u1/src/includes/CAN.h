@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "xparameters.h"
-#include "xcanps.h"
+// #include "xcanps.h"
+#include <xcanps.h>
 #include "xinterrupt_wrap.h"
 #include <stdint.h>
 #include <stdbool.h>
@@ -25,22 +26,15 @@
 #define CAN0_base_address                   XPAR_XCANPS_0_BASEADDR
 #define CAN1_base_address                   XPAR_XCANPS_1_BASEADDR
 
+
 extern XCanPs  CAN0_PS_inst;
 extern XCanPs  CAN1_PS_inst;
 extern XCanPs_Config *CAN_CFG_ptr;
 
-// Buffers to hold frames. Global to not be on stack. Must be 32-bit aligned.
-extern u32 TxFrame0[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
-extern u32 RxFrame0[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
-
-extern u32 TxFrame1[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
-extern u32 RxFrame1[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
-
-
 int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress); // Initializes the CAN hardware to 1 Mbit/s and runs checks as needed
 void CAN_Config(XCanPs *InstancePtr);                       
 int CAN_send(XCanPs *InstancePtr, u32 *frameptr);      // Sends the data stored within the transmit buffer
-int CAN_receive(XCanPs *InstancePtr, u32 *frameptr);   // Puts received data into the receive buffer
+// int CAN_receive(XCanPs *InstancePtr, u32 *frameptr);   // Puts received data into the receive buffer
 void CAN_enter_normal_mode(XCanPs *InstancePtr) ;     
 void CAN_enter_loopback_mode(XCanPs *InstancePtr);     // Zynq talks with itself. 
 void CAN_enter_sleep_mode(XCanPs *InstancePtr);        // low-power mode. 
@@ -48,7 +42,17 @@ void CAN_enter_snoop_mode(XCanPs *InstancePtr);        // can sniff/snoop on CAN
 bool CAN_is_TX_ready(XCanPs *InstancePtr);             // Checks whether TX  is ready 
 bool CAN_is_TX_FIFO_Full(XCanPs *InstancePtr);        
 bool CAN_is_RX_ready(XCanPs *InstancePtr);             // Checks whether RX FIFO is ready or empty
+void CAN_Send_TestFrame(XCanPs *InstancePtr);
+// void CAN_Receive_TestFrame(XCanPs *InstancePtr);
 
+static void SendHandler(void *CallBackRef);
+static void RecvHandler(void *CallBackRef);
+static void ErrorHandler(void *CallBackRef, u32 ErrorMask);
+static void EventHandler(void *CallBackRef, u32 IntrMask);
+
+
+extern u32 TxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
+extern u32 RxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
 
 
 // void XCanPs_IntrEnable(XCanPs *InstancePtr, u32 Mask);
@@ -63,3 +67,4 @@ bool CAN_is_RX_ready(XCanPs *InstancePtr);             // Checks whether RX FIFO
 // u32 XCanPs_GetStatus(XCanPs *InstancePtr);
 
 // XCanPs_IsTxDone
+

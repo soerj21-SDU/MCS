@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Nov  1 09:49:21 2024
-# Process ID: 10328
+# Start of session at: Mon Nov 11 08:42:45 2024
+# Process ID: 21128
 # Current directory: C:/B_Git/MCS/MC/MC_V1/Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11096 C:\B_Git\MCS\MC\MC_V1\Vivado\Vivado.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1200 C:\B_Git\MCS\MC\MC_V1\Vivado\Vivado.xpr
 # Log file: C:/B_Git/MCS/MC/MC_V1/Vivado/vivado.log
 # Journal file: C:/B_Git/MCS/MC/MC_V1/Vivado\vivado.jou
 # Running On        :mikkelsPC
@@ -19,102 +19,7 @@
 # Host memory       :8379 MB
 # Swap memory       :25769 MB
 # Total Virtual     :34149 MB
-# Available Virtual :19983 MB
+# Available Virtual :21117 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.xpr
-update_compile_order -fileset sources_1
-open_bd_design {C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/bd/MC/MC.bd}
-delete_bd_objs [get_bd_nets SDC_Monitor_CAR_0_IS_SDC_CLOSED_VECTOR_O]
-startgroup
-set_property CONFIG.C_GPIO_WIDTH {5} [get_bd_cells axi_gpio_0]
-endgroup
-save_bd_design
-report_ip_status -name ip_status 
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-connect_bd_net [get_bd_pins SDC_Monitor_CAR_0/SDC_VECTOR_O] [get_bd_pins axi_gpio_0/gpio_io_i]
-save_bd_design
-delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_nets axi_gpio_1_gpio_io_o] [get_bd_cells axi_gpio_1]
-delete_bd_objs [get_bd_ports PL_USER_LED]
-startgroup
-set_property CONFIG.NUM_MI {1} [get_bd_cells ps7_0_axi_periph]
-endgroup
-delete_bd_objs [get_bd_nets CLK_divider_0_CLK_O] [get_bd_cells CLK_divider_0]
-update_compile_order -fileset sources_1
-save_bd_design
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2
-endgroup
-set_property location {1922 504} [get_bd_ports PL_ALIVE_LED]
-connect_bd_net [get_bd_ports PL_ALIVE_LED] [get_bd_pins xlconstant_2/dout]
-set_property location {1914 518} [get_bd_ports PL_ALIVE_LED]
-validate_bd_design
-regenerate_bd_layout
-set_property name xlconstant [get_bd_cells xlconstant_2]
-save_bd_design
-reset_run synth_1
-reset_run MC_axi_gpio_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-startgroup
-endgroup
-startgroup
-set_property CONFIG.NO_OF_SDC_INPUT_BIT_WIDTH {4} [get_bd_cells SDC_Monitor_CAR_0]
-endgroup
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-startgroup
-set_property CONFIG.C_GPIO_WIDTH {17} [get_bd_cells axi_gpio_0]
-endgroup
-save_bd_design
-reset_run synth_1
-reset_run MC_SDC_Monitor_CAR_0_0_synth_1
-reset_run MC_axi_gpio_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-write_hw_platform -fixed -include_bit -force -file C:/B_Git/MCS/MC/MC_V1/Vivado/MC_wrapper.xsa
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-validate_bd_design
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-reset_run impl_1
-report_ip_status -name ip_status 
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-write_hw_platform -fixed -include_bit -force -file C:/B_Git/MCS/MC/MC_V1/Vitis/MC_wrapper_v2.xsa
-report_ip_status -name ip_status 
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-report_ip_status -name ip_status 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.runs/impl_1/MC_wrapper.bit} [get_hw_devices xc7z020_1]
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
-open_run synth_1 -name synth_1
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*sdc*" && TYPE == "DONT_CARE" } ]
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*sdc*" && TYPE == "DONT_CARE" } ]
-report_ip_status -name ip_status 
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/bd/MC/MC.bd]
-refresh_design
-report_ip_status -name ip_status 
-update_module_reference [get_ips  MC_SDC_Monitor_CAR_0_0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
