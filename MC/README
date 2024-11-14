@@ -1,0 +1,4 @@
+Due to hardware error is it not possible to run the xADC together with GPIO.
+This is because they have been placed on the same bank, and they require different VCC0.
+xADC = 1.8 
+GPIO = 3.3

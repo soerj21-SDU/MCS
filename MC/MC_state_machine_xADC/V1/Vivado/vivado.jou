@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Nov 12 15:51:05 2024
+# Process ID: 18144
+# Current directory: C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25056 C:\Git\GitHub\MCS\MC\MC_state_machine_xADC\V1\Vivado\Vivado.xpr
+# Log file: C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/vivado.log
+# Journal file: C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado\vivado.jou
+# Running On        :Soeren-Laptop
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16969 MB
+# Swap memory       :16106 MB
+# Total Virtual     :33075 MB
+# Available Virtual :16186 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.srcs/sources_1/bd/MC/MC.bd}
+delete_bd_objs [get_bd_nets COCKPIT_EMERGENCY_I_0_1] [get_bd_nets R_EMERGENCY_BUTTON_I_0_1] [get_bd_nets FL_WHEEL_I_0_1] [get_bd_nets RL_WHEEL_I_0_1] [get_bd_nets xlconstant_1_dout] [get_bd_nets TSMS_I_0_1] [get_bd_nets SDC_SUPPLY_I_0_1] [get_bd_nets BOTS_I_0_1] [get_bd_nets INERTIA_I_0_1] [get_bd_nets L_EMERGENCY_BUTTON_I_0_1] [get_bd_nets FR_WHEEL_I_0_1] [get_bd_nets RR_WHEEL_I_0_1] [get_bd_nets SDC_Monitor_CAR_0_SDC_VECTOR_O] [get_bd_cells SDC_Monitor_CAR_0]
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_ports SDC_SUPPLY_I]
+delete_bd_objs [get_bd_ports COCKPIT_EMERGENCY_I]
+delete_bd_objs [get_bd_ports BOTS_I]
+delete_bd_objs [get_bd_ports INERTIA_I]
+delete_bd_objs [get_bd_ports R_EMERGENCY_BUTTON_I]
+delete_bd_objs [get_bd_ports L_EMERGENCY_BUTTON_I]
+delete_bd_objs [get_bd_ports FR_WHEEL_I]
+delete_bd_objs [get_bd_ports RR_WHEEL_I]
+delete_bd_objs [get_bd_ports FL_WHEEL_I]
+delete_bd_objs [get_bd_ports RL_WHEEL_I]
+delete_bd_objs [get_bd_cells xlconstant_1]
+delete_bd_objs [get_bd_ports TSMS_I]
+set_property USER_COMMENTS.comment_0 {}  [current_bd_design]
+delete_bd_objs [get_bd_nets axi_gpio_0_ip2intc_irpt] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells axi_gpio_0]
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
