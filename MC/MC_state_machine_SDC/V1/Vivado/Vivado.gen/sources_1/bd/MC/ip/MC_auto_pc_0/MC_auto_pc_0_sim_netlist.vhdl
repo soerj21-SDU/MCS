@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Tue Nov 12 15:47:20 2024
+-- Date        : Tue Nov 12 15:47:19 2024
 -- Host        : Soeren-Laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_auto_pc_0/MC_auto_pc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top MC_auto_pc_0 -prefix
+--               MC_auto_pc_0_ MC_auto_pc_0_sim_netlist.vhdl
 -- Design      : MC_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,8 +35,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd is
     axaddr_incr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     \axlen_cnt_reg[5]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_31_b2s_incr_cmd";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_incr_cmd is
@@ -1368,8 +1366,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is
     m_valid_i_reg_0 : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is
@@ -1975,8 +1971,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo is
     aclk : in STD_LOGIC;
     shandshake_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_31_b2s_simple_fifo";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_simple_fifo is
@@ -3746,8 +3740,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm is
     cnt_read : in STD_LOGIC_VECTOR ( 1 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm is
@@ -4432,8 +4424,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd is
     \wrap_boundary_axaddr_r_reg[6]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \axaddr_wrap_reg[11]_1\ : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_31_b2s_wrap_cmd";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_wrap_cmd is
@@ -5615,8 +5605,6 @@ entity MC_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice is
     sel_first_1 : in STD_LOGIC;
     \m_payload_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice : entity is "axi_register_slice_v2_1_31_axic_register_slice";
 end MC_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_register_slice_v2_1_31_axic_register_slice is
@@ -11996,8 +11984,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel is
     \in\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel : entity is "axi_protocol_converter_v2_1_31_b2s_b_channel";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_b_channel is
@@ -12340,8 +12326,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator is
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \axaddr_wrap_reg[11]_0\ : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_31_b2s_cmd_translator";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_cmd_translator is
@@ -12625,8 +12609,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel is
     D : in STD_LOGIC_VECTOR ( 11 downto 0 );
     areset_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel : entity is "axi_protocol_converter_v2_1_31_b2s_r_channel";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_r_channel is
@@ -12870,8 +12852,6 @@ entity MC_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice : entity is "axi_register_slice_v2_1_31_axi_register_slice";
 end MC_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_register_slice_v2_1_31_axi_register_slice is
@@ -13031,8 +13011,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel is
     \axaddr_incr_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_31_b2s_ar_channel";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_ar_channel is
@@ -13399,8 +13377,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel is
     axaddr_incr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_31_b2s_aw_channel";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s_aw_channel is
@@ -13743,8 +13719,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s is
     s_axi_arvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s : entity is "axi_protocol_converter_v2_1_31_b2s";
 end MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s;
 
 architecture STRUCTURE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_b2s is
@@ -14419,8 +14393,6 @@ entity MC_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter is
   attribute C_TRANSLATION_MODE of MC_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of MC_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MC_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_31_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of MC_auto_pc_0_axi_protocol_converter_v2_1_31_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;

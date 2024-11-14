@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Nov 12 15:48:12 2024
+| Date         : Thu Nov 14 11:56:32 2024
 | Host         : Soeren-Laptop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MC_wrapper_utilization_synth.rpt -pb MC_wrapper_utilization_synth.pb
 | Design       : MC_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   24 |     0 |          0 |       125 | 19.20 |
+| Bonded IOB                  |   59 |     0 |          0 |       125 | 47.20 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,7 +149,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   16 |                  IO |
+| IBUF     |   51 |                  IO |
+| OBUFT    |   35 |                  IO |
 | OBUF     |    8 |                  IO |
 +----------+------+---------------------+
 
@@ -163,6 +164,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | MC_xbar_0                 |    1 |
 | MC_rst_ps7_0_100M_0       |    1 |
 | MC_processing_system7_0_0 |    1 |
+| MC_axi_gpio_2_0           |    1 |
+| MC_axi_gpio_1_0           |    1 |
 | MC_axi_gpio_0_0           |    1 |
 | MC_auto_pc_0              |    1 |
 | MC_SDC_Monitor_CAR_0_0    |    1 |

@@ -33,6 +33,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xlconsta
 # IP: bd/MC/ip/MC_xlconstant_2_0/MC_xlconstant_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_xlconstant_2_0 || ORIG_REF_NAME==MC_xlconstant_2_0} -quiet] -quiet
 
+# IP: bd/MC/ip/MC_axi_gpio_1_0/MC_axi_gpio_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_axi_gpio_1_0 || ORIG_REF_NAME==MC_axi_gpio_1_0} -quiet] -quiet
+
+# IP: bd/MC/ip/MC_axi_gpio_2_0/MC_axi_gpio_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_axi_gpio_2_0 || ORIG_REF_NAME==MC_axi_gpio_2_0} -quiet] -quiet
+
 # IP: bd/MC/ip/MC_auto_pc_0/MC_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MC_auto_pc_0 || ORIG_REF_NAME==MC_auto_pc_0} -quiet] -quiet
 
