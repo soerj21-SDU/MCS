@@ -22,7 +22,9 @@
 #include <portmacro.h>
 
 #include <stdio.h>
+#include "GPIO.h"
 #include "states.h"
+#include "SDC.h"
 
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
@@ -144,10 +146,9 @@ static void main_state_machine_task( void *pvParameters )
                 break;                
             }
         }
-        vTaskDelay(100); // 100 ms delay
+
 	}
 }
-
 
 
 /*-----------------------------------------------------------*/

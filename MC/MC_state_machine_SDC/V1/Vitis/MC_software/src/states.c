@@ -1,11 +1,44 @@
 #include "states.h"
 #include "xparameters.h"
+#include "xgpiops.h"
 
+/* MIO declerations */
+#define MIO_GPIO_BaseAddress XPAR_XGPIOPS_0_BASEADDR
 
+// Actuator pins MIO
+#define Cool_FET_In_channel 0
+#define Brake_SSR_In_channel 42
+#define RTDS_SSR_In_channel 44
+XGpioPs IPrtCool_FET_In;
+XGpioPs IPrtBrake_SSR_In;
+XGpioPs IPrtRTDS_SSR_In;
+
+// Power Distribution pins MIO
+#define Dash_FET_In_channel 48
+#define AMS_FET_In_channel 40
+#define DASH_AMS_SEL_channel 45
+#define TSC_INV12_SEL_channel 49
+#define TSC_FET_In_channel 50
+#define INV12_FET_In_channel 46
+#define SNET_FET_In_channel 51
+#define INV34_FET_In_channel 47
+#define SNET_INV34_SEL_channel 43
+
+XGpioPs IPrtDash_FET_In;
+XGpioPs IPrtAMS_FET_In;
+XGpioPs IPrtDASH_AMS_SEL;
+XGpioPs IPrtTSC_INV12_SEL; 
+XGpioPs IPrtTSC_FET_In;
+XGpioPs IPrtINV12_FET_In;
+XGpioPs IPrtSNET_FET_In;
+XGpioPs IPrtINV34_FET_In;
+XGpioPs IPrtSNET_INV34_SEL;
+
+XGpioPs_Config *GPIOConfigPtr;
 
 int state_init(){
     //
-    printf("Init state");
+    printf("init state");
     init_SDC();
     // Actuator pins
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtCool_FET_In, Cool_FET_In_channel, 1); // 1 in direction = output
@@ -35,7 +68,7 @@ int state_init(){
     XGpioPs_WritePin(&IPrtINV34_FET_In, INV34_FET_In_channel, 0x1); // 1= high
     XGpioPs_WritePin(&IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel, 0x1); // 1= high
 
-    printf("Initializing done");
+
     return ST_IDLE; 
 }
 
@@ -64,30 +97,30 @@ int state_lv_systems_active(){
 
 void state_precharging(){
     //
-    printf("Precharging state");
+    printf("precharging state");
 
 }
 
 void state_tractive(){
     //
-    printf("Tractive state");
+    printf("tractive state");
 
 }
 
 void state_drive(){
     //
-    printf("Drive state");
+    printf("drive state");
 
 }
 
 void state_shutdown(){
     //
-    printf("Shutdown state");
+    printf("shutdown state");
 }
 
 void state_error(){
     //
-    printf("Error state");
+    printf("error state");
 
 }
 
