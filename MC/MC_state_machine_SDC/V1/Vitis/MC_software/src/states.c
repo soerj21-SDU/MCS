@@ -36,6 +36,10 @@ XGpioPs IPrtSNET_INV34_SEL;
 
 XGpioPs_Config *GPIOConfigPtr;
 
+float ts_measurement = 0;
+
+
+
 int state_init(){
     //
     printf("init state");
@@ -88,6 +92,7 @@ int state_idle(){
 int state_lv_systems_active(){
     //
     printf("Lv systems active state");
+    // Function to check if Precharge button has been pressed
     if (Precharge_button == 1) 
     {
         return ST_PRECHARGING;
@@ -95,27 +100,50 @@ int state_lv_systems_active(){
     return ST_LV_SYSTEMS_ACTIVE;
 }
 
-void state_precharging(){
-    //
+int state_precharging(){
+    //    
     printf("precharging state");
-
+    // Function to check if ts measurement has been pressed
+    // Add timeout function
+    if (ts_measurement > 95) {
+        printf("precharging complete");
+        return ST_TRACTIVE;
+    }
+    return ST_PRECHARGING;
 }
 
-void state_tractive(){
+int state_tractive(){
     //
     printf("tractive state");
-
+    int brake_pedal_status = 1;
+    int torque_pedal_status = 1;
+    int drive_buton = 1;
+    if (brake_pedal_status && torque_pedal_status && drive_buton == 1) {  
+        return ST_DRIVE;
+    }
+    return ST_TRACTIVE;
 }
 
-void state_drive(){
+int state_drive(){
     //
     printf("drive state");
+    // int torque_implausibility = 1;
+    // int torque_disconnect = 1;
+    // int stop_command = 1;  
+    if (torque_implausibility || torque_disconnect || tractive_stop == 1) {
+        return ST_TRACTIVE;
+    }
 
+    // READ BP0, BP1, TP0 & TP 1 and send values to relevant functions in state_drive()
+
+    return ST_DRIVE;
 }
 
+
 void state_shutdown(){
-    //
+    // This function is to ensure all the data is saved corretly. 
     printf("shutdown state");
+    while (1) {}    
 }
 
 void state_error(){

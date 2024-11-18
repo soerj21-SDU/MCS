@@ -114,21 +114,21 @@ static void main_state_machine_task( void *pvParameters )
                 switch (state) {
             case ST_PRECHARGING:
             {
-                printf("Init state");
+                state = state_precharging();
                 break;                
             }
         }
         switch (state) {
             case ST_TRACTIVE:
             {
-                printf("Init state");
+                state = state_tractive();
                 break;                
             }
         }
         switch (state) {
             case ST_DRIVE:
             {
-                printf("Init state");
+                state = state_drive();
                 break;                
             }
         }
