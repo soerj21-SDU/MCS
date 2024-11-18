@@ -44,8 +44,12 @@ int main()
                 //         return XST_FAILURE;
                 //     }
 
-                CAN_enter_loopback_mode(&CAN0_PS_inst);
-                    
+
+                // CAN_enter_loopback_mode(&CAN0_PS_inst);
+                XCanPs_EnterMode(&CAN0_PS_inst, XCANPS_MODE_LOOPBACK);
+	                while (XCanPs_GetMode(&CAN0_PS_inst) != XCANPS_MODE_LOOPBACK){};
+
+
                 state = ST_IDLE;
                 break;
             }
@@ -53,28 +57,41 @@ int main()
             case (ST_IDLE) : //----------------------------------------------------------------------------
             { 
 
-// JEG ER NÅET HERHERTUL------------------------------------------------------------------------------------
-                print("\nSending data...");
+
+                // int k, y; 
+                // k = XCanPs_GetMode(&CAN0_PS_inst);
+                // y = XCanPs_GetStatus(&CAN0_PS_inst);
+                
+                // printf("\nmode = %d",k);
+                // printf("\nstatus  = %d",y);
+
+
+                // print("\nSending data...");
                 CAN_Send_TestFrame(&CAN0_PS_inst);
-                // for (int i = 0; i < XCANPS_MAX_FRAME_SIZE_IN_WORDS; i++) 
-                // {
-                //     printf("\nTxFrame[%d] = %u", i, TxFrame[i]);
-                // }
+
+                u32 upper4Bits = (TxFrame[1] & 0xF0000000) >> 28;
 
 
-                print("\nReceiveing data...");
-                for (int i = 0; i < 16; i++) 
-                {
-                    printf("\nRxFrame[%d] = %u", i, RxFrame[i]);
-                }
 
-                print("\nprinting id...");
+                printf("\n TxFrame[0] = ID  = %u", TxFrame[0]);
+                // printf("\n TxFrame[1] = DLC = %u", TxFrame[1]);
+                printf("\nUpper 4 bits of TxFrame[1] = %u", upper4Bits);  // %X prints in hexadecimal
+                printf("\n TxFrame[2] = DataWord1 = %u", TxFrame[2]);
+                printf("\n TxFrame[3] = DataWord2 = %u", TxFrame[3]);
+
+                printf("\n RxFrame[0] = ID  = %u", RxFrame[0]);
+                // printf("\n RxFrame[1] = DLC = %u", RxFrame[1]);
+                printf("\nUpper 4 bits of TxFrame[1] = %u", upper4Bits);  // %X prints in hexadecimal
+                printf("\n RxFrame[2] = DataWord1 = %u", RxFrame[2]);
+                printf("\n RxFrame[3] = DataWord2 = %u", RxFrame[3]);
+
+                printf("\n RxFrame[3] = DataWord2 = %u", RxFrame[3]);
+                // print("\nprinting id...");
 
                 // printf("\nRxFrame[0] = 11-bit ID = %u", RxFrame[0]);
                 // printf("\n%u", RxFrame[0]);
 
 
-                printf("\nI am stupid.");
 
 
 

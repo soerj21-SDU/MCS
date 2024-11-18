@@ -1,5 +1,6 @@
 #include "includes/CAN.h"
 #include <xil_types.h>
+#include <xstatus.h>
 
 XCanPs  CAN0_PS_inst;
 XCanPs  CAN1_PS_inst;
@@ -7,12 +8,17 @@ XCanPs_Config *CAN_CFG_ptr;
 
 // Buffers to hold frames. Global to not be on stack. Must be 32-bit aligned.
 u32 TxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS] = {0};
-u32 RxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS]  ={0};
+u32 RxFrame[4]  ={0};
 
 // Shared variables used to test the callback mode
 static volatile int LoopbackError;	/* Asynchronous error occurred */
 static volatile int RecvDone;		/* Received a frame */
 static volatile int SendDone;		/* Frame was sent successfully */
+
+static void SendHandler(void *CallBackRef); 
+static void RecvHandler(void *CallBackRef);
+static void ErrorHandler(void *CallBackRef, u32 ErrorMask);
+static void EventHandler(void *CallBackRef, u32 IntrMask);
 
 int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress)
 {
@@ -24,11 +30,17 @@ int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress)
             return XST_FAILURE;
         }
 
-    XCanPs_CfgInitialize(CanInstPtr, CAN_CFG_ptr, CAN_CFG_ptr->BaseAddr); 	// Initialize hardware configuration
-
+    status = XCanPs_CfgInitialize(CanInstPtr, CAN_CFG_ptr, CAN_CFG_ptr->BaseAddr); 	// Initialize hardware configuration
+        if (status != XST_SUCCESS) 
+        {
+            printf("\nxst_state = %d \n \n \n \n", status );
+            return XST_FAILURE;
+        }
+        
 	status = XCanPs_SelfTest(CanInstPtr);	// Check that hardware is correctly built
         if (status != XST_SUCCESS) 
         {
+            printf("\nxst_state of selfetest = %d \n \n \n \n", status );
             return XST_FAILURE;
         }
 
@@ -56,9 +68,6 @@ int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress)
 
 
 
-XCanPs_IsTxDone
-XCanPs_IsRxEmpty
-
 	// XCanPs_EnterMode(CanInstPtr, XCANPS_MODE_LOOPBACK);	// Enter Loop Back Mode.
 	//     while (XCanPs_GetMode(CanInstPtr) != XCANPS_MODE_LOOPBACK);
 
@@ -79,21 +88,21 @@ XCanPs_IsRxEmpty
 }
 
 
-void CAN_Config(XCanPs *InstancePtr)
+int CAN_Config(XCanPs *InstancePtr)
 {
+    int status; 
+
 	XCanPs_EnterMode(InstancePtr, XCANPS_MODE_CONFIG);
     	while (XCanPs_GetMode(InstancePtr) != XCANPS_MODE_CONFIG);
     
     /* Setup Baud Rate Prescaler Register (BRPR) and Bit Timing Register (BTR). */
     XCanPs_SetBaudRatePrescaler(InstancePtr, BRPR_BAUD_PRESCALAR);	// Set Baud Rate Prescaler
+    if (status != XST_SUCCESS)  {  return XST_FAILURE;  }
+
     XCanPs_SetBitTiming(InstancePtr,    BTR_SYNCJUMPWIDTH,    BTR_SECOND_TIMESEGMENT,    BTR_FIRST_TIMESEGMENT);
+    if (status != XST_SUCCESS)  {  return XST_FAILURE;  }
 }
 
-
-int CAN_send(XCanPs *InstancePtr, u32 *frameptr) 
-{
-	return XCanPs_Send(InstancePtr, frameptr);
-}
 
 void CAN_enter_normal_mode(XCanPs *InstancePtr) 
 {
@@ -129,40 +138,35 @@ bool CAN_is_TX_ready(XCanPs *InstancePtr)
 }
 
 
-bool CAN_is_TX_FIFO_Full(XCanPs *InstancePtr) 
-{
-    return XCanPs_IsTxFifoFull(InstancePtr);
-}
-
-
 bool CAN_is_RX_ready(XCanPs *InstancePtr) 
 {
     return XCanPs_IsRxEmpty(InstancePtr);
 }
 
 
-void CAN_Send_TestFrame(XCanPs *InstancePtr)
+int CAN_Send_TestFrame(XCanPs *InstancePtr)
 {
 	u8 *FramePtr;
 	int Index;
 	int Status;
 
     // Create value for identifier field
-	TxFrame[0] = (u32)XCanPs_CreateIdValue(  (u32)TEST_MESSAGE_ID,   DISABLE_SRR,   DISABLE_IDE,   NO_EXTENDED_ID,   SET_RTR);	
+	TxFrame[0] = (u32)XCanPs_CreateIdValue(  (u32)TEST_MESSAGE_ID,   DISABLED_SRR,   DISABLED_IDE,   NO_EXTENDED_ID,   DISABLED_RTR);	
 
     // Create value for Data Length Code Register. (how many data bytes in frame)
-	TxFrame[1] = (u32)XCanPs_CreateDlcValue((u32)FRAME_DATA_LENGTH); 
+	TxFrame[1] = (u32)XCanPs_CreateDlcValue(  (u32)FRAME_DATA_LENGTH  ); 
+	// TxFrame[1] = (u32)XCanPs_CreateDlcValue(  (u32)1  ); 
 
-
-	// Now fill in the data field with known values so we can verify them on receive. 
+	// Fill in the data-field with known values so we can verify them on receive. 
 	FramePtr = (u8 *)(&TxFrame[2]);
-	for (Index = 0; Index < FRAME_DATA_LENGTH; Index++) 
+    for (Index = 0; Index < FRAME_DATA_LENGTH; Index++) 
     {
-		*FramePtr++ = (u8)Index;
+		// *FramePtr++ = 0; //(u8)Index;
+        *FramePtr++ = (u8)Index;
+
 	}
 
-
-	// Now wait until the TX_FIFO is not full and send the frame. 
+	// Wait until the TX_FIFO is not full and send the frame. 
 	while (XCanPs_IsTxFifoFull(InstancePtr) == TRUE);
 
 	Status = XCanPs_Send(InstancePtr, TxFrame);
@@ -178,13 +182,16 @@ void CAN_Send_TestFrame(XCanPs *InstancePtr)
 
     // DELETE RecvDone PART WHEN NOT USING LOOPBACK.
     while ((SendDone != TRUE) || (RecvDone != TRUE));	// Wait here until both send interrupt and receive interrupt have been triggered.
-    print("\nSuccessfully sent test CAN Frame");
+    // print("\nSuccessfully sent test CAN Frame");
 
     if (LoopbackError == true)
     {
         print ("\nloopback error");
+        return XST_FAILURE;
     }
     else print("\nNo loopback error");
+
+    return XST_SUCCESS;
 }
 
 
@@ -208,7 +215,7 @@ static void SendHandler(void *CallBackRef)
 */
 static void RecvHandler(void *CallBackRef)
 {
-    print("\n \n A Receive interrupt has been made! ");    
+    // print("\n \n A Receive interrupt has been made! ");    
 
 	XCanPs *CanPtr = (XCanPs *)CallBackRef;    //set CanPtr to our driver instance
 	int Status;
@@ -224,7 +231,7 @@ static void RecvHandler(void *CallBackRef)
             return;
         }
 
-    print ("\nVeriyfying identifier");
+    // print ("\nVeriyfying identifier");
 	if (RxFrame[0] != (u32)XCanPs_CreateIdValue((u32)TEST_MESSAGE_ID, 0, 0, 0, 0)) 	//Verify Identifier is the same as the calculated sent one. Loopback
     {
 		LoopbackError = TRUE;
@@ -233,7 +240,7 @@ static void RecvHandler(void *CallBackRef)
 		return;
 	}
 
-    print ("\nVeriyfying DLC");
+    // print ("\nVeriyfying DLC");
 	// Verify Data Length Code.
 	if ((RxFrame[1] & ~XCANPS_DLCR_TIMESTAMP_MASK) != TxFrame[1]) 
     {
@@ -243,7 +250,7 @@ static void RecvHandler(void *CallBackRef)
 		return;
 	}
  
-    print ("\nVeriyfying data");
+    // print ("\nVeriyfying data");
 	/* Verify the Data field contents.*/
 	FramePtr = (u8 *)(&RxFrame[2]);
 	for (Index = 0; Index < FRAME_DATA_LENGTH; Index++) 
@@ -257,7 +264,7 @@ static void RecvHandler(void *CallBackRef)
 	}
 
 	RecvDone = TRUE;
-    print("\nSuccessfully received the data");
+    // print("\nSuccessfully received the data");
 }
 
 

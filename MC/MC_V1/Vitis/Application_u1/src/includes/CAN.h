@@ -58,19 +58,19 @@
 
 // Identifier field 
 #define NO_EXTENDED_ID   0 // If not using any extended ID,  "no ID"
-#define DISABLE_IDE      0 // DISABLE ID_EXTENSION_IDE
+#define DISABLED_IDE      0 // DISABLE ID_EXTENSION_IDE
 #define SET_SRR       1 // ENABLE_SUBSTITUTE_REMOTE_TRANSMISSION_REQUEST_SRR
-#define DISABLE_SRR      0 // NO_SUBSTITUTE_REMOTE_TRANSMISSION_REQUEST_SRR
+#define DISABLED_SRR      0 // NO_SUBSTITUTE_REMOTE_TRANSMISSION_REQUEST_SRR
 #define SET_RTR       1 // REMOTE_TRANSMISSION_REQUEST
-#define DISABLE_RTR      0 // DISABLE_REMOTE_TRANSMISSION_REQUEST
+#define DISABLED_RTR      0 // DISABLE_REMOTE_TRANSMISSION_REQUEST
 
 extern XCanPs  CAN0_PS_inst;
 extern XCanPs  CAN1_PS_inst;
 extern XCanPs_Config *CAN_CFG_ptr;
 
 int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress); // Initializes the CAN hardware to 1 Mbit/s and runs checks as needed
-void CAN_Config(XCanPs *InstancePtr);           
-void CAN_Send_TestFrame(XCanPs *InstancePtr);
+int CAN_Config(XCanPs *InstancePtr);           
+int CAN_Send_TestFrame(XCanPs *InstancePtr);
 
 int CAN_send(XCanPs *InstancePtr, u32 *frameptr);      // Sends the data stored within the transmit buffer
 void CAN_enter_normal_mode(XCanPs *InstancePtr) ;     
@@ -81,14 +81,17 @@ bool CAN_is_TX_ready(XCanPs *InstancePtr);             // Checks whether TX  is 
 bool CAN_is_TX_FIFO_Full(XCanPs *InstancePtr);        
 bool CAN_is_RX_ready(XCanPs *InstancePtr);             // Checks whether RX FIFO is ready or empty
 
-static void SendHandler(void *CallBackRef);
-static void RecvHandler(void *CallBackRef);
-static void ErrorHandler(void *CallBackRef, u32 ErrorMask);
-static void EventHandler(void *CallBackRef, u32 IntrMask);
-
+// static void SendHandler(void *CallBackRef); // skal disse være static?
+// static void RecvHandler(void *CallBackRef);
+// static void ErrorHandler(void *CallBackRef, u32 ErrorMask);
+// static void EventHandler(void *CallBackRef, u32 IntrMask);
+// static void SendHandler(void *CallBackRef); 
+// static void RecvHandler(void *CallBackRef);
+// static void ErrorHandler(void *CallBackRef, u32 ErrorMask);
+// static void EventHandler(void *CallBackRef, u32 IntrMask);
 
 extern u32 TxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
-extern u32 RxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
+extern u32 RxFrame[4];
 
 
 // void XCanPs_IntrEnable(XCanPs *InstancePtr, u32 Mask);
@@ -103,4 +106,5 @@ extern u32 RxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
 // u32 XCanPs_GetStatus(XCanPs *InstancePtr);
 
 // XCanPs_IsTxDone
+// XCanPs_IsRxEmpty
 
