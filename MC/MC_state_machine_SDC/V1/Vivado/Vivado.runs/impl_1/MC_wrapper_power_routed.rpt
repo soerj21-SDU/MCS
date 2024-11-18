@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Mon Nov 18 14:30:09 2024
+| Date             : Mon Nov 18 15:52:25 2024
 | Host             : Soeren-Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file MC_wrapper_power_routed.rpt -pb MC_wrapper_power_summary_routed.pb -rpx MC_wrapper_power_routed.rpx
 | Design           : MC_wrapper
@@ -59,7 +59,7 @@ Table of Contents
 |   CARRY4                |    <0.001 |       26 |     13300 |            0.20 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
 |   Others                |     0.000 |      210 |       --- |             --- |
-| Signals                 |     0.002 |     1483 |       --- |             --- |
+| Signals                 |     0.002 |     1482 |       --- |             --- |
 | I/O                     |     0.006 |       25 |       125 |           20.00 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.141 |          |           |                 |

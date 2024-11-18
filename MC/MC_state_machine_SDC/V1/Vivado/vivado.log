@@ -788,3 +788,18 @@ write_hw_platform -fixed -include_bit -force -file C:/Git/GitHub/MCS/MC/MC_state
 INFO: [Project 1-1918] Creating Hardware Platform: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/MC_wrapper_V4.xsa ...
 INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
 INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/MC_wrapper_V4.xsa
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210357AC43FCA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Common 17-48] File not found: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/MC_wrapper.ltx
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210357AC43FCA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/MC_wrapper.ltx]. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+ERROR: [Common 17-48] File not found: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/MC_wrapper.ltx
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA

@@ -3751,3 +3751,76 @@ dismissDialog("Export Hardware Platform"); // d (dialog42)
 // Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/MC_wrapper_V4.xsa ... 
 // Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/MC_wrapper_V4.xsa 
 dismissDialog("Export Hardware Platform"); // bj (Export Hardware Platform Progress)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 4785 ms. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4764 ms. Increasing delay to 14292 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 72 ms. Decreasing delay to 2072 ms.
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it. 
+// Tcl Message: ERROR: [Common 17-48] File not found: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/MC_wrapper.ltx 
+// Elapsed time: 857 seconds
+dismissDialog("Close Hardware Target"); // j.a (dialog43)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1997 ms. Increasing delay to 5991 ms.
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA 
+// Elapsed time: 194 seconds
+dismissDialog("Close Hardware Target"); // j.a (dialog44)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,004 MB. GUI used memory: 401 MB. Current time: 11/18/24, 2:50:55 PM CET
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  4768 ms.
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: ERROR: [Common 17-48] File not found: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/MC_wrapper.ltx 
+// Elapsed time: 1528 seconds
+dismissDialog("Close Hardware Target"); // j.a (dialog45)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,004 MB. GUI used memory: 405 MB. Current time: 11/18/24, 3:20:55 PM CET
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// Elapsed time: 510 seconds
+closeView(PAResourceOtoP.PAViews_DASHBOARD, "hw_ila_1"); // d (PAResourceOtoP.PAViews_DASHBOARD, PlanAheadTabhw_ila_1)
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA 
+dismissDialog("Close Hardware Target"); // j.a (dialog46)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 563 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Close Hardware Target"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Close Hardware Target"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Close Hardware Target"); // j.a (dialog47)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, MC, General Messages, [Common 17-48] File not found: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/MC_wrapper.ltx. ]", 5, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Node

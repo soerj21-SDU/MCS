@@ -37,7 +37,7 @@
 #define TIMER_CHECK_THRESHOLD	9
 
 /* PS ALlive */
-#define PS_allive_LED 54
+#define PS_allive_LED 41
 #define PS_allive_LED_Baseadress XPAR_XGPIOPS_0_BASEADDR
 
 XGpioPs_Config *ConfigPtr_PS_allive;

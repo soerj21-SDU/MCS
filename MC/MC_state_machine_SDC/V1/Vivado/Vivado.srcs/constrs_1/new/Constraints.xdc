@@ -94,9 +94,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports TSMS_I]
 set_property PACKAGE_PIN T5 [get_ports {PL_ALIVE_LED[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {PL_ALIVE_LED[0]}]
 
-set_property PACKAGE_PIN V8 [get_ports {GPIO_0_0_tri_io}]
-set_property IOSTANDARD LVCMOS33 [get_ports {GPIO_0_0_tri_io}]
-
 
 # set_property PACKAGE_PIN U5 [get_ports PL_USER_LED]
 # set_property IOSTANDARD LVCMOS33 [get_ports PL_USER_LED]
