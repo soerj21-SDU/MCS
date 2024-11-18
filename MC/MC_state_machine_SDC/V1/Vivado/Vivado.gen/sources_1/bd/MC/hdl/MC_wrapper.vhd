@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Thu Nov 14 14:03:07 2024
+--Date        : Mon Nov 18 14:04:31 2024
 --Host        : Soeren-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target MC_wrapper.bd
 --Design      : MC_wrapper
@@ -43,6 +43,7 @@ entity MC_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FL_WHEEL_I : in STD_LOGIC;
     FR_WHEEL_I : in STD_LOGIC;
+    GPIO_0_0_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     INERTIA_I : in STD_LOGIC;
     L_EMERGENCY_BUTTON_I : in STD_LOGIC;
     PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -109,10 +110,32 @@ architecture STRUCTURE of MC_wrapper is
     FL_WHEEL_I : in STD_LOGIC;
     RR_WHEEL_I : in STD_LOGIC;
     TSMS_I : in STD_LOGIC;
-    PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 )
+    PL_ALIVE_LED : out STD_LOGIC_VECTOR ( 0 to 0 );
+    GPIO_0_0_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    GPIO_0_0_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    GPIO_0_0_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component MC;
+  component IOBUF is
+  port (
+    I : in STD_LOGIC;
+    O : out STD_LOGIC;
+    T : in STD_LOGIC;
+    IO : inout STD_LOGIC
+  );
+  end component IOBUF;
+  signal GPIO_0_0_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal GPIO_0_0_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal GPIO_0_0_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal GPIO_0_0_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
+GPIO_0_0_tri_iobuf_0: component IOBUF
+     port map (
+      I => GPIO_0_0_tri_o_0(0),
+      IO => GPIO_0_0_tri_io(0),
+      O => GPIO_0_0_tri_i_0(0),
+      T => GPIO_0_0_tri_t_0(0)
+    );
 MC_i: component MC
      port map (
       BOTS_I => BOTS_I,
@@ -144,6 +167,9 @@ MC_i: component MC
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       FL_WHEEL_I => FL_WHEEL_I,
       FR_WHEEL_I => FR_WHEEL_I,
+      GPIO_0_0_tri_i(0) => GPIO_0_0_tri_i_0(0),
+      GPIO_0_0_tri_o(0) => GPIO_0_0_tri_o_0(0),
+      GPIO_0_0_tri_t(0) => GPIO_0_0_tri_t_0(0),
       INERTIA_I => INERTIA_I,
       L_EMERGENCY_BUTTON_I => L_EMERGENCY_BUTTON_I,
       PL_ALIVE_LED(0) => PL_ALIVE_LED(0),

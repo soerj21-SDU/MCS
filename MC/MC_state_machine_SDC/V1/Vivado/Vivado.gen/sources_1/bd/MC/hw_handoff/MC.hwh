@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 14 14:03:10 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 18 14:04:55 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:picozed_7020_som:part0:1.2" DEVICE="7z020" NAME="MC" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -149,6 +149,21 @@
         <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="FR_WHEEL_I"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" LEFT="0" NAME="GPIO_0_0_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_GPIO_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="GPIO_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="GPIO_0_0_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_GPIO_O">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="GPIO_O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="GPIO_0_0_tri_t" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_GPIO_T">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="GPIO_T"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="INERTIA_I" SIGIS="undef" SIGNAME="External_Ports_INERTIA_I">
       <CONNECTIONS>
         <CONNECTION INSTANCE="SDC_Monitor_CAR_0" PORT="INERTIA_I"/>
@@ -286,6 +301,13 @@
       <PORTMAPS>
         <PORTMAP LOGICAL="RX" PHYSICAL="CAN_1_rx"/>
         <PORTMAP LOGICAL="TX" PHYSICAL="CAN_1_tx"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="processing_system7_0_GPIO_0" NAME="GPIO_0_0" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO_0_0_tri_i"/>
+        <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO_0_0_tri_o"/>
+        <PORTMAP LOGICAL="TRI_T" PHYSICAL="GPIO_0_0_tri_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -603,7 +625,7 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="IRQ_F2P"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="1e+08" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
@@ -707,7 +729,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="MC_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="1e+08"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -767,7 +789,7 @@
         <PARAMETER NAME="C_DM_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_DQS_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_DQ_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_EMIO_GPIO_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_EMIO_GPIO_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_EN_EMIO_ENET0" VALUE="0"/>
         <PARAMETER NAME="C_EN_EMIO_ENET1" VALUE="0"/>
         <PARAMETER NAME="C_EN_EMIO_PJTAG" VALUE="0"/>
@@ -963,7 +985,7 @@
         <PARAMETER NAME="PCW_EN_EMIO_CD_SDIO1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_ENET0" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_ENET1" VALUE="0"/>
-        <PARAMETER NAME="PCW_EN_EMIO_GPIO" VALUE="0"/>
+        <PARAMETER NAME="PCW_EN_EMIO_GPIO" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_EMIO_I2C0" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_I2C1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_MODEM_UART0" VALUE="1"/>
@@ -1049,9 +1071,9 @@
         <PARAMETER NAME="PCW_GP1_NUM_READ_THREADS" VALUE="4"/>
         <PARAMETER NAME="PCW_GP1_NUM_WRITE_THREADS" VALUE="4"/>
         <PARAMETER NAME="PCW_GPIO_BASEADDR" VALUE="0xE000A000"/>
-        <PARAMETER NAME="PCW_GPIO_EMIO_GPIO_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PCW_GPIO_EMIO_GPIO_IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PCW_GPIO_EMIO_GPIO_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="PCW_GPIO_EMIO_GPIO_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PCW_GPIO_EMIO_GPIO_IO" VALUE="1"/>
+        <PARAMETER NAME="PCW_GPIO_EMIO_GPIO_WIDTH" VALUE="1"/>
         <PARAMETER NAME="PCW_GPIO_HIGHADDR" VALUE="0xE000AFFF"/>
         <PARAMETER NAME="PCW_GPIO_MIO_GPIO_ENABLE" VALUE="1"/>
         <PARAMETER NAME="PCW_GPIO_MIO_GPIO_IO" VALUE="MIO"/>
@@ -1303,7 +1325,7 @@
         <PARAMETER NAME="PCW_MIO_TREE_PERIPHERALS" VALUE="GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#Quad SPI Flash#GPIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet 0"/>
         <PARAMETER NAME="PCW_MIO_TREE_SIGNALS" VALUE="gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#data[0]#cmd#clk#data[1]#data[2]#data[3]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#gpio[28]#gpio[29]#gpio[30]#gpio[31]#gpio[32]#gpio[33]#gpio[34]#gpio[35]#gpio[36]#gpio[37]#gpio[38]#gpio[39]#gpio[40]#gpio[41]#gpio[42]#gpio[43]#gpio[44]#gpio[45]#gpio[46]#gpio[47]#gpio[48]#gpio[49]#gpio[50]#gpio[51]#mdc#mdio"/>
         <PARAMETER NAME="PCW_M_AXI_GP0_ENABLE_STATIC_REMAP" VALUE="0"/>
-        <PARAMETER NAME="PCW_M_AXI_GP0_FREQMHZ" VALUE="100.0"/>
+        <PARAMETER NAME="PCW_M_AXI_GP0_FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PCW_M_AXI_GP0_ID_WIDTH" VALUE="12"/>
         <PARAMETER NAME="PCW_M_AXI_GP0_SUPPORT_NARROW_BURST" VALUE="0"/>
         <PARAMETER NAME="PCW_M_AXI_GP0_THREAD_ID_WIDTH" VALUE="12"/>
@@ -1806,7 +1828,7 @@
             <CONNECTION INSTANCE="MC_imp" PORT="DDR_we_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="1e+08" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
@@ -1824,6 +1846,21 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="ext_reset_in"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="0" NAME="GPIO_I" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_GPIO_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MC_imp" PORT="GPIO_0_0_tri_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="GPIO_O" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_GPIO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MC_imp" PORT="GPIO_0_0_tri_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="GPIO_T" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_GPIO_T">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MC_imp" PORT="GPIO_0_0_tri_t"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="0" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_gpio_0_ip2intc_irpt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="ip2intc_irpt"/>
@@ -1834,7 +1871,7 @@
             <CONNECTION INSTANCE="MC_imp" PORT="FIXED_IO_mio"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="1e+08" DIR="I" NAME="M_AXI_GP0_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="M_AXI_GP0_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
@@ -2107,6 +2144,13 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="processing_system7_0_GPIO_0" NAME="GPIO_0" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO_I"/>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO_O"/>
+            <PORTMAP LOGICAL="TRI_T" PHYSICAL="GPIO_T"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="processing_system7_0_DDR" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR" VLNV="xilinx.com:interface:ddrx:1.0">
           <PARAMETER NAME="AXI_ARBITRATION_SCHEME" VALUE="TDM"/>
           <PARAMETER NAME="BURST_LENGTH" VALUE="8"/>
@@ -2200,7 +2244,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="MC_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="1e+08"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -2741,24 +2785,24 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_araddr" SIGIS="undef"/>
         <PORT DIR="O" NAME="M02_AXI_arprot" SIGIS="undef"/>
         <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef"/>
         <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_awaddr" SIGIS="undef"/>
         <PORT DIR="O" NAME="M02_AXI_awprot" SIGIS="undef"/>
         <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef"/>
         <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef"/>
         <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M02_AXI_bresp" SIGIS="undef"/>
         <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M02_AXI_rdata" SIGIS="undef"/>
         <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M02_AXI_rresp" SIGIS="undef"/>
         <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_wdata" SIGIS="undef"/>
         <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_wstrb" SIGIS="undef"/>
         <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef"/>
         <PORT DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
@@ -3115,7 +3159,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
-        <PORT CLKFREQUENCY="1e+08" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>

@@ -11,6 +11,10 @@
     1 tab == 4 spaces!
 */
 
+/* Debug variables */
+#define timer_multiplier 6 // To slow state machine down. NOT 0!
+
+
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
 #include "task.h"
@@ -22,6 +26,7 @@
 #include <portmacro.h>
 
 #include <stdio.h>
+#include <xgpiops.h>
 #include "GPIO.h"
 #include "states.h"
 #include "SDC.h"
@@ -31,16 +36,24 @@
 #define DELAY_1_SECOND		1000UL
 #define TIMER_CHECK_THRESHOLD	9
 
+/* PS ALlive */
+#define PS_allive_LED 54
+#define PS_allive_LED_Baseadress XPAR_XGPIOPS_0_BASEADDR
+
+XGpioPs_Config *ConfigPtr_PS_allive;
+XGpioPs Gpio_PS_allive;
+
 /*-----------------------------------------------------------*/
 
 /* The Tx and Rx tasks as described at the top of this file. */
+static void PS_allive_task(void *pvParameters);
 static void main_state_machine_task( void *pvParameters );
 /*-----------------------------------------------------------*/
 
 /* Variables for FreeRTOS */
 static TaskHandle_t main_state_machine_handle;
+static TaskHandle_t PS_allive;
 static QueueHandle_t xQueue = NULL;
-static TimerHandle_t xTimer = NULL;
 char HWstring[15] = "Hello World";
 long RxtaskCntr = 0;
 
@@ -55,20 +68,41 @@ int main( void )
 {
     xil_printf( "Master controller software initializing\r\n" );
 
+    /* PS_allive */
+
+    ConfigPtr_PS_allive = XGpioPs_LookupConfig(PS_allive_LED_Baseadress);
+
+    int status = XGpioPs_CfgInitialize(&Gpio_PS_allive, ConfigPtr_PS_allive, ConfigPtr_PS_allive -> BaseAddr);
+    if (status != XST_SUCCESS) {
+        print("Initialize fail XGpioPs_CfgInitialize PS_allive\n\r");
+    }
+    XGpioPs_SetDirectionPin(&Gpio_PS_allive, PS_allive_LED, 1);
+    XGpioPs_SetOutputEnablePin(&Gpio_PS_allive, PS_allive_LED, 1);
+    printf("EMIO pin: %d used. \n\r", PS_allive_LED);
+    XGpioPs_WritePin(&Gpio_PS_allive, PS_allive_LED, 0x1);
+
+
+    /* Free RTOS */
+
 	xTaskCreate( 	main_state_machine_task, 				    /* The function that implements the task. */
 					( const char * ) "main_state_machine", 	       /* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	              /* The stack allocated to the task. */
 					NULL, 						              /* The task parameter is not used, so set to NULL. */
-                tskIDLE_PRIORITY,			                    /* The task runs at the idle priority. */
+                tskIDLE_PRIORITY + 1,			                    /* The task runs at the idle+1 priority. */
 					&main_state_machine_handle);
+
+    xTaskCreate( 	PS_allive_task, 				    /* The function that implements the task. */
+					( const char * ) "PS_allive", 	       /* Text name for the task, provided to assist debugging only. */
+					configMINIMAL_STACK_SIZE, 	              /* The stack allocated to the task. */
+					NULL, 						              /* The task parameter is not used, so set to NULL. */
+                tskIDLE_PRIORITY,			                    /* The task runs at the idle priority. */
+					&PS_allive);
 
 	xQueue = xQueueCreate( 	10,						                       /* There is only one space in the queue. */
 							sizeof( HWstring ) );	                       /* Each space in the queue is large enough to hold a uint32_t. */
 
 	/* Check the queue was created. */
 	configASSERT( xQueue );
-
-	configASSERT( xTimer );
 
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
@@ -83,6 +117,7 @@ int main( void )
 
 
 /*-----------------------------------------------------------*/
+/*------------------ State machine task ---------------------*/
 static void main_state_machine_task( void *pvParameters )
 {
 
@@ -135,45 +170,33 @@ static void main_state_machine_task( void *pvParameters )
         switch (state) {
             case ST_SHUTDOWN:
             {
-                printf("Init state");
+                state = state_shutdown();
                 break;                
             }
         }
         switch (state) {
             case ST_ERROR:
             {
-                printf("Init state");
+                state = state_error();
                 break;                
             }
         }
-        vTaskDelay(100); // 100 ms delay
+        vTaskDelay(pdMS_TO_TICKS(100 * timer_multiplier)); // 100 ms delay
 	}
 }
-
 
 /*-----------------------------------------------------------*/
-void vTimerCallback( TimerHandle_t pxTimer )
+/*--------------------- PS allive task ----------------------*/
+
+static void PS_allive_task(void *pvParameters)
 {
-	long lTimerId;
-	configASSERT( pxTimer );
-
-	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
-
-	if (lTimerId != TIMER_ID) {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	/* If the RxtaskCntr is updated every time the Rx task is called. The
-	 Rx task is called every time the Tx task sends a message. The Tx task
-	 sends a message every 1 second.
-	 The timer expires after 10 seconds. We expect the RxtaskCntr to at least
-	 have a value of 9 (TIMER_CHECK_THRESHOLD) when the timer expires. */
-	if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
-		xil_printf("Successfully ran FreeRTOS Hello World Example");
-	} else {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	vTaskDelete( main_state_machine_handle);
+    for( ;; )
+    {
+        printf("PS_allive_task \n\r");
+        int carrier = XGpioPs_ReadPin(&Gpio_PS_allive, PS_allive_LED);
+        XGpioPs_WritePin(&Gpio_PS_allive, PS_allive_LED, ~carrier);
+        vTaskDelay(pdMS_TO_TICKS(200 * timer_multiplier)); // 200 ms delay
+    }
 }
+/*-----------------------------------------------------------*/
 

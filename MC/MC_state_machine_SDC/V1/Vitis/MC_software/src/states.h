@@ -34,5 +34,5 @@ int state_lv_systems_active();
 int state_precharging(void);
 int state_tractive(void);
 int state_drive(void);
-void state_shutdown(void);
-void state_error(void);
+int state_shutdown(void);
+int state_error(void);

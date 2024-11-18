@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Thu Nov 14 14:06:20 2024
+-- Date        : Mon Nov 18 13:33:19 2024
 -- Host        : Soeren-Laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xbar_0/MC_xbar_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top MC_xbar_0 -prefix
+--               MC_xbar_0_ MC_xbar_0_stub.vhdl
 -- Design      : MC_xbar_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
