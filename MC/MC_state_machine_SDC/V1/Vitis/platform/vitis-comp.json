@@ -3,8 +3,8 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "C:\\Git\\GitHub\\MCS\\MC\\MC_state_machine_SDC\\V1\\Vivado\\MC_wrapper.xsa",
-    "xsaPathInPlatform": "platform\\hw\\MC_wrapper.xsa",
+    "xsa": "C:\\Git\\GitHub\\MCS\\MC\\MC_state_machine_SDC\\V1\\Vivado\\MC_wrapper_V4.xsa",
+    "xsaPathInPlatform": "platform\\hw\\MC_wrapper_V4.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
     "isCustomFSBL": false,

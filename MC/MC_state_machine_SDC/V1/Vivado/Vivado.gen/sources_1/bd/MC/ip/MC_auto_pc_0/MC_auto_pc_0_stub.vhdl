@@ -2,8 +2,8 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Tue Nov 12 15:47:19 2024
--- Host        : Soeren-Laptop running 64-bit major release  (build 9200)
+-- Date        : Wed Oct 23 15:39:24 2024
+-- Host        : mikkelsPC running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top MC_auto_pc_0 -prefix
 --               MC_auto_pc_0_ MC_auto_pc_0_stub.vhdl
 -- Design      : MC_auto_pc_0

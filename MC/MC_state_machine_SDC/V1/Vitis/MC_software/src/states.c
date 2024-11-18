@@ -1,6 +1,16 @@
 #include "states.h"
 #include "xparameters.h"
 #include "xgpiops.h"
+#include <stdio.h>
+#include <sys/_intsup.h>
+#include <xil_printf.h>
+#include <xil_types.h>
+
+
+/* errors () */
+bool SDC_connected = FALSE;
+bool communication_lost = FALSE;
+bool error_internal = FALSE;
 
 /* MIO declerations */
 #define MIO_GPIO_BaseAddress XPAR_XGPIOPS_0_BASEADDR
@@ -36,9 +46,25 @@ XGpioPs IPrtSNET_INV34_SEL;
 
 XGpioPs_Config *GPIOConfigPtr;
 
+float ts_measurement = 0;
+
+/* Error codes */
+int error_code; 
+
+#define no_error 0
+#define unknown_error 1
+#define SDC_error 2
+#define communication_lost_error 3
+#define internal_error 4
+#define timeout_error 5
+#define precharge_timeout_error 6
+
+
+
+
 int state_init(){
     //
-    printf("init state");
+    printf("init state\n\r");
     init_SDC();
     // Actuator pins
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtCool_FET_In, Cool_FET_In_channel, 1); // 1 in direction = output
@@ -74,7 +100,33 @@ int state_init(){
 
 int state_idle(){
     //
-    printf("Idle state");
+    printf("Idle state\n\r");
+
+    /* Error checking */
+    SDC_connected = is_SDC_Completed();    
+    SDC_connected = TRUE; // DEBUG
+    if (SDC_connected != TRUE) {
+        // Send stop to AMS via CAN!
+        print("SDC not complete\n\r");
+        error_code = SDC_error;        
+        return ST_ERROR;
+    }
+
+    if (communication_lost == TRUE) {
+        // Send stop to AMS via CAN!
+        print("Communication error");
+        error_code = communication_lost_error;
+        return ST_ERROR;
+    }
+
+    if (error_internal == TRUE) {
+        // Send stop to AMS via CAN!
+        print("internal error");
+        error_code = internal_error;
+        return ST_ERROR;
+    }
+    
+
     // Function to check if LV button has been pressed
     if (LV_button == 1) 
     {
@@ -87,7 +139,8 @@ int state_idle(){
 
 int state_lv_systems_active(){
     //
-    printf("Lv systems active state");
+    printf("Lv systems active state\n\r");
+    // Function to check if Precharge button has been pressed
     if (Precharge_button == 1) 
     {
         return ST_PRECHARGING;
@@ -95,32 +148,84 @@ int state_lv_systems_active(){
     return ST_LV_SYSTEMS_ACTIVE;
 }
 
-void state_precharging(){
-    //
-    printf("precharging state");
-
+int state_precharging(){
+    //    
+    printf("precharging state\n\r");
+    // Function to check if ts measurement has been pressed
+    // Add timeout function
+    if (ts_measurement > 95) {
+        printf("precharging complete\n\r");
+        return ST_TRACTIVE;
+    }
+    return ST_PRECHARGING;
 }
 
-void state_tractive(){
+int state_tractive(){
     //
-    printf("tractive state");
-
+    printf("tractive state\n\r");
+    int brake_pedal_status = 1;
+    int torque_pedal_status = 1;
+    int drive_buton = 1;
+    if (brake_pedal_status && torque_pedal_status && drive_buton == 1) {  
+        return ST_DRIVE;
+    }
+    return ST_TRACTIVE;
 }
 
-void state_drive(){
+int state_drive(){
     //
-    printf("drive state");
+    printf("drive state\n\r");
+    // int torque_implausibility = 1;
+    // int torque_disconnect = 1;
+    // int stop_command = 1;  
+    if (torque_implausibility || torque_disconnect || tractive_stop == 1) {
+        return ST_TRACTIVE;
+    }
 
+    // READ BP0, BP1, TP0 & TP 1 and send values to relevant functions in state_drive()
+
+    return ST_DRIVE;
 }
 
-void state_shutdown(){
-    //
-    printf("shutdown state");
+
+int state_shutdown(){
+    // This function is to ensure all the data is saved corretly. 
+    printf("shutdown state\n\r");
+    printf("Entering infinite while loop\n\r");
+    while (1) {}  
+    return 1; 
 }
 
-void state_error(){
-    //
-    printf("error state");
+int state_error(){
+    /* Error handling SDC incomplete */
+    printf("error state\n\r");
+    if (error_code == SDC_error) {
+        printf("SDC error\n\r");
+        SDC_connected = is_SDC_Completed();
+        if (SDC_connected == TRUE) {
+            error_code = no_error;
+            return ST_IDLE;
+        }
+    }
+    
+    if (error_code == communication_lost_error) {
+        printf("Communication lost\n\r");
+        // Function to check if communication is established
+        if (communication_lost == FALSE) {
+            error_code = no_error;
+            return ST_IDLE;
+        }
+    }
 
+    if (error_code == internal_error) {
+    printf("Internal error\n\r");
+    // Function to check if enternal error is solved.
+    if (internal_error == FALSE) {
+        error_code = no_error;
+        return ST_IDLE;
+        }
+    }
+    
+    return ST_ERROR;
 }
 
