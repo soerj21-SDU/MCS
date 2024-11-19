@@ -803,3 +803,19 @@ WARNING: [Labtools 27-1347] Unable to find Debug Probes file [C:/Git/GitHub/MCS/
 ERROR: [Common 17-48] File not found: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/MC_wrapper.ltx
 WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.srcs/utils_1/imports/synth_1/MC_wrapper.dcp with file C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/MC_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Nov 18 15:49:53 2024] Launched synth_1...
+Run output will be captured here: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/runme.log
+[Mon Nov 18 15:49:53 2024] Launched impl_1...
+Run output will be captured here: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210357AC43FCA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357AC43FCA

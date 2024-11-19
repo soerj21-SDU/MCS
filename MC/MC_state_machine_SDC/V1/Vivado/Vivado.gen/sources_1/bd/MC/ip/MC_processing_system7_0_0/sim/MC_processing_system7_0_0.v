@@ -60,9 +60,6 @@ CAN0_PHY_TX,
 CAN0_PHY_RX, 
 CAN1_PHY_TX, 
 CAN1_PHY_RX, 
-GPIO_I, 
-GPIO_O, 
-GPIO_T, 
 SPI0_SCLK_I, 
 SPI0_SCLK_O, 
 SPI0_SCLK_T, 
@@ -156,9 +153,6 @@ output CAN0_PHY_TX;
 input CAN0_PHY_RX;
 output CAN1_PHY_TX;
 input CAN1_PHY_RX;
-input [0 : 0] GPIO_I;
-output [0 : 0] GPIO_O;
-output [0 : 0] GPIO_T;
 input SPI0_SCLK_I;
 output SPI0_SCLK_O;
 output SPI0_SCLK_T;

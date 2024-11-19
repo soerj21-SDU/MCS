@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Nov 18 15:49:55 2024
-# Process ID: 26212
+# Start of session at: Tue Nov 19 09:00:46 2024
+# Process ID: 18368
 # Current directory: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1
 # Command line: vivado.exe -log MC_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MC_wrapper.tcl
 # Log file: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/MC_wrapper.vds
@@ -19,6 +19,6 @@
 # Host memory       :16969 MB
 # Swap memory       :16106 MB
 # Total Virtual     :33075 MB
-# Available Virtual :8716 MB
+# Available Virtual :16816 MB
 #-----------------------------------------------------------
 source MC_wrapper.tcl -notrace

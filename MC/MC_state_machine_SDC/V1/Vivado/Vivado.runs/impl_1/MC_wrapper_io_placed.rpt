@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date                      : Mon Nov 18 15:51:52 2024
+| Date                      : Tue Nov 19 09:04:58 2024
 | Host                      : Soeren-Laptop running 64-bit major release  (build 9200)
 | Command                   : report_io -file MC_wrapper_io_placed.rpt
 | Design                    : MC_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           155 |
+|           154 |
 +---------------+
 
 
@@ -384,7 +384,7 @@ Table of Contents
 | V7         |                      | High Range | IO_L11N_T1_SRCC_13      | User IO     |                    |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V8         |                      | High Range | IO_L15P_T2_DQS_13       | User IO     |                    |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V9         |                      |            | GND                     | GND         |                    |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| V10        | GPIO_0_0_tri_io[0]   | High Range | IO_L21N_T3_DQS_13       | BIDIR       | LVCMOS33           |      13 |         12 | SLOW |                     |            FP_VTT_50 |         | UNFIXED    |           |          |      | NONE             |              |                   |              |
+| V10        |                      | High Range | IO_L21N_T3_DQS_13       | User IO     |                    |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V11        | TSMS_I               | High Range | IO_L21P_T3_DQS_13       | INPUT       | LVCMOS33           |      13 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V12        |                      | High Range | IO_L4P_T0_34            | User IO     |                    |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V13        | CAN_0_rx             | High Range | IO_L3N_T0_DQS_34        | INPUT       | LVCMOS33           |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |

@@ -11,6 +11,8 @@
 bool SDC_connected = FALSE;
 bool communication_lost = FALSE;
 bool error_internal = FALSE;
+bool timeout = FALSE;
+bool precharge_timeout = FALSE;
 
 /* MIO declerations */
 #define MIO_GPIO_BaseAddress XPAR_XGPIOPS_0_BASEADDR
@@ -59,10 +61,8 @@ int error_code;
 #define timeout_error 5
 #define precharge_timeout_error 6
 
-
-
-
-int state_init(){
+int state_init()
+{
     //
     printf("init state\n\r");
     init_SDC();
@@ -98,7 +98,8 @@ int state_init(){
     return ST_IDLE; 
 }
 
-int state_idle(){
+int state_idle()
+{
     //
     printf("Idle state\n\r");
 
@@ -137,9 +138,42 @@ int state_idle(){
     return ST_IDLE;
 }
 
-int state_lv_systems_active(){
+int state_lv_systems_active()
+{
     //
-    printf("Lv systems active state\n\r");
+    printf("LV systems active state\n\r");
+    
+    /* Error checking */
+    SDC_connected = is_SDC_Completed();    
+    SDC_connected = TRUE; // DEBUG
+    if (SDC_connected != TRUE) {
+        // Send stop to AMS via CAN!
+        print("SDC not complete\n\r");
+        error_code = SDC_error;        
+        return ST_ERROR;
+    }
+
+    if (communication_lost == TRUE) {
+        // Send stop to AMS via CAN!
+        print("Communication error\n\r");
+        error_code = communication_lost_error;
+        return ST_ERROR;
+    }
+
+    if (error_internal == TRUE) {
+        // Send stop to AMS via CAN!
+        print("internal error\n\r");
+        error_code = internal_error;
+        return ST_ERROR;
+    }
+
+    if (timeout == TRUE) {
+        // Send stop to AMS via CAN!
+        print("timeout error\n\r");
+        error_code = timeout_error;
+        return ST_ERROR;
+    }
+
     // Function to check if Precharge button has been pressed
     if (Precharge_button == 1) 
     {
@@ -148,11 +182,29 @@ int state_lv_systems_active(){
     return ST_LV_SYSTEMS_ACTIVE;
 }
 
-int state_precharging(){
+int state_precharging()
+{
     //    
     printf("precharging state\n\r");
     // Function to check if ts measurement has been pressed
+    /* Error checking */
+    SDC_connected = is_SDC_Completed();    
+    SDC_connected = TRUE; // DEBUG
+    if (SDC_connected != TRUE) {
+        // Send stop to AMS via CAN!
+        print("SDC not complete\n\r");
+        error_code = SDC_error;        
+        return ST_ERROR;
+    }
+    if (precharge_timeout == TRUE) {
+        // Send stop to AMS via CAN!
+        print("Precharge timeout\n\r");
+        error_code = precharge_timeout_error;        
+        return ST_ERROR;
+    }
     // Add timeout function
+
+
     if (ts_measurement > 95) {
         printf("precharging complete\n\r");
         return ST_TRACTIVE;
@@ -160,24 +212,47 @@ int state_precharging(){
     return ST_PRECHARGING;
 }
 
-int state_tractive(){
+int state_tractive()
+{
     //
     printf("tractive state\n\r");
-    int brake_pedal_status = 1;
-    int torque_pedal_status = 1;
-    int drive_buton = 1;
+    SDC_connected = is_SDC_Completed();    
+    SDC_connected = TRUE; // DEBUG
+    if (SDC_connected != TRUE) {
+        // Send stop to AMS via CAN!
+        print("SDC not complete\n\r");
+        error_code = SDC_error;        
+        return ST_ERROR;
+    }
+
+    int brake_pedal_status = 1;                 // temporary
+    int torque_pedal_status = 1;                // temporary
+    int drive_buton = 1;                        // temporary
     if (brake_pedal_status && torque_pedal_status && drive_buton == 1) {  
         return ST_DRIVE;
     }
     return ST_TRACTIVE;
 }
 
-int state_drive(){
+int state_drive()
+{
     //
     printf("drive state\n\r");
-    // int torque_implausibility = 1;
-    // int torque_disconnect = 1;
-    // int stop_command = 1;  
+
+
+    SDC_connected = is_SDC_Completed();    
+    SDC_connected = TRUE; // DEBUG
+    if (SDC_connected != TRUE) {
+        // Send stop to AMS via CAN!
+        print("SDC not complete\n\r");
+        error_code = SDC_error;        
+        return ST_ERROR;
+    }
+
+    int torque_implausibility = 0;
+    int torque_disconnect = 0;
+    int tractive_stop = 0;
+    int stop_command = 0;                       // To be used to enter shutdown state.
     if (torque_implausibility || torque_disconnect || tractive_stop == 1) {
         return ST_TRACTIVE;
     }
@@ -187,16 +262,17 @@ int state_drive(){
     return ST_DRIVE;
 }
 
-
-int state_shutdown(){
+int state_shutdown()
+{
     // This function is to ensure all the data is saved corretly. 
     printf("shutdown state\n\r");
     printf("Entering infinite while loop\n\r");
     while (1) {}  
-    return 1; 
+    return ST_SHUTDOWN; 
 }
 
-int state_error(){
+int state_error()
+{
     /* Error handling SDC incomplete */
     printf("error state\n\r");
     if (error_code == SDC_error) {
@@ -218,13 +294,31 @@ int state_error(){
     }
 
     if (error_code == internal_error) {
-    printf("Internal error\n\r");
-    // Function to check if enternal error is solved.
-    if (internal_error == FALSE) {
-        error_code = no_error;
-        return ST_IDLE;
+        printf("Internal error\n\r");
+        // Function to check if enternal error is solved.
+        if (internal_error == FALSE) {
+            error_code = no_error;
+            return ST_IDLE;
+            }
         }
-    }
+
+    if (error_code == timeout_error) {
+        printf("Timeout error\n\r");
+        // Function to check if enternal error is solved.
+        if (timeout_error == FALSE) {
+            error_code = no_error;
+            return ST_IDLE;
+            }
+        }
+
+    if (error_code == precharge_timeout_error) {
+        print("Precharge timeout\n\r");
+        // Function to check if enternal error is solved.
+        if (timeout_error == FALSE) {
+            error_code = no_error;
+            return ST_IDLE;
+            }
+        }
     
     return ST_ERROR;
 }

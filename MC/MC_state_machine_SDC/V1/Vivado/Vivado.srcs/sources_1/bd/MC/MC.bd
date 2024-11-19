@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x979FA71A4E39FF36",
+      "boundary_crc": "0x1D5B712EF9FA1AE",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Vivado.gen/sources_1/bd/MC",
       "name": "MC",
@@ -224,31 +224,6 @@
           "RX": {
             "physical_name": "CAN_1_rx",
             "direction": "I"
-          }
-        }
-      },
-      "GPIO_0_0": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_I": {
-            "physical_name": "GPIO_0_0_tri_i",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          },
-          "TRI_O": {
-            "physical_name": "GPIO_0_0_tri_o",
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          },
-          "TRI_T": {
-            "physical_name": "GPIO_0_0_tri_t",
-            "direction": "O",
-            "left": "0",
-            "right": "0"
           }
         }
       }
@@ -512,7 +487,7 @@
             "value": "0"
           },
           "PCW_EN_EMIO_GPIO": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_EN_EMIO_MODEM_UART0": {
             "value": "1"
@@ -608,13 +583,7 @@
             "value": "1"
           },
           "PCW_GPIO_EMIO_GPIO_ENABLE": {
-            "value": "1"
-          },
-          "PCW_GPIO_EMIO_GPIO_IO": {
-            "value": "1"
-          },
-          "PCW_GPIO_EMIO_GPIO_WIDTH": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_GPIO_MIO_GPIO_ENABLE": {
             "value": "1"
@@ -2142,12 +2111,6 @@
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "processing_system7_0_GPIO_0": {
-        "interface_ports": [
-          "GPIO_0_0",
-          "processing_system7_0/GPIO_0"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {

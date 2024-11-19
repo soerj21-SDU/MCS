@@ -47,5 +47,3 @@ set_property src_info {type:XDC file:1 line:58 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN V11 [get_ports TSMS_I]
 set_property src_info {type:XDC file:1 line:94 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T5 [get_ports {PL_ALIVE_LED[0]}]
-set_property src_info {type:XDC file:1 line:97 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN T5 [get_ports {GPIO_0_0_tri_io}]

@@ -17,11 +17,11 @@
 #define LV_button 0
 #define Precharge_button 0
 
-/* Tractive state */
-    /* Tractive errors */
-    #define torque_implausibility 0
-    #define torque_disconnect 0
-    #define tractive_stop 0
+// /* Tractive state */
+//     /* Tractive errors */
+//     #define torque_implausibility 0
+//     #define torque_disconnect 0
+//     #define tractive_stop 0
 
 
 

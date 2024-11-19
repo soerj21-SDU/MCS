@@ -171,6 +171,13 @@ static void main_state_machine_task( void *pvParameters )
             case ST_SHUTDOWN:
             {
                 state = state_shutdown();
+
+
+
+
+
+                                
+                print("Power can be shut off");
                 break;                
             }
         }

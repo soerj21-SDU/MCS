@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Nov 18 15:49:55 2024
-# Process ID: 26212
+# Start of session at: Tue Nov 19 09:00:46 2024
+# Process ID: 18368
 # Current directory: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1
 # Command line: vivado.exe -log MC_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MC_wrapper.tcl
 # Log file: C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/MC_wrapper.vds
@@ -19,10 +19,10 @@
 # Host memory       :16969 MB
 # Swap memory       :16106 MB
 # Total Virtual     :33075 MB
-# Available Virtual :8716 MB
+# Available Virtual :16816 MB
 #-----------------------------------------------------------
 source MC_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 612.875 ; gain = 199.730
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 612.035 ; gain = 197.758
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
@@ -39,51 +39,48 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26032
+INFO: [Synth 8-7075] Helper process launched with PID 10196
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1521.625 ; gain = 448.754
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1520.160 ; gain = 447.742
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MC_wrapper' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd:66]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209' bound to instance 'GPIO_0_0_tri_iobuf_0' of component 'IOBUF' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd:132]
-INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209]
-INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:78209]
-INFO: [Synth 8-3491] module 'MC' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1398' bound to instance 'MC_i' of component 'MC' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd:139]
-INFO: [Synth 8-638] synthesizing module 'MC' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1455]
-INFO: [Synth 8-3491] module 'MC_SDC_Monitor_CAR_0_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_SDC_Monitor_CAR_0_0_stub.vhdl:6' bound to instance 'SDC_Monitor_CAR_0' of component 'MC_SDC_Monitor_CAR_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1837]
-INFO: [Synth 8-638] synthesizing module 'MC_SDC_Monitor_CAR_0_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_SDC_Monitor_CAR_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'MC_axi_gpio_0_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_axi_gpio_0_0_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'MC_axi_gpio_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1859]
-INFO: [Synth 8-638] synthesizing module 'MC_axi_gpio_0_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_axi_gpio_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'MC_processing_system7_0_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'MC_processing_system7_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1883]
-INFO: [Synth 8-638] synthesizing module 'MC_processing_system7_0_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_processing_system7_0_0_stub.vhdl:107]
-INFO: [Synth 8-638] synthesizing module 'MC_ps7_0_axi_periph_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:750]
+INFO: [Synth 8-638] synthesizing module 'MC_wrapper' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd:65]
+INFO: [Synth 8-3491] module 'MC' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1422' bound to instance 'MC_i' of component 'MC' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'MC' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1476]
+INFO: [Synth 8-3491] module 'MC_SDC_Monitor_CAR_0_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_SDC_Monitor_CAR_0_0_stub.vhdl:6' bound to instance 'SDC_Monitor_CAR_0' of component 'MC_SDC_Monitor_CAR_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1848]
+INFO: [Synth 8-638] synthesizing module 'MC_SDC_Monitor_CAR_0_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_SDC_Monitor_CAR_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'MC_axi_gpio_0_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_axi_gpio_0_0_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'MC_axi_gpio_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1870]
+INFO: [Synth 8-638] synthesizing module 'MC_axi_gpio_0_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_axi_gpio_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'MC_processing_system7_0_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'MC_processing_system7_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1894]
+INFO: [Synth 8-638] synthesizing module 'MC_processing_system7_0_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_processing_system7_0_0_stub.vhdl:104]
+INFO: [Synth 8-638] synthesizing module 'MC_ps7_0_axi_periph_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:762]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1OUIXXC' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1OUIXXC' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:58]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_I0E1BJ' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:159]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_I0E1BJ' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_FE1AE7' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:264]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_FE1AE7' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:264]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_WUMUUK' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:394]
-INFO: [Synth 8-3491] module 'MC_auto_pc_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'MC_auto_pc_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:577]
-INFO: [Synth 8-638] synthesizing module 'MC_auto_pc_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_auto_pc_0_stub.vhdl:71]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_WUMUUK' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:394]
-INFO: [Synth 8-3491] module 'MC_xbar_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'MC_xbar_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1247]
-INFO: [Synth 8-638] synthesizing module 'MC_xbar_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_xbar_0_stub.vhdl:52]
-INFO: [Synth 8-256] done synthesizing module 'MC_ps7_0_axi_periph_0' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:750]
-INFO: [Synth 8-3491] module 'MC_rst_ps7_0_100M_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_rst_ps7_0_100M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M' of component 'MC_rst_ps7_0_100M_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2085]
-INFO: [Synth 8-638] synthesizing module 'MC_rst_ps7_0_100M_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-26212-Soeren-Laptop/realtime/MC_rst_ps7_0_100M_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'MC_xlconstant_2_0' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_2_0/synth/MC_xlconstant_2_0.v:53' bound to instance 'xlconstant' of component 'MC_xlconstant_2_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2098]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_I0E1BJ' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:163]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_I0E1BJ' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_FE1AE7' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:274]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_FE1AE7' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:274]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_WUMUUK' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:404]
+INFO: [Synth 8-3491] module 'MC_auto_pc_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'MC_auto_pc_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:587]
+INFO: [Synth 8-638] synthesizing module 'MC_auto_pc_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_WUMUUK' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:404]
+INFO: [Synth 8-3491] module 'MC_xbar_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'MC_xbar_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1269]
+INFO: [Synth 8-638] synthesizing module 'MC_xbar_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_xbar_0_stub.vhdl:52]
+INFO: [Synth 8-256] done synthesizing module 'MC_ps7_0_axi_periph_0' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:762]
+INFO: [Synth 8-3491] module 'MC_rst_ps7_0_100M_0' declared at 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_rst_ps7_0_100M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M' of component 'MC_rst_ps7_0_100M_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2095]
+INFO: [Synth 8-638] synthesizing module 'MC_rst_ps7_0_100M_0' [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/.Xil/Vivado-18368-Soeren-Laptop/realtime/MC_rst_ps7_0_100M_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'MC_xlconstant_2_0' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_2_0/synth/MC_xlconstant_2_0.v:53' bound to instance 'xlconstant' of component 'MC_xlconstant_2_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2108]
 INFO: [Synth 8-6157] synthesizing module 'MC_xlconstant_2_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_2_0/synth/MC_xlconstant_2_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'MC_xlconstant_2_0' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_2_0/synth/MC_xlconstant_2_0.v:53]
-INFO: [Synth 8-3491] module 'MC_xlconstant_0_0' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_0_0/synth/MC_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'MC_xlconstant_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2102]
+INFO: [Synth 8-3491] module 'MC_xlconstant_0_0' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_0_0/synth/MC_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'MC_xlconstant_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2112]
 INFO: [Synth 8-6157] synthesizing module 'MC_xlconstant_0_0' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_0_0/synth/MC_xlconstant_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'MC_xlconstant_0_0' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_0_0/synth/MC_xlconstant_0_0.v:53]
-INFO: [Synth 8-3491] module 'MC_xlconstant_1_1' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_1_1/synth/MC_xlconstant_1_1.v:53' bound to instance 'xlconstant_1' of component 'MC_xlconstant_1_1' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2106]
+INFO: [Synth 8-3491] module 'MC_xlconstant_1_1' declared at 'c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_1_1/synth/MC_xlconstant_1_1.v:53' bound to instance 'xlconstant_1' of component 'MC_xlconstant_1_1' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:2116]
 INFO: [Synth 8-6157] synthesizing module 'MC_xlconstant_1_1' [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_1_1/synth/MC_xlconstant_1_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'MC_xlconstant_1_1' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xlconstant_1_1/synth/MC_xlconstant_1_1.v:53]
-INFO: [Synth 8-256] done synthesizing module 'MC' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1455]
-INFO: [Synth 8-256] done synthesizing module 'MC_wrapper' (0#1) [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'MC' (0#1) [c:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/synth/MC.vhd:1476]
+INFO: [Synth 8-256] done synthesizing module 'MC_wrapper' (0#1) [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.gen/sources_1/bd/MC/hdl/MC_wrapper.vhd:65]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_WUMUUK is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_WUMUUK is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_FE1AE7 is either unconnected or has no load
@@ -98,108 +95,27 @@ WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1OUIXXC is either
 WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1OUIXXC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_1OUIXXC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_1OUIXXC is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[31] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[30] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[29] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[28] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[27] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[26] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[25] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[24] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[23] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[22] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[21] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[20] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[19] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[18] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[17] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[16] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[15] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[14] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[13] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[12] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[11] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[10] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[9] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[8] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[7] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[6] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[5] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[4] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[3] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[2] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_araddr[1] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[31] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[30] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[29] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[28] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[27] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[26] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[25] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[24] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[23] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[22] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[21] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[20] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[19] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[18] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[17] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[16] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[15] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[14] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[13] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[12] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[11] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[10] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[9] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[8] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[7] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[6] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[5] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[4] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[3] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[2] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_awaddr[1] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[31] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[30] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[29] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[28] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[27] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[26] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[25] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[24] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[23] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[22] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[21] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[20] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[19] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[18] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[17] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[16] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[15] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[14] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[13] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[12] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[11] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[10] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[9] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_AXI_wdata[8] in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port M00_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1640.820 ; gain = 567.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1639.625 ; gain = 567.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1640.820 ; gain = 567.949
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1639.625 ; gain = 567.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1640.820 ; gain = 567.949
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1639.625 ; gain = 567.207
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1640.820 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1639.625 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -224,23 +140,22 @@ Parsing XDC File [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.run
 Finished Parsing XDC File [C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1653.262 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1653.320 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1653.262 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1653.320 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:48 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:48 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -517,10 +432,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for MC_i/SDC_Monitor_CAR_0. (constrai
 Applied set_property KEEP_HIERARCHY = SOFT for MC_i/xlconstant_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for MC_i/xlconstant. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:49 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:49 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -542,26 +457,34 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module MC_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -579,37 +502,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -638,32 +561,28 @@ Report Cell Usage:
 |5     |MC_rst_ps7_0_100M_0_bbox       |     1|
 |6     |MC_xbar_0_bbox                 |     1|
 |7     |IBUF                           |    16|
-|8     |IOBUF                          |     1|
-|9     |OBUF                           |     8|
+|8     |OBUF                           |     8|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 1653.320 ; gain = 580.902
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 138 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1653.262 ; gain = 567.949
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1653.262 ; gain = 580.391
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:01:22 . Memory (MB): peak = 1653.320 ; gain = 567.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:29 . Memory (MB): peak = 1653.320 ; gain = 580.902
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1653.262 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1653.320 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1653.262 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1653.320 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 51f18340
+Synth Design complete | Checksum: cc64a42d
 INFO: [Common 17-83] Releasing license: Synthesis
-69 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1653.262 ; gain = 1009.984
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1653.262 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:49 . Memory (MB): peak = 1653.320 ; gain = 1012.074
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1653.320 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Git/GitHub/MCS/MC/MC_state_machine_SDC/V1/Vivado/Vivado.runs/synth_1/MC_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file MC_wrapper_utilization_synth.rpt -pb MC_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 18 15:51:01 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 19 09:02:51 2024...
