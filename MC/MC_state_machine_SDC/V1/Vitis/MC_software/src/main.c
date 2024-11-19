@@ -200,8 +200,7 @@ static void PS_allive_task(void *pvParameters)
     for( ;; )
     {
         printf("PS_allive_task \n\r");
-        int carrier = XGpioPs_ReadPin(&Gpio_PS_allive, PS_allive_LED);
-        XGpioPs_WritePin(&Gpio_PS_allive, PS_allive_LED, ~carrier);
+        toggle_MIO_GPIO(&Gpio_PS_allive, PS_allive_LED, 2);
         vTaskDelay(pdMS_TO_TICKS(200 * timer_multiplier)); // 200 ms delay
     }
 }

@@ -5,6 +5,7 @@
 #include <sys/_intsup.h>
 #include <xil_printf.h>
 #include <xil_types.h>
+#include "sleep.h"
 
 
 /* errors () */
@@ -14,16 +15,27 @@ bool error_internal = FALSE;
 bool timeout = FALSE;
 bool precharge_timeout = FALSE;
 
+/* Error codes */
+int error_code; 
+
+#define no_error 0
+#define unknown_error 1
+#define SDC_error 2
+#define communication_lost_error 3
+#define internal_error 4
+#define timeout_error 5
+#define precharge_timeout_error 6
+
 /* MIO declerations */
 #define MIO_GPIO_BaseAddress XPAR_XGPIOPS_0_BASEADDR
 
 // Actuator pins MIO
-#define Cool_FET_In_channel 0
-#define Brake_SSR_In_channel 42
-#define RTDS_SSR_In_channel 44
-XGpioPs IPrtCool_FET_In;
-XGpioPs IPrtBrake_SSR_In;
-XGpioPs IPrtRTDS_SSR_In;
+#define Cool_FET_Out_channel 0
+#define Brake_SSR_Out_channel 42
+#define RTDS_SSR_Out_channel 44
+XGpioPs IPrtCool_FET_Out;
+XGpioPs IPrtBrake_SSR_Out;
+XGpioPs IPrtRTDS_SSR_Out;
 
 // Power Distribution pins MIO
 #define Dash_FET_In_channel 48
@@ -50,16 +62,9 @@ XGpioPs_Config *GPIOConfigPtr;
 
 float ts_measurement = 0;
 
-/* Error codes */
-int error_code; 
-
-#define no_error 0
-#define unknown_error 1
-#define SDC_error 2
-#define communication_lost_error 3
-#define internal_error 4
-#define timeout_error 5
-#define precharge_timeout_error 6
+bool RTDS_sound_on = TRUE;
+bool RTDS_timer_alarm = FALSE;
+bool RTDS_timer_started = FALSE;
 
 int state_init()
 {
@@ -67,12 +72,13 @@ int state_init()
     printf("init state\n\r");
     init_SDC();
     // Actuator pins
-    setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtCool_FET_In, Cool_FET_In_channel, 1); // 1 in direction = output
-    setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtBrake_SSR_In, Brake_SSR_In_channel, 1); // 1 in direction = output
-    setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtRTDS_SSR_In, RTDS_SSR_In_channel, 1); // 1 in direction = output
-    XGpioPs_WritePin(&IPrtCool_FET_In, Cool_FET_In_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtBrake_SSR_In, Brake_SSR_In_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtRTDS_SSR_In, RTDS_SSR_In_channel, 0x1); // 1= high
+    setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtCool_FET_Out, Cool_FET_Out_channel, 1); // 1 in direction = output
+    setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtBrake_SSR_Out, Brake_SSR_Out_channel, 1); // 1 in direction = output
+    setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 1); // 1 in direction = output
+    toggle_MIO_GPIO(&IPrtCool_FET_Out, Cool_FET_Out_channel, 1);
+    toggle_MIO_GPIO(&IPrtBrake_SSR_Out, Brake_SSR_Out_channel,1);
+    toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel,0);
+
     
     // Power Distribution pins
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtDash_FET_In, Dash_FET_In_channel, 1); // 1 in direction = output
@@ -84,16 +90,24 @@ int state_init()
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtSNET_FET_In, SNET_FET_In_channel, 1); // 1 in direction = output
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtINV34_FET_In, INV34_FET_In_channel, 1); // 1 in direction = output
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel, 1); // 1 in direction = output
-    XGpioPs_WritePin(&IPrtDash_FET_In, Dash_FET_In_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtAMS_FET_In, AMS_FET_In_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtDASH_AMS_SEL, DASH_AMS_SEL_channel, 0x1); // 1= high   
-    XGpioPs_WritePin(&IPrtTSC_INV12_SEL, TSC_INV12_SEL_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtTSC_FET_In, TSC_FET_In_channel, 0x1); // 1= high  
-    XGpioPs_WritePin(&IPrtINV12_FET_In, INV12_FET_In_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtSNET_FET_In, SNET_FET_In_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtINV34_FET_In, INV34_FET_In_channel, 0x1); // 1= high
-    XGpioPs_WritePin(&IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel, 0x1); // 1= high
+    toggle_MIO_GPIO(&IPrtDash_FET_In, Dash_FET_In_channel,1);
+    toggle_MIO_GPIO(&IPrtAMS_FET_In, AMS_FET_In_channel,1);
+    toggle_MIO_GPIO(&IPrtDASH_AMS_SEL, DASH_AMS_SEL_channel,1);
+    toggle_MIO_GPIO(&IPrtTSC_INV12_SEL, TSC_INV12_SEL_channel,1);
+    toggle_MIO_GPIO(&IPrtTSC_FET_In, TSC_FET_In_channel,1);
+    toggle_MIO_GPIO(&IPrtINV12_FET_In, INV12_FET_In_channel,1);
+    toggle_MIO_GPIO(&IPrtSNET_FET_In, SNET_FET_In_channel,1);
+    toggle_MIO_GPIO(&IPrtINV34_FET_In, INV34_FET_In_channel,1);
+    toggle_MIO_GPIO(&IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel,1);
 
+    
+    /* ------------------------- Debug code ------------------------- */
+    
+    print("going to drive state" );
+    return ST_DRIVE;
+
+
+    /* ---------------------- Debug code end ------------------------ */
 
     return ST_IDLE; 
 }
@@ -225,6 +239,8 @@ int state_tractive()
         return ST_ERROR;
     }
 
+    RTDS_sound_on = TRUE;
+
     int brake_pedal_status = 1;                 // temporary
     int torque_pedal_status = 1;                // temporary
     int drive_buton = 1;                        // temporary
@@ -238,8 +254,21 @@ int state_drive()
 {
     //
     printf("drive state\n\r");
+    /* RTDS */
+    if (RTDS_sound_on == TRUE)
+    {
+        print("Beginning of switch\n\r");
+        toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 1);
+        print("Before delay\n\r");
+        sleep(2);
+        print("After delay\n\r");
+        toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 0);
+        print("RTDS of\n\r");
+    }
 
 
+
+    /* Error handling */
     SDC_connected = is_SDC_Completed();    
     SDC_connected = TRUE; // DEBUG
     if (SDC_connected != TRUE) {

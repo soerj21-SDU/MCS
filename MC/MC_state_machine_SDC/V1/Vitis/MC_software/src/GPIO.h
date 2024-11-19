@@ -11,6 +11,7 @@
 
 int setup_AXI_GPIO(UINTPTR AXI_GPIO_BaseAddress,   XGpio *instancePtr, u8 channel, u8 direction );
 int setup_MIO_GPIO(UINTPTR MIO_GPIO_BaseAddress, XGpioPs_Config* ConfigPtr ,XGpioPs* instancePtr, u8 channel, u8 direction);
+void toggle_MIO_GPIO(XGpioPs* instancePtr, u8 channel, int mode);
 
 // int  setup_PS_GPIO  (u32 BaseAddr,   XGpioPs *GPIO_inst,   u8 pin,  u8 direction,   XGpioPs_Config *GPIO_ConfigPtr);
 // int setup_PS_GPIO(u32 BaseAddr,   XGpioPs *GPIO_inst,   u8 pin,    u8 direction,    XGpioPs_Config *GPIO_ConfigPtr )

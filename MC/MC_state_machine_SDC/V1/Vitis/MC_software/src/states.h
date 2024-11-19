@@ -36,3 +36,6 @@ int state_tractive(void);
 int state_drive(void);
 int state_shutdown(void);
 int state_error(void);
+
+void RTDS_timer_2_sec_callback();
+void RTDS_timer_2_sec_start();

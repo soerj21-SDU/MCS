@@ -40,12 +40,23 @@ int setup_MIO_GPIO(UINTPTR MIO_GPIO_BaseAdrr, XGpioPs_Config* ConfigPtr ,XGpioPs
     }
     XGpioPs_SetDirectionPin(instancePtr, channel, direction);
     XGpioPs_SetOutputEnablePin(instancePtr, channel, 1);
+    XGpioPs_WritePin(instancePtr, channel, 0x0);
     return XST_SUCCESS;
     }
 
-// write 
-// set
-// clear
+
+void toggle_MIO_GPIO(XGpioPs* instancePtr, u8 channel, int mode){
+        if (mode == 0) {
+            XGpioPs_WritePin(instancePtr, channel, 0x0);
+        }
+        if (mode == 1) {
+            XGpioPs_WritePin(instancePtr, channel, 0x1);
+        }
+        if (mode == 2){
+            int carirer = XGpioPs_ReadPin(instancePtr, channel);
+            XGpioPs_WritePin(instancePtr, channel, ~carirer);
+        }
+    }
 
 
 
