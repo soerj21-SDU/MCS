@@ -77,12 +77,12 @@ read_vhdl -library xil_defaultlib C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/
 add_files C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.srcs/sources_1/bd/MC/MC.bd
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_processing_system7_0_0/MC_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xbar_0/MC_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_auto_pc_0/MC_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_rst_ps7_0_100M_0/MC_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_rst_ps7_0_100M_0/MC_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_rst_ps7_0_100M_0/MC_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xadc_wiz_0_0/MC_xadc_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_xadc_wiz_0_0/MC_xadc_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/ip/MC_auto_pc_0/MC_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.gen/sources_1/bd/MC/MC_ooc.xdc]
 
 OPTRACE "Adding files" END { }
