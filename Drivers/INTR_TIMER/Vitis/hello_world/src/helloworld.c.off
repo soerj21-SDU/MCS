@@ -1,0 +1,29 @@
+#include "xparameters.h"
+#include "xscutimer.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include <stdio.h>
+#include <sleep.h>
+#include <xil_types.h>
+#include "timer_driver.h"
+
+#define TIMER_BASEADDR XPAR_SCUTIMER_BASEADDR
+
+XScuTimer TimerInstance;
+int status;
+
+
+
+int main() {
+   
+    status = timer_interrupt_setup(&TimerInstance, TIMER_BASEADDR);
+    enable_interrupt(&TimerInstance);
+    while (while_status) {
+        // Main loop
+        printf("in while\n\r");
+        sleep(10);
+    }
+    printf("Out of while test complete");
+
+    return 0;
+}
