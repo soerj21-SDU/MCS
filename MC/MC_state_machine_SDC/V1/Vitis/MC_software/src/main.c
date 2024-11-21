@@ -29,6 +29,8 @@
 #define PS_allive_LED 41
 #define PS_allive_LED_Baseadress XPAR_XGPIOPS_0_BASEADDR
 
+/* Pedals */ 
+
 XGpioPs_Config *ConfigPtr_PS_allive;
 XGpioPs Gpio_PS_allive;
 

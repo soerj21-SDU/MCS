@@ -69,6 +69,8 @@ bool RTDS_sound_on = TRUE;
 bool RTDS_timer_alarm = FALSE;
 bool RTDS_timer_started = FALSE;
 
+bool brake_pressed = TRUE;
+
 TimerHandle_t xTimer_2_sec;
 TimerHandle_t xTimer_10_sec; // used for debug
 
@@ -98,8 +100,8 @@ int state_init()
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtCool_FET_Out, Cool_FET_Out_channel, 1); // 1 in direction = output
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtBrake_SSR_Out, Brake_SSR_Out_channel, 1); // 1 in direction = output
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 1); // 1 in direction = output
-    toggle_MIO_GPIO(&IPrtCool_FET_Out, Cool_FET_Out_channel, 1);
-    toggle_MIO_GPIO(&IPrtBrake_SSR_Out, Brake_SSR_Out_channel,1);
+    toggle_MIO_GPIO(&IPrtCool_FET_Out, Cool_FET_Out_channel, 0);
+    toggle_MIO_GPIO(&IPrtBrake_SSR_Out, Brake_SSR_Out_channel,0);
     toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel,0);
 
     
@@ -233,7 +235,11 @@ int state_precharging()
 {
     //    
     printf("precharging state\n\r");
+    toggle_MIO_GPIO(&IPrtCool_FET_Out, Cool_FET_Out_channel, 1);
     // Function to check if ts measurement has been pressed
+
+
+
     /* Error checking */
     SDC_connected = is_SDC_Completed();    
     SDC_connected = TRUE; // DEBUG
@@ -288,22 +294,20 @@ int state_drive()
     printf("drive state\n\r");
     /* RTDS */
     if (RTDS_sound_on == TRUE) {
-        printf("RTDS_SOUND_ON\r\n");
         if (RTDS_timer_started == FALSE) {
-            printf("RTDS_timer_started false\r\n");
             xTimerStart(xTimer_2_sec, 0);
             if (xTimerStart(xTimer_2_sec, 0) != pdPASS) {
                 printf("RTDS Timer start failed\n");
             }
-            printf("after interrupt enable\n\r");
             toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 1);
-            printf("LED on\n\r");
             RTDS_timer_started = TRUE;
-    }
+        }   
     }   
     /* Brake Pedal */
-
-    
+    // When brake is pressed:
+    if (brake_pressed == TRUE) {
+        toggle_MIO_GPIO(&IPrtBrake_SSR_Out, Brake_SSR_Out_channel,2); // Debug - Remember to change mode!!!
+    }
 
 
     /* Error handling */
