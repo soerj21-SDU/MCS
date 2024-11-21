@@ -23,7 +23,7 @@
 //     #define torque_disconnect 0
 //     #define tractive_stop 0
 
-
+extern int state;
 
 
 

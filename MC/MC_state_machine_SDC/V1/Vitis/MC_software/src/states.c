@@ -5,7 +5,10 @@
 #include <sys/_intsup.h>
 #include <xil_printf.h>
 #include <xil_types.h>
-#include "sleep.h"
+
+/* FreeRTOS */
+#include "FreeRTOS.h"
+#include "timers.h"
 
 
 /* errors () */
@@ -66,6 +69,26 @@ bool RTDS_sound_on = TRUE;
 bool RTDS_timer_alarm = FALSE;
 bool RTDS_timer_started = FALSE;
 
+TimerHandle_t xTimer_2_sec;
+TimerHandle_t xTimer_10_sec; // used for debug
+
+
+int status;
+
+void vTimerCallback_2_sec(TimerHandle_t xTimer_2_sec) {
+    toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 0);
+    RTDS_timer_started = FALSE;
+    RTDS_sound_on = FALSE;
+    /* Debug */
+    xTimerStart(xTimer_10_sec, 0); // Used to go to tractive state.
+}
+
+/* Debug  */
+void vTimerCallback_10_sec(TimerHandle_t xTimer_10_sec) {
+    printf("Going to tractive state.");
+    state = ST_TRACTIVE;
+}
+
 int state_init()
 {
     //
@@ -100,10 +123,20 @@ int state_init()
     toggle_MIO_GPIO(&IPrtINV34_FET_In, INV34_FET_In_channel,1);
     toggle_MIO_GPIO(&IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel,1);
 
-    
+    /* FreeRTOS */
+    xTimer_2_sec = xTimerCreate("Timer", pdMS_TO_TICKS(2000), pdFALSE, (void *)0, vTimerCallback_2_sec);
+        if (xTimer_2_sec == NULL) {
+            // Handle error
+            printf("Timer creation failed\n");
+        }
     /* ------------------------- Debug code ------------------------- */
+    xTimer_10_sec = xTimerCreate("Timer", pdMS_TO_TICKS(10000), pdFALSE, (void *)0, vTimerCallback_10_sec);
+        if (xTimer_2_sec == NULL) {
+            // Handle error
+            printf("Timer creation failed\n");
+        }
     
-    print("going to drive state" );
+    print("going to drive state\r\n" );
     return ST_DRIVE;
 
 
@@ -129,14 +162,14 @@ int state_idle()
 
     if (communication_lost == TRUE) {
         // Send stop to AMS via CAN!
-        print("Communication error");
+        print("Communication error\r\n");
         error_code = communication_lost_error;
         return ST_ERROR;
     }
 
     if (error_internal == TRUE) {
         // Send stop to AMS via CAN!
-        print("internal error");
+        print("internal error\r\n");
         error_code = internal_error;
         return ST_ERROR;
     }
@@ -252,20 +285,25 @@ int state_tractive()
 
 int state_drive()
 {
-    //
     printf("drive state\n\r");
     /* RTDS */
-    if (RTDS_sound_on == TRUE)
-    {
-        print("Beginning of switch\n\r");
-        toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 1);
-        print("Before delay\n\r");
-        sleep(2);
-        print("After delay\n\r");
-        toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 0);
-        print("RTDS of\n\r");
+    if (RTDS_sound_on == TRUE) {
+        printf("RTDS_SOUND_ON\r\n");
+        if (RTDS_timer_started == FALSE) {
+            printf("RTDS_timer_started false\r\n");
+            xTimerStart(xTimer_2_sec, 0);
+            if (xTimerStart(xTimer_2_sec, 0) != pdPASS) {
+                printf("RTDS Timer start failed\n");
+            }
+            printf("after interrupt enable\n\r");
+            toggle_MIO_GPIO(&IPrtRTDS_SSR_Out, RTDS_SSR_Out_channel, 1);
+            printf("LED on\n\r");
+            RTDS_timer_started = TRUE;
     }
+    }   
+    /* Brake Pedal */
 
+    
 
 
     /* Error handling */

@@ -1,16 +1,3 @@
-/*
-    Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
-    Copyright (c) 2012 - 2022 Xilinx, Inc. All Rights Reserved.
-	SPDX-License-Identifier: MIT
-
-
-    http://www.FreeRTOS.org
-    http://aws.amazon.com/freertos
-
-
-    1 tab == 4 spaces!
-*/
-
 /* Debug variables */
 #define timer_multiplier 6 // To slow state machine down. NOT 0!
 
@@ -20,10 +7,12 @@
 #include "task.h"
 #include "queue.h"
 #include "timers.h"
+
 /* Xilinx includes. */
 #include "xil_printf.h"
 #include "xparameters.h"
 #include <portmacro.h>
+
 
 #include <stdio.h>
 #include <xgpiops.h>
@@ -163,6 +152,7 @@ static void main_state_machine_task( void *pvParameters )
         switch (state) {
             case ST_DRIVE:
             {
+
                 state = state_drive();
                 break;                
             }
