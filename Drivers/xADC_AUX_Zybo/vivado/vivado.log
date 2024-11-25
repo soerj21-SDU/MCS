@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Nov 11 13:01:29 2024
-# Process ID: 17468
-# Current directory: C:/Users/Soeren-SDU/Downloads/vivado test/vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27108 C:\Users\Soeren-SDU\Downloads\vivado test\vivado\vivado.xpr
-# Log file: C:/Users/Soeren-SDU/Downloads/vivado test/vivado/vivado.log
-# Journal file: C:/Users/Soeren-SDU/Downloads/vivado test/vivado\vivado.jou
+# Start of session at: Mon Nov 25 15:00:24 2024
+# Process ID: 3136
+# Current directory: C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31524 C:\Git\GitHub\MCS_driver\MCS\Drivers\xADC_AUX_Zybo\vivado\vivado.xpr
+# Log file: C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado/vivado.log
+# Journal file: C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado\vivado.jou
 # Running On        :Soeren-Laptop
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :22631
@@ -19,10 +19,17 @@
 # Host memory       :16969 MB
 # Swap memory       :16106 MB
 # Total Virtual     :33075 MB
-# Available Virtual :12500 MB
+# Available Virtual :12427 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Soeren-SDU/Downloads/vivado test/vivado/vivado.xpr}
+open_project C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado/vivado.xpr
+INFO: [Project 1-313] Project file moved from 'C:/B_Git/MCS/Drivers/xADC_AUX_Zybo/vivado' since last save.
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/Git/GitHub/Users/miwoj/AppData/Roaming/Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store', nor could it be found using path 'C:/Users/miwoj/AppData/Roaming/Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado/vivado.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
@@ -32,25 +39,17 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 avai
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/B_Git/MCS/Drivers/xADC_AUX_Zybo/vivado' since last save.
-WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/miwoj/AppData/Roaming/Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store'.
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Soeren-SDU/Downloads/vivado test/vivado/vivado.ip_user_files'.
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1660.281 ; gain = 451.926
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.625 ; gain = 481.430
 update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Soeren-SDU/Downloads/vivado test/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd}
-Reading block design file <C:/Users/Soeren-SDU/Downloads/vivado test/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd>...
+open_bd_design {C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd>...
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
 Adding component instance block -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
-Successfully read diagram <design_1> from block design file <C:/Users/Soeren-SDU/Downloads/vivado test/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1782.355 ; gain = 113.016
-regenerate_bd_layout
+Successfully read diagram <design_1> from block design file <C:/Git/GitHub/MCS_driver/MCS/Drivers/xADC_AUX_Zybo/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1769.879 ; gain = 105.297
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 11 13:02:23 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 25 15:02:19 2024...
