@@ -23,3 +23,10 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/Vivado.srcs/sources_1/bd/MC/MC.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+write_hw_platform -fixed -include_bit -force -file C:/Git/GitHub/MCS/MC/MC_state_machine_xADC/V1/Vivado/MC_wrapper_V!.xsa

@@ -241,9 +241,12 @@ int state_drive()
     }   
     /* Brake Pedal */
     // When brake is pressed:
+    sw_value = xadc_get_aux(3); // Be aware that the input sterring wheel is used do to TP0 and TP1 is broken on testbench. 
     sw_value = xADC_get_converted_voltage(3);
-    if (brake_pressed == TRUE) {
-        printf("Read voltage: %.3f V\r\n", sw_value);
+    sw_value = xADC_reverse_voltage_division(5, sw_value);
+    if (sw_value > 1) {
+        print("Brake light on\n\r"); // Remember to enable brake light, when PCB is fixed.
+        brake_pressed = TRUE;
     }
 
 
