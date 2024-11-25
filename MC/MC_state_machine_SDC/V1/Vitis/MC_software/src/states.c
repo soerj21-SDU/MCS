@@ -73,6 +73,7 @@ bool brake_pressed = TRUE;
 
 TimerHandle_t xTimer_2_sec;
 TimerHandle_t xTimer_10_sec; // used for debug
+TimerHandle_t xTimer_15_sec; // used for debug
 
 
 int status;
@@ -87,7 +88,12 @@ void vTimerCallback_2_sec(TimerHandle_t xTimer_2_sec) {
 
 /* Debug  */
 void vTimerCallback_10_sec(TimerHandle_t xTimer_10_sec) {
-    printf("Going to tractive state.");
+    printf("Going to tractive state from 10 sec.\n\r");
+    state = ST_TRACTIVE;
+}
+
+void vTimerCallback_15_sec(TimerHandle_t xTimer_15_sec) {
+    printf("Going to tractive state from 15 sec.\n\r");
     state = ST_TRACTIVE;
 }
 
@@ -137,9 +143,16 @@ int state_init()
             // Handle error
             printf("Timer creation failed\n");
         }
+
+    xTimer_15_sec = xTimerCreate("Timer", pdMS_TO_TICKS(10000), pdFALSE, (void *)0, vTimerCallback_15_sec);
+        if (xTimer_2_sec == NULL) {
+            // Handle error
+            printf("Timer creation failed\n");
+        }
     
-    print("going to drive state\r\n" );
-    return ST_DRIVE;
+    print("going to precharching state\r\n" );
+    xTimerStart(xTimer_15_sec, 0); // Startiing timer to go ST_TRACTIVE.
+    return ST_PRECHARGING;
 
 
     /* ---------------------- Debug code end ------------------------ */
@@ -238,8 +251,6 @@ int state_precharging()
     toggle_MIO_GPIO(&IPrtCool_FET_Out, Cool_FET_Out_channel, 1);
     // Function to check if ts measurement has been pressed
 
-
-
     /* Error checking */
     SDC_connected = is_SDC_Completed();    
     SDC_connected = TRUE; // DEBUG
@@ -293,8 +304,8 @@ int state_drive()
 {
     printf("drive state\n\r");
     /* RTDS */
-    if (RTDS_sound_on == TRUE) {
-        if (RTDS_timer_started == FALSE) {
+    if (RTDS_sound_on) {
+        if (!RTDS_timer_started) {
             xTimerStart(xTimer_2_sec, 0);
             if (xTimerStart(xTimer_2_sec, 0) != pdPASS) {
                 printf("RTDS Timer start failed\n");
