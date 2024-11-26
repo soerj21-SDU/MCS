@@ -35,12 +35,14 @@
 static void main_state_machine_task( void *pvParameters );
 static void PS_allive_task(void *pvParameters);
 static void LVS_measurement_task(void *pvParameters);
+static void Sensor_measurment_task(void *pvParameters);
 /*-----------------------------------------------------------*/
 
 /* Variables for FreeRTOS */
 static TaskHandle_t main_state_machine_handle;
 static TaskHandle_t PS_allive;
 static TaskHandle_t LVS_Current;
+static TaskHandle_t Sensor_measurment;
 static QueueHandle_t xQueue = NULL;
 char HWstring[15] = "Hello World";
 long RxtaskCntr = 0;
@@ -50,6 +52,7 @@ int state = ST_INIT; // Initial state
 
 float LVS_current_value; 
 float LVS_voltage_value;
+float SW_measurment;
 
 
 
@@ -79,6 +82,13 @@ int main( void )
                         NULL, 						              /* The task parameter is not used, so set to NULL. */
                     tskIDLE_PRIORITY,			                    /* The task runs at the idle priority. */
                         &LVS_Current);
+
+    xTaskCreate( 	Sensor_measurment_task, 				    /* The function that implements the task. */
+                            ( const char * ) "LVS_Current", 	       /* Text name for the task, provided to assist debugging only. */
+                            configMINIMAL_STACK_SIZE, 	              /* The stack allocated to the task. */
+                            NULL, 						              /* The task parameter is not used, so set to NULL. */
+                        tskIDLE_PRIORITY,			                    /* The task runs at the idle priority. */
+                            &Sensor_measurment);
 
 	xQueue = xQueueCreate( 	10,						                       /* There is only one space in the queue. */
 							sizeof( HWstring ) );	                       /* Each space in the queue is large enough to hold a uint32_t. */
@@ -200,6 +210,27 @@ static void LVS_measurement_task(void *pvParameters) // This task can be extende
         LVS_voltage_value = xADC_get_LVS_Current(5);
         printf("LVS Voltage: %.3f V.\n\r", LVS_voltage_value);
         vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
+    }
+}
+
+static void Sensor_measurment_task(void *pvParameters) // This task can be extended to contain all data readings (Current (DashAMSCurrnet etc.)) 
+{
+    for( ;; )
+    {
+        print("sensor task");
+        SW_measurment = xadc_get_aux(3);
+        printf("SW sensor value: %.3f V.\n\r", SW_measurment);
+        SW_measurment = xADC_get_converted_voltage(3);
+        SW_measurment = xADC_reverse_voltage_division(5, SW_measurment);
+        printf("SW voltage: %.3f V.\n\r", SW_measurment);
+        
+
+        
+        // vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
+
+
+        
+        vTaskDelay(pdMS_TO_TICKS(400)); // 400 ms delay
     }
 }
 /*-----------------------------------------------------------*/
