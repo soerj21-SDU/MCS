@@ -1,0 +1,508 @@
+drive state
+Brake light on
+SW sensor value: 2591.000 V.
+SW voltage: 3.184 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.205 A.
+LVS Voltage: 4.016 V.
+SW sensor value: 2588.000 V.
+SW voltage: 3.184 V.
+SW sensor value: 2594.000 V.
+SW voltage: 3.180 V.
+drive state
+Brake light on
+SW sensor value: 2592.000 V.
+SW voltage: 3.181 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2596.000 V.
+SW voltage: 3.174 V.
+SW sensor value: 2592.000 V.
+SW voltage: 3.180 V.
+drive state
+Brake light on
+SW sensor value: 2592.000 V.
+SW voltage: 3.176 V.
+Going to tractive state.
+tractive state
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.201 A.
+LVS Voltage: 4.012 V.
+SW sensor value: 2596.000 V.
+SW voltage: 3.177 V.
+SW sensor value: 2594.000 V.
+SW voltage: 3.177 V.
+drive state
+Brake light on
+SW sensor value: 2598.000 V.
+SW voltage: 3.185 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2593.000 V.
+SW voltage: 3.175 V.
+SW sensor value: 2593.000 V.
+SW voltage: 3.179 V.
+drive state
+Brake light on
+SW sensor value: 2594.000 V.
+SW voltage: 3.177 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.205 A.
+LVS Voltage: 4.011 V.
+SW sensor value: 2595.000 V.
+SW voltage: 3.181 V.
+SW sensor value: 2594.000 V.
+SW voltage: 3.176 V.
+drive state
+Brake light on
+SW sensor value: 2595.000 V.
+SW voltage: 3.181 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2593.000 V.
+SW voltage: 3.177 V.
+SW sensor value: 2468.000 V.
+SW voltage: 3.028 V.
+drive state
+Brake light on
+SW sensor value: 1714.000 V.
+SW voltage: 2.097 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.201 A.
+LVS Voltage: 4.009 V.
+SW sensor value: 1328.000 V.
+SW voltage: 1.628 V.
+SW sensor value: 1317.000 V.
+SW voltage: 1.611 V.
+drive state
+Brake light on
+SW sensor value: 1314.000 V.
+SW voltage: 1.608 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 1315.000 V.
+SW voltage: 1.613 V.
+SW sensor value: 1318.000 V.
+SW voltage: 1.613 V.
+drive state
+Brake light on
+SW sensor value: 1314.000 V.
+SW voltage: 1.611 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.199 A.
+LVS Voltage: 4.009 V.
+SW sensor value: 1468.000 V.
+SW voltage: 1.796 V.
+SW sensor value: 1874.000 V.
+SW voltage: 2.297 V.
+drive state
+Brake light on
+SW sensor value: 2405.000 V.
+SW voltage: 2.951 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2847.000 V.
+SW voltage: 3.490 V.
+SW sensor value: 3172.000 V.
+SW voltage: 3.881 V.
+drive state
+Brake light on
+SW sensor value: 3532.000 V.
+SW voltage: 4.330 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.006 V.
+SW sensor value: 3751.000 V.
+SW voltage: 4.596 V.
+SW sensor value: 3749.000 V.
+SW voltage: 4.602 V.
+drive state
+Brake light on
+SW sensor value: 3749.000 V.
+SW voltage: 4.595 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 3744.000 V.
+SW voltage: 4.596 V.
+SW sensor value: 3753.000 V.
+SW voltage: 4.591 V.
+drive state
+Brake light on
+SW sensor value: 3635.000 V.
+SW voltage: 4.451 V.
+Going to tractive state.
+tractive state
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.011 V.
+SW sensor value: 3381.000 V.
+SW voltage: 4.151 V.
+SW sensor value: 2988.000 V.
+SW voltage: 3.664 V.
+drive state
+Brake light on
+SW sensor value: 2543.000 V.
+SW voltage: 3.117 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2077.000 V.
+SW voltage: 2.547 V.
+SW sensor value: 1590.000 V.
+SW voltage: 1.949 V.
+drive state
+Brake light on
+SW sensor value: 1395.000 V.
+SW voltage: 1.714 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.014 V.
+SW sensor value: 1398.000 V.
+SW voltage: 1.713 V.
+SW sensor value: 1335.000 V.
+SW voltage: 1.635 V.
+drive state
+Brake light on
+SW sensor value: 1171.000 V.
+SW voltage: 1.433 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 1221.000 V.
+SW voltage: 1.497 V.
+SW sensor value: 1467.000 V.
+SW voltage: 1.797 V.
+drive state
+Brake light on
+SW sensor value: 1831.000 V.
+SW voltage: 2.249 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.014 V.
+SW sensor value: 2378.000 V.
+SW voltage: 2.918 V.
+SW sensor value: 2978.000 V.
+SW voltage: 3.651 V.
+drive state
+Brake light on
+SW sensor value: 3299.000 V.
+SW voltage: 4.055 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 3687.000 V.
+SW voltage: 4.524 V.
+SW sensor value: 3751.000 V.
+SW voltage: 4.602 V.
+drive state
+Brake light on
+SW sensor value: 3751.000 V.
+SW voltage: 4.598 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.016 V.
+SW sensor value: 3751.000 V.
+SW voltage: 4.597 V.
+SW sensor value: 3742.000 V.
+SW voltage: 4.587 V.
+drive state
+Brake light on
+SW sensor value: 3657.000 V.
+SW voltage: 4.479 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2958.000 V.
+SW voltage: 3.626 V.
+SW sensor value: 2307.000 V.
+SW voltage: 2.835 V.
+drive state
+Brake light on
+SW sensor value: 2203.000 V.
+SW voltage: 2.703 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.018 V.
+SW sensor value: 1916.000 V.
+SW voltage: 2.343 V.
+SW sensor value: 1631.000 V.
+SW voltage: 2.006 V.
+drive state
+Brake light on
+SW sensor value: 1463.000 V.
+SW voltage: 1.796 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 1274.000 V.
+SW voltage: 1.563 V.
+SW sensor value: 1094.000 V.
+SW voltage: 1.341 V.
+drive state
+Brake light on
+SW sensor value: 1102.000 V.
+SW voltage: 1.350 V.
+Going to tractive state.
+tractive state
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.205 A.
+LVS Voltage: 4.016 V.
+SW sensor value: 1315.000 V.
+SW voltage: 1.611 V.
+SW sensor value: 1579.000 V.
+SW voltage: 1.938 V.
+drive state
+Brake light on
+SW sensor value: 1906.000 V.
+SW voltage: 2.337 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2295.000 V.
+SW voltage: 2.818 V.
+SW sensor value: 2626.000 V.
+SW voltage: 3.219 V.
+drive state
+Brake light on
+SW sensor value: 2991.000 V.
+SW voltage: 3.660 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.206 A.
+LVS Voltage: 4.011 V.
+SW sensor value: 3177.000 V.
+SW voltage: 3.901 V.
+SW sensor value: 3547.000 V.
+SW voltage: 4.346 V.
+drive state
+Brake light on
+SW sensor value: 3746.000 V.
+SW voltage: 4.591 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 3745.000 V.
+SW voltage: 4.588 V.
+SW sensor value: 3748.000 V.
+SW voltage: 4.595 V.
+drive state
+Brake light on
+SW sensor value: 3745.000 V.
+SW voltage: 4.600 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.007 V.
+SW sensor value: 3752.000 V.
+SW voltage: 4.596 V.
+SW sensor value: 3356.000 V.
+SW voltage: 4.110 V.
+drive state
+Brake light on
+SW sensor value: 2896.000 V.
+SW voltage: 3.551 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2370.000 V.
+SW voltage: 2.905 V.
+SW sensor value: 1934.000 V.
+SW voltage: 2.373 V.
+drive state
+Brake light on
+SW sensor value: 1593.000 V.
+SW voltage: 1.953 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.010 V.
+SW sensor value: 1351.000 V.
+SW voltage: 1.650 V.
+SW sensor value: 1259.000 V.
+SW voltage: 1.543 V.
+drive state
+Brake light on
+SW sensor value: 1260.000 V.
+SW voltage: 1.545 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 1173.000 V.
+SW voltage: 1.438 V.
+SW sensor value: 1173.000 V.
+SW voltage: 1.438 V.
+drive state
+Brake light on
+SW sensor value: 1255.000 V.
+SW voltage: 1.541 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.200 A.
+LVS Voltage: 4.012 V.
+SW sensor value: 1175.000 V.
+SW voltage: 1.442 V.
+SW sensor value: 1427.000 V.
+SW voltage: 1.746 V.
+drive state
+Brake light on
+SW sensor value: 1873.000 V.
+SW voltage: 2.299 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2409.000 V.
+SW voltage: 2.948 V.
+SW sensor value: 2881.000 V.
+SW voltage: 3.534 V.
+drive state
+Brake light on
+SW sensor value: 3224.000 V.
+SW voltage: 3.945 V.
+Going to tractive state.
+tractive state
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.007 V.
+SW sensor value: 3519.000 V.
+SW voltage: 4.325 V.
+SW sensor value: 3747.000 V.
+SW voltage: 4.593 V.
+drive state
+Brake light on
+SW sensor value: 3743.000 V.
+SW voltage: 4.588 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 3747.000 V.
+SW voltage: 4.593 V.
+SW sensor value: 3755.000 V.
+SW voltage: 4.603 V.
+drive state
+Brake light on
+SW sensor value: 3469.000 V.
+SW voltage: 4.253 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.205 A.
+LVS Voltage: 4.016 V.
+SW sensor value: 2904.000 V.
+SW voltage: 3.550 V.
+SW sensor value: 2227.000 V.
+SW voltage: 2.730 V.
+drive state
+Brake light on
+SW sensor value: 1684.000 V.
+SW voltage: 2.064 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 1618.000 V.
+SW voltage: 1.983 V.
+SW sensor value: 1619.000 V.
+SW voltage: 1.983 V.
+drive state
+Brake light on
+SW sensor value: 1283.000 V.
+SW voltage: 1.570 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.011 V.
+SW sensor value: 1086.000 V.
+SW voltage: 1.331 V.
+SW sensor value: 1088.000 V.
+SW voltage: 1.331 V.
+drive state
+Brake light on
+SW sensor value: 1507.000 V.
+SW voltage: 1.846 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2519.000 V.
+SW voltage: 3.087 V.
+SW sensor value: 2518.000 V.
+SW voltage: 3.086 V.
+drive state
+Brake light on
+SW sensor value: 2515.000 V.
+SW voltage: 3.083 V.
+drive state
+Brake light on
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.201 A.
+LVS Voltage: 4.012 V.
+SW sensor value: 2518.000 V.
+SW voltage: 3.086 V.
+SW sensor value: 2518.000 V.
+SW voltage: 3.087 V.
+drive state
+Brake light on
+SW sensor value: 2511.000 V.
+SW voltage: 3.089 V.
+drive state
+Brake light on
+PS_allive_task
+SW sensor value: 2515.000 V.
+SW voltage: 3.083 V.
+SW sensor value: 2519.000 V.
+SW voltage: 3.086 V.

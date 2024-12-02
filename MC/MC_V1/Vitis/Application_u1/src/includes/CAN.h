@@ -37,10 +37,52 @@
 
 
 
-// // JONAS AND SEBASTIAN'S CALCULATIONS:---------------------------------------------------------------------------------
-// // CAN Clock, as set in Vivado, is 23.8 (24) MHz.
+// see Chapter 18: CAN Controller: sub-sections Rx/Tx Bit Timing Logic AND Time Quanta Clock for formulas.
 
-//  // CAN_controller_clock / (Prescaler + 1) = quantum clock (from XCanPs_SetBaudRatePrescaler documentation). 
+/* Abbreviations:
+* CAN_REF_CLK = CAN Reference Clock
+* BRPR = Baud Rate Prescalar Register
+* BTR  = Bit Timing Register 
+* TQ_CLK = Time Quanta CLK
+
+*/ 
+
+#define CAN_REF_CLK_FREQ             (23.8 * 1e6)/   // 23.8 (24) MHz  (as set in Vivado)
+
+// from TRF: RECOMMENDED: For all clocking sources, set the can.BRPR register to a value of 2 or greater and a prescaler value of at least 3.
+#define BAUD_RATE_PRESCALAR          2 
+
+// From TRF: The time quanta clock (TQ_CLK) is derived from the controller reference clock (CAN_REF_CLK) divided by the baud rate prescaler (BRP)
+// TQ_time  = CAN_REF_CLK / (PRESCALAR + 1)  )
+#define TQ_FREQ = CAN_REF_CLK_FREQ / (BAUD_RATE_PRESCALAR + 1)
+
+
+/* The time segments and syncronization time (time quanta) (from TRF):
+
+* Propegation Segment: 
+* Synchronization Jump Width: as specified in the CAN 2.0A and CAN 2.0B standard. The actual value is one more than the value written to the register.
+* Time Segment 1: the Sum of Propagation Segment and Phase Segment 1 as specified in the CAN 2.0A and CAN 2.0B standard The actual value is one more
+* Time Segment 2: Phase Segment 2 as specified in the CAN 2.0A and CAN 2.0B standard. The actual value is one more than the value written to the register.
+
+than the value written to the register
+*/
+#define SYNC_SEGMENT_time     3 // Used for synchronizing the CAN controller to the CAN traffic on the bus: tSYNC_SEGMENT = 1 * tTQ_CLK
+#define SECOND_SEGMENT_time   2 // tTIME_SEGMENT2 = tTQ_CLK * (can.BTR[TS2] + 1)
+#define FIRST_SEGMENT_time    3 // tTIME_SEGMENT1 = tTQ_CLK * (can.BTR[TS1] + 1)
+
+// Calculate the baud rate (Mb/s)
+
+// tBIT_RATE = tSYNC_SEGMENT + tTIME_SEGMENT1 + tTIME_SEGMENT2
+#define BAUD_RATE       CAN_REF_CLK_FREQ / ( (PRESCALAR + 1 ) * (SYNC_SEGMENT_time + FIRST_SEGMENT_time + SECOND_SEGMENT_time)  )  
+
+
+
+
+
+
+// quantum clk = CAN_clk / (Prescalar + 1)  
+// CAN_clock / (Prescaler + 1) = quantum clock (from XCanPs_SetBaudRatePrescaler documentation). 
+
 // #define BRPR_BAUD_PRESCALER 2 // f_TQ = 23.8 MHz / (BRPR_BAUD_PRESCALER + 1) = 7.99 MHz --> time quantum, t_TQ = 1 / 7.f_TQ = 0.126 us 
 
 // // These timing parameters are set to give  a 1 Mbps baud rate with a CAN_controller_clock of 23.8 MHz. 77.77% sampling point.
@@ -167,6 +209,7 @@ typedef struct
 } CAN_Frame;
 
 
+
 // To be used for dynamically sizing the data fields depending on the inputted DLC.
 // typedef struct 
 // {
@@ -178,15 +221,6 @@ typedef struct
 // } CAN_Frame;
 
 
-
-const CAN_Frame Default_CAN_Frame = 
-{
-    .ID = 0,
-    .DLC = 0,
-    .RTR_flag = FALSE,
-    .DataField_1 = {0},
-    .DataField_2 = {0}
-};
 
 
 

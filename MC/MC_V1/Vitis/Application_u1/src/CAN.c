@@ -22,6 +22,15 @@ static void RecvHandler(void *CallBackRef);
 static void ErrorHandler(void *CallBackRef, u32 ErrorMask);
 static void EventHandler(void *CallBackRef, u32 IntrMask);
 
+const CAN_Frame Default_CAN_Frame = 
+{
+    .ID = 0,
+    .DLC = 0,
+    .RTR_flag = FALSE,
+    .DataField_1 = {0},
+    .DataField_2 = {0}
+};
+
 int CAN_init(XCanPs *CanInstPtr, UINTPTR BaseAddress)
 {
     int status;

@@ -50,6 +50,7 @@ int main()
                 // CAN_enter_loopback_mode(&CAN0_PS_inst);
                 // XCanPs_EnterMode(&CAN0_PS_inst, XCANPS_MODE_LOOPBACK);
 	            //     while (XCanPs_GetMode(&CAN0_PS_inst) != XCANPS_MODE_LOOPBACK){};
+                
                 CAN_enter_loopback_mode(&CAN0_PS_inst);
                 // CAN_enter_snoop_mode(&CAN0_PS_inst);
 
@@ -74,11 +75,11 @@ int main()
                 // print("\nSending data...");
                 // CAN_Send_Data_Frame(&CAN0_PS_inst);
                 
-                u32 CAN_ID = 2046;  // Example CAN ID
-                u8 Data[] = {1, 2, 3, 4, 5, 6, 7, 8};  // Example data to send
-                u32 DataLength = sizeof(Data);  // Data length in bytes
+                // u32 CAN_ID = 2046;  // Example CAN ID
+                // u8 Data[] = {1, 2, 3, 4, 5, 6, 7, 8};  // Example data to send
+                // u32 DataLength = sizeof(Data);  // Data length in bytes
 
-                status = CAN_Send_Data_Frame(&CAN0_PS_inst, CAN_ID, Data, DataLength);
+                // status = CAN_Send_Data_Frame(&CAN0_PS_inst, CAN_ID, Data, DataLength);
 
 
     
