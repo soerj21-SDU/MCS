@@ -41,7 +41,6 @@ int setup_GPIO_Interrupt(XGpio *InstancePtr, UINTPTR BaseAddress, u16 IntrMask, 
 * @param	instancePtr Pointer to a CANps instance to be worked on.
 * @param	BaseAddress Base Address of the instance. 
 * @param	IntrMask    Intterrupt mask 
-* @param	ISR         Handler to be executed.  
 
 * @return	XST_SUCCESS.
 *
@@ -55,6 +54,7 @@ int setup_CAN_Interrupt(XCanPs *InstancePtr, UINTPTR BaseAddress, u16 IntrMask)
 	CAN_CFG_ptr = XCanPs_LookupConfig(BaseAddress); 	// Find hardware configuration from Vivado's generated file xparameters.h
         if (CAN_CFG_ptr == NULL) 
         { 
+            print("\nCould not find CAN hardware configuration for interrupt setup.");
             return XST_FAILURE;
         }
 
@@ -63,7 +63,7 @@ int setup_CAN_Interrupt(XCanPs *InstancePtr, UINTPTR BaseAddress, u16 IntrMask)
     Status = XSetupInterruptSystem(InstancePtr, &XCanPs_IntrHandler, CAN_CFG_ptr->IntrId, CAN_CFG_ptr->IntrParent, XINTERRUPT_DEFAULT_PRIORITY);
         if (Status != XST_SUCCESS) 
         {
-            print("Failed to setup CAN interrupt");
+            print("\nFailed to setup CAN interrupt");
             return XST_FAILURE; 
         }
 
