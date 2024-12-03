@@ -5,6 +5,7 @@
 #include <sys/_intsup.h>
 #include <xil_printf.h>
 #include <xil_types.h>
+#include <xstatus.h>
 #include "includes/mc_xadc.h"
 
 
@@ -44,7 +45,11 @@ TimerHandle_t xTimer_10_sec; // used for debug
 
 
 int status;
-float sw_value; 
+float sw_value;
+float BP0_measurment; // Used in states.c
+float BP1_measurment; // Used in states.c
+float TP0_measurment; // Used in states.c
+float TP1_measurment; // Used in states.c
 
 void vTimerCallback_2_sec(TimerHandle_t xTimer_2_sec) {
     RTDS_timer_started = FALSE;
@@ -65,7 +70,10 @@ int state_init()
     printf("init state\n\r");
 
     status = xadc_init(XPAR_XXADCPS_0_BASEADDR);
-
+    if (status != XST_SUCCESS) {
+        printf("Error in xadc");
+        return XST_FAILURE;
+    }
 
     /* FreeRTOS */
     xTimer_2_sec = xTimerCreate("Timer", pdMS_TO_TICKS(2000), pdFALSE, (void *)0, vTimerCallback_2_sec);
@@ -241,10 +249,10 @@ int state_drive()
     }   
     /* Brake Pedal */
     // When brake is pressed:
-    sw_value = xadc_get_aux(3); // Be aware that the input sterring wheel is used do to TP0 and TP1 is broken on testbench. 
-    sw_value = xADC_get_converted_voltage(3);
-    sw_value = xADC_reverse_voltage_division(5, sw_value);
-    if (sw_value > 1) {
+
+
+
+    if (BP0_measurment > 1) { // Include the code for all the brake sensor value (BP0 og BP1). They have to be compared.
         print("Brake light on\n\r"); // Remember to enable brake light, when PCB is fixed.
         brake_pressed = TRUE;
     }

@@ -29,7 +29,7 @@ def extract_sw_sensor(file_path):
     return sw_sensor_values
 
 # Path to the input file
-file_path = os.path.join(os.path.dirname(__file__), 'data.txt')
+file_path = os.path.join(os.path.dirname(__file__), 'data_SW.txt')
 
 # Extract SW voltage values
 sw_voltage_values = extract_sw_voltage(file_path)

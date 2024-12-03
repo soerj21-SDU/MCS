@@ -1,0 +1,832 @@
+Master controller software initializing
+init state
+going to drive state
+drive state
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.196 A.
+LVS Voltage: 4.011 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.514 V.
+drive state
+SW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+drive state
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.509 V.
+drive state
+LVS_Current_task
+LVS Current: 0.199 A.
+LVS Voltage: 4.004 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.512 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.514 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.509 V.
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.514 V.
+drive state
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.011 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 420.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 420.000.
+BP0 voltage: 0.514 V.
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.017 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.512 V.
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.514 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 420.000.
+BP0 voltage: 0.511 V.
+drive state
+LVS_Current_task
+LVS Current: 0.196 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.514 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.515 V.
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.512 V.
+drive state
+LVS_Current_task
+LVS Current: 0.199 A.
+LVS Voltage: 4.003 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 420.000.
+BP0 voltage: 0.512 V.
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.514 V.
+Going to tractive state.
+tractive state
+drive state
+LVS_Current_task
+LVS Current: 0.195 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.514 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.512 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 14.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+drive state
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.012 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 14.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+drive state
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 518.000.
+BP0 voltage: 0.635 V.
+SW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 559.000.
+BP0 voltage: 0.689 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 507.000.
+BP0 voltage: 0.620 V.
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.511 V.
+drive state
+LVS_Current_task
+LVS Current: 0.201 A.
+LVS Voltage: 4.006 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.514 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.514 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.512 V.
+drive state
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+Going to tractive state.
+tractive state
+drive state
+LVS_Current_task
+LVS Current: 0.196 A.
+LVS Voltage: 4.014 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.511 V.
+drive state
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 12.000.
+SW voltage: 0.017 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+LVS_Current_task
+LVS Current: 0.205 A.
+LVS Voltage: 4.010 V.
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.508 V.
+drive state
+SW sensor value: 9.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.510 V.
+drive state
+LVS_Current_task
+LVS Current: 0.200 A.
+LVS Voltage: 4.012 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.514 V.
+drive state
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+drive state
+LVS_Current_task
+LVS Current: 0.199 A.
+LVS Voltage: 4.014 V.
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.509 V.
+SW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+drive state
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.509 V.
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.508 V.
+drive state
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.014 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.508 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.509 V.
+Going to tractive state.
+tractive state
+drive state
+LVS_Current_task
+LVS Current: 0.196 A.
+LVS Voltage: 4.005 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+drive state
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+drive state
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+drive state
+LVS_Current_task
+LVS Current: 0.205 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.509 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.512 V.
+drive state
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.511 V.
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.512 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.514 V.
+SW sensor value: 10.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.511 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 421.000.
+BP0 voltage: 0.516 V.
+drive state
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.004 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 479.000.
+BP0 voltage: 0.587 V.
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 521.000.
+BP0 voltage: 0.641 V.
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 569.000.
+BP0 voltage: 0.695 V.
+drive state
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 615.000.
+BP0 voltage: 0.753 V.
+SW sensor value: 11.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 498.000.
+BP0 voltage: 0.613 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 493.000.
+BP0 voltage: 0.607 V.
+drive state
+LVS_Current_task
+LVS Current: 0.206 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 521.000.
+BP0 voltage: 0.641 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 690.000.
+BP0 voltage: 0.845 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 647.000.
+BP0 voltage: 0.792 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 615.000.
+BP0 voltage: 0.753 V.
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 511.000.
+BP0 voltage: 0.623 V.
+drive state
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 421.000.
+BP0 voltage: 0.515 V.
+Going to tractive state.
+tractive state
+drive state
+LVS_Current_task
+LVS Current: 0.197 A.
+LVS Voltage: 4.012 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 517.000.
+BP0 voltage: 0.633 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 686.000.
+BP0 voltage: 0.841 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 581.000.
+BP0 voltage: 0.712 V.
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 423.000.
+BP0 voltage: 0.515 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 421.000.
+BP0 voltage: 0.514 V.
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 420.000.
+BP0 voltage: 0.514 V.
+drive state
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.010 V.
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.515 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.514 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 419.000.
+BP0 voltage: 0.516 V.
+drive state
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 467.000.
+BP0 voltage: 0.574 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 648.000.
+BP0 voltage: 0.797 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 689.000.
+BP0 voltage: 0.848 V.
+drive state
+LVS_Current_task
+LVS Current: 0.200 A.
+LVS Voltage: 4.010 V.
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 666.000.
+BP0 voltage: 0.816 V.
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 596.000.
+BP0 voltage: 0.732 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 414.000.
+BP0 voltage: 0.509 V.
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.508 V.
+drive state
+LVS_Current_task
+LVS Current: 0.205 A.
+LVS Voltage: 4.007 V.
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.509 V.
+drive state
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.512 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 415.000.
+BP0 voltage: 0.512 V.
+drive state
+LVS_Current_task
+LVS Current: 0.200 A.
+LVS Voltage: 4.007 V.
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+SW sensor value: 14.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.512 V.
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.510 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+drive state

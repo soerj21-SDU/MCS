@@ -47,13 +47,26 @@ static QueueHandle_t xQueue = NULL;
 char HWstring[15] = "Hello World";
 long RxtaskCntr = 0;
 
+/* Timer for sensor testing */
+TimerHandle_t xTimer;
+float elapsedTime = 0;
+void vTimerCallback(TimerHandle_t xTimer) {
+    elapsedTime= elapsedTime + 0.5;
+    printf("Elapsed time: %.1f seconds\n", elapsedTime);
+}
+
+
+
 /* Other variables */
 int state = ST_INIT; // Initial state
 
 float LVS_current_value; 
 float LVS_voltage_value;
 float SW_measurment;
-
+extern float BP0_measurment; // Used in states.c
+extern float BP1_measurment; // Used in states.c
+extern float TP0_measurment; // Used in states.c
+extern float TP1_measurment; // Used in states.c
 
 
 int main( void )
@@ -90,7 +103,27 @@ int main( void )
                         tskIDLE_PRIORITY,			                    /* The task runs at the idle priority. */
                             &Sensor_measurment);
 
-	xQueue = xQueueCreate( 	10,						                       /* There is only one space in the queue. */
+
+/* For sensor test */
+
+    xTimer = xTimerCreate("Timer", pdMS_TO_TICKS(500), pdTRUE, (void *)0, vTimerCallback);
+        
+        if (xTimer != NULL) {
+            // Start the timer with a block time of 0 ticks
+            if (xTimerStart(xTimer, 0) != pdPASS) {
+                // The timer could not be set into the Active state
+                printf("Timer start failed\n");
+            }
+        } else {
+            // The timer could not be created
+            printf("Timer creation failed\n");
+        }
+
+
+/* ----- */
+
+
+    xQueue = xQueueCreate( 	10,						                       /* There is only one space in the queue. */
 							sizeof( HWstring ) );	                       /* Each space in the queue is large enough to hold a uint32_t. */
 
 	/* Check the queue was created. */
@@ -219,17 +252,37 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
     {
         print("sensor task");
         SW_measurment = xadc_get_aux(3);
-        printf("SW sensor value: %.3f V.\n\r", SW_measurment);
+        printf("SW sensor value: %.3f.\n\r", SW_measurment);
         SW_measurment = xADC_get_converted_voltage(3);
         SW_measurment = xADC_reverse_voltage_division(5, SW_measurment);
         printf("SW voltage: %.3f V.\n\r", SW_measurment);
         
+        BP0_measurment = xadc_get_aux(8);
+        printf("BP0 sensor value: %.3f.\n\r", BP0_measurment);
+        BP0_measurment = xADC_get_converted_voltage(8);
+        BP0_measurment = xADC_reverse_voltage_division(5, BP0_measurment);
+        printf("BP0 voltage: %.3f V.\n\r", BP0_measurment);
 
+        BP1_measurment = xadc_get_aux(0);
+        printf("BP1 sensor value: %.3f.\n\r", BP1_measurment);
+        BP1_measurment = xADC_get_converted_voltage(0);
+        BP1_measurment = xADC_reverse_voltage_division(5, BP1_measurment);
+        printf("BP1 voltage: %.3f V.\n\r", BP1_measurment);
+
+        TP0_measurment = xadc_get_aux(1);
+        printf("TP0 sensor value: %.3f.\n\r", TP0_measurment);
+        TP0_measurment = xADC_get_converted_voltage(1);
+        TP0_measurment = xADC_reverse_voltage_division(5, TP0_measurment);
+        printf("TP0 voltage: %.3f V.\n\r", TP0_measurment);
+
+        TP1_measurment = xadc_get_aux(9);
+        printf("TP1 sensor value: %.3f.\n\r", TP1_measurment);
+        TP1_measurment = xADC_get_converted_voltage(9);
+        TP1_measurment = xADC_reverse_voltage_division(5, TP1_measurment);
+        printf("TP1 voltage: %.3f V.\n\r", TP1_measurment);
         
+
         // vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
-
-
-        
         vTaskDelay(pdMS_TO_TICKS(400)); // 400 ms delay
     }
 }
