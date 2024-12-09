@@ -157,6 +157,20 @@ collect(PROJECT_LIB_DEPS xilstandalone;xiltimer;freertos)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 collect(PROJECT_LIB_DEPS freertos)
 collect(PROJECT_LIB_DEPS xil)
 collect(PROJECT_LIB_DEPS xiltimer)
@@ -169,9 +183,11 @@ if(CMAKE_EXPORT_COMPILE_COMMANDS)
     set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
     set(CMAKE_C_STANDARD_INCLUDE_DIRECTORIES ${CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES})
 endif()
+collect (PROJECT_LIB_SOURCES GPIO.c)
 collect (PROJECT_LIB_SOURCES interrupts.c)
 collect (PROJECT_LIB_SOURCES main.c)
 collect (PROJECT_LIB_SOURCES mc_xadc.c)
+collect (PROJECT_LIB_SOURCES SDC.c)
 collect (PROJECT_LIB_SOURCES states.c)
 collector_list (_sources PROJECT_LIB_SOURCES)
 linker_gen("${CMAKE_CURRENT_SOURCE_DIR}/linker_files/")

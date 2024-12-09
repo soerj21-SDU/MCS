@@ -63,10 +63,10 @@ int state = ST_INIT; // Initial state
 float LVS_current_value; 
 float LVS_voltage_value;
 float SW_measurment;
-extern float BP0_measurment; // Used in states.c
-extern float BP1_measurment; // Used in states.c
-extern float TP0_measurment; // Used in states.c
-extern float TP1_measurment; // Used in states.c
+float BP0_measurment; // Used in states.c
+float BP1_measurment; // Used in states.c
+float TP0_measurment; // Used in states.c
+float TP1_measurment; // Used in states.c
 
 
 int main( void )
@@ -230,7 +230,6 @@ static void PS_allive_task(void *pvParameters)
     }
 }
 /*-----------------------------------------------------------*/
-
 /*----------------- LVS measurement task --------------------*/
 
 static void LVS_measurement_task(void *pvParameters) // This task can be extended to contain all data readings (Current (DashAMSCurrnet etc.)) 
@@ -245,7 +244,8 @@ static void LVS_measurement_task(void *pvParameters) // This task can be extende
         vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
     }
 }
-
+/*-----------------------------------------------------------*/
+/*---------------- Sensor measurment task -------------------*/
 static void Sensor_measurment_task(void *pvParameters) // This task can be extended to contain all data readings (Current (DashAMSCurrnet etc.)) 
 {
     for( ;; )

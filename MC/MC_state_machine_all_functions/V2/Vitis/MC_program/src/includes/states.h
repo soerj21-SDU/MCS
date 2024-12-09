@@ -26,6 +26,11 @@
 
 extern int state;
 
+extern float BP0_measurment; // Used in states.c
+extern float BP1_measurment; // Used in states.c
+extern float TP0_measurment; // Used in states.c
+extern float TP1_measurment; // Used in states.c
+
 
 
 /* State machine states */
