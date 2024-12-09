@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <xil_types.h>
+#include "SDC.h"
 #include "xparameters.h"
 
 /* States */

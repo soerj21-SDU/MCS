@@ -1,4 +1,5 @@
 #include "xparameters.h"
+#include "xgpio.h"
 #include "xcanps.h"
 #include "xil_exception.h"
 #include "xinterrupt_wrap.h"
@@ -7,7 +8,7 @@
 extern u16 GlobalIntrMask; /* GPIO channel mask that is needed by the Interrupt Handler */
 
 typedef void     (*ISR_CallBack) (void *CallbackRef);   
-// int setup_GPIO_Interrupt(XGpio *InstancePtr, UINTPTR BaseAddress, u16 IntrMask, ISR_CallBack ISR); // ISR == Intr_Handler
+int setup_GPIO_Interrupt(XGpio *InstancePtr, UINTPTR BaseAddress, u16 IntrMask, ISR_CallBack ISR); // ISR == Intr_Handler
 
 // int setup_CAN_Interrupt(XCanPs *InstancePtr, UINTPTR BaseAddress, u16 IntrMask, ISR_CallBack ISR); // ISR == Intr_Handler
 int setup_CAN_Interrupt(XCanPs *InstancePtr, UINTPTR BaseAddress, u16 IntrMask); 

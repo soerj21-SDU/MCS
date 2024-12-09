@@ -1,4 +1,4 @@
-#include "includes/interrupts.h"
+#include "interrupts.h"
 
 u16 GlobalIntrMask;
 
@@ -12,7 +12,28 @@ u16 GlobalIntrMask;
 *
 * @note		
 *****************************************************************************/
+int setup_GPIO_Interrupt(XGpio *InstancePtr, UINTPTR BaseAddress, u16 IntrMask, ISR_CallBack ISR)
+{
+    XGpio_Config *ConfigPtr;                        
+    ConfigPtr = XGpio_LookupConfig(BaseAddress);  
 
+    GlobalIntrMask = IntrMask;
+
+    int Status;
+
+    Status = XSetupInterruptSystem(InstancePtr, ISR, ConfigPtr->IntrId, ConfigPtr->IntrParent, XINTERRUPT_DEFAULT_PRIORITY);
+        if (Status != XST_SUCCESS) 
+        {
+            print("Failed to setup GPIO interrupt");
+            return XST_FAILURE;
+        }
+
+    XGpio_InterruptEnable(InstancePtr, IntrMask);
+    XGpio_InterruptGlobalEnable(InstancePtr);
+	// XDisconnectInterruptCntrl(ConfigPtr->IntrId, ConfigPtr->IntrParent);
+
+    return Status; 
+}
 
 
 
