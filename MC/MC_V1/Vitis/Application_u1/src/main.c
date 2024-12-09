@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
+#include <xcanps.h>
 #include <xgpio.h>
 #include <xil_types.h>
 #include <xstatus.h>
@@ -14,25 +15,25 @@
 #include "includes/interrupts.h"
 #include "includes/CAN.h"
 
+// #define FRAME_DATA_LENGTH	8 /* Frame Data field length */
+
+// #define XCANPS_MAX_FRAME_SIZE_IN_WORDS (XCANPS_MAX_FRAME_SIZE / sizeof(u32))
+// static u32 NEW_TxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
+
+
 int DELAY = 100000000;
 int main()
 {
     int status; 
     init_platform();
 
+
     while(1)
     {
         switch (state) 
         {
-            case (ST_INIT) : //----------------------------------------------------------------------------
+            case (ST_INIT) :
             {
-                // status = init_SDC();
-                //     if (status != XST_SUCCESS)
-                //     {
-                //         print ("Initialization of Shutdown Circuit failed.");
-                //         return XST_FAILURE;
-                //     }
-
                 status = CAN_init(&CAN0_PS_inst, CAN0_base_address);
                     if (status != XST_SUCCESS) 
                     {
@@ -40,74 +41,54 @@ int main()
                         return XST_FAILURE;
                     }
 
-                // status = CAN_init(&CAN1_PS_inst, CAN1_base_address);
-                //     if (status != XST_SUCCESS) {
-                //         xil_printf("Initialization of CAN1 failed.");
-                //         return XST_FAILURE;
-                //     }
-
-
+                CAN_enter_normal_mode(&CAN0_PS_inst);
                 // CAN_enter_loopback_mode(&CAN0_PS_inst);
-                // XCanPs_EnterMode(&CAN0_PS_inst, XCANPS_MODE_LOOPBACK);
-	            //     while (XCanPs_GetMode(&CAN0_PS_inst) != XCANPS_MODE_LOOPBACK){};
-                
-                CAN_enter_loopback_mode(&CAN0_PS_inst);
+
                 // CAN_enter_snoop_mode(&CAN0_PS_inst);
 
 
 
-                state = ST_IDLE;
-                break;
-            }
-
-            case (ST_IDLE) : //----------------------------------------------------------------------------
-            { 
 
 
-                // int k, y; 
-                // k = XCanPs_GetMode(&CAN0_PS_inst);
-                // y = XCanPs_GetStatus(&CAN0_PS_inst);
-                
-                // printf("\nmode = %d",k);
-                // printf("\nstatus  = %d",y);
+                // print("\nIn Normal Mode");
 
 
-                // print("\nSending data...");
-                // CAN_Send_Data_Frame(&CAN0_PS_inst);
-                
-                // u32 CAN_ID = 2046;  // Example CAN ID
-                // u8 Data[] = {1, 2, 3, 4, 5, 6, 7, 8};  // Example data to send
+                u32 CAN_ID = 0b00111;  // Example CAN ID
+                // u32 CAN_ID = 0b11111111111;  // Example CAN ID
+                // u32 CAN_ID = 1488;  // Example CAN ID
+
+                u8 Data[] = {0};  // Example data to send
+                // u8 Data = 0;  // Example data to send
+                // // u8 Data = 0b1111;  // Example data to send
                 // u32 DataLength = sizeof(Data);  // Data length in bytes
+                u32 DataLength = 1;
 
-                // status = CAN_Send_Data_Frame(&CAN0_PS_inst, CAN_ID, Data, DataLength);
+                status = CAN_Send_Data_Frame(&CAN0_PS_inst, CAN_ID, Data, DataLength);
 
-
-    
-
-                // CAN_Send_TestFrame(&CAN0_PS_inst);
-
-                // u32 upper4Bits = (TxFrame[1] & 0xF0000000) >> 28;
+                // state = ST_IDLE;
 
 
 
-                // printf("\n TxFrame[0] = ID  = %u", TxFrame[0]);
-                // // printf("\n TxFrame[1] = DLC = %u", TxFrame[1]);
-                // printf("\nUpper 4 bits of TxFrame[1] = %u", upper4Bits);  // %X prints in hexadecimal
-                // printf("\n TxFrame[2] = DataWord1 = %u", TxFrame[2]);
-                // printf("\n TxFrame[3] = DataWord2 = %u", TxFrame[3]);
+                    // u8 *FramePtr;
+                    // NEW_TxFrame[0] = (u32)XCanPs_CreateIdValue((u32)3, 0, 0, 0, 0);
+                    // NEW_TxFrame[1] = (u32)XCanPs_CreateDlcValue((u32)FRAME_DATA_LENGTH);
 
-                // printf("\n RxFrame[0] = ID  = %u", RxFrame[0]);
-                // // printf("\n RxFrame[1] = DLC = %u", RxFrame[1]);
-                // printf("\nUpper 4 bits of TxFrame[1] = %u", upper4Bits);  // %X prints in hexadecimal
-                // printf("\n RxFrame[2] = DataWord1 = %u", RxFrame[2]);
-                // printf("\n RxFrame[3] = DataWord2 = %u", RxFrame[3]);
+                    // FramePtr = (u8 *)(&NEW_TxFrame[2]);
 
-                // printf("\n RxFrame[3] = DataWord2 = %u", RxFrame[3]);
-                // print("\nprinting id...");
+                    // int Index;
 
-                // printf("\nRxFrame[0] = 11-bit ID = %u", RxFrame[0]);
-                // printf("\n%u", RxFrame[0]);
+                    // for (Index = 0; Index < FRAME_DATA_LENGTH; Index++) 
+                    // {
+                    //     *FramePtr++ = (u8)Index;
+                    // }
 
+                    // while (XCanPs_IsTxFifoFull(&CAN0_PS_inst) == TRUE);
+
+                    // int Status = XCanPs_Send(&CAN0_PS_inst, NEW_TxFrame);
+                    //     if (Status != XST_SUCCESS) 
+                    //     {
+                    //         print("\nFailed to send");
+                    //     }
 
 
 
@@ -115,7 +96,32 @@ int main()
                 for(int i = 0; i < 1000000000; i++)
                 {
 
-                } //1 sec delay
+                } //1 sec delay 1000000000
+
+
+                break;
+            }
+
+            case (ST_IDLE) :
+            { 
+
+
+
+
+                // if (XCanPs_IsRxEmpty(&CAN0_PS_inst))
+                // {
+                //     print("\n RxFIFO is empty");
+                // }
+                // else
+                // {
+                //     print("\n RxFIFO is NOT empty");
+                // }
+
+
+                // for(int i = 0; i < 100000000; i++)
+                // {
+
+                // } //1 sec delay
 
 
 

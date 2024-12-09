@@ -96,13 +96,13 @@ int CAN_Config(XCanPs *InstancePtr)
 
     CAN_enter_config_mode(InstancePtr);
     
-    status = XCanPs_SetBaudRatePrescaler(InstancePtr, BRPR_BAUD_PRESCALAR);  
+    status = XCanPs_SetBaudRatePrescaler(InstancePtr, BAUD_RATE_PRESCALAR);  
         if (status != XST_SUCCESS)  
         {  
             print("\nfailed to set CAN Baud Rate prescalar");
             return XST_FAILURE;  
         }
-    status = XCanPs_SetBitTiming(InstancePtr,    BTR_SYNCJUMPWIDTH,    BTR_SECOND_TIMESEGMENT,    BTR_FIRST_TIMESEGMENT);
+    status = XCanPs_SetBitTiming(InstancePtr,    SYNC_JUMP_WIDTH_time,    SECOND_SEGMENT_time,    FIRST_SEGMENT_time);
         if (status != XST_SUCCESS)  
         {  
             print("\nfailed to set CAN bit timing");
@@ -182,10 +182,6 @@ int CAN_Send_Data_Frame(XCanPs *InstancePtr, u32 ID, u8 *DataPtr, u32 DataLength
         return XST_FAILURE;
     }
 
-    #define CAN_BITS_IDENTIFIER_LOWER_STANDARD_BITS 0x7FF // =      0000 0000 0000 0000 0000 0111 1111 1111
-     #define CAN_BITS_IDENTIFIER_UPPER_EXTENDED_BITS 0x3FFFF800 //  0011 1111 1111 1111 1111 1000 0000 0000
-
-
     CAN_Transmitted_Message.ID = ID;
 
 
@@ -196,7 +192,7 @@ int CAN_Send_Data_Frame(XCanPs *InstancePtr, u32 ID, u8 *DataPtr, u32 DataLength
 
 
     // ------------------------ Create Control Field (DLC) ------------------------
-    if ( (DataLength_No_Of_Bytes <= MAX_DATA_FIELD_LENGTH) && (DataLength_No_Of_Bytes > 0) ) 
+    if ( (DataLength_No_Of_Bytes <= MAX_DATA_FIELD_LENGTH) && (DataLength_No_Of_Bytes >= 0) ) 
     {
         TxFrame[IDX_FIELD_CTLR] = (u32)XCanPs_CreateDlcValue( DataLength_No_Of_Bytes ); 
     }
@@ -238,6 +234,7 @@ int CAN_Send_Data_Frame(XCanPs *InstancePtr, u32 ID, u8 *DataPtr, u32 DataLength
         print("\nERROR: Failed to send data frame.");
         return XST_FAILURE;
     }
+    print("\n Succesfully sent");
 
     // printf("\n \n");
     // printf("\n\nCAN_Tx_DW1_DB0 = %u", CAN_Transmitted_Message.DataField_1[0]);
@@ -266,6 +263,7 @@ static void SendHandler(void *CallBackRef)
 {
     (void)CallBackRef;
     SendDone = TRUE;    /* The frame was sent successfully. Notify the task context. */
+    print("\n Succesfully transmitted");
 }
 
 
@@ -278,9 +276,13 @@ static void SendHandler(void *CallBackRef)
 static void RecvHandler(void *CallBackRef)
 {
 
+
     CAN_Received_Message = Default_CAN_Frame;
 
     XCanPs *CanPtr = (XCanPs *)CallBackRef;    //set CanPtr to driver instance
+
+                XCanPs_IntrDisable(CanPtr, XCANPS_IXR_ERROR_MASK);
+
     int Status;
 
     Status = XCanPs_Recv(CanPtr, RxFrame);
@@ -303,7 +305,7 @@ static void RecvHandler(void *CallBackRef)
         CAN_Extended_ID = (RxFrame[IDX_FIELD_IDENT] & BITS_FIELD_IDENT_EXT_ID) >> OFFSET_BITS_EXT_ID;
     }
 
-    CAN_Received_Message.ID = CAN_Standard_ID | (CAN_Extended_ID << LENGTH_STD_ID)            ; 
+    CAN_Received_Message.ID = CAN_Standard_ID | (CAN_Extended_ID << LENGTH_STD_ID); 
 
     printf("\nRECEIVED CAN STANDARD ID: %u", CAN_Standard_ID);
     printf("\nRECEIVED CAN EXTENDED ID: %u", CAN_Extended_ID);
@@ -383,46 +385,62 @@ static void RecvHandler(void *CallBackRef)
 */
 static void ErrorHandler(void *CallBackRef, u32 ErrorMask)
 {
+    print ("\n Error Handler");
+
     (void)CallBackRef;
 
-    if (ErrorMask & XCANPS_ESR_ACKER_MASK) 
+    // XCanPs_IntrDisable(CallBackRef, XCANPS_IXR_ERROR_MASK);
+
+
+
+    if (ErrorMask & XCANPS_ESR_ACKER_MASK) //ACK ERROR: a transmitting node does not receive an acknowledgment (ACK) bit from any receiver on the network.
     {
-        /* ACK Error handling code should be put here.*/
+        /* "ACK Error" handling code should be put here.*/
+        print("\n ACK error.");
     }
 
-    if (ErrorMask & XCANPS_ESR_BERR_MASK) 
+    if (ErrorMask & XCANPS_ESR_BERR_MASK) //BIT ERROR: a transmitting node sends a bit on the bus and reads back a different bit due to interference or faults on the bus.
     {
-        /* Bit Error handling code should be put here */
+        /* "Bit Error" handling code should be put here. */
+        print("\n Bit error.");
     }
 
-    if (ErrorMask & XCANPS_ESR_STER_MASK) 
+    if (ErrorMask & XCANPS_ESR_STER_MASK) //STUFF ERROR: the CAN controller detects more than 5 consecutive identical bits (either all 0s or all 1s) in a frame.
     {
-        /* Stuff Error handling code should be put here. */
+        /* "Stuff Error" handling code should be put here. */
+
+        print("\n Stuff error.");
     }
 
-    if (ErrorMask & XCANPS_ESR_FMER_MASK) 
+    if (ErrorMask & XCANPS_ESR_FMER_MASK) //FORM ERROR: when a fixed-form field in the frame (e.g., CRC delimiter, ACK delimiter, or EOF) contains an illegal value.
     {
-        /* Form Error handling code should be put here. */
+        /* "Form Error" handling code should be put here. */
+        print("\n Form error.");
     }
 
-    if (ErrorMask & XCANPS_ESR_CRCER_MASK) 
+    if (ErrorMask & XCANPS_ESR_CRCER_MASK)  //CRC ERROR: when the CRC value calculated by the receiver does not match the CRC field sent by the transmitter.
     {
-        /* CRC Error handling code should be put here. */
+        /* "CRC Error" handling code should be put here. */
+        print("\n CRC error.");
     }
 
     LoopbackError = TRUE;
     RecvDone = TRUE;
     SendDone = TRUE;
+
+    // XCanPs_IntrEnable(CallBackRef, XCANPS_IXR_ERROR_MASK);
 }
 
 static void EventHandler(void *CallBackRef, u32 IntrMask)
 {
     XCanPs *CanPtr = (XCanPs *)CallBackRef;
 
+    print ("\n EventHandler");
+
     if (IntrMask & XCANPS_IXR_BSOFF_MASK) 
     {
         // Entering Bus off status interrupt requires the CAN device be reset and reconfigured.
-
+        print ("\n entering Bus off status ");
         XCanPs_Reset(CanPtr);
         CAN_Config(CanPtr);
 
@@ -432,36 +450,47 @@ static void EventHandler(void *CallBackRef, u32 IntrMask)
     if (IntrMask & XCANPS_IXR_RXOFLW_MASK) 
     {
         /* Code to handle RX FIFO Overflow Interrupt should be put here. */
+        print("\n Rx FIFO overflow interrupt");
     }
 
     if (IntrMask & XCANPS_IXR_RXUFLW_MASK) 
     {
         /* Code to handle RX FIFO Underflow Interrupt should be put here. */
+                print("\n Rx FIFO underflow interrupt");
+
     }
 
     if (IntrMask & XCANPS_IXR_TXBFLL_MASK) 
     {
         /* Code to handle TX High Priority Buffer Full Interrupt should be put here. */
+                print("\n TxHP buffer full interrupt");
+
     }
 
     if (IntrMask & XCANPS_IXR_TXFLL_MASK) 
     {
         /* Code to handle TX FIFO Full Interrupt should be put here. */
+                print("\n Tx FIFO Full interrupt");
+
     }
 
     if (IntrMask & XCANPS_IXR_WKUP_MASK) 
     {
         /* Code to handle Wake up from sleep mode Interrupt should be put here. */
+                print("\n Wake up from sleep mode interrupt");
+
     }
 
     if (IntrMask & XCANPS_IXR_SLP_MASK) 
     {
         /* Code to handle Enter sleep mode Interrupt should be put here. */
+                print("\n Enter sleep mode interrupt");
     }
 
     if (IntrMask & XCANPS_IXR_ARBLST_MASK) 
     {
         /* Code to handle Lost bus arbitration Interrupt should be put here. */
+                print("\n Lost bus arbitration interrupt");
     }
 }
 

@@ -47,76 +47,62 @@
 
 */ 
 
-#define CAN_REF_CLK_FREQ             (23.8 * 1e6)/   // 23.8 (24) MHz  (as set in Vivado)
+#define CAN_REF_CLK_FREQ             (23.8 * 1e6)/   // 23.8 (24) MHz (as set in Vivado)
 
-// from TRF: RECOMMENDED: For all clocking sources, set the can.BRPR register to a value of 2 or greater and a prescaler value of at least 3.
-#define BAUD_RATE_PRESCALAR          2 
+// from TRF: "RECOMMENDED: For all clocking sources, set the can.BRPR register to a value of 2 or greater and a prescaler value of at least 3."
+// #define BAUD_RATE_PRESCALAR            2  //3                            // 6 // 2 
 
-// From TRF: The time quanta clock (TQ_CLK) is derived from the controller reference clock (CAN_REF_CLK) divided by the baud rate prescaler (BRP)
-// TQ_time  = CAN_REF_CLK / (PRESCALAR + 1)  )
-#define TQ_FREQ = CAN_REF_CLK_FREQ / (BAUD_RATE_PRESCALAR + 1)
-
-
-/* The time segments and syncronization time (time quanta) (from TRF):
+// From TRF: "The time quanta clock (TQ_CLK) is derived from the controller reference clock (CAN_REF_CLK) divided by the baud rate prescaler (BRP)
+// #define TQ_FREQ = CAN_REF_CLK_FREQ / (BAUD_RATE_PRESCALAR + 1)          // TQ_time  = CAN_REF_CLK / (PRESCALAR + 1)  )
+ 
+/* The time segments and syncronization time (time quanta):
+* Chosen as to give  a 1 Mbps baud rate with a CAN_controller_clock of 23.8 MHz. 77.77% sampling point.
 
 * Propegation Segment: 
 * Synchronization Jump Width: as specified in the CAN 2.0A and CAN 2.0B standard. The actual value is one more than the value written to the register.
 * Time Segment 1: the Sum of Propagation Segment and Phase Segment 1 as specified in the CAN 2.0A and CAN 2.0B standard The actual value is one more
-* Time Segment 2: Phase Segment 2 as specified in the CAN 2.0A and CAN 2.0B standard. The actual value is one more than the value written to the register.
-
-than the value written to the register
-*/
-#define SYNC_SEGMENT_time     3 // Used for synchronizing the CAN controller to the CAN traffic on the bus: tSYNC_SEGMENT = 1 * tTQ_CLK
-#define SECOND_SEGMENT_time   2 // tTIME_SEGMENT2 = tTQ_CLK * (can.BTR[TS2] + 1)
-#define FIRST_SEGMENT_time    3 // tTIME_SEGMENT1 = tTQ_CLK * (can.BTR[TS1] + 1)
-
-// Calculate the baud rate (Mb/s)
-
-// tBIT_RATE = tSYNC_SEGMENT + tTIME_SEGMENT1 + tTIME_SEGMENT2
-#define BAUD_RATE       CAN_REF_CLK_FREQ / ( (PRESCALAR + 1 ) * (SYNC_SEGMENT_time + FIRST_SEGMENT_time + SECOND_SEGMENT_time)  )  
+* Time Segment 2: Phase Segment 2 as specified in the CAN 2.0A and CAN 2.0B standard. The actual value is one more than the value written to the register.*/
 
 
 
 
+// // // Configuration for 1 Mb/s (Jonas / Sebastian)
+// #define BAUD_RATE_PRESCALAR      2                        
+// #define SYNC_JUMP_WIDTH_time     3 // Used for synchronizing the CAN controller to the CAN traffic on the bus: tSYNC_SEGMENT = 1 * tTQ_CLK
+// #define FIRST_SEGMENT_time       3 // tTIME_SEGMENT1 = tTQ_CLK * (can.BTR[TS1] + 1)
+// #define SECOND_SEGMENT_time      2 // tTIME_SEGMENT2 = tTQ_CLK * (can.BTR[TS2] + 1)
+
+#define BAUD_RATE_PRESCALAR         29
+#define SYNC_JUMP_WIDTH_time		3  // 3
+#define FIRST_SEGMENT_time	        15 // 3
+#define SECOND_SEGMENT_time	        2  // 2
+
+// // Configuration for 1 Mb/s (Texas Calculator)
+// #define BAUD_RATE_PRESCALAR      2                        
+// #define SYNC_JUMP_WIDTH_time     4 // Used for synchronizing the CAN controller to the CAN traffic on the bus: tSYNC_SEGMENT = 1 * tTQ_CLK
+// #define FIRST_SEGMENT_time       4 // tTIME_SEGMENT1 = tTQ_CLK * (can.BTR[TS1] + 1)
+// #define SECOND_SEGMENT_time      4 // tTIME_SEGMENT2 = tTQ_CLK * (can.BTR[TS2] + 1)
+
+// Configuration for 1 Mb/s (Texas Calculator)
+// #define BAUD_RATE_PRESCALAR      1                        
+// #define SYNC_JUMP_WIDTH_time     3 // Used for synchronizing the CAN controller to the CAN traffic on the bus: tSYNC_SEGMENT = 1 * tTQ_CLK
+// #define FIRST_SEGMENT_time       3 // tTIME_SEGMENT1 = tTQ_CLK * (can.BTR[TS1] + 1)
+// #define SECOND_SEGMENT_time      3 // tTIME_SEGMENT2 = tTQ_CLK * (can.BTR[TS2] + 1)
+
+// // Configuration for 500 Kb/s (Texas Calculator)
+// #define BAUD_RATE_PRESCALAR      2                        
+// #define SYNC_JUMP_WIDTH_time     3 // Used for synchronizing the CAN controller to the CAN traffic on the bus: tSYNC_SEGMENT = 1 * tTQ_CLK
+// #define FIRST_SEGMENT_time       3 // tTIME_SEGMENT1 = tTQ_CLK * (can.BTR[TS1] + 1)
+// #define SECOND_SEGMENT_time      2 // tTIME_SEGMENT2 = tTQ_CLK * (can.BTR[TS2] + 1)
 
 
-// quantum clk = CAN_clk / (Prescalar + 1)  
-// CAN_clock / (Prescaler + 1) = quantum clock (from XCanPs_SetBaudRatePrescaler documentation). 
-
-// #define BRPR_BAUD_PRESCALER 2 // f_TQ = 23.8 MHz / (BRPR_BAUD_PRESCALER + 1) = 7.99 MHz --> time quantum, t_TQ = 1 / 7.f_TQ = 0.126 us 
-
-// // These timing parameters are set to give  a 1 Mbps baud rate with a CAN_controller_clock of 23.8 MHz. 77.77% sampling point.
-// #define BTR_SYNCJUMPWIDTH        3 // Bit Timing Register (BTR) 
-// #define BTR_FIRST_TIMESEGMENT    3
-// #define BTR_SECOND_TIMESEGMENT   2
-// // BIT_RATE = f_tq / (BTR_SYNCJUMPWIDTH + BTR_FIRST_TIMESEGMENT + BTR_SECOND_TIMESEGMENT) = 7.99 MHz * (3 + 3 + 2) = 0.99875 Mbit/s
-// // :--------------------------------------------------------------------------------------------------------------
 
 
 
-/*
- * The Baud Rate Prescaler Register (BRPR) and Bit Timing Register (BTR)
- * are setup such that CAN baud rate equals 40Kbps, assuming that the
- * the CAN clock is 24MHz. The user needs to modify these values based on
- * the desired baud rate and the CAN clock frequency. For more information
- * see the CAN 2.0A, CAN 2.0B, ISO 11898-1 specifications.
 
- * Timing parameters to be set in the Bit Timing Register (BTR).
- * These values are for a 40 Kbps baudrate assuming the CAN input clock
- * frequency is 24 MHz.
- */
-#define BTR_SYNCJUMPWIDTH       3
-#define BTR_SECOND_TIMESEGMENT  2
-#define BTR_FIRST_TIMESEGMENT   15
+// Calculate the baud rate (Mb/s --> 1 Mb/s)
+#define BAUD_RATE       CAN_REF_CLK_FREQ / ( (PRESCALAR + 1 ) * (SYNC_SEGMENT_time + FIRST_SEGMENT_time + SECOND_SEGMENT_time)  )   // tBIT_RATE = tSYNC_SEGMENT + tTIME_SEGMENT1 + tTIME_SEGMENT2
 
-/*
- * The Baud rate Prescalar value in the Baud Rate Prescaler Register
- * needs to be set based on the input clock  frequency to the CAN core and
- * the desired CAN baud rate.
- * This value is for a 40 Kbps baudrate assuming the CAN input clock frequency
- * is 24 MHz.
- */
-#define BRPR_BAUD_PRESCALAR 29
 
 
 
@@ -164,7 +150,7 @@ than the value written to the register
 #define OFFSET_DATA_WORD_DB0                 24
 #define OFFSET_DATA_WORD_DB1                 16
 #define OFFSET_DATA_WORD_DB2                  8
-#define OFFSET_DATA_WORD_DB3                  0
+#define OFFSET_DATA_WORD_DB3                  0 
 
 // ------------------------ Field indexes ------------------------
 #define IDX_FIELD_IDENT                       0
@@ -210,7 +196,7 @@ typedef struct
 
 
 
-// To be used for dynamically sizing the data fields depending on the inputted DLC.
+// To be used for dynamically sizing the data fields depending on the inputted DLC. 
 // typedef struct 
 // {
 //     u32 ID;          // 29-bit or 11-bit CAN ID
