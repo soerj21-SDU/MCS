@@ -1,0 +1,16 @@
+Overview:
+This software package includes all the essential functions required for a basic race car. It is designed to provide the fundamental capabilities needed for race car operations.
+
+Important Notice:
+Please be aware that due to current hardware issues, it is not possible to run the code at this time. Attempting to execute the software on the Zynq platform may result in hardware damage. We strongly advise against running the code until these issues are resolved.
+
+Features:
+Basic race car control functions
+Sensor integration
+Data logging
+Communication protocols
+Usage
+Due to the aforementioned hardware issues, usage instructions will be provided once the hardware problems are resolved.
+
+Disclaimer
+Running this software on the Zynq platform in its current state may cause irreparable damage to the hardware. Proceed with caution and ensure all hardware issues are addressed before attempting to use the software.
