@@ -1,0 +1,8 @@
+vhdl xil_defaultlib  \
+"../../../../Vivado.gen/sources_1/bd/MC/ip/MC_axi_gpio_0_0/sim/MC_axi_gpio_0_0.vhd" \
+"../../../../Vivado.gen/sources_1/bd/MC/ip/MC_rst_ps7_0_100M_0/sim/MC_rst_ps7_0_100M_0.vhd" \
+"../../../../Vivado.gen/sources_1/bd/MC/ip/MC_SDC_Monitor_CAR_0_0/sim/MC_SDC_Monitor_CAR_0_0.vhd" \
+"../../../../Vivado.gen/sources_1/bd/MC/sim/MC.vhd" \
+
+# Do not sort compile order
+nosort
