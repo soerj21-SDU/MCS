@@ -304,6 +304,7 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         if (!TorqueSensorsOutOfRange(TP0_measurment, TP1_measurment)) 
         {
             print("TPs out of range");
+            state = ST_ERROR;
         }
         else 
         {
