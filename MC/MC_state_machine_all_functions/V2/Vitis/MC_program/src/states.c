@@ -131,6 +131,14 @@ int state_init()
     toggle_MIO_GPIO(&IPrtINV34_FET_In, INV34_FET_In_channel,1);
     toggle_MIO_GPIO(&IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel,1);
 
+    /* ADC */
+        status = xadc_init(XPAR_XXADCPS_0_BASEADDR);
+    if (status != XST_SUCCESS) {
+        printf("Error in xadc");
+        return XST_FAILURE;
+    }
+
+
     /* FreeRTOS */
     xTimer_2_sec = xTimerCreate("Timer", pdMS_TO_TICKS(2000), pdFALSE, (void *)0, vTimerCallback_2_sec);
         if (xTimer_2_sec == NULL) {

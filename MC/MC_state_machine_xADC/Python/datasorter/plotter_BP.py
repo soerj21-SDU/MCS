@@ -1,5 +1,5 @@
-from main_BP0 import extract_BP0_voltage, extract_elapsed_time, create_linspace
-from main_BP1 import extract_BP1_voltage, extract_elapsed_time, create_linspace
+from main_BP0 import extract_BP0_voltage, extract_elapsed_time, create_linspace, extract_BP0_sensor
+from main_BP1 import extract_BP1_voltage, extract_elapsed_time, create_linspace, extract_BP1_sensor
 from read_csv import read_csv, csv_scaler, compare_datasets
 
 import matplotlib.pyplot as plt
@@ -101,3 +101,33 @@ ax_bp1_2.grid(True)
 
 plt.tight_layout()
 plt.show()
+
+
+BP0_value = extract_BP0_sensor(brake_txt_file_path)
+
+
+plt.plot(BP0_value)
+plt.xlabel('Index')
+plt.ylabel('Sensor Value')
+plt.title('Sensor Values Over Time BP0')
+plt.show()
+
+max_value = max(BP0_value)
+min_value = min(BP0_value)
+
+print(f"Maximum value: {max_value}")
+print(f"Minimum value: {min_value}")
+
+BP1_value = extract_BP1_sensor(brake_txt_file_path)
+plt.plot(BP1_value)
+plt.xlabel('Index')
+plt.ylabel('Sensor Value')
+plt.title('Sensor Values Over Time BP1')
+plt.show()
+
+max_value = max(BP1_value)
+min_value = min(BP1_value)
+
+print(f"Maximum value: {max_value}")
+print(f"Minimum value: {min_value}")
+

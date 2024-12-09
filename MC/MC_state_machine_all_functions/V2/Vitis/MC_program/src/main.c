@@ -1,4 +1,14 @@
+/*
+
+To do: 
+    After final sensor test -> remove timers etc. in regards to the time etc. 
+    Make sure the processing layers are clear. RTOS <-> state machine <-> Data processing <-> Drivers
+    Talk to a mechanicle guy to clarify how far the BP sensors can be pressed. 
+*/
+
+
 /* Debug variables */
+#include <xinterrupt_wrap.h>
 #define timer_multiplier 6 // To slow state machine down. NOT 0!
 
 
@@ -17,6 +27,7 @@
 #include <stdio.h>
 #include "includes/states.h"
 #include "includes/mc_xadc.h"
+#include "includes/data_processing.h"
 
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
@@ -26,6 +37,9 @@
 /* PS ALlive */
 #define PS_allive_LED 41
 #define PS_allive_LED_Baseadress XPAR_XGPIOPS_0_BASEADDR
+
+XGpioPs_Config *ConfigPtr_PS_allive;
+XGpioPs Gpio_PS_allive;
 
 /* Pedals */ 
 
@@ -63,15 +77,29 @@ int state = ST_INIT; // Initial state
 float LVS_current_value; 
 float LVS_voltage_value;
 float SW_measurment;
-float BP0_measurment; // Used in states.c
-float BP1_measurment; // Used in states.c
-float TP0_measurment; // Used in states.c
-float TP1_measurment; // Used in states.c
+float SW_angle;
+float BP0_measurment; 
+float BP1_measurment;
+float TP0_measurment; 
+float TP1_measurment;
 
 
 int main( void )
 {
     xil_printf( "Master controller software initializing\r\n" );
+
+    ConfigPtr_PS_allive = XGpioPs_LookupConfig(PS_allive_LED_Baseadress);
+
+    int status = XGpioPs_CfgInitialize(&Gpio_PS_allive, ConfigPtr_PS_allive, ConfigPtr_PS_allive -> BaseAddr);
+    if (status != XST_SUCCESS) {
+        print("Initialize fail XGpioPs_CfgInitialize PS_allive\n\r");
+    }
+    XGpioPs_SetDirectionPin(&Gpio_PS_allive, PS_allive_LED, 1);
+    XGpioPs_SetOutputEnablePin(&Gpio_PS_allive, PS_allive_LED, 1);
+    printf("EMIO pin: %d used. \n\r", PS_allive_LED);
+    XGpioPs_WritePin(&Gpio_PS_allive, PS_allive_LED, 0x1);
+
+
 
     /* Free RTOS */
 
@@ -197,12 +225,7 @@ static void main_state_machine_task( void *pvParameters )
             case ST_SHUTDOWN:
             {
                 state = state_shutdown();
-
-
-
-
-
-                                
+                             
                 print("Power can be shut off");
                 break;                
             }
@@ -226,6 +249,7 @@ static void PS_allive_task(void *pvParameters)
     for( ;; )
     {
         printf("PS_allive_task \n\r");
+        toggle_MIO_GPIO(&Gpio_PS_allive, PS_allive_LED, 2);
         vTaskDelay(pdMS_TO_TICKS(500 * timer_multiplier)); // 200 ms delay
     }
 }
@@ -245,6 +269,7 @@ static void LVS_measurement_task(void *pvParameters) // This task can be extende
     }
 }
 /*-----------------------------------------------------------*/
+
 /*---------------- Sensor measurment task -------------------*/
 static void Sensor_measurment_task(void *pvParameters) // This task can be extended to contain all data readings (Current (DashAMSCurrnet etc.)) 
 {
@@ -256,31 +281,55 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         SW_measurment = xADC_get_converted_voltage(3);
         SW_measurment = xADC_reverse_voltage_division(5, SW_measurment);
         printf("SW voltage: %.3f V.\n\r", SW_measurment);
+        SW_measurment = xadc_get_aux(3);
+        SW_angle = get_SW_angle(SW_measurment);
+        printf("SW angle: %.3f V.\n\r", SW_angle);
         
         BP0_measurment = xadc_get_aux(8);
         printf("BP0 sensor value: %.3f.\n\r", BP0_measurment);
         BP0_measurment = xADC_get_converted_voltage(8);
         BP0_measurment = xADC_reverse_voltage_division(5, BP0_measurment);
         printf("BP0 voltage: %.3f V.\n\r", BP0_measurment);
+        BP0_measurment = xadc_get_aux(8);
+        BP0_measurment = BP0_percentage(BP0_measurment);
+        printf("BP0 percentage: %.3f V.\n\r", BP0_measurment);
+
 
         BP1_measurment = xadc_get_aux(0);
         printf("BP1 sensor value: %.3f.\n\r", BP1_measurment);
         BP1_measurment = xADC_get_converted_voltage(0);
         BP1_measurment = xADC_reverse_voltage_division(5, BP1_measurment);
         printf("BP1 voltage: %.3f V.\n\r", BP1_measurment);
+        BP1_measurment = xadc_get_aux(0);
+        BP1_measurment = BP1_percentage(BP1_measurment);
+        printf("BP1 percentage: %.3f V.\n\r", BP1_measurment);
 
         TP0_measurment = xadc_get_aux(1);
         printf("TP0 sensor value: %.3f.\n\r", TP0_measurment);
         TP0_measurment = xADC_get_converted_voltage(1);
         TP0_measurment = xADC_reverse_voltage_division(5, TP0_measurment);
         printf("TP0 voltage: %.3f V.\n\r", TP0_measurment);
+        TP0_measurment = xadc_get_aux(1);
+        TP0_measurment = TP0_percentage(TP0_measurment);
+        printf("TP0 percentage: %.3f V.\n\r", TP0_measurment);
 
         TP1_measurment = xadc_get_aux(9);
         printf("TP1 sensor value: %.3f.\n\r", TP1_measurment);
         TP1_measurment = xADC_get_converted_voltage(9);
         TP1_measurment = xADC_reverse_voltage_division(5, TP1_measurment);
         printf("TP1 voltage: %.3f V.\n\r", TP1_measurment);
+        TP1_measurment = xadc_get_aux(1);
+        TP1_measurment = TP0_percentage(TP1_measurment);
+        printf("TP0 percentage: %.3f V.\n\r", TP1_measurment);
         
+        if (!TorqueSensorsOutOfRange(TP0_measurment, TP1_measurment)) 
+        {
+            print("TPs out of range");
+        }
+        else 
+        {
+            print("TPs within 5 percent");
+        }
 
         // vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
         vTaskDelay(pdMS_TO_TICKS(400)); // 400 ms delay

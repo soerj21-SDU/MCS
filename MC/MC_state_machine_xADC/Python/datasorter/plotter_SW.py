@@ -58,3 +58,18 @@ ax2.grid(True)
 plt.tight_layout()
 plt.show()
 
+
+# Sensor value
+sw_value = extract_sw_sensor(txt_file_path)
+
+plt.plot(sw_value)
+plt.xlabel('Index')
+plt.ylabel('Sensor Value')
+plt.title('Sensor Values Over Time')
+plt.show()
+
+max_value = max(sw_value)
+min_value = min(sw_value)
+
+print(f"Maximum value: {max_value}")
+print(f"Minimum value: {min_value}")
