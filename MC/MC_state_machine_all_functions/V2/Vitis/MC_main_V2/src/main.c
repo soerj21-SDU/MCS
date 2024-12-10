@@ -250,7 +250,7 @@ static void PS_allive_task(void *pvParameters)
     {
         printf("PS_allive_task \n\r");
         toggle_MIO_GPIO(&Gpio_PS_allive, PS_allive_LED, 2);
-        vTaskDelay(pdMS_TO_TICKS(500 * timer_multiplier)); // 200 ms delay
+        vTaskDelay(pdMS_TO_TICKS(500 * timer_multiplier)); // 500 ms delay
     }
 }
 /*-----------------------------------------------------------*/
@@ -292,7 +292,7 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         printf("BP0 voltage: %.3f V.\n\r", BP0_measurment);
         BP0_measurment = xadc_get_aux(8);
         BP0_measurment = BP0_percentage(BP0_measurment);
-        printf("BP0 percentage: %.3f V.\n\r", BP0_measurment);
+        printf("BP0 percentage: %.3f\n\r", BP0_measurment);
 
 
         BP1_measurment = xadc_get_aux(0);
@@ -302,7 +302,7 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         printf("BP1 voltage: %.3f V.\n\r", BP1_measurment);
         BP1_measurment = xadc_get_aux(0);
         BP1_measurment = BP1_percentage(BP1_measurment);
-        printf("BP1 percentage: %.3f V.\n\r", BP1_measurment);
+        printf("BP1 percentage: %.3f\n\r", BP1_measurment);
 
         TP0_measurment = xadc_get_aux(1);
         printf("TP0 sensor value: %.3f.\n\r", TP0_measurment);
@@ -311,7 +311,7 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         printf("TP0 voltage: %.3f V.\n\r", TP0_measurment);
         TP0_measurment = xadc_get_aux(1);
         TP0_measurment = TP0_percentage(TP0_measurment);
-        printf("TP0 percentage: %.3f V.\n\r", TP0_measurment);
+        printf("TP0 percentage: %.3f\n\r", TP0_measurment);
 
         TP1_measurment = xadc_get_aux(9);
         printf("TP1 sensor value: %.3f.\n\r", TP1_measurment);
@@ -320,7 +320,7 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         printf("TP1 voltage: %.3f V.\n\r", TP1_measurment);
         TP1_measurment = xadc_get_aux(1);
         TP1_measurment = TP0_percentage(TP1_measurment);
-        printf("TP0 percentage: %.3f V.\n\r", TP1_measurment);
+        printf("TP0 percentage: %.3f\n\r", TP1_measurment);
         
         if (!TorqueSensorsOutOfRange(TP0_measurment, TP1_measurment)) 
         {
@@ -332,7 +332,7 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         }
 
         // vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
-        vTaskDelay(pdMS_TO_TICKS(400)); // 400 ms delay
+        vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
     }
 }
 /*-----------------------------------------------------------*/

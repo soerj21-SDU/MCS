@@ -76,7 +76,7 @@ bool brake_pressed = TRUE;
 /*  state_tractive()  */
 int brake_pedal_status = 1;                 // temporary
 int torque_pedal_status = 1;                // temporary
-int drive_buton = 1;                        // temporary
+int drive_button = 1;                        // temporary
 
 /*  state_drive()  */
 int torque_implausibility = 0;
@@ -135,7 +135,7 @@ int state_init()
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtINV34_FET_In, INV34_FET_In_channel, 1); // 1 in direction = output
     setup_MIO_GPIO(MIO_GPIO_BaseAddress, GPIOConfigPtr, &IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel, 1); // 1 in direction = output
     toggle_MIO_GPIO(&IPrtDash_FET_In, Dash_FET_In_channel,1);
-    toggle_MIO_GPIO(&IPrtAMS_FET_In, AMS_FET_In_channel,1);
+    toggle_MIO_GPIO(&IPrtAMS_FET_In, AMS_FET_In_channel,1); // Is off when program is run... 
     toggle_MIO_GPIO(&IPrtDASH_AMS_SEL, DASH_AMS_SEL_channel,1);
     toggle_MIO_GPIO(&IPrtTSC_INV12_SEL, TSC_INV12_SEL_channel,1);
     toggle_MIO_GPIO(&IPrtTSC_FET_In, TSC_FET_In_channel,1);
@@ -143,6 +143,12 @@ int state_init()
     toggle_MIO_GPIO(&IPrtSNET_FET_In, SNET_FET_In_channel,1);
     toggle_MIO_GPIO(&IPrtINV34_FET_In, INV34_FET_In_channel,1);
     toggle_MIO_GPIO(&IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel,1);
+
+    status = xadc_init(XPAR_XXADCPS_0_BASEADDR);
+    if (status != XST_SUCCESS) {
+        printf("Error in xadc");
+        return XST_FAILURE;
+    }
 
     /* FreeRTOS */
     xTimer_2_sec = xTimerCreate("Timer", pdMS_TO_TICKS(2000), pdFALSE, (void *)0, vTimerCallback_2_sec);
@@ -310,41 +316,43 @@ int state_tractive()
     }
     */
     printf("tractive state\n\r");
-    SDC_connected = is_SDC_Completed();    
-    SDC_connected = TRUE; // DEBUG
-    if (SDC_connected != TRUE) {
-        // Send stop to AMS via CAN!
-        print("SDC not complete\n\r");
-        error_code = SDC_error;        
-        return ST_ERROR;
-    }
+    // SDC_connected = is_SDC_Completed();    
+    // SDC_connected = TRUE; // DEBUG
+    // if (SDC_connected != TRUE) {
+    //     // Send stop to AMS via CAN!
+    //     print("SDC not complete\n\r");
+    //     error_code = SDC_error;        
+    //     return ST_ERROR;
+    // }
     
     brake_pedal_status = 0;                
     torque_pedal_status = 0;               
-    drive_buton = 0; 
+    drive_button = 0; 
 
     BP0_measurment = xadc_get_aux(8);
+    printf("BP0_measurment %.3f \n\r",BP0_measurment);
     BP1_measurment = xadc_get_aux(0);
+    printf("BP1_measurment %.3f \n\r",BP1_measurment);
     TP0_measurment = xadc_get_aux(1);
+    printf("TP0_measurment %.3f \n\r",TP0_measurment);
     TP1_measurment = xadc_get_aux(9);
-    // read drive button
+    printf("TP1_measurment %.3f \n\r",TP1_measurment);
+    // read drive button 
     if (TorqueSensorsOutOfRange(TP0_measurment, TP1_measurment)) {
         torque_pedal_status = 1; 
     }
-
     if (BrakePedalSensorsOutOfRange(BP0_measurment, BP1_measurment)) {
         brake_pedal_status = 1; 
     }
 
-    // function to detect if drive_buton has been pressed.
-
+    // function to detect if drive_button has been pressed.
     RTDS_sound_on = TRUE;
     /* Debug */
     brake_pedal_status = 1;                
     torque_pedal_status = 1;                
-    drive_buton = 1; 
-    /* Debug end */                       
-    if (brake_pedal_status && torque_pedal_status && drive_buton == 1) {  
+    drive_button = 1;
+    /* Debug end */                     
+    if (brake_pedal_status == 1 && torque_pedal_status == 1 && drive_button == 1) {
         return ST_DRIVE;
     }
     return ST_TRACTIVE;
