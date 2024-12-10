@@ -144,6 +144,8 @@ int state_init()
     toggle_MIO_GPIO(&IPrtINV34_FET_In, INV34_FET_In_channel,1);
     toggle_MIO_GPIO(&IPrtSNET_INV34_SEL, SNET_INV34_SEL_channel,1);
 
+
+    /* ADC */    
     status = xadc_init(XPAR_XXADCPS_0_BASEADDR);
     if (status != XST_SUCCESS) {
         printf("Error in xadc");
