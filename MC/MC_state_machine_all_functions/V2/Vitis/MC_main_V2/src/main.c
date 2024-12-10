@@ -1,3 +1,12 @@
+/*
+
+To do: 
+    After final sensor test -> remove timers etc. in regards to the time etc. 
+    Make sure the processing layers are clear. RTOS <-> state machine <-> Data processing <-> Drivers
+    Talk to a mechanicle guy to clarify how far the BP sensors can be pressed. 
+*/
+
+
 /* Debug variables */
 #include <xinterrupt_wrap.h>
 #define timer_multiplier 6 // To slow state machine down. NOT 0!
@@ -28,6 +37,9 @@
 /* PS ALlive */
 #define PS_allive_LED 41
 #define PS_allive_LED_Baseadress XPAR_XGPIOPS_0_BASEADDR
+
+XGpioPs_Config *ConfigPtr_PS_allive;
+XGpioPs Gpio_PS_allive;
 
 /* Pedals */ 
 
@@ -75,6 +87,19 @@ float TP1_measurment;
 int main( void )
 {
     xil_printf( "Master controller software initializing\r\n" );
+
+    ConfigPtr_PS_allive = XGpioPs_LookupConfig(PS_allive_LED_Baseadress);
+
+    int status = XGpioPs_CfgInitialize(&Gpio_PS_allive, ConfigPtr_PS_allive, ConfigPtr_PS_allive -> BaseAddr);
+    if (status != XST_SUCCESS) {
+        print("Initialize fail XGpioPs_CfgInitialize PS_allive\n\r");
+    }
+    XGpioPs_SetDirectionPin(&Gpio_PS_allive, PS_allive_LED, 1);
+    XGpioPs_SetOutputEnablePin(&Gpio_PS_allive, PS_allive_LED, 1);
+    printf("MIO pin: %d used. \n\r", PS_allive_LED);
+    XGpioPs_WritePin(&Gpio_PS_allive, PS_allive_LED, 0x1);
+
+
 
     /* Free RTOS */
 
@@ -200,12 +225,7 @@ static void main_state_machine_task( void *pvParameters )
             case ST_SHUTDOWN:
             {
                 state = state_shutdown();
-
-
-
-
-
-                                
+                             
                 print("Power can be shut off");
                 break;                
             }
@@ -229,6 +249,7 @@ static void PS_allive_task(void *pvParameters)
     for( ;; )
     {
         printf("PS_allive_task \n\r");
+        toggle_MIO_GPIO(&Gpio_PS_allive, PS_allive_LED, 2);
         vTaskDelay(pdMS_TO_TICKS(500 * timer_multiplier)); // 200 ms delay
     }
 }
@@ -303,12 +324,11 @@ static void Sensor_measurment_task(void *pvParameters) // This task can be exten
         
         if (!TorqueSensorsOutOfRange(TP0_measurment, TP1_measurment)) 
         {
-            print("TPs out of range");
-            state = ST_ERROR;
+            print("TPs out of range\n\r");
         }
         else 
         {
-            print("TPs within 5 percent");
+            print("TPs within 5 percent\n\r");
         }
 
         // vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay

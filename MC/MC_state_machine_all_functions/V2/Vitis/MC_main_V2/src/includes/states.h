@@ -18,20 +18,16 @@
 #define LV_button 0
 #define Precharge_button 0
 
-// /* Tractive state */
-//     /* Tractive errors */
-//     #define torque_implausibility 0
-//     #define torque_disconnect 0
-//     #define tractive_stop 0
-
 extern int state;
 
+extern float LVS_current_value; // Used in states.c  
+extern float LVS_voltage_value; // Used in states.c
+extern float SW_measurment; // Used in states.c
+extern float SW_angle; // Used in states.c
 extern float BP0_measurment; // Used in states.c
 extern float BP1_measurment; // Used in states.c
 extern float TP0_measurment; // Used in states.c
-extern float TP1_measurment; // Used in states.c
-
-
+extern float TP1_measurment; // Used in states.c       
 
 /* State machine states */
 int state_init();

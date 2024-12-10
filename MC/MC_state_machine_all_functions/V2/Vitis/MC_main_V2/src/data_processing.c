@@ -78,7 +78,7 @@ float TP1_percentage(int ADC_value)
 
 bool TorqueSensorsOutOfRange(float TP_0_percentage, float TP_1_percentage) 
     {
-        if (fabs(TP_0_percentage - TP_1_percentage) > 5) 
+        if (fabs(TP_0_percentage - TP_1_percentage) > 5) // Change margin of error here
         {
             // Insert error handeling. 
             return TRUE;
@@ -88,6 +88,19 @@ bool TorqueSensorsOutOfRange(float TP_0_percentage, float TP_1_percentage)
             return FALSE;
         }
     }
+
+bool BrakePedalSensorsOutOfRange(float BP_0_percentage, float BP_1_percentage) 
+{
+    if (fabs(BP_0_percentage - BP_1_percentage) > 15) // Change margin of error here
+    {
+        // Insert error handling.
+        return TRUE;
+    }
+    else 
+    {
+        return FALSE;
+    }
+}
 
 float BP0_percentage(int ADC_value) 
 {
