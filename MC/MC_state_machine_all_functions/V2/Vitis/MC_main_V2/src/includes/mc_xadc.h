@@ -26,3 +26,4 @@ float xADC_reverse_voltage_division(int voltage_in_use, float voltage);
 
 float xADC_get_LVS_Current(u16 channel);
 
+float xADC_get_LVS_Voltage(u16 channel);

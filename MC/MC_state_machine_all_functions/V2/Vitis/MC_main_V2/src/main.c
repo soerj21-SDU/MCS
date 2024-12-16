@@ -151,8 +151,8 @@ int main( void )
 /* ----- */
 
 
-    xQueue = xQueueCreate( 	10,						                       /* There is only one space in the queue. */
-							sizeof( HWstring ) );	                       /* Each space in the queue is large enough to hold a uint32_t. */
+    xQueue = xQueueCreate( 	10,						                       
+							sizeof( HWstring ) );	                      
 
 	/* Check the queue was created. */
 	configASSERT( xQueue );
@@ -260,11 +260,11 @@ static void LVS_measurement_task(void *pvParameters) // This task can be extende
 {
     for( ;; )
     {
-        printf("LVS_Current_task\n\r");
+        // printf("LVS_Current_task\n\r");
         LVS_current_value = xADC_get_LVS_Current(13);
-        printf("LVS Current: %.3f A.\n\r", LVS_current_value);
-        LVS_voltage_value = xADC_get_LVS_Current(5);
-        printf("LVS Voltage: %.3f V.\n\r", LVS_voltage_value);
+        // printf("LVS Current: %.6f A.\n\r", LVS_current_value);
+        LVS_voltage_value = xADC_get_LVS_Voltage(5);
+        // printf("LVS Voltage: %.3f V.\n\r", LVS_voltage_value);
         vTaskDelay(pdMS_TO_TICKS(400 * timer_multiplier)); // 400 ms delay
     }
 }

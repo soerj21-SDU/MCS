@@ -72,6 +72,12 @@ float xADC_reverse_voltage_division(int voltage_in_use, float voltage)
         return reverse_voltage;
     }
 
+    else if (voltage_in_use == 24) // If pin headeres are set to 12 V
+    {
+        reverse_voltage = voltage*(1.0 + (29100.0 / 1000.0));
+        return reverse_voltage;
+    }
+
     else {
         printf("Voltage eroor in xADC_reverse_voltage_division");
         return reverse_voltage = 0.0;
@@ -83,7 +89,16 @@ float xADC_reverse_voltage_division(int voltage_in_use, float voltage)
 float xADC_get_LVS_Current(u16 channel)
 {
     float LVS_Current;
+    LVS_Current = xadc_get_aux(channel);
     LVS_Current = xADC_get_converted_voltage(channel);
-    LVS_Current = xADC_reverse_voltage_division(5, LVS_Current);    
+    LVS_Current = xADC_reverse_voltage_division(5, LVS_Current); 
     return LVS_Current;
+}
+
+float xADC_get_LVS_Voltage(u16 channel)
+{
+    float LVS_Voltage;
+    LVS_Voltage = xADC_get_converted_voltage(channel);
+    LVS_Voltage = xADC_reverse_voltage_division(24, LVS_Voltage);    
+    return LVS_Voltage;
 }
