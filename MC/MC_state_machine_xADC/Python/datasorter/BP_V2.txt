@@ -1,0 +1,884 @@
+Master controller software initializing
+init state
+going to drive state
+drive state
+PS_allive_task
+LVS_Current_task
+LVS Current: 0.196 A.
+LVS Voltage: 4.010 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 433.000.
+BP0 voltage: 0.531 V.
+BP1 sensor value: 416.000.
+BP1 voltage: 0.509 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 434.000.
+BP0 voltage: 0.532 V.
+BP1 sensor value: 416.000.
+BP1 voltage: 0.511 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.018 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 0.5 seconds
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 432.000.
+BP0 voltage: 0.531 V.
+BP1 sensor value: 416.000.
+BP1 voltage: 0.506 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 1.0 seconds
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 431.000.
+BP0 voltage: 0.532 V.
+BP1 sensor value: 417.000.
+BP1 voltage: 0.512 V.
+TP0 sensor value: 10.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 1.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 469.000.
+BP0 voltage: 0.575 V.
+BP1 sensor value: 452.000.
+BP1 voltage: 0.552 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+Elapsed time: 2.0 seconds
+sensor taskSW sensor value: 10.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 500.000.
+BP0 voltage: 0.613 V.
+BP1 sensor value: 466.000.
+BP1 voltage: 0.574 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+LVS_Current_task
+LVS Current: 0.206 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 827.000.
+BP0 voltage: 1.020 V.
+BP1 sensor value: 666.000.
+BP1 voltage: 0.818 V.
+TP0 sensor value: 10.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 2.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1365.000.
+BP0 voltage: 1.668 V.
+BP1 sensor value: 980.000.
+BP1 voltage: 1.199 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 174.000.
+TP1 voltage: 0.217 V.
+Elapsed time: 3.0 seconds
+drive state
+Brake light on
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 666.000.
+BP0 voltage: 0.816 V.
+BP1 sensor value: 591.000.
+BP1 voltage: 0.723 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 3.5 seconds
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 468.000.
+BP0 voltage: 0.574 V.
+BP1 sensor value: 429.000.
+BP1 voltage: 0.526 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 4.0 seconds
+sensor taskSW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 426.000.
+BP0 voltage: 0.522 V.
+BP1 sensor value: 407.000.
+BP1 voltage: 0.500 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.012 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+Elapsed time: 4.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 454.000.
+BP0 voltage: 0.557 V.
+BP1 sensor value: 421.000.
+BP1 voltage: 0.519 V.
+TP0 sensor value: 10.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+LVS_Current_task
+LVS Current: 0.202 A.
+LVS Voltage: 4.010 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 846.000.
+BP0 voltage: 1.044 V.
+BP1 sensor value: 693.000.
+BP1 voltage: 0.852 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 5.0 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 1450.000.
+BP0 voltage: 1.780 V.
+BP1 sensor value: 1061.000.
+BP1 voltage: 1.299 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.012 V.
+TP1 sensor value: 216.000.
+TP1 voltage: 0.265 V.
+drive state
+Brake light on
+Elapsed time: 5.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 664.000.
+BP0 voltage: 0.807 V.
+BP1 sensor value: 597.000.
+BP1 voltage: 0.728 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 6.0 seconds
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 436.000.
+BP0 voltage: 0.533 V.
+BP1 sensor value: 409.000.
+BP1 voltage: 0.500 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 6.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 428.000.
+BP0 voltage: 0.525 V.
+BP1 sensor value: 409.000.
+BP1 voltage: 0.504 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.012 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 587.000.
+BP0 voltage: 0.726 V.
+BP1 sensor value: 518.000.
+BP1 voltage: 0.639 V.
+TP0 sensor vElapsed time: 7.0 seconds
+a7.0 seconds
+
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+LVS_Current_task
+LVS Current: 0.208 A.
+LVS Voltage: 4.009 V.
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 1276.000.
+BP0 voltage: 1.568 V.
+BP1 sensor value: 929.000.
+BP1 voltage: 1.139 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 156.000.
+TP1 voltage: 0.194 V.
+Elapsed time: 7.5 seconds
+drive state
+Brake light on
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 892.000.
+BP0 voltage: 1.081 V.
+BP1 sensor value: 759.000.
+BP1 voltage: 0.923 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 8.0 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 456.000.
+BP0 voltage: 0.559 V.
+BP1 sensor value: 427.000.
+BP1 voltage: 0.525 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+PS_allive_task
+Elapsed time: 8.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 425.000.
+BP0 voltage: 0.521 V.
+BP1 sensor value: 409.000.
+BP1 voltage: 0.501 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 9.0 seconds
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 471.000.
+BP0 voltage: 0.581 V.
+BP1 sensor value: 425.000.
+BP1 voltage: 0.523 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 793.000.
+BP0 voltage: 0.978 V.
+BP1 sensor value: 646.000.
+BP1 voltage: 0.793 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.012 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 9.5 seconds
+drive state
+LVS_Current_task
+LVS Current: 0.206 A.
+LVS Voltage: 4.011 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1234.000.
+BP0 voltage: 1.512 V.
+BP1 sensor value: 949.000.
+BP1 voltage: 1.162 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 121.000.
+TP1 voltage: 0.143 V.
+Elapsed time: 10.0 seconds
+drive state
+Brake light on
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 496.000.
+BP0 voltage: 0.608 V.
+BP1 sensor value: 464.000.
+BP1 voltage: 0.568 V.
+TP0 sensor value: 14.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 10.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 424.000.
+BP0 voltage: 0.521 V.
+BP1 sensor value: 410.000.
+BP1 voltage: 0.500 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+PS_allive_task
+Elapsed time: 11.0 seconds
+sensor taskSW sensor value: 14.000.
+SW voltage: 0.017 V.
+BP0 sensor value: 448.000.
+BP0 voltage: 0.549 V.
+BP1 sensor value: 419.000.
+BP1 voltage: 0.514 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+Elapsed time: 11.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 754.000.
+BP0 voltage: 0.930 V.
+BP1 sensor value: 617.000.
+BP1 voltage: 0.763 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+SW sensor value: 10.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 1222.000.
+BP0 voltage: 1.494 V.
+BP1 sensor value: 958.000.
+BP1 voltage: 1.171 V.
+TP0 sensor value: 14.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 114.000.
+TP1 voltage: 0.139 V.
+Going to tractive state.
+Elapsed time: 12.0 seconds
+tractive state
+drive state
+Brake light on
+LVS_Current_task
+LVS Current: 0.197 A.
+LVS Voltage: 4.011 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 542.000.
+BP0 voltage: 0.664 V.
+BP1 sensor value: 511.000.
+BP1 voltage: 0.625 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 12.5 seconds
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 418.000.
+BP0 voltage: 0.511 V.
+BP1 sensor value: 408.000.
+BP1 voltage: 0.503 V.
+TP0 sensor value: 14.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 13.0 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 416.000.
+BP0 voltage: 0.509 V.
+BP1 sensor value: 410.000.
+BP1 voltage: 0.503 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+PS_allive_task
+Elapsed time: 13.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 545.000.
+BP0 voltage: 0.671 V.
+BP1 sensor value: 500.000.
+BP1 voltage: 0.612 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1097.000.
+BP0 voltage: 1.348 V.
+BP1 sensor value: 837.000.
+BP1 voltage: 1.025 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 78.000.
+TP1 voltage: 0.096 V.
+Elapsed time: 14.0 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1452.000.
+BP0 voltage: 1.779 V.
+BP1 sensor value: 1081.000.
+BP1 voltage: 1.319 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 209.000.
+TP1 voltage: 0.255 V.
+drive state
+Brake light on
+LVS_Current_task
+LVS Current: 0.196 A.
+LVS Voltage: 4.011 V.
+PS_allive_task
+Elapsed time: 14.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 583.000.
+BP0 voltage: 0.711 V.
+BP1 sensor value: 549.000.
+BP1 voltage: 0.667 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 15.0 seconds
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 420.000.
+BP0 voltage: 0.515 V.
+BP1 sensor value: 408.000.
+BP1 voltage: 0.500 V.
+TP0 sensor value: 14.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 15.5 seconds
+drive state
+PS_allive_task
+SW sensor value: 10.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 421.000.
+BP0 voltage: 0.519 V.
+BP1 sensor value: 409.000.
+BP1 voltage: 0.503 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 16.0 seconds
+sensor taskSW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 494.000.
+BP0 voltage: 0.607 V.
+BP1 sensor value: 450.000.
+BP1 voltage: 0.550 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 913.000.
+BP0 voltage: 1.128 V.
+BP1 sensor value: 721.000.
+BP1 voltage: 0.888 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.002 V.
+Elapsed time: 16.5 seconds
+drive state
+Brake light on
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.007 V.
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1222.000.
+BP0 voltage: 1.493 V.
+BP1 sensor value: 951.000.
+BP1 voltage: 1.165 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 113.000.
+TP1 voltage: 0.139 V.
+Elapsed time: 17.0 seconds
+sensor taskSW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 443.000.
+BP0 voltage: 0.542 V.
+BP1 sensor value: 423.000.
+BP1 voltage: 0.514 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+Elapsed time: 17.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 417.000.
+BP0 voltage: 0.512 V.
+BP1 sensor value: 410.000.
+BP1 voltage: 0.504 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 18.0 seconds
+drive state
+PS_allive_task
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 425.000.
+BP0 voltage: 0.521 V.
+BP1 sensor value: 410.000.
+BP1 voltage: 0.504 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 549.000.
+BP0 voltage: 0.677 V.
+BP1 sensor value: 495.000.
+BP1 voltage: 0.607 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 18.5 seconds
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1151.000.
+BP0 voltage: 1.412 V.
+BP1 sensor value: 858.000.
+BP1 voltage: 1.059 V.
+TP0 sensor value: 14.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 104.000.
+TP1 voltage: 0.131 V.
+Elapsed time: 19.0 seconds
+drive state
+Brake light on
+LVS_Current_task
+LVS Current: 0.207 A.
+LVS Voltage: 4.011 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 1182.000.
+BP0 voltage: 1.444 V.
+BP1 sensor value: 959.000.
+BP1 voltage: 1.171 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 92.000.
+TP1 voltage: 0.107 V.
+Elapsed time: 19.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 465.000.
+BP0 voltage: 0.565 V.
+BP1 sensor value: 441.000.
+BP1 voltage: 0.536 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+Elapsed time: 20.0 seconds
+sensor taskSW sensor value: 13.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 422.000.
+BP0 voltage: 0.516 V.
+BP1 sensor value: 410.000.
+BP1 voltage: 0.500 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+PS_allive_task
+Elapsed time: 20.5 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 436.000.
+BP0 voltage: 0.537 V.
+BP1 sensor value: 412.000.
+BP1 voltage: 0.503 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 733.000.
+BP0 voltage: 0.902 V.
+BP1 sensor value: 612.000.
+BP1 voltage: 0.754 V.
+TP0 sensor value: 14.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 21.0 seconds
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 1390.000.
+BP0 voltage: 1.703 V.
+BP1 sensor value: 1004.000.
+BP1 voltage: 1.230 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 186.000.
+TP1 voltage: 0.228 V.
+Elapsed time: 21.5 seconds
+drive state
+Brake light on
+LVS_Current_task
+LVS Current: 0.201 A.
+LVS Voltage: 4.015 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.016 V.
+BP0 sensor value: 652.000.
+BP0 voltage: 0.792 V.
+BP1 sensor value: 607.000.
+BP1 voltage: 0.737 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.012 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 22.0 seconds
+sensor taskSW sensor value: 13.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 450.000.
+BP0 voltage: 0.552 V.
+BP1 sensor value: 427.000.
+BP1 voltage: 0.526 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.017 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+Elapsed time: 22.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 425.000.
+BP0 voltage: 0.521 V.
+BP1 sensor value: 408.000.
+BP1 voltage: 0.504 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+PS_allive_task
+SW sensor value: 13.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 498.000.
+BP0 voltage: 0.613 V.
+BP1 sensor value: 448.000.
+BP1 voltage: 0.553 V.
+TP0 sensor vElapsed time: 23.0 seconds
+a23.0 seconds
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+SW sensor value: 10.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 1008.000.
+BP0 voltage: 1.242 V.
+BP1 sensor value: 781.000.
+BP1 voltage: 0.962 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 41.000.
+TP1 voltage: 0.053 V.
+Elapsed time: 23.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 1117.000.
+BP0 voltage: 1.363 V.
+BP1 sensor value: 921.000.
+BP1 voltage: 1.123 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 57.000.
+TP1 voltage: 0.066 V.
+Going to tractive state.
+Elapsed time: 24.0 seconds
+tractive state
+drive state
+Brake light on
+LVS_Current_task
+LVS Current: 0.195 A.
+LVS Voltage: 4.007 V.
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 466.000.
+BP0 voltage: 0.572 V.
+BP1 sensor value: 436.000.
+BP1 voltage: 0.533 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 24.5 seconds
+drive state
+SW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 423.000.
+BP0 voltage: 0.520 V.
+BP1 sensor value: 408.000.
+BP1 voltage: 0.500 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 25.0 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 444.000.
+BP0 voltage: 0.546 V.
+BP1 sensor value: 416.000.
+BP1 voltage: 0.509 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 765.000.
+BP0 voltage: 0.945 V.
+BP1 sensor value: 646.000.
+BP1 voltage: 0.792 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 25.5 seconds
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1419.000.
+BP0 voltage: 1.741 V.
+BP1 sensor value: 1030.000.
+BP1 voltage: 1.265 V.
+TP0 sensor value: 10.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 201.000.
+TP1 voltage: 0.246 V.
+Elapsed time: 26.0 seconds
+sensor taskSW sensor value: 12.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 1376.000.
+BP0 voltage: 1.687 V.
+BP1 sensor value: 1031.000.
+BP1 voltage: 1.268 V.
+TP0 sensor value: 14.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 179.000.
+TP1 voltage: 0.223 V.
+drive state
+Brake light on
+LVS_Current_task
+LVS Current: 0.203 A.
+LVS Voltage: 4.012 V.
+PS_allive_task
+Elapsed time: 26.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.012 V.
+BP0 sensor value: 1313.000.
+BP0 voltage: 1.613 V.
+BP1 sensor value: 1025.000.
+BP1 voltage: 1.259 V.
+TP0 sensor value: 11.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 155.000.
+TP1 voltage: 0.190 V.
+Elapsed time: 27.0 seconds
+drive state
+Brake light on
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 734.000.
+BP0 voltage: 0.895 V.
+BP1 sensor value: 656.000.
+BP1 voltage: 0.796 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.013 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 27.5 seconds
+sensor taskSW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 451.000.
+BP0 voltage: 0.550 V.
+BP1 sensor value: 416.000.
+BP1 voltage: 0.512 V.
+TP0 sensor value: 12.000.
+TP0 voltage: 0.016 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+drive state
+PS_allive_task
+SW sensor value: 11.000.
+SW voltage: 0.013 V.
+BP0 sensor value: 444.000.
+BP0 voltage: 0.546 V.
+BP1 sensor value: 414.000.
+BP1 voltage: 0.505 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.
+Elapsed time: 28.0 seconds
+drive state
+SW sensor value: 11.000.
+SW voltage: 0.015 V.
+BP0 sensor value: 441.000.
+BP0 voltage: 0.542 V.
+BP1 sensor value: 410.000.
+BP1 voltage: 0.503 V.
+TP0 sensor value: 13.000.
+TP0 voltage: 0.015 V.
+TP1 sensor value: 0.000.
+TP1 voltage: 0.000 V.

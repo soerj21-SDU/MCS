@@ -1,3 +1,11 @@
 SW_V1 = test højre er lav og venstre er høj i køreretning (førerens perspektiv)
 SW_V2 = test som skal bruges i journal. R&S scope
 BP_V1 = test som skal bruges i journal. BP0 = grøn, BP1 = blå Keysight
+TP_V1 = test som skal bruges i journal. BP0 = grøn, BP1 = blå Keysight
+
+
+16/12
+TP test
+
+CH1 = TP0
+CH2 = TP1
