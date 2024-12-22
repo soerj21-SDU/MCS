@@ -55,6 +55,7 @@ plt.figure()
 plt.plot(torque0_time, torque0_voltage, marker='o', linestyle='-', label='TP0 Sensor Voltage ADC')
 plt.plot(torque1_x, torque1_y, marker='o', linestyle='-', label='TP1 Sensor Voltage scope')
 plt.xlim([16, 28])
+plt.ylim([0, 4])
 plt.xlabel('Elapsed Time [s]')
 plt.ylabel('Sensor voltage [V]')
 plt.legend(['ADC voltage TP0', 'ADC voltage TP1'])
@@ -101,7 +102,6 @@ ax_tp0_2.legend()
 ax_tp0_2.grid(True)
 plt.tight_layout()
 plt.show(block=False)
-
 
 
 # # Plotting the original datasets and differences for TP1

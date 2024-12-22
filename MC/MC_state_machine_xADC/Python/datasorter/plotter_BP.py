@@ -54,6 +54,20 @@ for i in range(len(brake1_x)):
 differences0, common_x0 = compare_datasets(brake0_x, brake0_y, brake0_time, brake0_voltage)
 differences1, common_x1 = compare_datasets(brake1_x, brake1_y, brake1_time, brake1_voltage)
 
+# plotting voltages together
+plt.plot(brake0_time, brake0_voltage, marker='o', linestyle='-', label='BP0 Sensor Voltage ADC')
+plt.plot(brake1_time, brake1_voltage, marker='o', linestyle='-', label='BP1 Sensor Voltage ADC')
+plt.tight_layout()
+plt.grid()
+plt.title('BP0 Sensor Voltage over Time scope vs ADC')
+plt.xlabel('Elapsed Time [seconds]')
+plt.ylabel('BP0 Sensor Voltage [V]')
+plt.xlim([10, 16])
+plt.legend()
+plt.show(block=False)
+
+
+
 # Plotting the original datasets and differences for BP0
 fig_bp0, (ax_bp0_1, ax_bp0_2) = plt.subplots(2, 1)
 

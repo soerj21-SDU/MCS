@@ -56,20 +56,40 @@ ax2.legend()
 ax2.grid(True)
 
 plt.tight_layout()
-plt.show()
+plt.show(block=False)
+
+print(differences[61:111+1])
+print("Average: " + str(sum(differences[61:111+1])/len(differences[61:111+1])))
 
 
 # Sensor value
 sw_value = extract_sw_sensor(txt_file_path)
 
-plt.plot(sw_value)
-plt.xlabel('Index')
-plt.ylabel('Sensor Value')
-plt.title('Sensor Values Over Time')
-plt.show()
+# plt.figure()
+# plt.plot(txt_time, sw_value)
+# plt.xlabel('Time [s]')
+# plt.ylabel('Sensor Value')
+# plt.title('Sensor Values Over time')
+# plt.grid()
+# plt.show(block=False)
 
 max_value = max(sw_value)
 min_value = min(sw_value)
 
 print(f"Maximum value: {max_value}")
 print(f"Minimum value: {min_value}")
+
+
+
+for i in range(len(sw_value)):
+    sw_value[i] = (sw_value[i] - min_value) / (max_value - min_value) * (100 - (-100)) + (-100)
+
+plt.figure()
+plt.plot(txt_time, sw_value, label = "SW angle", marker='o', linestyle='-')
+plt.xlabel('Time [s]')
+plt.ylabel('Sensor angle [degree]')
+plt.title('Sensor angles over time')
+plt.xlim([25, 45])
+plt.legend()
+plt.grid()
+plt.show()
