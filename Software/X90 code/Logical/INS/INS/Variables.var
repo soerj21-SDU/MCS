@@ -1,0 +1,18 @@
+VAR
+	messageOk : BOOL;
+	distDelta : REAL;
+	cycletime : UDINT;
+	RTInfo_0 : RTInfo;
+	Receiver : Receiver_typ := (0); (*local Struktur with all instances and variables*)
+END_VAR
+VAR CONSTANT
+	BUSY : UINT := 65535; (*Functionblock BUSY status*)
+END_VAR
+VAR
+	socActual : REAL;
+	socPrevious : REAL;
+	distActual : REAL;
+	distPrevious : REAL;
+	MTFilterMovingAverage_0 : MTFilterMovingAverage;
+	TON_rangEstTimer : TON;
+END_VAR

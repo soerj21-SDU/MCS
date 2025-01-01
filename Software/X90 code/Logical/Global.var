@@ -1,0 +1,3 @@
+VAR
+	gIsSimulation : BOOL;
+END_VAR

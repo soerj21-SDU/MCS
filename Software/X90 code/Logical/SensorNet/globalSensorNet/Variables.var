@@ -1,0 +1,14 @@
+VAR
+	a : ARRAY[0..SENSOR_NET_POLY_LEN] OF REAL;
+	i : USINT;
+	y : REAL;
+	x : INT;
+	deviceName : STRING[127];
+	calculateSensorNetOut_0 : calculateSensorNetOut;
+	ArCanSetBaudrate_0 : ArCanSetBaudrate;
+	communicationState : CAN_STATES;
+	ArCanSend_0 : ArCanSend;
+	ArCanReceive_0 : ArCanReceive;
+	TON_sendTimer : TON;
+	TON_disconnectTimer : TON;
+END_VAR

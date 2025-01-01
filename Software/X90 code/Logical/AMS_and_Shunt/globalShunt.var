@@ -1,0 +1,3 @@
+VAR
+	gShunt : gShunt_typ;
+END_VAR

@@ -1,4 +1,0 @@
-VAR
-	TON_persistancetimer : TON;
-	i : USINT;
-END_VAR

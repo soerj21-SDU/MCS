@@ -1,3 +1,0 @@
-C:/B_Git/MCS/MC/MC_Zybo_V1/Vitis/platform/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
-C:/B_Git/MCS/MC/MC_Zybo_V1/Vitis/platform/zynq_fsbl/build/CMakeFiles/edit_cache.dir
-C:/B_Git/MCS/MC/MC_Zybo_V1/Vitis/platform/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+VAR
+	gSoftBrakingForced : BOOL;
+	gBraking : gBraking_typ;
+END_VAR

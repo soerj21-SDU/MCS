@@ -1,0 +1,18 @@
+VAR
+	mpDataRecorder_0 : MpDataRecorder;
+	mpDataRecorderConfigPar : MpDataRecorderConfigType;
+	mpDataRecorderConfig_0 : MpDataRecorderConfig;
+	mpDataRegPar_0 : ARRAY[0..MAX_LOG_VAR] OF MpDataRegPar;
+	local : local_typ;
+	this : REFERENCE TO local_typ;
+END_VAR
+VAR CONSTANT
+	MAX_LOG_VAR : USINT := 38;
+END_VAR
+VAR
+	i : INT;
+	loggingNames : ARRAY[0..MAX_LOG_VAR] OF STRING[80];
+END_VAR
+VAR CONSTANT
+	NUM_LOG_VAR : USINT := MAX_LOG_VAR +1;
+END_VAR

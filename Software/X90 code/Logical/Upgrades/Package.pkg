@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">AS4_HW_X90CP174.48-00.exe</Object>
+    <Object Type="File">AS4_HW_X90PO210.08-00.exe</Object>
+  </Objects>
+</Package>

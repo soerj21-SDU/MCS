@@ -1,7 +1,0 @@
-VAR
-	a : ARRAY[0..SENSOR_NET_POLY_LEN] OF REAL;
-	i : USINT;
-	y : REAL;
-	x : INT;
-	calculateSensorNetOut_0 : calculateSensorNetOut;
-END_VAR

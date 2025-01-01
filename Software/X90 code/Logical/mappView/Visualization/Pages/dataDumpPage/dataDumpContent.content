@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="dataDumpContent" height="880" width="1670" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="0" x1="0" x2="0" y1="880" y2="0" />
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="20" left="40" width="440" height="840" zIndex="1">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="340" text="Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" text="Values(Bool)" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Table" id="Table2" top="20" left="700" width="500" height="840" zIndex="2">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem3" zIndex="0" columnWidth="220" text="Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem4" zIndex="1" columnWidth="280" text="Values(strings)" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Table" id="Table3" top="20" left="1220" width="440" height="840" zIndex="3">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem5" zIndex="0" columnWidth="280" text="Names" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem6" zIndex="1" columnWidth="160" text="Values(Real)" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

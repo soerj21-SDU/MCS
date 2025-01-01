@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.2.102?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">ledAMS.st</Object>
+    <Object Type="File">ledDV.st</Object>
+    <Object Type="File">ledEBS.st</Object>
+    <Object Type="File">ledIMD.st</Object>
+    <Object Type="File">ledLV.st</Object>
+    <Object Type="File">ledREADY.st</Object>
+    <Object Type="File">ledSC.st</Object>
+    <Object Type="File">ledTS_OFF.st</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,8 @@
+VAR
+	inverterMaxTemp : REAL;
+	motorMaxTemp : REAL;
+	COOLING_MODE_STATE : USINT := 0;
+	pumpOffCurrent : UINT;
+	pumpOnCurrent : UINT;
+	i : USINT;
+END_VAR

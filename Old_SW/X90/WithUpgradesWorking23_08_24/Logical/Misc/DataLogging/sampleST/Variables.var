@@ -1,4 +1,0 @@
-VAR
-	i : USINT;
-	this : brdkusb_sample_st_interal_typ;
-END_VAR

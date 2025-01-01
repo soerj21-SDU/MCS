@@ -1,0 +1,96 @@
+// See mc_can.h for descriptions of functions.
+// -------------------------------------------------
+
+// Includes
+// -------------------------------------------------
+#include "includes/Jonas_CAN.h"
+
+
+XCanPs CAN_PS[2];
+XCanPs_Config *CAN_CFG[2];
+
+
+// Functions
+// -------------------------------------------------
+int can_init(u32 ID) {
+	int status = XST_SUCCESS;
+
+    print("\n entered CAN init");
+
+	// Find hardware configuration from Vivado's generated file xparameters.h
+	CAN_CFG[ID] = XCanPs_LookupConfig(XPAR_XCANPS_0_BASEADDR);
+	if (CAN_CFG[ID] == NULL) 
+    {
+        print("\n Failed lookupconfig");
+		return XST_FAILURE;
+
+	}
+
+            print("\n after lookupconfig");
+	// Initialize hardware configuration
+	XCanPs_CfgInitialize(&CAN_PS[ID], CAN_CFG[ID], CAN_CFG[ID]->BaseAddr);
+	if (status != XST_SUCCESS) {
+        print("\n Failed cfginitalize");
+		return XST_FAILURE;
+	}
+
+	// Check that hardware is correctly built
+	XCanPs_SelfTest(&CAN_PS[ID]);
+	if (status != XST_SUCCESS) {
+        print("\n Failed selftest");
+		return XST_FAILURE;
+	}
+
+	// Enter configuration mode
+	XCanPs_EnterMode(&CAN_PS[ID], XCANPS_MODE_CONFIG);
+
+	while(XCanPs_GetMode(&CAN_PS[ID]) != XCANPS_MODE_CONFIG);
+
+            print("\n after configuratioin m,ode");
+
+	// Set Baud Rate Prescaler and Bit Timing
+	XCanPs_SetBaudRatePrescaler(&CAN_PS[ID], TEST_BRPR_BAUD_PRESCALER);
+	if (status != XST_SUCCESS) {
+                print("\n Failed to setup prescalar");
+		return XST_FAILURE;
+	}
+	XCanPs_SetBitTiming(&CAN_PS[ID], TEST_BTR_SYNCJUMPWIDTH, TEST_BTR_SECOND_TIMESEGMENT, TEST_BTR_FIRST_TIMESEGMENT);
+	if (status != XST_SUCCESS) {
+                print("\n Failed to setbittiming");
+		return XST_FAILURE;
+	}
+
+	return status;
+}
+
+// -------------------------------------------------
+int can_send(u32 ID, u32 *frameptr) {
+	return XCanPs_Send(&CAN_PS[ID], frameptr);
+}
+
+// -------------------------------------------------
+int can_receive(u32 ID, u32 *frameptr) {
+	return XCanPs_Recv(&CAN_PS[ID], frameptr);
+}
+
+// -------------------------------------------------
+void can_loopback_mode(u32 ID) {
+	XCanPs_EnterMode(&CAN_PS[ID], XCANPS_MODE_LOOPBACK);
+	while(XCanPs_GetMode(&CAN_PS[ID]) != XCANPS_MODE_LOOPBACK);
+}
+
+// -------------------------------------------------
+void can_normal_mode(u32 ID) {
+	XCanPs_EnterMode(&CAN_PS[ID], XCANPS_MODE_NORMAL);
+	while(XCanPs_GetMode(&CAN_PS[ID]) != XCANPS_MODE_NORMAL);
+}
+
+// -------------------------------------------------
+int can_txready(u32 ID) {
+	return XCanPs_IsTxFifoFull(&CAN_PS[ID]);
+}
+
+// -------------------------------------------------
+int can_rxready(u32 ID) {
+	return XCanPs_IsRxEmpty(&CAN_PS[ID]);
+}

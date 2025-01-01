@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Vivado.srcs/sources_1/new/SDC_Monitor_CAR.vhd" \
+"../../../../Vivado.srcs/sim_1/new/SDC_TB.vhd" \
+
+# Do not sort compile order
+nosort

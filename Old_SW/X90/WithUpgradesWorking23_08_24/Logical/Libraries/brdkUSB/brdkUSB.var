@@ -1,3 +1,0 @@
-VAR CONSTANT
-	BRDK_USB_MAX_DEVICES : UINT := 4; (*Maximum numbers of connected USB devices. 4 means 5*)
-END_VAR

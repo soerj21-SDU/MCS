@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="I4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases>
+      <EURangeViolation Id="1" AclInherit="0" />
+    </EURangeViolationAliases>
+    <EURangesAliases>
+      <EURanges Id="1" AclInherit="0" />
+    </EURangesAliases>
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="4408652" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree Celsius" Symbol="°C" />
+    </EngineeringUnitAliases>
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gSafetyChain">
+          <Variable Name="status">
+            <Variable Name="scOK_notEnabled" />
+            <Variable Name="scErrorString" />
+            <Variable Name="scOK_usint" />
+          </Variable>
+          <Variable Name="outputs" />
+          <Variable Name="inputs">
+            <Variable Name="di_LVMS_OK" />
+            <Variable Name="di_shutdownCockpit_OK" />
+            <Variable Name="di_BOTS_OK" />
+            <Variable Name="di_inertiaSwitch_OK" />
+            <Variable Name="di_shutdownLeft_OK" />
+            <Variable Name="di_shutdownRight_OK" />
+            <Variable Name="di_interlockWheelFR_OK" />
+            <Variable Name="di_interlockWheelFL_OK" />
+            <Variable Name="di_interlockWheelRR_OK" />
+            <Variable Name="di_interlockWheelRL_OK" />
+            <Variable Name="di_BSPD_OK" />
+            <Variable Name="di_interlockHVD_OK" />
+            <Variable Name="di_interlockMotorRR_OK" />
+            <Variable Name="di_interlockMotorRL_OK" />
+            <Variable Name="di_interlockMotorFR_OK" />
+            <Variable Name="di_interlockMotorFL_OK" />
+            <Variable Name="di_interlockTSMP_OK" />
+            <Variable Name="di_TSMS_OK" />
+            <Variable Name="di_supply" />
+            <Variable Name="di_TS_Container" />
+            <Variable Name="interlockHVDC_OK" />
+            <Variable Name="IMD_OK" />
+            <Variable Name="AMS_OK" />
+          </Variable>
+          <Variable Name="cmd">
+            <Variable Name="di_LVMS_OK" />
+            <Variable Name="di_supply" />
+            <Variable Name="di_shutdownCockpit_OK" />
+            <Variable Name="di_BOTS_OK" />
+            <Variable Name="di_inertiaSwitch_OK" />
+            <Variable Name="di_shutdownLeft_OK" />
+            <Variable Name="di_shutdownRight_OK" />
+            <Variable Name="di_interlockWheelFR_OK" />
+            <Variable Name="di_interlockWheelFL_OK" />
+            <Variable Name="di_interlockWheelRR_OK" />
+            <Variable Name="di_interlockWheelRL_OK" />
+            <Variable Name="di_interlockHVDC_OK" />
+            <Variable Name="di_IMD_OK" />
+            <Variable Name="di_AMS_OK" />
+            <Variable Name="di_TS_Container" />
+            <Variable Name="di_BSPD_OK" />
+            <Variable Name="di_interlockHVD_OK" />
+            <Variable Name="di_interlockMotorRR_OK" />
+            <Variable Name="di_interlockMotorRL_OK" />
+            <Variable Name="di_interlockMotorFR_OK" />
+            <Variable Name="di_interlockMotorFL_OK" />
+            <Variable Name="di_interlockTSMP_OK" />
+            <Variable Name="di_TSMS_OK" />
+          </Variable>
+        </Variable>
+        <Variable Name="gSteeringAngle">
+          <Variable Name="inputs">
+            <Variable Name="angleSensor" />
+          </Variable>
+          <Variable Name="data">
+            <Variable Name="angleDegrees" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="wheelSVG" />
+            <Variable Name="steeringWheelSVG" />
+            <Variable Name="errorOutOfRange" />
+            <Variable Name="disconnected" />
+            <Variable Name="ok" />
+          </Variable>
+          <Variable Name="cmd">
+            <Variable Name="angleSensor" />
+          </Variable>
+        </Variable>
+        <Variable Name="gBraking">
+          <Variable Name="inputs">
+            <Variable Name="ai_brakePressureFront" />
+            <Variable Name="ai_brakePressureRear" />
+          </Variable>
+          <Variable Name="outputs">
+            <Variable Name="do_brakeLight" />
+          </Variable>
+          <Variable Name="cmd">
+            <Variable Name="brakePressureFront" />
+            <Variable Name="brakePressureRear" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="softBraking" />
+            <Variable Name="hardBraking" />
+            <Variable Name="ok" />
+          </Variable>
+          <Variable Name="data">
+            <Variable Name="pressurePercentageFront" />
+            <Variable Name="pressurePercentageRear" />
+            <Variable Name="pressureBarRear" />
+            <Variable Name="pressureBarFront" />
+          </Variable>
+        </Variable>
+        <Variable Name="gTorqueSensor">
+          <Variable Name="inputs">
+            <Variable Name="torque1" />
+            <Variable Name="torque2" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="torquePercentage" />
+            <Variable Name="ok" />
+          </Variable>
+          <Variable Name="cmd">
+            <Variable Name="torque1" />
+            <Variable Name="torque2" />
+            <Variable Name="disablePlausibilityCheck" />
+          </Variable>
+          <Variable Name="data">
+            <Variable Name="torque1Percent" />
+            <Variable Name="torque2Percent" />
+          </Variable>
+        </Variable>
+        <Variable Name="gDashboard">
+          <Variable Name="inputs">
+            <Variable Name="di_buttonSafety" />
+            <Variable Name="di_buttonTractive" />
+            <Variable Name="di_buttonDrive" />
+            <Variable Name="di_button1" />
+            <Variable Name="di_button2" />
+            <Variable Name="di_button3" />
+            <Variable Name="di_button4" />
+          </Variable>
+          <Variable Name="outputs">
+            <Variable Name="do_ledTS_OFF" />
+            <Variable Name="do_ledIMD" />
+            <Variable Name="do_ledAMS" />
+            <Variable Name="do_ledEBS" />
+            <Variable Name="do_ledREADY" />
+            <Variable Name="do_ledSC" />
+            <Variable Name="do_ledLV" />
+            <Variable Name="do_ledDV" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="ok" />
+          </Variable>
+        </Variable>
+        <Variable Name="gStateMachine">
+          <Variable Name="status">
+            <Variable Name="stateName" />
+            <Variable Name="instruction" />
+            <Variable Name="stateChangeTimeout" />
+            <Variable Name="missionIndex" />
+            <Variable Name="mission" />
+          </Variable>
+          <Variable Name="outputs" />
+          <Variable Name="cmd">
+            <Variable Name="forceIO" />
+            <Variable Name="loadMission" />
+            <Variable Name="saveMission" />
+          </Variable>
+        </Variable>
+        <Variable Name="gIsSimulation" />
+        <Variable Name="CONVERTER_PEAK_CURRENT" />
+        <Variable Name="gRTDS">
+          <Variable Name="outputs">
+            <Variable Name="do_RTDS" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="ok" />
+          </Variable>
+        </Variable>
+        <Variable Name="gAMS">
+          <Variable Name="status">
+            <Variable Name="bank" RecursiveEnable="1">
+              <Variable Name="bank[0]">
+                <Variable Name="cellVoltage" RecursiveEnable="1" />
+                <Variable Name="resistorTemperature" RecursiveEnable="1" />
+                <Variable Name="temperatures" RecursiveEnable="1" />
+              </Variable>
+              <Variable Name="bank[1]">
+                <Variable Name="cellVoltage" RecursiveEnable="1" />
+                <Variable Name="resistorTemperature" RecursiveEnable="1" />
+                <Variable Name="temperatures" RecursiveEnable="1" />
+              </Variable>
+              <Variable Name="bank[2]">
+                <Variable Name="cellVoltage" RecursiveEnable="1" />
+                <Variable Name="resistorTemperature" RecursiveEnable="1" />
+                <Variable Name="temperatures" RecursiveEnable="1" />
+              </Variable>
+              <Variable Name="bank[3]">
+                <Variable Name="cellVoltage" RecursiveEnable="1" />
+                <Variable Name="resistorTemperature" RecursiveEnable="1" />
+                <Variable Name="temperatures" RecursiveEnable="1" />
+              </Variable>
+              <Variable Name="bank[4]">
+                <Variable Name="cellVoltage" RecursiveEnable="1" />
+                <Variable Name="resistorTemperature" RecursiveEnable="1" />
+                <Variable Name="temperatures" RecursiveEnable="1" />
+              </Variable>
+            </Variable>
+            <Variable Name="error">
+              <Variable Name="errorTimers" />
+              <Variable Name="amsError" />
+              <Variable Name="imdError" />
+              <Variable Name="tempWarn" />
+              <Variable Name="voltWarn" />
+              <Variable Name="precharge" />
+              <Variable Name="airMinus" />
+              <Variable Name="airPlus" />
+              <Variable Name="lowVoltage" />
+              <Variable Name="highVoltage" />
+              <Variable Name="lowTemp" />
+              <Variable Name="highTemp" />
+              <Variable Name="ltc6813Com" />
+              <Variable Name="shuntCom" />
+              <Variable Name="openSc" />
+              <Variable Name="closeSc" />
+              <Variable Name="openAirMinus" />
+              <Variable Name="closeAirMinus" />
+              <Variable Name="openAirPlus" />
+              <Variable Name="closeAirPlus" />
+              <Variable Name="openPrePlus" />
+              <Variable Name="closePrePlus" />
+              <Variable Name="preTimeout" />
+              <Variable Name="unexpectedChargeRate" />
+              <Variable Name="bankCountMismatch" />
+              <Variable Name="unexpectedTsCurrent" />
+              <Variable Name="relayFailed" />
+              <Variable Name="scBroken" />
+              <Variable Name="unfitChargeVoltage" />
+              <Variable Name="monitorError" />
+            </Variable>
+            <Variable Name="highPowerWarning" />
+            <Variable Name="highPowerError" />
+            <Variable Name="prechargingDone" />
+            <Variable Name="scEnabled" />
+            <Variable Name="amsBankCount" />
+            <Variable Name="amsState" />
+            <Variable Name="amsTurnedOnCharger" />
+            <Variable Name="disconnected" />
+            <Variable Name="amsStateName" />
+            <Variable Name="ok" />
+          </Variable>
+          <Variable Name="outputs" />
+          <Variable Name="data">
+            <Variable Name="batteryVoltage" />
+            <Variable Name="outputCurrent" />
+            <Variable Name="stateOfCharge" />
+            <Variable Name="bankTemperatureMax" RecursiveEnable="1" />
+            <Variable Name="bankTemperatureMin" RecursiveEnable="1" />
+            <Variable Name="cellVoltageMax" RecursiveEnable="1" />
+            <Variable Name="cellVoltageMin" RecursiveEnable="1" />
+            <Variable Name="chargeCurrent" />
+            <Variable Name="bankResistorTemperatureMin" RecursiveEnable="1" />
+            <Variable Name="bankResistorTemperatureMax" RecursiveEnable="1" />
+          </Variable>
+          <Variable Name="cmd">
+            <Variable Name="chargingPrescalerAmp" />
+            <Variable Name="chargingPrescalerPercent" />
+          </Variable>
+        </Variable>
+        <Variable Name="gLowVoltageBattery">
+          <Variable Name="inputs" />
+          <Variable Name="data">
+            <Variable Name="current" />
+            <Variable Name="voltage" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="full" />
+            <Variable Name="empty" />
+          </Variable>
+        </Variable>
+        <Variable Name="gDataLogging">
+          <Variable Name="status">
+            <Variable Name="dataloggingActive" />
+          </Variable>
+        </Variable>
+        <Variable Name="gShunt">
+          <Variable Name="data">
+            <Variable Name="currentThreshold" />
+            <Variable Name="actCurrent" />
+            <Variable Name="actVoltage" />
+            <Variable Name="actVoltage2" />
+            <Variable Name="actPowerKW" />
+            <Variable Name="actPowerW" />
+            <Variable Name="actCurrentAS" />
+            <Variable Name="actPowerKWH" />
+            <Variable Name="actPowerWH" />
+            <Variable Name="actTemp" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="disconnected" />
+            <Variable Name="currentRunning" />
+            <Variable Name="ok" />
+          </Variable>
+        </Variable>
+        <Variable Name="gINS">
+          <Variable Name="status">
+            <Variable Name="ok" />
+          </Variable>
+          <Variable Name="data">
+            <Variable Name="distEstimated" />
+            <Variable Name="actDistTraveledKm" />
+            <Variable Name="actLonAcceleration" />
+            <Variable Name="actLatAcceleration" />
+          </Variable>
+        </Variable>
+        <Variable Name="gCooling">
+          <Variable Name="outputs">
+            <Variable Name="do_fan" RecursiveEnable="1" />
+            <Variable Name="do_pump" RecursiveEnable="1" />
+          </Variable>
+          <Variable Name="inputs">
+            <Variable Name="ai_coolingTemp" RecursiveEnable="1" />
+            <Variable Name="im_pumpCurrent" RecursiveEnable="1" />
+          </Variable>
+          <Variable Name="data">
+            <Variable Name="coolingSysTemp" RecursiveEnable="1" />
+          </Variable>
+          <Variable Name="cmd">
+            <Variable Name="manualMode" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="ok" />
+            <Variable Name="error" />
+            <Variable Name="pumpError" RecursiveEnable="1" />
+            <Variable Name="pumpState" RecursiveEnable="1" />
+            <Variable Name="warningHighTemperature" />
+            <Variable Name="warningInverterHighTemp" />
+            <Variable Name="warningMotorHighTemp" />
+          </Variable>
+        </Variable>
+        <Variable Name="gEventLog">
+          <Variable Name="events" />
+          <Variable Name="resetEventLog" />
+        </Variable>
+        <Variable Name="gInverters">
+          <Variable Name="cmd">
+            <Variable Name="enableRegenerativeBraking" />
+            <Variable Name="enableTractionControl" />
+            <Variable Name="enablePowerLimiter" />
+            <Variable Name="enableTorqueVectoring" />
+            <Variable Name="enableTorqueLimiter" />
+            <Variable Name="enableFrontRearDistribution" />
+            <Variable Name="enableMotorPairShutdown" />
+            <Variable Name="powerCycle" />
+            <Variable Name="exitDrive" />
+            <Variable Name="manualControl" />
+            <Variable Name="enableConfigurationDuringDrive" />
+            <Variable Name="autoReset" />
+            <Variable Name="stopInverters" />
+            <Variable Name="activateInverters" />
+            <Variable Name="powerCyclePair12" />
+            <Variable Name="powerCyclePair34" />
+          </Variable>
+          <Variable Name="status">
+            <Variable Name="deratingStaticPercent" />
+            <Variable Name="configurationEnabled" />
+            <Variable Name="errorCanFramesLost" />
+            <Variable Name="regenerativeBrakingAvailable" />
+          </Variable>
+          <Variable Name="output">
+            <Variable Name="do_enableInv34" />
+            <Variable Name="do_enableInv12" />
+            <Variable Name="do_powerInv12" />
+            <Variable Name="do_powerInv34" />
+          </Variable>
+          <Variable Name="inverter" RecursiveEnable="1" />
+          <Variable Name="data">
+            <Variable Name="powerLimitKW" EURangeViolationId="1" EURangesId="1" />
+            <Variable Name="powerLimit" />
+            <Variable Name="averageVelocityKmh" />
+            <Variable Name="deratingStatic" />
+            <Variable Name="acceleration_0to100kmh_inSecs" />
+            <Variable Name="negativeTorqueLimGain" />
+            <Variable Name="torqueSetpointGain" />
+          </Variable>
+        </Variable>
+      </GlobalVariables>
+      <Task Name="Simulation" />
+      <Task Name="AMS_CTRL">
+        <Variable Name="powerWarningLimit" />
+      </Task>
+      <Task Name="INV_CAN">
+        <Variable Name="bus" RecursiveEnable="1" />
+      </Task>
+      <Task Name="INV_CTRL">
+        <Variable Name="constant">
+          <Variable Name="MAX_NEG_TORQUE" />
+          <Variable Name="MAX_BRAKE_PRESSURE" />
+          <Variable Name="MIN_BRAKE_PRESSURE" />
+          <Variable Name="REGEN_DERATING_SPEED" />
+          <Variable Name="MIN_REGEN_SPEED" />
+          <Variable Name="MIN_REGENERATION_VOLTAGE" />
+          <Variable Name="PI" />
+          <Variable Name="GEAR_RATIO" />
+          <Variable Name="WHEEL_RADIUS" />
+          <Variable Name="STEERING_ANGLE_MAX" />
+          <Variable Name="MAX_TORQUE_VECTORING_DERATING" />
+          <Variable Name="LAUNCH_PROFILE_MIN_TORQUE_PERC" />
+          <Variable Name="LAUNCH_PROFILE_MIN_TORQUE" />
+          <Variable Name="LAUNCH_PROFILE_MIN_SPEED" />
+          <Variable Name="DERATING_AT_MAX" />
+          <Variable Name="DERATING_AREA_WIDTH" />
+          <Variable Name="REAR_DISTRIBUTION" />
+          <Variable Name="FRONT_DISTRIBUTION" />
+          <Variable Name="TORQUE_CONSTANT" />
+        </Variable>
+        <Variable Name="control">
+          <Variable Name="TV">
+            <Variable Name="enable" />
+            <Variable Name="torque_input" />
+            <Variable Name="steering_angle" />
+            <Variable Name="MAX_DERATING" />
+            <Variable Name="MAX_STEERING_ANGLE" />
+            <Variable Name="torque_output" />
+          </Variable>
+          <Variable Name="TC">
+            <Variable Name="enable" />
+            <Variable Name="longitudinal_wheel_slip" />
+            <Variable Name="LON_SLIP_REF" />
+            <Variable Name="P_GAIN" />
+            <Variable Name="I_GAIN" />
+            <Variable Name="derating_output" />
+          </Variable>
+          <Variable Name="PL">
+            <Variable Name="enable" />
+            <Variable Name="lowest_cell_voltage" />
+            <Variable Name="MAX_POWER" />
+            <Variable Name="P_GAIN" />
+            <Variable Name="I_GAIN" />
+            <Variable Name="derating_output" />
+          </Variable>
+          <Variable Name="LP">
+            <Variable Name="enable" />
+            <Variable Name="derating_output" />
+          </Variable>
+          <Variable Name="TL">
+            <Variable Name="enable" />
+            <Variable Name="max_torque" />
+            <Variable Name="derating_output" />
+          </Variable>
+          <Variable Name="RB">
+            <Variable Name="enable" />
+            <Variable Name="vehicle_lon_velocity" />
+            <Variable Name="negative_torque_transfer" />
+            <Variable Name="torque_pedal" />
+            <Variable Name="brake_pressure" />
+            <Variable Name="REGEN_BRAKING_GAIN" />
+            <Variable Name="IDLE_MOTOR_TORQUE" />
+            <Variable Name="negative_torque_limit" />
+            <Variable Name="positive_torque_limit" />
+            <Variable Name="negTrqLimSetpoint" />
+          </Variable>
+        </Variable>
+        <Variable Name="torqueSetpoint" RecursiveEnable="1" />
+        <Variable Name="tempActivateOutputTorque" />
+        <Variable Name="tempManualControl" />
+      </Task>
+      <Task Name="INV_SM">
+        <Variable Name="tempActivateInvsWhenInDrive" />
+      </Task>
+      <Task Name="ALARM_MAN">
+        <Variable Name="MpAlarmXListUIConnectType_0">
+          <Variable Name="AlarmList">
+            <Variable Name="Message" />
+            <Variable Name="Timestamp" />
+          </Variable>
+          <Variable Name="AcknowledgeAll" />
+          <Variable Name="Details">
+            <Variable Name="Message" />
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="SENSORS">
+        <Variable Name="brakingPedalConstants">
+          <Variable Name="frontWarningLimitMaxMax" />
+          <Variable Name="frontWarningLimitMax" />
+          <Variable Name="frontWarningLimitMin" />
+          <Variable Name="frontWarningLimitMinMin" />
+          <Variable Name="rearWarningLimitMaxMax" />
+          <Variable Name="rearWarningLimitMax" />
+          <Variable Name="rearWarningLimitMin" />
+          <Variable Name="rearWarningLimitMinMin" />
+        </Variable>
+        <Variable Name="brakingPedalVariables">
+          <Variable Name="brakingPedalFrontMax" />
+          <Variable Name="brakingPedalFrontMin" />
+          <Variable Name="brakingPedalRearMax" />
+          <Variable Name="brakingPedalRearMin" />
+        </Variable>
+        <Variable Name="steeringAngleConstants">
+          <Variable Name="MAX_ANGLE" />
+          <Variable Name="MIN_ANGLE" />
+        </Variable>
+        <Variable Name="torquePedalConstants">
+          <Variable Name="lowLimit2" />
+          <Variable Name="highLimit2" />
+          <Variable Name="lowLimit1" />
+          <Variable Name="highLimit1" />
+          <Variable Name="torqueOffUpperHysteresis" />
+          <Variable Name="torqueOffLowerHysteresis" />
+        </Variable>
+        <Variable Name="torquePedalVariables">
+          <Variable Name="torquePedalMax2" />
+          <Variable Name="torquePedalMax1" />
+          <Variable Name="torquePedalMin2" />
+          <Variable Name="torquePedalMin1" />
+        </Variable>
+        <Variable Name="maxTorquePercentThrottle" />
+      </Task>
+      <Task Name="NewLogging">
+        <Variable Name="local">
+          <Variable Name="activateLogging" />
+          <Variable Name="loggingActive" />
+          <Variable Name="newFilename" />
+          <Variable Name="filename" />
+          <Variable Name="setFilename" />
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

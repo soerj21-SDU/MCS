@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="11/06/2024 10:48:23" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="X90CP174_48_00" Type="X90CP174.48-00" X="197" Y="127" />
+    <Module Name="X90PO210.08-00" Type="X90PO210.08-00" X="415" Y="259" />
+    <Module Name="X90PO210.08-00a" Type="X90PO210.08-00" X="415" Y="236" />
+    <Module Name="X90DI110.10-00" Type="X90DI110.10-00" X="415" Y="213" />
+    <Module Name="X90IF720.04-00" Type="X90IF720.04-00" X="415" Y="160" />
+    <Module Name="X1" Type="X1" X="415" Y="137" />
+  </Modules>
+  <Links />
+  <InfoElements />
+</BR.AS.HardwareTopology>

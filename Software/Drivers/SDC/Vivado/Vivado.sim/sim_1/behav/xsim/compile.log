@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/new/SDC_Monitor_CAR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SDC_Monitor_CAR'
+ERROR: [VRFC 10-2989] 'sdc_vector_o' is not declared [C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/new/SDC_Monitor_CAR.vhd:111]
+ERROR: [VRFC 10-9458] unit 'behavioral' is ignored due to previous errors [C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/new/SDC_Monitor_CAR.vhd:57]
+INFO: [VRFC 10-8704] VHDL file 'C:/B_Git/MCS/MC/MC_V1/Vivado/Vivado.srcs/sources_1/new/SDC_Monitor_CAR.vhd' is ignored due to errors

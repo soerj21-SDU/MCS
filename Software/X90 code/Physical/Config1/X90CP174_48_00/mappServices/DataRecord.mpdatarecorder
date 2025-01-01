@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gDataRecorderNew" Type="mpdatarecorder">
+    <Group ID="DataRecorder">
+      <Property ID="MaxNumberOfFiles" Value="4" />
+      <Property ID="MaxFileSize" Value="32000" />
+      <Property ID="DecimalDigits" Value="3" />
+      <Property ID="SaveInterval" Value="2000" />
+      <Property ID="FileNamePattern" Value="Datalog_%H_%M_%S.csv" />
+      <Property ID="TimeStampPattern" Value="%H:%M:%S:%L" />
+    </Group>
+  </Element>
+</Configuration>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="topContent" height="200" width="1920" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="2" x1="0" x2="1920" y1="200" y2="200" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="5" left="60" width="130" height="150" zIndex="3" image="Media/Viking_Logo_Black.png" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="155" left="0" width="245" height="45" zIndex="4" image="Media/Viking_Text_Black.png" borderWidth="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="15" left="1105" width="175" height="20" zIndex="5" breakWord="true" multiLine="true" text="Shutdown Circuit" textAlign="left" fontSize="16px" bold="true" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="10" left="1101" width="220" zIndex="1" borderWidth="2px" cornerRadius="5px" opacity="0.1" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="65" left="1105" width="220" height="40" zIndex="6" value="SC element" textAlign="left top" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.ImageList" id="ImageList1" top="15" left="1275" width="45" height="50" zIndex="7" imageList="['Media/warning.png', 'Media/checkmark.png', 'Media/checkmark.png']" borderWidth="0px" />
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="10" left="1330" width="580" height="180" zIndex="8" rowHeight="20" cellAlign="left center" cellPadding="0px 15px 0px 15px" cornerRadius="5px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="395" rowHeight="20" text="Alarms" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" columnWidth="185" rowHeight="20" text="Time" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput2" top="5" left="325" width="300" zIndex="9" value="State" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="5" left="250" width="110" zIndex="10" text="State" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput3" top="115" left="250" width="380" height="75" zIndex="11" multiLine="true" value="Instructions" wordWrap="true" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="115" left="1100" width="220" height="75" zIndex="12" borderWidth="2px" cornerRadius="5px" backColor="rgba(255, 136, 0, 1)" opacity="0.1" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton33" top="38" left="1064" width="20" height="20" zIndex="13" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton34" top="63" left="1064" width="20" height="20" zIndex="14" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton35" top="113" left="1064" width="20" height="20" zIndex="15" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="40" left="860" width="205" height="20" zIndex="16" text="Torque Vectoring (TV)" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="65" left="860" width="200" height="20" zIndex="17" text="Traction Control (TC)" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="115" left="860" width="205" height="20" zIndex="18" text="Regenerative Braking (RB)" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="120" left="1095" width="100" height="15" zIndex="19" text="Inverters" textAlign="left" fontSize="16px" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton39" top="140" left="1215" width="20" height="20" zIndex="20" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton40" top="140" left="1240" width="20" height="20" zIndex="21" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton41" top="140" left="1265" width="20" height="20" zIndex="22" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton42" top="140" left="1290" width="20" height="20" zIndex="23" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="120" left="1215" width="20" height="20" zIndex="24" text="1" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="120" left="1240" width="20" height="20" zIndex="25" text="2" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Label11" top="120" left="1265" width="20" height="20" zIndex="26" text="3" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Label12" top="120" left="1290" width="20" height="20" zIndex="27" text="4" textAlign="center" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton36" top="88" left="1064" width="20" height="20" zIndex="28" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="90" left="860" width="205" height="20" zIndex="29" text="Power Limiter (PL)" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="140" left="860" width="140" height="25" zIndex="30" text="Power Limit" textAlign="left" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label13" top="140" left="1055" width="30" height="25" zIndex="31" text="kW" textAlign="center" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="165" left="1815" zIndex="32" text="Acknowledge" cornerRadius="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="115" left="1210" width="105" height="80" zIndex="43" borderWidth="0px" backColor="rgba(255, 136, 0, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label14" top="140" left="1095" width="110" height="20" zIndex="33" text="Enabled" />
+    <Widget xsi:type="widgets.brease.Label" id="Label15" top="165" left="1095" width="115" height="20" zIndex="34" text="Connected" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton43" top="165" left="1215" width="20" height="20" zIndex="35" value="true" cornerRadius="10px" backColor="rgba(0, 255, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(255, 0, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton44" top="165" left="1240" width="20" height="20" zIndex="36" value="true" cornerRadius="10px" backColor="rgba(0, 255, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(255, 0, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton45" top="165" left="1265" width="20" height="20" zIndex="37" value="true" cornerRadius="10px" backColor="rgba(0, 255, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(255, 0, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton46" top="165" left="1290" width="20" height="20" zIndex="38" value="true" cornerRadius="10px" backColor="rgba(0, 255, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(255, 0, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label16" top="35" left="1105" width="210" height="20" zIndex="39" breakWord="true" multiLine="true" text="Broken at:" textAlign="left" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="10" left="635" width="210" height="180" zIndex="40" borderWidth="2px" cornerRadius="5px" backColor="rgba(255, 136, 0, 1)" opacity="0.1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label17" top="15" left="640" width="195" height="40" zIndex="41" multiLine="true" text="Accumulator Management System" wordWrap="true" textAlign="left" fontSize="16px" bold="true" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle5" top="10" left="855" width="240" height="180" zIndex="0" borderWidth="2px" cornerRadius="5px" backColor="rgba(255, 136, 0, 1)" opacity="0.1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label18" top="20" left="860" width="190" height="15" zIndex="42" text="Vehicle Control" textAlign="left" fontSize="16px" bold="true" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle6" top="33" left="1054" width="40" height="105" zIndex="44" borderWidth="0px" backColor="rgba(255, 136, 0, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label19" top="65" left="635" width="115" height="20" zIndex="45" text="Connected" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton47" top="65" left="805" width="20" height="20" zIndex="46" cornerRadius="10px" backColor="rgba(0, 255, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(255, 0, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle7" top="54" left="800" width="30" height="86" zIndex="53" borderWidth="0px" backColor="rgba(255, 136, 0, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton48" top="90" left="805" width="20" height="20" zIndex="47" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton49" top="115" left="805" width="20" height="20" zIndex="48" cornerRadius="10px" backColor="rgba(255, 0, 0, 1)" borderColor="rgba(91, 124, 112, 0)" padding="0px" checkedBackColor="rgba(0, 255, 0, 1)" checkedBorderColor="rgba(253, 123, 1, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label20" top="90" left="635" width="175" height="20" zIndex="49" text="SC Enabled" />
+    <Widget xsi:type="widgets.brease.Label" id="Label21" top="115" left="635" width="175" height="20" zIndex="50" text="TC Enabled" />
+    <Widget xsi:type="widgets.brease.Label" id="Label22" top="140" left="635" width="75" height="20" zIndex="51" text="State:" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput5" top="140" left="695" width="140" height="20" zIndex="52" padding="0px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput6" top="45" left="265" width="370" zIndex="54" value="Mission" fontSize="24px" padding="0px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label24" top="85" left="250" width="165" zIndex="55" text="Instruction:" fontSize="24px" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="140" left="1000" width="55" height="25" zIndex="56" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="80" fontSize="14px" padding="0px 15px 0px 0px" />
+  </Widgets>
+</Content>

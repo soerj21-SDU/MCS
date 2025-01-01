@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gDataRecorder" Type="mpdatarecorder">
+    <Group ID="DataRecorder">
+      <Property ID="MaxFileSize" Value="32000" />
+      <Property ID="SaveInterval" Value="5000" />
+    </Group>
+  </Element>
+</Configuration>

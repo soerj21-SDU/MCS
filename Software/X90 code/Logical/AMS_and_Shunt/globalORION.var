@@ -1,0 +1,4 @@
+VAR
+	TON_prechargeDisableDrive : TON;
+	gORION : gORION_typ;
+END_VAR

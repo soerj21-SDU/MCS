@@ -1,0 +1,4 @@
+VAR
+	gBrdkFileDev_0 : brdkFileDeviceHandler;
+	gFile : gFile_typ;
+END_VAR

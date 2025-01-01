@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="inverterBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].outputs.com_interverOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch7" attribute="value" />
+		</Binding>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].outputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch6" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].outputs.com_enable" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch5" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].outputs.com_targetTorque" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].outputs.com_errorReset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch4" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].outputs.com_torqueLimitPos" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput2" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_quitDcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton6" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_warning" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_error" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_systemReady" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton3" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton5" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_quitInverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton4" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_inverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton8" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_derating" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton7" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_tempIGBT" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput6" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_tempInverter" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput4" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_tempMotor" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput7" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_magnetizingCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput3" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_torqueCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_actualVelocity" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput1" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].outputs.com_enable" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch9" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].outputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch10" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].outputs.com_interverOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch11" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].outputs.com_targetTorque" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput4" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].outputs.com_errorReset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch8" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].outputs.com_torqueLimitNeg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput6" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].outputs.com_torqueLimitPos" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput5" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_derating" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton15" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_inverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton16" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_quitInverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton12" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton13" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_quitDcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton14" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_warning" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton9" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_error" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton10" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_systemReady" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton11" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_tempIGBT" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput13" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_tempInverter" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput11" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_tempMotor" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput14" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_magnetizingCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput10" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_torqueCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput9" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].outputs.com_errorReset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch12" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].outputs.com_enable" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch13" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].outputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch14" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].outputs.com_interverOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch15" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].outputs.com_torqueLimitNeg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput9" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].outputs.com_torqueLimitPos" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput8" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].outputs.com_targetTorque" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput7" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_error" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton18" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_systemReady" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton19" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_derating" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton23" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_inverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton24" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_quitInverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton20" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton21" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_quitDcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton22" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_warning" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton17" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_tempIGBT" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput20" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_tempInverter" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput18" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_tempMotor" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput21" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_magnetizingCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput17" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_torqueCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput16" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].inputs.com_actualVelocity" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput15" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].outputs.com_errorReset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch16" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].outputs.com_enable" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch17" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].outputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch18" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].outputs.com_interverOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleSwitch19" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].outputs.com_torqueLimitNeg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput12" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].outputs.com_torqueLimitPos" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput11" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].outputs.com_targetTorque" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput10" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_error" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton26" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_systemReady" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton27" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_quitDcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton30" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_warning" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton25" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_quitInverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton28" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_dcOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton29" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_inverterOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton32" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_derating" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="ToggleButton31" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_torqueCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput23" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_actualVelocity" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput22" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_magnetizingCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput24" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_tempMotor" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput28" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_tempInverter" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput25" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].inputs.com_tempIGBT" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput27" attribute="value" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].status.stateName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterOverviewContent" widgetRefId="TextOutput1" attribute="value" />
+		</Binding>
+
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].inputs.com_actualVelocity" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput8" attribute="value" />
+		</Binding>
+
+
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[1].status.stateName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="TextOutput2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].status.stateName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="TextOutput1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[2].status.stateName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="TextOutput3" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[3].status.stateName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="TextOutput4" attribute="value" />
+		</Binding>
+
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.cmd.enableRegenerativeBraking" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterControlContent" widgetRefId="ToggleSwitch2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSteeringAngle.data.angleDegrees" attribute="value" />
+			<Target xsi:type="brease" contentRefId="inverterOverviewContent" widgetRefId="RadialSlider1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].inputs.com_errorDiagnostics" attribute="value" />
+<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericOutput5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gInverters.inverter[0].outputs.com_torqueLimitNeg" attribute="value" />
+<Target xsi:type="brease" contentRefId="inverterCommunicationContent" widgetRefId="NumericInput3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ALARM_MAN:MpAlarmXListUIConnectType_0.AlarmList.Timestamp" attribute="value" />
+<Target xsi:type="brease" contentRefId="topContent" widgetRefId="TableItem2" attribute="stringValue" />
+</Binding>
+</Bindings>
+</BindingsSet>

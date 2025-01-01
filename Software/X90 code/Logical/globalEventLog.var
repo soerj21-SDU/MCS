@@ -1,0 +1,6 @@
+VAR CONSTANT
+	EVENT_LOG_LENGTH : UINT := 100;
+END_VAR
+VAR
+	gEventLog : gEventLog_typ;
+END_VAR
